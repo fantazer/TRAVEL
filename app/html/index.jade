@@ -1,0 +1,122 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/header.jade
+	include ./block_html/elements/const.jade
+
+	.top-menu
+		.main-cont
+			.top-menu-wraper
+				.top-menu-logo
+					img(src="img/logo.png", alt="")
+				.top-menu-items
+					a(href="#") Авибилеты
+					a(href="#") Гостиницы
+					a(href="#") Экскурсии
+					a(href="#") Страховка
+				.top-menu-money
+					span RUB
+					i.fa.fa-caret-down
+				a(href="#").top-menu-enter вход
+	
+	.main-cont
+		.breadcrumbs
+			a(href="#") Главная
+			a(href="#") Экскурсии
+			a(href="#") Результаты поиска
+
+	.main-cont
+		.top-search
+			.top-search-town
+				.top-search-town-title Название города или отеля
+				.top-search-town-input
+					input(type="text")
+			.top-search-date
+				.top-search-date-title 
+					.top-search-date-title-el Дата экскурсии
+					.top-search-date-title-el 
+						input#r1(type='checkbox', name='rr')
+						label(for='r1') 
+							span 
+						span +/- 3 дня
+
+				.top-search-date-input
+					input(type="text")
+					i.fa.fa-calendar
+			.top-search-time
+				.top-search-time-title 
+					.top-search-date-title-el Время
+					.top-search-date-title-el 
+						input#r2(type='checkbox', name='rr')
+						label(for='r2') 
+							span 
+						span в любое время
+				.top-search-time-input
+					select(name="").dropdown
+						option 10:00
+						option 10:00
+						option 10:00
+			.top-search-but
+				button найти
+
+	.content
+		.main-cont
+			.content-wraper
+				.content-left
+					.show-from показано 26 из 1250
+					.content-left-filter
+						.filter-reting
+							.content-left-title Популярность
+							- for (var a = 0; a < 6; a++)
+								.filter-reting-el
+									.filter-reting-el-left
+										input(id='r#{a+4}', type='checkbox', name='rr')
+										label(for='r#{a+4}') 
+											span 
+										.filter-reting-stars
+											i.fa.fa-star.active
+											i.fa.fa-star.active
+											i.fa.fa-star.active
+											i.fa.fa-star
+											i.fa.fa-star
+									.filter-reting-el-right 566
+						.filter-review
+							.content-left-title Отзывы туристов
+							.filter-review-slider
+						.filter-name
+							.content-left-title Имя содержит
+							.filter-name-wraper
+								input(type="text")
+								button ок
+						.filter-type
+							.content-left-title Вид экскурсии
+							+filterLine(1,'Пешеходные') 
+							+filterLine(2,'Автобусные') 
+							+filterLine(3,'Гастрономические') 
+						.filter-type
+							.content-left-title Тип экскурсии
+							+filterLine(4,'Групповая') 
+							+filterLine(5,'Индивидуальная') 
+						.filter-type
+							.content-left-title Продолжительность
+							+filterLine(6,'Полдня') 
+							+filterLine(7,'День') 
+							+filterLine(8,'2-4 дня')
+						.filter-type
+							.content-left-title Язык экскурсии
+							+filterLine(9,'Русский') 
+							+filterLine(10,'Английский') 
+							+filterLine(11,'Французский') 
+							+filterLine(12,'Другое') 
+				.content-right
+					.content-right-sort
+						.content-right-sort-title Сортировка
+						.content-right-sort-el Цена
+						.content-right-sort-el.active Популярность
+						.content-right-sort-el Отзывы гостей
+						.content-right-sort-el Названия
+
+//Include script
+include ./block_html/script.jade
+

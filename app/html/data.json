@@ -1,0 +1,14 @@
+{
+	"page":[
+			{"el": {
+				"name":"Главная!",
+				"href":"page.html"
+			}
+		},
+		{"el": {
+				"name":"Новости",
+				"href":"main.html"
+			}
+		}
+	]
+}

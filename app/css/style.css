@@ -1,0 +1,385 @@
+a:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.bold {
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("/fonts/icomoon.eot?u78ibn");
+  src: url("/fonts/icomoon.eot?u78ibn#iefix") format('embedded-opentype'), url("/fonts/icomoon.ttf?u78ibn") format('truetype'), url("/fonts/icomoon.woff?u78ibn") format('woff'), url("/fonts/icomoon.svg?u78ibn#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+/* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-radio:before {
+  content: "\e03e";
+}
+.icon-recent_actors:before {
+  content: "\e03f";
+}
+.icon-repeat:before {
+  content: "\e040";
+}
+.icon-laptop:before {
+  content: "\e001";
+}
+.icon-briefcase:before {
+  content: "\e015";
+}
+.icon-wallet:before {
+  content: "\e016";
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  display: block;
+}
+.allpage {
+  background: #eee;
+}
+.allpage wraper {
+  background: #fff;
+  height: 100vh;
+}
+.allpage wraper a {
+  padding: 20px;
+  display: block;
+  box-shadow: 1px 1px 20px #eee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+.allpage wraper a:hover {
+  background: #6d2d74;
+  color: #fff;
+}
+.main-cont {
+  *zoom: 1;
+  width: auto;
+  max-width: 1200px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.main-cont:before,
+.main-cont:after {
+  content: '';
+  display: table;
+}
+.main-cont:after {
+  clear: both;
+}
+input,
+select {
+  border: 0px;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+input[type="checkbox"] {
+  padding: 0;
+}
+button {
+  border: 0px;
+  color: #fff;
+  background: #0074d9;
+  text-transform: uppercase;
+}
+body {
+  font-family: "PT Sans";
+  font-size: 16px;
+  background: #f7f7f7;
+}
+.top-menu {
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 3px #e1e1e1;
+}
+.top-menu-wraper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.top-menu-logo {
+  flex-grow: 2;
+}
+.top-menu-logo img {
+  margin: 0 auto;
+}
+.top-menu-items {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 10;
+  font-weight: 600;
+}
+.top-menu-money {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.top-menu-money .fa {
+  margin-left: 10px;
+}
+.top-menu-enter {
+  flex-grow: 2;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.breadcrumbs {
+  padding: 20px 0;
+}
+.breadcrumbs a {
+  margin-right: 20px;
+  position: relative;
+}
+.breadcrumbs a:after {
+  content: '>';
+  position: absolute;
+  right: -15px;
+}
+.breadcrumbs a:last-child {
+  color: #0074d9;
+}
+.breadcrumbs a:last-child:after {
+  content: '';
+}
+.top-search {
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0px 0px 3px #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+}
+.top-search-town {
+  flex-grow: 4;
+  margin-right: 20px;
+}
+.top-search-town-title {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-search-town-input input {
+  width: 100%;
+  margin-top: 10px;
+}
+.top-search-date {
+  flex-grow: 2;
+  margin-right: 20px;
+}
+.top-search-date-title {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-search-date-input {
+  position: relative;
+}
+.top-search-date-input input {
+  width: 100%;
+  margin-top: 10px;
+}
+.top-search-date-input input:hover {
+  cursor: pointer;
+}
+.top-search-date-input .fa {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -4px;
+}
+.top-search-date-input .fa:hover {
+  cursor: pointer;
+}
+.top-search-time {
+  flex-grow: 2;
+  margin-right: 20px;
+}
+.top-search-time .dropdown {
+  width: 100%;
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+}
+.top-search-time .dropdown ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e1e1e1;
+}
+.top-search-time-title {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-search-time-input select {
+  width: 100%;
+  margin-top: 10px;
+}
+.top-search-but {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+.top-search-but button {
+  border: 0px;
+  color: #fff;
+  background: #0074d9;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px 0;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: url("../img/chekbox.png") no-repeat;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label span {
+  background: url("../img/checkbox-check.png") no-repeat;
+}
+.content {
+  margin-top: 20px;
+}
+.content-wraper {
+  display: flex;
+}
+.content-left {
+  -webkit-flex: 1;
+  margin-right: 20px;
+}
+.content-right {
+  -webkit-flex: 4;
+}
+.show-from {
+  text-align: center;
+  color: #fff;
+  background: #0074d9;
+  padding: 15px 0;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.content-left-filter {
+  padding: 10px;
+  box-shadow: 0px 2px 3px #e1e1e1;
+  background: #fff;
+}
+.filter-reting {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.content-left-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.filter-reting-el {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-reting-el-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-reting-el-left label {
+  margin-right: 5px;
+}
+.filter-reting-el-left .active {
+  color: #ffdc00 !important;
+}
+.filter-reting-el-left .fa {
+  margin-right: 3px;
+  font-size: 20px;
+  color: #e1e1e1;
+}
+.filter-name-wraper {
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.filter-name-wraper button {
+  padding: 0 10px;
+}
+.filter-type {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.filter-type-el {
+  margin-bottom: 3px;
+}
+.content-right-sort {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 2px 3px #e1e1e1;
+  background: #fff;
+}
+.content-right-sort .active {
+  border-bottom: 2px solid #0074d9;
+}
+.content-right-sort .active:after {
+  content: '\f0d7';
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-left: 10px;
+}
+.content-right-sort-el {
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+.content-right-sort-title {
+  text-transform: uppercase;
+}

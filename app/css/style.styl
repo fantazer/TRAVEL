@@ -1,0 +1,261 @@
+@import "variable/*"
+@import "icon/*"
+@import 'axis'
+@import 'jeet'
+@import 'rupture'
+
+border-box-html()
+fluid-media() //care flex box image
+rupture.scale = 0 320px 640px 768px 1024px 1280px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 
+jeet.gutter = 1
+
+.allpage
+	background #eee
+	wraper
+		background white
+		height 100vh
+		a
+			padding 20px
+			display block
+			box-shadow 1px 1px 20px #eee
+			margin-bottom 10px
+			border-radius 5px
+			tr(all)
+			&:hover
+				background #6D2D74
+				color white
+.main-cont
+	center(1200px)
+
+input,select
+	border 0px
+	border 1px solid #E1E1E1
+	padding 10px
+input[type="checkbox"]
+	padding 0
+	
+button
+	border 0px
+	color white
+	background blue
+	text-transform uppercase
+body
+	font-family "PT Sans"
+	font-size 16px
+	background #F7F7F7
+
+bsh(){
+	box-shadow: 0px 2px 3px #E1E1E1;
+}
+.top-menu
+	padding 10px
+	width 100%
+	background white
+	box-shadow: 0px 2px 3px #E1E1E1;
+.top-menu-wraper
+	flex(around)
+.top-menu-logo
+	flex-grow 2
+	img
+		margin 0 auto
+.top-menu-items
+	text-transform uppercase
+	flex(around)
+	flex-grow 10
+	font-weight 600
+.top-menu-money
+	flex-grow 2
+	flex(mid)
+	font-weight 600
+	.fa
+		margin-left 10px
+.top-menu-enter
+	flex-grow 2
+	text-transform uppercase
+	text-align center
+	font-weight 600
+	
+.breadcrumbs
+	padding 20px 0
+	a
+		margin-right 20px
+		position relative
+		&:after
+			content '>'
+			position absolute
+			right -15px
+		&:last-child
+			color blue
+			&:after
+				content ''
+				
+.top-search
+	padding 10px 20px
+	background white
+	box-shadow: 0px 0px 3px #E1E1E1;
+	display flex
+	justify-content  space-between
+.top-search-town
+	flex-grow 4
+	margin-right 20px
+.top-search-town-title
+	font-size 18px
+	flex(between)
+.top-search-town-input
+	input
+		width 100%
+		margin-top 10px
+.top-search-date
+	flex-grow 2
+	margin-right 20px
+.top-search-date-title
+	font-size 18px
+	flex(between)
+//.top-search-date-title-el
+.top-search-date-input
+	position relative
+	input
+		width 100%
+		margin-top 10px
+		&:hover
+			cursor pointer
+	.fa
+		position absolute
+		top 50%
+		right 15px
+		margin-top -4px
+		&:hover
+			cursor pointer
+.top-search-time
+	flex-grow 2
+	margin-right 20px
+	.dropdown
+		width 100%
+		margin-top 10px
+		background white
+		border 1px solid grey
+		ul
+			margin 0
+			padding 0
+			border 1px solid grey
+.top-search-time-title
+	font-size 18px
+	flex(between)
+.top-search-time-input
+	select
+		width 100%
+		margin-top 10px
+.top-search-but
+	flex-grow 1
+	f()
+	fl()
+	justify-content flex-end
+	button
+		border 0px
+		color white
+		background blue
+		text-transform uppercase
+		width 100%
+		padding 12px 0
+
+input[type="checkbox"]
+	display:none;
+
+
+input[type="checkbox"] + label span
+	display:inline-block;
+	width:24px;
+	height:24px;
+	margin:-1px 4px 0 0;
+	vertical-align:middle;
+	background:url(../img/chekbox.png) no-repeat;
+	cursor:pointer;
+
+
+input[type="checkbox"]:checked + label span
+	background:url(../img/checkbox-check.png) no-repeat;
+
+
+.content
+	margin-top 20px
+.content-wraper
+	f()
+.content-left
+	-webkit-flex:1;
+	margin-right 20px
+.content-right
+	-webkit-flex:4;
+	
+.show-from
+	text-align center
+	color white
+	background blue
+	padding 15px 0
+	text-transform uppercase
+	margin-bottom 10px
+.content-left-filter
+	padding 10px
+	bsh()
+	background white
+.filter-reting
+	margin-bottom 10px
+	padding-bottom 20px
+	border-bottom 1px solid #f8f8f8
+.content-left-title
+	font-weight 600
+	margin-bottom 10px
+.filter-reting-el
+	flex(between)
+.filter-reting-el-left
+	label
+		margin-right 5px
+	flex(between)
+	.active
+		color yellow!important
+	.fa
+		margin-right 3px
+		font-size 20px
+		color grey
+//.filter-reting-stars
+//.active
+//.filter-reting-el-right
+//.filter-review
+//.filter-review-slider
+.filter-name-wraper
+	f()
+	margin-bottom 10px
+	padding-bottom 20px
+	border-bottom 1px solid #f8f8f8
+	button
+		padding 0 10px
+//.filter-name 
+//.content-left-title 
+.filter-type 
+	margin-bottom 10px
+	padding-bottom 20px
+	border-bottom 1px solid #f8f8f8
+.filter-type-el 
+	margin-bottom 3px
+	
+.content-right-sort
+	flex(around)
+	bsh()
+	background white
+	.active
+		border-bottom 2px solid blue
+		&:after
+			content '\f0d7'
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+			margin-left 10px
+			
+.content-right-sort-el
+	text-transform uppercase
+	padding 15px 0
+	
+.content-right-sort-title
+	text-transform uppercase
+	
