@@ -380,6 +380,9 @@ input[type="checkbox"]:checked + label span {
   text-transform: uppercase;
   padding: 15px 0;
 }
+.content-right-sort-el:hover {
+  cursor: pointer;
+}
 .content-right-sort-title {
   text-transform: uppercase;
 }
