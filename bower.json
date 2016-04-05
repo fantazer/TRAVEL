@@ -19,6 +19,7 @@
     "components-font-awesome": "~4.3.0"
   },
   "devDependencies": {
-    "easydropdown": "^2.1.4"
+    "easydropdown": "^2.1.4",
+    "nouislider": "^8.3.0"
   }
 }

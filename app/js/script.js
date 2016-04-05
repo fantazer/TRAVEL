@@ -20,6 +20,35 @@
 */
 
 $(document).ready(function(){
+	var slider = document.getElementById('rangeSlider');
+
+	noUiSlider.create(slider, {
+		start: [0, 100],
+		connect: true,
+		step: 10,
+		range: {
+			'min': 0,
+			'max': 100,
+		},
+		pips: { // Show a scale with the slider
+			mode: 'steps',
+			density: 4
+		}
+	});
+
+	$('.toggle-top-menu').click(function(){
+		$('.top-menu-items').slideToggle()
+	})
+	$('.content-right-sort-title-toggle').click(function(){
+		$('.content-right-sort-el').slideToggle()
+	})
+	$('.content-right-sort-title-filter').click(function(){
+		$('.content-left').slideToggle()
+	})
+	$('.top-search-more').click(function(){
+		$('.top-search-date').slideToggle()
+		$('.top-search-time').slideToggle()
+	})
 
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/

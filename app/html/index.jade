@@ -9,6 +9,7 @@ body
 		.main-cont
 			.top-menu-wraper
 				.top-menu-logo
+					i.fa.fa-bars.toggle-top-menu
 					img(src="img/logo.png", alt="")
 				.top-menu-items
 					a(href="#") Авибилеты
@@ -19,7 +20,7 @@ body
 					span RUB
 					i.fa.fa-caret-down
 				a(href="#").top-menu-enter вход
-	
+				
 	.main-cont
 		.breadcrumbs
 			a(href="#") Главная
@@ -28,6 +29,9 @@ body
 
 	.main-cont
 		.top-search
+			.top-search-more 
+				span Подробннее
+				i.fa.fa-caret-down
 			.top-search-town
 				.top-search-town-title Название города или отеля
 				.top-search-town-input
@@ -83,39 +87,92 @@ body
 									.filter-reting-el-right 566
 						.filter-review
 							.content-left-title Отзывы туристов
+							#rangeSlider
 							.filter-review-slider
 						.filter-name
 							.content-left-title Имя содержит
 							.filter-name-wraper
 								input(type="text")
 								button ок
-						.filter-type
-							.content-left-title Вид экскурсии
-							+filterLine(1,'Пешеходные') 
-							+filterLine(2,'Автобусные') 
-							+filterLine(3,'Гастрономические') 
-						.filter-type
-							.content-left-title Тип экскурсии
-							+filterLine(4,'Групповая') 
-							+filterLine(5,'Индивидуальная') 
-						.filter-type
-							.content-left-title Продолжительность
-							+filterLine(6,'Полдня') 
-							+filterLine(7,'День') 
-							+filterLine(8,'2-4 дня')
-						.filter-type
-							.content-left-title Язык экскурсии
-							+filterLine(9,'Русский') 
-							+filterLine(10,'Английский') 
-							+filterLine(11,'Французский') 
-							+filterLine(12,'Другое') 
+						.filter-type-wraper
+							.filter-type
+								.content-left-title Вид экскурсии
+								+filterLine(1,'Пешеходные') 
+								+filterLine(2,'Автобусные') 
+								+filterLine(3,'Гастрономические') 
+							.filter-type
+								.content-left-title Тип экскурсии
+								+filterLine(4,'Групповая') 
+								+filterLine(5,'Индивидуальная') 
+							.filter-type
+								.content-left-title Продолжительность
+								+filterLine(6,'Полдня') 
+								+filterLine(7,'День') 
+								+filterLine(8,'2-4 дня')
+							.filter-type
+								.content-left-title Язык экскурсии
+								+filterLine(9,'Русский') 
+								+filterLine(10,'Английский') 
+								+filterLine(11,'Французский') 
+								+filterLine(12,'Другое') 
 				.content-right
 					.content-right-sort
-						.content-right-sort-title Сортировка
+						.content-right-sort-title 
+							.content-right-sort-title-filter
+								i.fa.fa-bars
+							span Сортировка
+							.content-right-sort-title-toggle
+								i.fa.fa-caret-down
 						.content-right-sort-el Цена
 						.content-right-sort-el.active Популярность
 						.content-right-sort-el Отзывы гостей
 						.content-right-sort-el Названия
+					- for (var f = 0; f < 6; f++)
+						.content-right-found
+							.content-right-found-content
+								.content-right-found-img
+									.content-right-found-img-big
+										img(src="img/otel-item.jpg", alt="")
+									.content-right-found-img-small
+										- for (var g = 0; g < 6; g++)
+											.content-right-found-img-small-el
+												img(src="img/otel-item.jpg", alt="")
+									.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!
+								.content-right-found-info
+									.content-right-found-title
+										.content-right-found-title-name Название экскурсии
+										+star()
+										.content-right-found-title-type Индивидуальная экскурсия
+									.content-right-found-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.
+									a(href="#").content-right-found-more Подробнее
+									.content-right-found-get
+										.content-right-found-get-type
+											.content-right-found-get-title Тип экскурсии
+											.content-right-found-get-type-wraper
+												.content-right-found-get-type-el
+													i.fa.fa-check
+													span 1-5 человек
+												.content-right-found-get-type-el
+													i.fa.fa-check
+													span Автобусная
+												.content-right-found-get-type-el
+													i.fa.fa-check
+													span 10 часов
+										.content-right-found-get-price
+											.content-right-found-get-title Цена за одного человека
+											.content-right-found-get-price-el
+												.content-right-found-get-price-val $100
+												a(href="#").content-right-found-get-price-but Забронировать
+												.content-right-found-get-price-text Снять бронь за 3 дня
+											.content-right-found-get-price-el
+												.content-right-found-get-price-val $70
+												a(href="#").content-right-found-get-price-but Купить
+												.content-right-found-get-price-text Бронь не отменить
+							.content-right-found-foter
+								a(href="#") Добавить в закладки
+								a(href="#") Забронировать отель
+								a(href="#") Забронировать билет
+								a(href="#") Найти экскурсию
 
 //Include script
 include ./block_html/script.jade

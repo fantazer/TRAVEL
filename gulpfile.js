@@ -1,5 +1,5 @@
-//var fs = require('fs');
-//var ftpConf = JSON.parse(fs.readFileSync('./ftp.json'));
+var fs = require('fs');
+var ftpConf = JSON.parse(fs.readFileSync('./ftp.json'));
 
 var gulp = require("gulp");
 var autoprefixer = require('gulp-autoprefixer');
