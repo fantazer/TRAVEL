@@ -24,9 +24,11 @@ $(document).ready(function(){
 	$(".main-head-slider").owlCarousel({
 	 	items : 1,
 	 	pagination : false,
-	 	autoPlay : true,
+	 	autoplay:true,
+    autoplayTimeout:10000,
 	 	singleItem:true,
-	 
+	 	loop:true,
+	 	animateOut: 'fadeOut'
 	 	}
 	 ); 
 
