@@ -26,3 +26,25 @@ mixin star()
 		i.fa.fa-star.active
 		i.fa.fa-star
 		i.fa.fa-star
+
+mixin place(img,country,name,days,val,type)
+	.main-place-el-filter
+	.main-place-el-img(style="background-image: url(#{img})")
+	.main-place-el-content
+		.main-place-country #{country}
+		.main-place-name #{name}
+		.main-place-days #{days}
+		.main-place-cost
+			.main-place-cost-value
+				span.main-place-from от 
+				span.main-place-val #{val}
+				span.main-place-rub ₽
+			.main-place-cost-text
+				span.main-place-text #{type}
+		//- .main-place-cost
+		//- 	.main-place-cost-value
+		//- 		span.main-place-from от 
+		//- 		span.main-place-val 16494
+		//- 		span.main-place-rub ₽
+		//- 	.main-place-cost-text
+		//- 		span.main-place-text отель + перелет

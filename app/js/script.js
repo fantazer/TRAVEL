@@ -20,6 +20,41 @@
 */
 
 $(document).ready(function(){
+
+	$(".main-head-slider").owlCarousel({
+	 	items : 1,
+	 	pagination : false,
+	 	autoPlay : true,
+	 	singleItem:true,
+	 
+	 	}
+	 ); 
+
+
+
+	$('.toggle-top-menu').click(function(){
+		$('.top-menu-items').slideToggle()
+	})
+	$('.toggle-top-menu').click(function(){
+		$('.main-head-cont-menu').slideToggle()
+	})
+	$('.content-right-sort-title-toggle').click(function(){
+		$('.content-right-sort-el').slideToggle()
+	})
+	$('.content-right-sort-title-filter').click(function(){
+		$('.content-left').slideToggle()
+	})
+	$('.top-search-more').click(function(){
+		$('.top-search-date').slideToggle()
+		$('.top-search-time').slideToggle()
+	})
+
+	//Forms style
+	$(".mewtwo-hotels-container label").css('color','#fff');
+	$('.mewtwo-hotels').removeAttr('class');
+	$(".mewtwo-show_hotels").css('display','none');
+	$(".mewtwo-hotels-submit_button").removeAttr('class');
+	$(".mewtwo-hotels").addClass('FormStyle')
 	var slider = document.getElementById('rangeSlider');
 
 	noUiSlider.create(slider, {
@@ -36,19 +71,6 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.toggle-top-menu').click(function(){
-		$('.top-menu-items').slideToggle()
-	})
-	$('.content-right-sort-title-toggle').click(function(){
-		$('.content-right-sort-el').slideToggle()
-	})
-	$('.content-right-sort-title-filter').click(function(){
-		$('.content-left').slideToggle()
-	})
-	$('.top-search-more').click(function(){
-		$('.top-search-date').slideToggle()
-		$('.top-search-time').slideToggle()
-	})
 
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
@@ -80,29 +102,7 @@ $(document).ready(function(){
 	/* ###### init OwlCarousel2  ######*/
 	/*!!! add class owlCarousel !!!*/
 	/* ###### bower i OwlCarousel2 ######*/
-	// $("#owl-example").owlCarousel({
-	//  	items : 1,
-	//		responsive : {
-	//		 		0:{
-	//				 	items : 1
-	//			 	},
-	//			 	768:{
-	//				 	items : 2
-	//			 	},
-	//			 	960:{
-	//				 	items : 2
-	//			 	},
-	//			 	
-	//		  },
-	//  	margin:50,
-	//  	autoHeight : true,
-	//  	pagination : false,
-	//  	autoPlay : true,
-	//  	singleItem:true,
-	//  	nav:true,
-	// 		navText:['<i class="fa fa-arrow-circle-o-left"></i>','<i class="fa fa-arrow-circle-o-right"></i>']
-	//  	}
-	//  ); 
+	
 	//		.owl-next,
 	//		.owl-prev
 	//			position absolute

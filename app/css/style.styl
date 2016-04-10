@@ -41,7 +41,8 @@ button
 	background blue
 	text-transform uppercase
 body
-	font-family "PT Sans"
+	//font-family "PT Sans"
+	font-family Arial,Helvetica,sans-serif
 	font-size 16px
 	background #F7F7F7
 
@@ -56,11 +57,11 @@ bsh(){
 	position relative
 .top-menu-wraper
 	+below(768px)
-		flex(between)
-	flex(around)
+		flexB(between)
+	flexB(around)
 .top-menu-logo
 	+below(768px)
-		flex(between)
+		flexB(between)
 		justify-content flex-start
 		flex-grow 0
 	flex-grow 2
@@ -88,14 +89,14 @@ bsh(){
 				border-bottom 1px solid #F8F8F8
 				
 	text-transform uppercase
-	flex(around)
+	flexB(around)
 	flex-grow 10
 	font-weight 600
 .top-menu-money
 	+below(768px)
 		display none
 	flex-grow 2
-	flex(mid)
+	flexB(mid)
 	font-weight 600
 	.fa
 		margin-left 10px
@@ -179,7 +180,7 @@ bsh(){
 	+below(768px)
 		display flex
 		justify-content space-between
-		//-webkit-flex 2
+		//flex 2
 		fl()
 .top-search
 	+below(768px)
@@ -194,7 +195,7 @@ bsh(){
 			width 50%
 .top-search-town-title
 	font-size 18px
-	flex(between)
+	flexB(between)
 .top-search-town-input
 	input
 		width 100%
@@ -208,9 +209,9 @@ bsh(){
 	margin-right 20px
 .top-search-date-title
 	font-size 18px
-	flex(between)
+	flexB(between)
 .top-search-date-title-el
-	//-webkit-flex 1
+	//flex 1
 .top-search-date-input
 	+below(380px)
 		margin-bottom 10px
@@ -244,7 +245,7 @@ bsh(){
 			border 1px solid grey
 .top-search-time-title
 	font-size 16px
-	flex(between)
+	flexB(between)
 .top-search-time-input
 	select
 		width 100%
@@ -295,13 +296,13 @@ input[type="checkbox"]:checked + label span
 		width 100%
 		margin-right 0
 		padding 10px
-	-webkit-flex:1;
+	flex:1;
 	margin-right 20px
 .content-right
 	+below(1280px)
-		-webkit-flex:none;
+		flex:none;
 		width 100%
-	-webkit-flex:4;
+	flex:4;
 	
 .show-from
 	text-align center
@@ -322,11 +323,11 @@ input[type="checkbox"]:checked + label span
 	font-weight 600
 	margin-bottom 10px
 .filter-reting-el
-	flex(between)
+	flexB(between)
 .filter-reting-el-left
 	label
 		margin-right 5px
-	flex(between)
+	flexB(between)
 	.active
 		color yellow!important
 	.fa
@@ -348,7 +349,7 @@ input[type="checkbox"]:checked + label span
 //.filter-review-slider
 .filter-name-wraper
 	input[type="text"]
-		width 100%
+		width 80%
 	f()
 	margin-bottom 10px
 	padding-bottom 20px
@@ -372,7 +373,7 @@ input[type="checkbox"]:checked + label span
 		position relative
 
 			
-	flex(around)
+	flexB(around)
 	bsh()
 	background white
 	.active
@@ -474,15 +475,17 @@ input[type="checkbox"]:checked + label span
 	+below(768px)
 		margin-right 0px
 	margin-right 20px
-	-webkit-flex:3;
+	flex:3;
+	img
+		width 100%
 .content-right-found-info
 	f()
 	fl()
-	-webkit-flex:8;
+	flex:8;
 .content-right-found-title
 	+below(768px)
 		fw()
-	flex(between)
+	flexB(between)
 	margin-bottom 10px
 .content-right-found-title-name
 	+below(1024px)
@@ -514,12 +517,12 @@ input[type="checkbox"]:checked + label span
 	margin-top 10px
 .content-right-found-get-type
 	+below(1024px)
-		-webkit-flex 3
+		flex 3
 	+below(768px)
 		width 100%
-		-webkit-flex none
+		flex none
 	margin-right 20px
-	-webkit-flex:2;
+	flex:2;
 .content-right-found-get-title
 	
 	font-weight 600
@@ -535,7 +538,7 @@ input[type="checkbox"]:checked + label span
 		margin-right 5px
 .content-right-found-get-type-wraper
 	+below(768px)
-		flex(between)
+		flexB(between)
 		padding 10px 0
 		margin-bottom 10px
 	.fa
@@ -544,22 +547,22 @@ input[type="checkbox"]:checked + label span
 .content-right-found-get-price
 	+below(768px)
 		width 100%
-		-webkit-flex none
-	-webkit-flex:8;
+		flex none
+	flex:8;
 .content-right-found-get-price-el
 	+below(768px)
 		padding 5px 0px
-	flex(between)
+	flexB(between)
 	padding 10px
 .content-right-found-get-price-val
-	-webkit-flex 1
+	flex 1
 	text-align center
 	font-weight 600
 	font-size 20px
 .content-right-found-get-price-but
 	+below(768px)
 		font-size 14px
-	-webkit-flex 1
+	flex 1
 	text-align center
 	background blue
 	color white
@@ -569,9 +572,9 @@ input[type="checkbox"]:checked + label span
 
 .content-right-found-get-price-text
 	+below(768px)
-		-webkit-flex 2
+		flex 2
 		display none
-	-webkit-flex 1
+	flex 1
 	text-align center
 	font-size 12px
 .content-right-found-foter
@@ -579,7 +582,7 @@ input[type="checkbox"]:checked + label span
 		fw()
 		margin-top 10px
 	margin-top 20px
-	flex(between)
+	flexB(between)
 	a
 		+below(768px)
 			font-size 12px
@@ -605,3 +608,444 @@ input[type="checkbox"]:checked + label span
 	text-align center
 	padding 5px 10px
 	margin-top 10px
+	
+.test
+	display flex
+.test-left
+	flex 8
+	background red
+	display flex
+.test-right
+	flex 5
+	background green
+	display flex
+.main-cont
+	center(1240px)
+.main-head 
+	position relative
+	height 500px
+
+.main-head-filter
+	background-color: rgba(34,34,34,.15);
+	background-image: -webkit-linear-gradient(left,rgba(34,34,34,.55),rgba(34,34,34,.5),rgba(34,34,34,.4),rgba(34,34,34,.2),rgba(34,34,34,0));
+	background-image: -moz-linear-gradient(left,rgba(34,34,34,.55),rgba(34,34,34,.5),rgba(34,34,34,.4),rgba(34,34,34,.2),rgba(34,34,34,0));
+	background-image: -o-linear-gradient(left,rgba(34,34,34,.55),rgba(34,34,34,.5),rgba(34,34,34,.4),rgba(34,34,34,.2),rgba(34,34,34,0));
+	background-image: linear-gradient(to right,rgba(34,34,34,.55),rgba(34,34,34,.5),rgba(34,34,34,.4),rgba(34,34,34,.2),rgba(34,34,34,0));
+	height 100%
+	position absolute
+	top 0px
+	left 0px
+	width 100%
+	z-index 200
+.main-head-slider
+	width 100%
+	.owl-item
+		+below(500px)
+			height 700px
+		height 500px
+.main-head-slider-el
+	background-size cover
+	background-position center top
+	width 100%
+	height 100%
+	.main-cont
+		z-index 300
+		position relative
+		height 100%
+.main-head-content
+	position absolute
+	top 0px
+	left 0px
+	z-index 300
+	width 100%
+.main-head-cont 
+	center(1460px)
+	flexB(between)
+	height 70px
+	+below(768px)
+		.toggle-top-menu
+			flex 1
+			margin 0
+			text-align center
+.main-head-cont-logo
+	+below(1280px)
+		flex 1
+		img
+			margin 0 auto
+			width 100%
+	+below(768px)
+		justify-content flex-start
+		img
+			width 50%!important
+	+below(640px)
+		flex 4
+		
+	height 100%
+	flexB(mid)
+	img
+		width 80%
+.main-head-cont-menu
+	+below(1280px)
+		flex 6
+		z-index 9999
+	+above(768px)
+		display flex!important
+	+below(768px)
+		display none
+		position absolute
+		left 0px
+		top 70px
+		height auto
+		fw()
+		background white
+		a
+			width 100%
+			color black!important
+			padding 15px
+			
+	flexB(around)
+	height 100%
+	a
+		text-transform uppercase
+		color white
+		height 100%
+		flexB(mid)
+		position relative
+		&:hover
+			&:after
+				content ''
+				position absolute
+				height 2px
+				width 100%
+				background white
+				left 0px
+				bottom 0px
+	width 100%
+.main-head-cont-logo-img
+	width 100%
+.main-head-cont-enter 
+	+below(1280px)
+		flex 1
+		text-align center
+	+below(768px)
+		padding-right 20px
+	+below(640px)
+		font-size 12px
+	text-transform uppercase
+	color white
+
+.main-head-row-input
+	flexB(between)
+.main-head-row-input-el
+	f()
+	fl()
+	width 100%
+	input
+		width 100%
+		
+.main-head-fullwidth
+	+below(1024px)
+		margin-bottom 10px
+	padding 0 20px
+	//+below(1280px)
+	.fa
+		color white
+	width 100%
+	border-bottom  1px solid rgba(255, 255, 255, 0.2)
+	margin-bottom 70px
+	
+.main-head-slider-content
+	flexB(mid)
+	fl()
+	color white
+	z-index 4000
+	width 100%
+	position absolute
+	bottom 10%
+.main-head-slider-country
+	font-size 13px
+	opacity .8
+.main-head-slider-name
+	font-size 32px
+	margin-bottom 10px
+.main-head-slider-days
+	font-size 13px
+	opacity .8
+	margin-bottom 10px
+.main-head-slider-cost
+	margin-bottom 10px
+	flexB(mid)
+	width 250px
+	span
+		margin 0 4px
+.main-head-slider-from
+	color #ffeba0
+.main-head-slider-val
+	color #ffeba0
+	font-size 18px
+.main-head-slider-rub
+	color #ffeba0
+	font-size 18px
+.main-head-slider-text
+	color white
+	font-size 13px
+.main-head-slider-but
+	padding 5px 10px
+	border 1px solid white
+	border-radius 5px
+	font-size 13px
+	height 28px
+	margin-top 15px
+	color white
+.main-head-slider-cost-value
+	width 65%
+	text-align right
+.main-head-slider-cost-text
+	width 35%
+	
+.main-service
+	background #F3F1ED;
+//.main-cont
+.main-service-wraper
+	+below(768px)
+		fw()
+	flexB(mid)
+.main-service-el
+	+below(768px)
+		width 25%
+		flex initial
+	height 120px
+	flexB(mid)
+	fl()
+	flex 1
+	&:hover
+		background white
+.main-service-el-img
+	img
+		width 32px
+		
+.main-service-el-text
+	+below(640px)
+		font-size 9px
+	font-size 13px
+	margin-top 20px
+	text-align center
+//.main-place
+//.main-cont
+//.main-wraper
+.main-place-row
+	+below(768px)
+		fw()
+	f()
+.main-place-el
+	+below(768px)
+		width 100%
+	position relative
+	&:hover
+		.main-place-el-filter
+			background-image: linear-gradient(to right, rgba(34,34,34,0.55), rgba(34,34,34,0.5), rgba(34, 34, 34, 0.53), rgba(34, 34, 34, 0.54), rgba(34, 34, 34, 0.58));
+
+.main-place-el-filter
+	position absolute
+	top 0px
+	left 0px
+	width 100%
+	height 100%
+	transition: background-color .35s,background-position .35s;
+	background-color: rgba(34,34,34,.15);
+	background-image: linear-gradient(to right,rgba(34,34,34,.55),rgba(34,34,34,.5),rgba(34,34,34,.4),rgba(34,34,34,.2),rgba(34,34,34,0));
+.main-place-el-img
+	height 255px
+	background-size cover
+	background-position: bottom center
+//.main-place-el-content
+.main-small-small-big
+	+below(768px)
+		.main-place-el
+			flex initial!important
+	.main-place-el
+		&:nth-child(1)
+			flex 2
+		&:nth-child(2)
+			flex 1
+		&:nth-child(3)
+			flex 1
+.main-big-small-small
+	+below(768px)
+		.main-place-el
+			flex initial!important
+	.main-place-el
+		&:nth-child(1)
+			flex 1
+		&:nth-child(2)
+			flex 1
+		&:nth-child(3)
+			flex 2
+
+.main-place-el-content
+	color white
+	z-index 4000
+	position absolute
+	top 20px
+	left 20px
+.main-place-country
+	font-size 13px
+	opacity .8
+.main-place-name
+	font-size 18px
+	margin 10px 0
+.main-place-days
+	font-size 13px
+	opacity .8
+	margin-bottom 10px
+.main-place-cost
+	margin-bottom 10px
+	f()
+	span
+		margin 0 4px
+.main-place-from
+	color #ffeba0
+.main-place-val
+	color #ffeba0
+	font-size 18px
+.main-place-rub
+	color #ffeba0
+	font-size 18px
+.main-place-text
+	color white
+	font-size 13px
+.head-form
+	.main-cont
+		padding 10px
+
+div[class*="main-type"]
+	fw()
+	f()
+	width 50%
+//.main-type-one
+	
+.main-type-one-left
+	.main-place-el
+		height 255px
+		display block
+		&:nth-child(1)
+			width 100%
+		&:nth-child(2)
+			width 50%
+		&:nth-child(3)
+			width 50%
+.main-type-one-right
+	.main-place-el
+		height 255px
+		display block
+		&:nth-child(1)
+			width 50%
+		&:nth-child(2)
+			width 50%
+		&:nth-child(3)
+			width 100%
+			
+//.main-type-two
+
+.main-type-two-left
+
+	.main-place-el
+		height 255px
+		display block
+		&:nth-child(1)
+			width 50%
+		&:nth-child(2)
+			width 50%
+		&:nth-child(3)
+			width 100%
+.main-type-two-right
+
+	.main-place-el
+		display block
+		.main-place-el-img
+			height 100%
+		&:nth-child(1)
+			width 100%
+			height 510px
+
+
+//.main-type-three
+
+.main-type-three-left
+	.main-place-el
+		display block
+		.main-place-el-img
+			height 100%
+		&:nth-child(1)
+			width 100%
+			height 510px
+.main-type-three-right
+	.main-place-el
+		height 255px
+		display block
+		&:nth-child(1)
+			width 50%
+		&:nth-child(2)
+			width 50%
+		&:nth-child(3)
+			width 100%
+	
+			
+.main-templ-four
+	f()
+	fw()
+	.main-type-four-left
+		f()
+		fw()
+		width 25%
+		.main-place-el
+			width 100%
+	.main-type-four-center
+		f()
+		fw()
+		width 50%
+		.main-place-el
+			width 100%
+			height 510px
+			.main-place-el-img
+				height 100%
+	.main-type-four-right
+		f()
+		fw()
+		width 25%
+		.main-place-el
+			width 100%
+			
+.main-templ-five
+	f()
+	fw()
+	.main-type-five-center
+		f()
+		fw()
+		width 100%
+		.main-place-el
+			width 100%
+			height 510px
+			.main-place-el-img
+				height 100%
+.main-templ-six
+	f()
+	fw()
+	.main-type-six-center
+		f()
+		fw()
+		width 100%
+		.main-place-el
+			width 50%
+			height 255px
+			.main-place-el-img
+				height 100%
++below(768px)
+	div[class*="main-type"]
+		fw()
+		f()
+		width 100%!important
+		height 255px!important
+		.main-place-el
+			height 255px!important
+			width 100%!important
