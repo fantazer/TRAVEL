@@ -2024,10 +2024,86 @@ div[class*="main-type"] {
     display: -ms-flexbox;
     display: flex;
     width: 100% !important;
-    height: 255px !important;
   }
   div[class*="main-type"] .main-place-el {
-    height: 255px !important;
+    max-height: 255px !important;
     width: 100% !important;
   }
+}
+.footer {
+  border-top: 3px solid #3051aa;
+  margin-top: 40px;
+}
+.footer-wraper {
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .footer-wraper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-left {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer-left a {
+  margin: 0 20px;
+}
+@media only screen and (max-width: 768px) {
+  .footer-right {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+}
+.footer-right .fa {
+  background: #f3f3f3;
+  color: #ccc;
+  padding: 10px;
+  border-right: 1px solid #dbdbdb;
+}
+.footer-right .fa:hover {
+  background: #337ab7;
+  color: #fff;
+}
+.footer-right a:last-child .fa {
+  border: 0px;
 }

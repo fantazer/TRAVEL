@@ -1045,7 +1045,39 @@ div[class*="main-type"]
 		fw()
 		f()
 		width 100%!important
-		height 255px!important
 		.main-place-el
-			height 255px!important
+			max-height 255px!important
 			width 100%!important
+			
+.footer
+	border-top 3px solid #3051aa
+	margin-top 40px
+.footer-wraper
+	+below(768px)
+		fw()
+	padding 20px
+	flexB(between)
+.footer-left
+	+below(768px)
+		width 100%
+		flexB(mid)
+	a
+		margin 0 20px
+.footer-right
+	+below(768px)
+		width 100%
+		flexB(mid)
+		margin-top 10px
+	.fa
+		background #F3F3F3
+		color #CCCCCC
+		padding 10px
+		border-right 1px solid #CCCCCC+30%
+		&:hover
+			background #337ab7
+			color white
+	a
+		&:last-child
+			.fa
+				border 0px
+		
