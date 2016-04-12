@@ -55,10 +55,13 @@ bsh(){
 	background white
 	box-shadow: 0px 2px 3px #E1E1E1;
 	position relative
+	/*.main-cont
+		center(1440px)*/
 .top-menu-wraper
 	+below(768px)
 		flexB(between)
 	flexB(around)
+	position relative
 .top-menu-logo
 	+below(768px)
 		flexB(between)
@@ -108,7 +111,52 @@ bsh(){
 	text-transform uppercase
 	text-align center
 	font-weight 600
-
+	&:hover
+		cursor pointer
+.log-wraper-remember
+	flexB(between)
+	margin-top 12px
+	line-height 10px
+.log-foget
+	text-align center
+	display inline-block
+	width 100%
+	text-transform uppercase
+	font-size 10px
+	margin-top 10px
+	//text-decoration underline
+	color blue
+.log-wraper,
+.log-wraper-main
+	+below(640px)
+		width 100%
+	position absolute
+	top 100%
+	right 0px
+	width 250px
+	padding 10px
+	background white
+	z-index 2000
+	margin-top 10px
+	display none
+	bsh()
+	input
+		+below(768px)
+			margin-bottom 25px
+		width 100%
+		margin-bottom 10px
+	button
+		width 100%
+		padding 10px
+	.log-social
+		margin-top 10px
+		flexB(around)
+		a
+			color blue
+			i 
+				color blue
+.log-wraper-main
+	margin-top 0
 .toggle-top-menu
 	display none
 	+below(768px)
@@ -150,6 +198,7 @@ bsh(){
 		margin-bottom 10px
 	flex-grow 4
 	margin-right 20px
+
 .top-search-more
 	+below(768px)
 		display block
@@ -196,6 +245,7 @@ bsh(){
 .top-search-town-title
 	font-size 18px
 	flexB(between)
+	margin-top 5px
 .top-search-town-input
 	input
 		width 100%
@@ -239,6 +289,7 @@ bsh(){
 		margin-top 10px
 		background white
 		border 1px solid grey
+		height 40px
 		ul
 			margin 0
 			padding 0
@@ -265,7 +316,9 @@ bsh(){
 		text-transform uppercase
 		width 100%
 		padding 12px 0
-
+		height 39px
+		display inline-block
+		//border-bottom: 2px solid white;
 input[type="checkbox"]
 	display:none;
 
@@ -522,7 +575,7 @@ input[type="checkbox"]:checked + label span
 		width 100%
 		flex none
 	margin-right 20px
-	flex:2;
+	flex:3;
 .content-right-found-get-title
 	
 	font-weight 600
@@ -537,6 +590,7 @@ input[type="checkbox"]:checked + label span
 		color blue
 		margin-right 5px
 .content-right-found-get-type-wraper
+	margin-top 15px
 	+below(768px)
 		flexB(between)
 		padding 10px 0
@@ -662,6 +716,7 @@ input[type="checkbox"]:checked + label span
 	center(1460px)
 	flexB(between)
 	height 70px
+	position relative
 	+below(768px)
 		.toggle-top-menu
 			flex 1
@@ -733,7 +788,14 @@ input[type="checkbox"]:checked + label span
 		font-size 12px
 	text-transform uppercase
 	color white
-
+	&:hover
+		cursor pointer
+.log-wraper-remember-el
+	span,a
+		font-size 10px
+	a
+		text-decoration underline
+	flexB(mid)
 .main-head-row-input
 	flexB(between)
 .main-head-row-input-el
@@ -742,7 +804,21 @@ input[type="checkbox"]:checked + label span
 	width 100%
 	input
 		width 100%
-		
+#registration-form
+	display none
+.log-registration
+	margin 10px 0
+	span 
+		display inline-block
+		width 100%
+		text-align center
+		font-size 12px
+		color #bcbcbc
+.registration-trigger
+	text-decoration underline
+	color blue!important
+	&:hover
+		cursor pointer
 .main-head-fullwidth
 	+below(1024px)
 		margin-bottom 10px
@@ -753,7 +829,15 @@ input[type="checkbox"]:checked + label span
 	width 100%
 	border-bottom  1px solid rgba(255, 255, 255, 0.2)
 	margin-bottom 70px
-	
+.log-social-title
+	font-size 12px
+	text-align center
+	margin 15px 0px
+.registr-text
+	font-size 12px
+	text-align center
+	margin 10px 0
+	color #cbcbcb
 .main-head-slider-content
 	flexB(mid)
 	fl()

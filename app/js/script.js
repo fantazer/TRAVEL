@@ -32,8 +32,36 @@ $(document).ready(function(){
 	 	}
 	 ); 
 
+	$('.top-menu-enter').click(function(){
+		$('.log-wraper').slideToggle()
+	})
+	
+
+	 $(document).click(function (event) {
+        if ($(event.target).closest('.log-wraper').length == 0 
+            && $(event.target).attr('class') != 'top-menu-enter' 
+
+             ) {
+            $('.log-wraper').hide();
+        }
+    });
+	 $('.main-head-cont-enter').click(function(){
+		$('.log-wraper-main').slideToggle()
+	})
+	 $(document).click(function (event) {
+        if ($(event.target).closest('.log-wraper-main').length == 0 
+            && $(event.target).attr('class') != 'main-head-cont-enter' 
+
+             ) {
+            $('.log-wraper-main').hide();
+        }
+    });
 
 
+	$('.registration-trigger').click(function(){
+		$('#login-form').hide()
+		$('#registration-form').show()
+	})
 	$('.toggle-top-menu').click(function(){
 		$('.top-menu-items').slideToggle()
 	})

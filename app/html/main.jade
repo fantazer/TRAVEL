@@ -72,7 +72,56 @@ body
 							span экскурсии
 						a(href="#") 
 							span страховка
-					a(href="#").main-head-cont-enter Вход
+					.main-head-cont-enter Вход
+					.log-wraper-main
+						form(action="")#login-form
+							input(type="text" placeholder="E-mail")
+							input(type="password" placeholder="Пароль")
+							button Вход
+							.log-wraper-remember
+								.log-wraper-remember-el
+									input(id='login', type='checkbox', name='rr')
+									label(for='login') 
+										span
+									span Чужой компьютер
+								.log-wraper-remember-el
+									a(href="#") Востановить пароль
+							.log-registration
+								span.registration-trigger Зарегистрироваться 
+								span для полного доступа к сервисам
+							.log-social-title Авторизоваться через соц. сети
+
+							.log-social
+								a(href="#")
+									i.fa.fa-vk
+								a(href="#")
+									i.fa.fa-facebook
+								a(href="#")
+									i.fa.fa-twitter
+								a(href="#")
+									i.fa.fa-google-plus
+								a(href="#")
+									i.fa.fa-instagram
+						form(action="")#registration-form
+							input(type="text" placeholder="Фамилия")
+							input(type="text" placeholder="Имя")
+							input(type="text" placeholder="E-mail")
+							input(type="password" placeholder="Пароль")
+							button Зарегистрироваться
+							.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
+							.log-social-title Авторизоваться через соц. сети
+
+							.log-social
+								a(href="#")
+									i.fa.fa-vk
+								a(href="#")
+									i.fa.fa-facebook
+								a(href="#")
+									i.fa.fa-twitter
+								a(href="#")
+									i.fa.fa-google-plus
+								a(href="#")
+									i.fa.fa-instagram
 		.head-form
 			.main-cont
 					script(src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716")
@@ -188,23 +237,7 @@ body
 							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
 
 
-	.footer
-		.main-cont
-			.footer-wraper
-				.footer-left
-					a(href="#") Помощь
-					a(href="#") Портал
-				.footer-right
-					a(href="#")
-						i.fa.fa-vk
-					a(href="#")
-						i.fa.fa-facebook
-					a(href="#")
-						i.fa.fa-twitter
-					a(href="#")
-						i.fa.fa-google-plus
-					a(href="#")
-						i.fa.fa-instagram
+	include ./block_html/footer.jade
 				
 
 	style.
