@@ -195,10 +195,10 @@ bsh(){
 	+below(768px)
 		width 100%
 		margin-right 0
-		margin-bottom 10px
+		//margin-bottom 10px
 	flex-grow 4
 	margin-right 20px
-
+	
 .top-search-more
 	+below(768px)
 		display block
@@ -219,6 +219,7 @@ bsh(){
 .top-search-date-title,
 .top-search-time-title
 	font-size 16px!important
+	width 100%
 	+below(768px)
 		font-size 14px!important
 		margin 5px 0
@@ -231,6 +232,10 @@ bsh(){
 		justify-content space-between
 		//flex 2
 		fl()
+	flexB(between)
+	fl()
+	width 100%
+		
 .top-search
 	+below(768px)
 		input[type="text"],
@@ -336,7 +341,19 @@ input[type="checkbox"] + label span
 input[type="checkbox"]:checked + label span
 	background:url(../img/checkbox-check.png) no-repeat;
 
-
+.top-search-date-input,
+.top-search-time-input,
+.top-search-town-input
+	width 100%
+	
+.top-search-town
+	flex 4
+.top-search-date
+	flex 2
+.top-search-time
+	flex 2
+.top-search-but
+	flex 1
 .content
 	margin-top 20px
 .content-wraper
