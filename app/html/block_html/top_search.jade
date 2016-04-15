@@ -1,0 +1,36 @@
+.main-cont
+	.top-search
+		.top-search-more 
+			span Подробннее
+			i.fa.fa-caret-down
+		.top-search-town
+			.top-search-town-title Название города или отеля
+			.top-search-town-input
+				input(type="text")
+		.top-search-date
+			.top-search-date-title 
+				.top-search-date-title-el Дата экскурсии
+				.top-search-date-title-el 
+					input#r1(type='checkbox', name='rr')
+					label(for='r1') 
+						span 
+					span +/- 3 дня
+
+			.top-search-date-input
+				input(type="text").input-date
+				i.fa.fa-calendar
+		.top-search-time
+			.top-search-time-title 
+				.top-search-date-title-el Время
+				.top-search-date-title-el 
+					input#r2(type='checkbox', name='rr')
+					label(for='r2') 
+						span 
+					span в любое время
+			.top-search-time-input
+				select(name="").dropdown
+					option 10:00
+					option 10:00
+					option 10:00
+		.top-search-but
+			button найти

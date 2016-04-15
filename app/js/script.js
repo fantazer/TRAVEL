@@ -65,7 +65,8 @@ $(document).ready(function(){
 	$('.toggle-top-menu').click(function(){
 		$('.top-menu-items').slideToggle()
 	})
-	$('.toggle-top-menu').click(function(){
+
+	$('.toggle-top-menu').unbind('click').click(function(){
 		$('.main-head-cont-menu').slideToggle()
 	})
 	$('.content-right-sort-title-toggle').click(function(){
@@ -73,6 +74,9 @@ $(document).ready(function(){
 	})
 	$('.content-right-sort-title-filter').click(function(){
 		$('.content-left').slideToggle()
+	})
+	$('.btn-more').click(function(){
+		$('.result-right-hide-mobile').slideToggle()
 	})
 	$('.top-search-more').click(function(){
 		$('.top-search-date').slideToggle()
@@ -85,6 +89,72 @@ $(document).ready(function(){
 	$(".mewtwo-show_hotels").css('display','none');
 	$(".mewtwo-hotels-submit_button").removeAttr('class');
 	$(".mewtwo-hotels").addClass('FormStyle')
+
+	//Get progress Bar
+	$('.result-mark-value').each(function(){
+		var progress = $(this).data('mark');
+		$(this).css('width',progress+'%')
+		if(progress<30 && progress>0){
+			$(this).css('background-color','#C34632')
+		}
+		if(progress<70 && progress>30){
+			$(this).css('background-color','#0074D9')
+		}
+		if( progress>70){
+			$(this).css('background-color','#5DC332')
+		}
+	})
+
+
+	$('#get-bron').click(function(){
+		$('.modal-order').bPopup({
+				closeClass:'fa',
+					position:['auto','auto'], // position center
+				follow: [true,false]
+		}); 
+	})
+
+	$('.tour-table-el-right .btn-main').click(function(){
+		$('.modal-bron').bPopup({
+				closeClass:'btn-main',
+				position:['auto','auto'], // position center
+				follow: [true,false],
+		}); 
+	})
+
+	$('#modal-get-bron').click(function(){
+			$('.modal-order').bPopup().close();
+			$('.modal-bron').bPopup({
+				closeClass:'btn-main',
+				position:['auto','auto'], // position center
+				follow: [true,false],
+				})
+	})
+	$('#modal-get-bay').click(function(){
+			$('.modal-order').bPopup().close();
+			$('.modal-exs').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
+
+	//datePicker
+	
+		$('.input-date').datepicker({
+			language: 'ru'
+		});
+		$('.input-date').on('changeDate', function(ev){
+		    $(this).datepicker('hide');
+		});
+
+
+		$('#modal-date').datepicker({
+			language: 'ru'
+		});
+		$('#modal-date').on('changeDate', function(ev){
+		    $(this).datepicker('hide');
+		});
+
 	var slider = document.getElementById('rangeSlider');
 
 	noUiSlider.create(slider, {
@@ -101,6 +171,7 @@ $(document).ready(function(){
 		}
 	});
 
+	
 
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/

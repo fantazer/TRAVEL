@@ -43,8 +43,9 @@ button
 body
 	//font-family "PT Sans"
 	font-family Arial,Helvetica,sans-serif
-	font-size 16px
+	font-size 14px
 	background #F7F7F7
+	color #545454
 
 bsh(){
 	box-shadow: 0px 2px 3px #E1E1E1;
@@ -70,8 +71,11 @@ bsh(){
 	flex-grow 2
 	img
 		+below(768px)
-			margin 0
-			width 30%
+			margin 0 auto
+			width 70px
+			position absolute
+			left 50%
+			margin-left -35px
 		margin 0 auto
 .top-menu-items
 	+below(768px)
@@ -169,6 +173,8 @@ bsh(){
 .breadcrumbs
 	+below(768px)
 		padding 20px
+		f()
+		fw()
 	padding 20px 0
 	a
 		margin-right 20px
@@ -232,6 +238,8 @@ bsh(){
 		justify-content space-between
 		//flex 2
 		fl()
+		flex 1 1 100%!important
+		width 100%
 	flexB(between)
 	fl()
 	width 100%
@@ -258,6 +266,7 @@ bsh(){
 .top-search-date
 	+below(768px)
 		display none
+		margin-right 0
 	+below(380px)
 		margin-right 0
 	flex-grow 2
@@ -310,6 +319,7 @@ bsh(){
 	+below(768px)
 		width 100%
 		margin-top 10px
+		flex 1 1 100%!important
 	flex-grow 1
 	f()
 	fl()
@@ -347,7 +357,7 @@ input[type="checkbox"]:checked + label span
 	width 100%
 	
 .top-search-town
-	flex 4
+	flex 3
 .top-search-date
 	flex 2
 .top-search-time
@@ -711,6 +721,8 @@ input[type="checkbox"]:checked + label span
 .main-head-slider
 	width 100%
 	.owl-item
+		+below(768px)
+			height 600px
 		+below(500px)
 			height 700px
 		height 500px
@@ -760,9 +772,9 @@ input[type="checkbox"]:checked + label span
 	+below(1280px)
 		flex 6
 		z-index 9999
-	+above(768px)
+	+above(769px)
 		display flex!important
-	+below(768px)
+	+below(769px)
 		display none
 		position absolute
 		left 0px
@@ -1181,4 +1193,475 @@ div[class*="main-type"]
 		&:last-child
 			.fa
 				border 0px
+
+.back-search
+	margin 10px 0
+	flexB(mid)
+	justify-content flex-start
+	padding 10px
+	background white
+	bsh()
+.triangle-left
+	triangle:left 5px black
+	margin-right 10px
+.result
+	margin-bottom 20px
+.result-wraper
+	padding 20px
+	background white
+	bsh()
+	fw()
+	f()
+.result-left
+	+below(1024px)
+		width 100%
+		flex 1 1 100%
+		order 2
+	flex 7
+.result-right
+	+below(1024px)
+		order 1
+		width 100%
+		flex 1 1 100%
+		margin-left 0
+	flex 2
+	margin-left 20px
+	p
+		font-size 14px
+		color #545454
+.result-left-title
+	flexB(mid)
+	fw()
+	justify-content flex-start
+	.big-title
+		+below(640px)
+			font-size 22px
+		margin-right 20px
+.big-title
+	color blue
+	font-size 28px
+	margin-bottom 10px
+	
+.result-left-alert
+	+below(640px)
+		margin-top 10px
+	color red
+	text-transform uppercase
+	margin-bottom 10px
+	font-size 14px
+	font-weight 600
+.result-left-img
+	margin-bottom 20px
+	img
+		width 100%
+.mid-title
+	font-size 14px
+	text-transform uppercase
+	font-weight 600
+	margin-bottom 20px
+	color black
+.mid-title-border
+	font-size 14px
+	text-transform uppercase
+	font-weight 600
+	margin-bottom 20px
+	padding-bottom 20px
+	border-bottom 1px solid #e1e1e1
+	color black
+.tour-table
+	margin-bottom 20px
+.tour-table-title
+	background #f7f7f7
+	padding 10px 20px
+	flexB(between)
+.tour-table-title-date
+	+below(640px)
+		font-size 10px
+	font-weight 600
+	flex 1
+	color #8F8F8F
+.tour-table-title-info
+	+below(640px)
+		font-size 10px
+	font-weight 600
+	flex 3
+	color #8F8F8F
+.tour-table-el
+	+below(640px)
+		padding 10px
+	padding 10px 20px
+	border 1px solid #e1e1e1
+	margin-bottom 10px
+.tour-table-el-wraper
+	flexB(mid)
+	fw()
+.tour-table-el-title
+	flexB(between)
+	fw()
+	a
+		+below(768px)
+			width 100%
+			display block
+			text-align center
+		text-decoration underline
+		color blue
+		margin-bottom 10px
+		font-size 14px
+.tour-table-el-left
+	+below(768px)
+		flex 1 1 100%
+		margin-bottom 10px
+		margin-right 0
+	flex 4
+	margin-right 20px
+.tour-table-el-row
+	+below(1024px)
+		box-shadow: 0px 0px 4px #E3E0E0;
+		background: #F7F7F7;
+		padding 10px
+	flexB(between)
+	fw()
+	margin-bottom 10px
+	padding 5px
+.tour-table-el-date
+	+below(640px)
+		flex 1 1 100%
+		text-align left
+		font-weight 600
+	flex 1
+	font-size 14px
+.tour-table-el-text
+	+below(640px)
+		flex 1 1 100%
+		text-align left
+		font-size 12px
+		margin 10px 0
+	flex 4
+	font-size 14px
+.tour-table-el-cost
+	+below(768px)
+		text-align left
+	+below(640px)
+		flex 1 1 100%
+	color black
+	flex 1
+	font-size 18px
+	font-weight 600
+.tour-table-el-right
+	+below(768px)
+		flex 1 1 100%
+	flex 1
+.btn-main
+	text-align center
+	background #0074d9
+	color #fff
+	padding 10px
+	text-transform uppercase
+	font-size 14px
+	display block
+	&:hover
+		cursor pointer
+.result-mark
+	f()
+	fw()
+	margin-bottom 20px
+.result-mark-left
+	+below(768px)
+		flex 1 1 100%
+	flex 1
+.result-mark-el
+	margin-bottom 10px
+	flexB(mid)
+	justify-content flex-strat
+	margin-right 20px
+.result-mark-name
+	+below(640px)
+		flex 0 0 40%
+	flex 1
+	font-size 14px
+.result-mark-row
+	+below(640px)
+		flex 0 0 60%
+	flex 3
+	position relative
+	//padding 5px
+	background #F7F7F7
+.result-mark-value
+	font-size 12px
+	color white
+	padding 5px
+.result-mark-col
+	position absolute
+	left 0px
+	top 0px
+	height 100%
+.result-mark-right
+	+below(768px)
+		flex 1 1 100%
+	flex 1
+
+.result-info
+	f()
+	fw()
+	margin-bottom 20px
+.result-info-left
+	+below(640px)
+		flex 1 1 100%
+	flex 1
+.result-info-el
+	flexB(mid)
+	justify-content flex-start
+	margin-bottom 10px
+.result-info-el-color
+	width 10px
+	height 10px
+	border-radius 50%
+	margin-right 10px
+.result-info-el-color-red
+	background red
+.result-info-el-info
+	font-size 14px
+.result-info-el-color-green
+	background #5DC332
+.result-info-right
+	+below(640px)
+		flex 1 1 100%
+	flex 1
+.result-info-el-color-blue
+	background blue
+	
+.result-place
+	f()
+	fw()
+	margin-bottom 20px
+.result-place-img
+	+below(640px)
+		flex 1 1 100%
+		margin-bottom 10px
+	flex 1
+	margin-right 10px
+	img
+		width 100%
+.result-place-info
+	+below(640px)
+		flex 1 1 100%
+	flex 5
+.result-place-title
+	color blue
+	font-weight 600
+	margin-bottom 10px
+.result-place-text
+	font-size 14px
+
+.result-right-title
+	+below(768px)
+		text-align center
+	text-transform uppercase
+	font-size 16px
+	color blue
+	margin-bottom 10px
+.result-cost
+	margin 20px 0
+	flexB(mid)
+.result-cost-text
+	span 
+		display block
+		text-align right
+		margin-right 10px
+		font-size 14px
+.result-cost-val
+	font-size 24px
+	font-weight 600
+	color black
+.result-right-img
+	f()
+	fw()
+	margin-bottom 40px
+	a
+		color blue
+		text-decoration underline
+		font-size 14px
+		margin-top 10px
+.result-right-img-el
+	width calc(33.333% - 4px)
+	margin 2px
+	img
+		width 100%
+.result-right-text
+	margin-bottom 25px
+
+.gid-wraper
+	f()
+	fw()
+//.gid
+.gid-img
+	+below(1024px)
+		width 15%
+	+below(640px)
+		width 30%
+	width 30%
+	margin-right 10px
+	img
+		width 100%
+.gid-info
+	width 60%
+.gid-title
+	color blue
+	margin-bottom 10px
+.gid-text
+	font-size 10px
+.same-excurse
+	padding 10px
+.same-excurse-wraper
+	flexB(between)
+	fw()
+.same-excurse-el
+	+below(768px)
+		width 100%
+		margin-bottom 10px
+	width 33%
+	position relative
+.same-excurse-title
+	background blue
+	opacity .8
+	color white
+	padding 10px
+	text-transform uppercase
+	position absolute
+	left 0
+	bottom 0
+	width 100%
+
+.btn-more
+	+below(1024px)
+		display block
+	margin-top 10px
+	background #60A6E3
+	position relative
+	display none
+	.fa
+		position absolute
+		top 10px
+		left 10px
+.result-right-hide-mobile
+	+below(1024px)
+		display none
 		
+.modal
+	+below(	1024px)
+		width 60%	
+	+below(640px)
+		width 100%	
+	position relative
+	padding 20px
+	background white
+	width 40%
+	max-width 500px
+	.fa
+		position absolute
+		top 10px
+		right 10px
+		font-size 18px
+		&:hover
+			cursor pointer
+	.dropdown
+		margin-bottom 10px
+		width 100%
+		background white
+		border 1px solid grey
+		height 40px
+		ul
+			margin 0
+			padding 0
+			border 1px solid grey
+			li.active
+				height 0px
+				display none
+	input
+		width 100%
+		margin-bottom 10px
+
+	.big-title
+		text-align center
+		text-transform uppercase
+.modal-order
+	display none
+.modal-order-wraper
+	form
+		flexB(mid)
+		fl()
+//.mid-title
+.modal-order-text
+	text-align center
+	margin-bottom 20px
+//.modal-time
+//.dropdown
+//.modal-man
+//.modal-children
+.modal-order-el
+	+below(768px)
+		fw()
+	flexB(between)
+	width 100%
+	background #f7f7f7
+	padding 10px
+	margin-bottom 10px
+.modal-order-left
+	flexB(mid)
+	fl()
+	width 100%
+.modal-order-left-title
+	text-transform uppercase
+	font-size 20px
+	color black
+	text-align center
+.modal-order-left-price
+	text-transform uppercase
+	font-size 20px
+	color black
+	text-align center
+.modal-order-right
+	+below(768px)
+		margin-top 10px	
+	width 100%
+	span
+		text-align center
+		margin-top 5px
+		display block
+//.btn-main
+.modal-more
+	margin-top 10px	
+	span
+		display block
+		margin-bottom 5px
+		font-size 12px
+		text-align center
+
+#modal-date::-webkit-input-placeholder {
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+#modal-date::-moz-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+#modal-date:-moz-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+#modal-date:-ms-input-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+
+.modal-bron
+	display none
+	
+.modal-exs
+	display none
+	.btn-main
+		margin-bottom 10px

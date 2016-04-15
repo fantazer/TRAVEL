@@ -48,3 +48,10 @@ mixin place(img,country,name,days,val,type)
 		//- 		span.main-place-rub ₽
 		//- 	.main-place-cost-text
 		//- 		span.main-place-text отель + перелет
+
+mixin mark(text,val)
+	.result-mark-el
+		.result-mark-name #{text}
+		.result-mark-row
+			.result-mark-value(data-mark= '#{val}') #{val}
+			.result-mark-col 
