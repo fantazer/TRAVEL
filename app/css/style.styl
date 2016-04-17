@@ -38,7 +38,8 @@ input[type="checkbox"]
 button
 	border 0px
 	color white
-	background blue
+	background #FFDB4D
+	color black
 	text-transform uppercase
 body
 	//font-family "PT Sans"
@@ -327,12 +328,14 @@ bsh(){
 	button
 		border 0px
 		color white
-		background blue
+		background #FFDB4D
+		color black
 		text-transform uppercase
 		width 100%
 		padding 12px 0
 		height 39px
 		display inline-block
+		border-radius 5px
 		//border-bottom: 2px solid white;
 input[type="checkbox"]
 	display:none;
@@ -459,7 +462,8 @@ input[type="checkbox"]:checked + label span
 	.active
 		+below(768px)
 			color white
-			background blue
+			background #FFDB4D
+			color black
 		border-bottom 2px solid blue
 		&:after
 			content '\f0d7'
@@ -528,6 +532,7 @@ input[type="checkbox"]:checked + label span
 	border 0
 .noUi-connect
 	background blue
+	color black
 
 .noUi-handle:after, .noUi-handle:before 
 	content ""
@@ -645,11 +650,12 @@ input[type="checkbox"]:checked + label span
 		font-size 14px
 	flex 1
 	text-align center
-	background blue
-	color white
+	background #FFDB4D
+	color black
 	padding 10px
 	text-transform uppercase
 	font-size 14px
+	border-radius 5px
 
 .content-right-found-get-price-text
 	+below(768px)
@@ -1207,17 +1213,19 @@ div[class*="main-type"]
 .result
 	margin-bottom 20px
 .result-wraper
+	+below(1024px)
+		fw()
 	padding 20px
 	background white
 	bsh()
-	fw()
 	f()
 .result-left
 	+below(1024px)
 		width 100%
 		flex 1 1 100%
 		order 2
-	flex 7
+	//flex 7
+	width 75%
 .result-right
 	+below(1024px)
 		order 1
@@ -1226,6 +1234,7 @@ div[class*="main-type"]
 		margin-left 0
 	flex 2
 	margin-left 20px
+	width 25%
 	p
 		font-size 14px
 		color #545454
@@ -1254,6 +1263,7 @@ div[class*="main-type"]
 	margin-bottom 20px
 	img
 		width 100%
+		display block
 .mid-title
 	font-size 14px
 	text-transform uppercase
@@ -1353,8 +1363,9 @@ div[class*="main-type"]
 	flex 1
 .btn-main
 	text-align center
-	background #0074d9
-	color #fff
+	background yellow
+	border-radius 5px
+	color black
 	padding 10px
 	text-transform uppercase
 	font-size 14px
@@ -1428,7 +1439,8 @@ div[class*="main-type"]
 		flex 1 1 100%
 	flex 1
 .result-info-el-color-blue
-	background blue
+	background #FFDB4D
+	color black
 	
 .result-place
 	f()
@@ -1474,6 +1486,8 @@ div[class*="main-type"]
 	font-weight 600
 	color black
 .result-right-img
+	+below(1124px)
+		display none
 	f()
 	fw()
 	margin-bottom 40px
@@ -1485,6 +1499,8 @@ div[class*="main-type"]
 .result-right-img-el
 	width calc(33.333% - 4px)
 	margin 2px
+	&:hover
+		cursor pointer
 	img
 		width 100%
 .result-right-text
@@ -1523,6 +1539,7 @@ div[class*="main-type"]
 	position relative
 .same-excurse-title
 	background blue
+	color black
 	opacity .8
 	color white
 	padding 10px
@@ -1536,7 +1553,7 @@ div[class*="main-type"]
 	+below(1024px)
 		display block
 	margin-top 10px
-	background #60A6E3
+	background #FDEC85
 	position relative
 	display none
 	.fa
@@ -1555,8 +1572,8 @@ div[class*="main-type"]
 	position relative
 	padding 20px
 	background white
-	width 40%
-	max-width 500px
+	width 45%
+	max-width 520px
 	.fa
 		position absolute
 		top 10px
@@ -1665,3 +1682,9 @@ div[class*="main-type"]
 	display none
 	.btn-main
 		margin-bottom 10px
+		
+/*.dropdown .selected::after
+	background yellow
+	color black
+.noUi-horizontal .noUi-handle
+	background #EE9307*/

@@ -20,8 +20,11 @@ body
 						.big-title Золотое кольцо России
 						+star()
 					.result-left-alert ! Кто-то только что забронировал экскурсию
-					.result-left-img
-						img(src="img/otel-item-2.jpg", alt="")
+					.result-left-img.owl-carousel
+						- for (var u = 0; u < 4; u++)
+							img(src="img/otel-item-2.jpg", alt="")
+							img(src="img/otel-item-3.jpg", alt="")
+							img(src="img/otel-item-2.jpg", alt="")
 					.mid-title сборные туры по золотому кольцу
 					
 					.tour-table
@@ -145,56 +148,8 @@ body
 						img(src="img/otel-item-2.jpg", alt="")
 						.same-excurse-title Название экскурсии
 
-	.modal.modal-order
-		i.fa.fa-close
-		.modal-order-wraper
-			.big-title Заказ экскурсии
-			.modal-order-text Индивидуальная экскурсия
-			form(action="#")
-				input#modal-date(type="text" placeholder=" Дата ")
-				select.modal-time.dropdown
-					option Время 
-					option 10:00
-					option 11:00
-					option 12:00
-				select.modal-man.dropdown
-					option Взрослые 
-					option 1
-					option 2
-					option 3
-				select.modal-children.dropdown
-					option Дети 
-					option 1
-					option 2
-					option 3
-				.modal-order-el
-					.modal-order-left
-						.modal-order-left-title Лучшая цена
-						.modal-order-left-price $ 1 788
-					.modal-order-right
-						.btn-main#modal-get-bay Купить
-						span Нельзя отменить бронь
-				.modal-order-el
-					.modal-order-left
-						.modal-order-left-title Стандарт
-						.modal-order-left-price $ 2000
-					.modal-order-right
-						.btn-main#modal-get-bron Забронировать
-						span Возможна отмена брони за 3 дня
-		.modal-more
-			span *Точное время будет указано в бланке заказа
-			span *дети от 7 лет
-
-	.modal.modal-bron
-		.modal-bron-wraper
-			.big-title Бронь добавлена
-			.btn-main продолжить покупки
-
-	.modal.modal-exs
-		.modal-bron-wraper
-			.big-title Экскурсия добавлена в корзину
-			.btn-main Оплатить
-			.btn-main продолжить покупки
+	
+	include ./block_html/modal.jade
 	include ./block_html/footer.jade
 
 //Include script

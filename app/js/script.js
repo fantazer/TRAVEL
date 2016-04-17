@@ -30,7 +30,26 @@ $(document).ready(function(){
 	 	loop:true,
 	 	animateOut: 'fadeOut'
 	 	}
-	 ); 
+	 );
+
+	 $(".result-left-img").owlCarousel({
+	 	items : 1,
+	 	pagination : false,
+	 	autoplay:true,
+    autoplayTimeout:10000,
+	 	singleItem:true,
+	 	loop:true,
+	 	autoHeight:true,
+	 	//animateOut: 'fadeOut'
+	 	}
+	 );  
+	 
+
+	$('.result-right-img-el').click(function(){
+		var NumberSlide = $(this).index();
+		$('.result-left-img').trigger('to.owl.carousel', NumberSlide)
+	})
+
 
 	$('.top-menu-enter').click(function(){
 		$('.log-wraper').slideToggle()
@@ -268,9 +287,8 @@ $(document).ready(function(){
 
 	/* ###### init fancybox  ######*/
 	/* ###### bower i fancybox  ######*/
-	// $(".play").fancybox();
-	// a(href="img/item-house-1.png" rel="group-element(для объединения в группу)") - image in a
-	//	img(src="img/item-house-1.png", alt="")
+	
+	
 	
 	/* ###### init scrollup  ######*/
 	/* ###### bower i scrollup  ######*/
