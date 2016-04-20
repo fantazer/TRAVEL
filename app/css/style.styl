@@ -6,8 +6,8 @@
 
 border-box-html()
 fluid-media() //care flex box image
-rupture.scale = 0 320px 640px 768px 1024px 1280px
-rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 
+//rupture.scale = 0 320px 640px 768px 1024px 1280px
+//rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 
 jeet.gutter = 1
 
 .allpage
@@ -28,7 +28,7 @@ jeet.gutter = 1
 .main-cont
 	center(1200px)
 
-input,select
+input,select,textarea
 	border 0px
 	border 1px solid #E1E1E1
 	padding 10px
@@ -462,7 +462,7 @@ input[type="checkbox"]:checked + label span
 	.active
 		+below(768px)
 			color white
-			background #FFDB4D
+			//background #FFDB4D
 			color black
 		border-bottom 2px solid blue
 		&:after
@@ -1372,6 +1372,8 @@ div[class*="main-type"]
 	display block
 	&:hover
 		cursor pointer
+button.btn-main
+	padding 10px 20px
 .result-mark
 	f()
 	fw()
@@ -1688,3 +1690,236 @@ div[class*="main-type"]
 	color black
 .noUi-horizontal .noUi-handle
 	background #EE9307*/
+hr
+	border 0px
+	color #E7E7E7
+	border-bottom 1px solid
+	margin-bottom 20px
+.faq-wraper
+	f()
+	fw()
+.faq-left
+	+below(1024px)
+		width 100%
+		margin-bottom 20px
+		position relative
+		margin-right 0
+		.mid-title
+			margin-bottom 0px
+		.fa-sort-desc
+			display block
+			position absolute
+			font-size 20px
+			top 25px
+			margin-top -10px
+			right 30px
+			&:hover
+				cursor pointer
+	width 20%
+	background white
+	padding 20px
+	margin-right 2%
+	bsh()
+//.mid-title
+.fa-sort-desc
+	display none
+.faq-menu
+	+below(1024px)
+		display none
+		margin-top 20px
+	a
+		display block
+		margin-bottom 15px
+		color blue
+		text-decoration underline
+.faq-right
+	+below(1024px)
+		width 100%
+	width 78%
+	
+.faq-search
+	background white
+	padding 20px
+	bsh()
+	margin-bottom 20px
+.faq-search-input
+	position relative
+	.fa-search
+		position absolute
+		top 10px
+		right 10px
+		font-size 18px
+	input
+		width 100%
+.faq-content
+	bsh()
+	padding 20px
+	background white
+.help
+	.big-title
+		+below(768px)
+			font-size 18px
+	.mid-title
+		+below(768px)
+			font-size 12px
+			text-align center
+//.help-wraper
+.help-top
+	background white
+	padding 20px
+	bsh()
+	margin-bottom 20px
+.help-title
+	+below(768px)
+		flexB(mid)
+		fw()
+		img
+			margin-bottom 10px
+		.big-title
+			text-align center
+			
+	flexB(mid)
+	justify-content flex-start
+	.big-title
+		margin-bottom 0
+	img
+		margin-right 20px
+	margin-bottom 20px
+//.big-title
+.help-top-wraper
+	flexB(between)
+	fw()
+.help-top-el
+	+below(768px)
+		width 100%
+		a
+			text-align center
+			display block
+	width 30%
+	margin-bottom 20px
+	a
+		text-decoration underline
+		color blue
+//.mid-title
+.help-top-bottom
+	text-align center
+	text-transform uppercase
+	color blue
+	text-decoration underline
+	display block
+.help-contact
+	+below(768px)
+		fw()
+		button
+			width 100%
+	margin-bottom 20px
+	f()
+	form
+		width 100%
+	input
+		+below(768px)
+			flex 1 1 100%
+			margin-right 0
+		flex 1 1 48%
+		flex 1 1 calc(50% - 10px)
+		margin-bottom 10px
+		margin-right 5px
+	textarea
+		width 100%
+		margin-bottom 20px
+.help-contact-form-wrap
+	f()
+	fw()
+.help-contact-left
+	+below(768px)
+		margin-right 0
+		margin-bottom 20px
+	flexB(mid)
+	fl()
+	bsh()
+	align-items flex-start;
+	padding 20px
+	background white
+	flex 1 1 100%
+	margin-right 20px
+	max-height 400px
+//.btn-main
+.help-contact-right
+	padding 20px
+	flex 1 1 100%
+	background white
+	bsh()
+.help-number
+	flexB(mid)
+	fw()
+.help-number-img
+	+below(1024px)
+		width 100%
+		img
+			margin 0 auto
+	width 30%
+	margin-right 5%
+.help-number-info
+	+below(1024px)
+		width 100%
+		p
+			text-align center
+	width 65%
+.help-number-text
+	+below(1024px)
+		text-align center
+	color blue
+	font-size 18px
+	margin-bottom 10px
+.help-number-numb
+	+below(1024px)
+		text-align center
+	color black
+	font-size 28px
+	margin-bottom 20px
+.help-contact-bot
+	text-align center
+	display block
+	color blue
+	text-decoration underline
+	text-transform uppercase
+	&:hover
+		cursor pointer
+.help-bottom
+	flexB(between)
+	fw()
+	bsh()
+	align-items flex-start
+	background white
+	padding 20px
+	margin-bottom 20px
+.help-flag
+	+below(1024px)
+		flexB(mid)
+	flexB(mid)
+	justify-content flex-start
+	margin-bottom 20px
+.help-flag-img
+	margin-right 20px
+.help-flag-text
+	color black
+	font-size 28px
+	
+.help-bottom-el
+	+below(768px)
+		width 100%
+		margin-bottom 20px
+	flexB(mid)
+	fl()
+	.mid-title
+		text-align center
+	width 30%
+.help-bottom-el-img
+	margin-bottom 20px
+.help-bottom-el-text
+	+below(768px)
+		width 90%
+	width 60%
+	text-align center
+.help-contact-wraper
+	display none

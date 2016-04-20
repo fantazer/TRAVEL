@@ -1,0 +1,108 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.help
+		.main-cont
+			.help-wraper
+				.help-top
+					.help-title
+						img(src="img/icon-questions.png", alt="")
+						.big-title Быстрые ответы на самые популярные вопросы наших гостей
+					.help-top-wraper
+						- for (var a = 0; a < 3; a++)
+							.help-top-el
+								.mid-title Как узнать, что мое бронирование подтверждено?
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus eos optio culpa voluptatum asperiores dolore placeat saepe officia officiis cumque inventore aliquid, at explicabo enim ut dolor ea consectetur.
+								a(href="#") Подробнее
+					hr
+					a(href="#").help-top-bottom Посмотреть все часто задаваемые вопросы
+
+				.help-contact
+					.help-contact-left
+						.help-title
+							img(src="img/icon-mail.png", alt="")
+							.big-title Чем мы можем вам помочь?
+						form(action="#")
+							.help-contact-form-wrap
+								input(type="text" placeholder="Номер брони ")
+								input(type="text" placeholder="E-mail ")
+								input(type="text" placeholder="Имя ")
+								input(type="text" placeholder="телефон ")
+							textarea(name="",  rows="5" placeholder="введите ваше сообщение. Укажите больше деталей, чтобы мы могли ответить быстрее. ")
+							button.btn-main Отправить
+					.help-contact-right
+						.help-title
+							img(src="img/icon-mail.png", alt="")
+							.big-title Позвоните нам в любое время
+						.help-flag
+							.help-flag-img
+								img(src="img/icon-flag.png", alt="")
+							.help-flag-text Россия
+						.help-number
+							.help-number-img
+								img(src="img/help-service.png", alt="")
+							.help-number-info
+								.help-number-text Местный номер телефона:
+								.help-number-numb 8800 100 6282
+								.help-number-text Для международных звонков
+								.help-number-numb 8800 100 6282
+								p При звонке на телефонные номера внутри страны применяются тарифы за местное соединение; исключение составляет международный номер.
+						.help-contact-wraper
+							.help-contact-el
+								.help-flag
+									.help-flag-img
+										img(src="img/icon-flag.png", alt="")
+									.help-flag-text Россия
+								.help-number
+									.help-number-img
+										img(src="img/help-service.png", alt="")
+									.help-number-info
+										.help-number-text Местный номер телефона:
+										.help-number-numb 8800 100 6282
+										.help-number-text Для международных звонков
+										.help-number-numb 8800 100 6282
+										p При звонке на телефонные номера внутри страны применяются тарифы за местное соединение; исключение составляет международный номер.
+							.help-contact-el
+								.help-flag
+									.help-flag-img
+										img(src="img/icon-flag.png", alt="")
+									.help-flag-text Россия
+								.help-number
+									.help-number-img
+										img(src="img/help-service.png", alt="")
+									.help-number-info
+										.help-number-text Местный номер телефона:
+										.help-number-numb 8800 100 6282
+										.help-number-text Для международных звонков
+										.help-number-numb 8800 100 6282
+										p При звонке на телефонные номера внутри страны применяются тарифы за местное соединение; исключение составляет международный номер.
+						.help-contact-bot Другие регионы и страны
+
+				.help-bottom
+					.help-bottom-el
+						.help-bottom-el-img
+							img(src="img/help-hour.png", alt="")
+						.mid-title Мы работаем круглосуточно и без выходных
+						.help-bottom-el-text Вы можете связаться с нами в любое удобное для вас время
+					.help-bottom-el
+						.help-bottom-el-img
+							img(src="img/help-message.png", alt="")
+						.mid-title Мы быстро отвечаем
+						.help-bottom-el-text Мы отвечаем на звонок в течение нескольких секунд, а на большинство электронных писем — в течение дня.
+					.help-bottom-el
+						.help-bottom-el-img
+							img(src="img/help-call.png", alt="")
+						.mid-title Мы говорим на вашем языке
+						.help-bottom-el-text Наша международная команда оказывает поддержку клиентам на русском и на более чем 40 других языках.
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

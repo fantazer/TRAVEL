@@ -81,13 +81,24 @@ $(document).ready(function(){
 		$('#login-form').hide()
 		$('#registration-form').show()
 	})
-	$('.toggle-top-menu').click(function(){
-		$('.top-menu-items').slideToggle()
-	})
 
 	$('.toggle-top-menu').unbind('click').click(function(){
 		$('.main-head-cont-menu').slideToggle()
 	})
+
+	$('.help-contact-bot').click(function(){
+		$('.help-contact-wraper').slideToggle()
+	})
+
+	$('.toggle-top-menu').click(function(){
+		$('.top-menu-items').slideToggle()
+	})
+
+	$('.fa-sort-desc').click(function(){
+		$('.faq-menu').slideToggle()
+	})
+
+	
 	$('.content-right-sort-title-toggle').click(function(){
 		$('.content-right-sort-el').slideToggle()
 	})
