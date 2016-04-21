@@ -76,6 +76,9 @@ $(document).ready(function(){
         }
     });
 
+	$('.lk-list-el-sub-triger').click(function(){
+		$(this).parent().next('.lk-list-el-sub').slideToggle()
+	})
 
 	$('.registration-trigger').click(function(){
 		$('#login-form').hide()
@@ -88,6 +91,10 @@ $(document).ready(function(){
 
 	$('.help-contact-bot').click(function(){
 		$('.help-contact-wraper').slideToggle()
+	})
+
+	$('.lk-left-el-profil').click(function(){
+		$(this).find('.lk-left-el-sub').slideToggle()
 	})
 
 	$('.toggle-top-menu').click(function(){

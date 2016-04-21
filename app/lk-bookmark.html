@@ -1,0 +1,229 @@
+
+<!--Include style--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <!--build:css css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower/easydropdown/themes/easydropdown.css"/>
+    <link rel="stylesheet" href="bower/nouislider/distribute/nouislider.min.css"/>
+    <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css"/>
+    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"/>
+    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css"/>
+    <!--endbuild-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+  </head>
+</html>
+<body>
+  <!--Include header-->
+  <div class="top-menu">
+    <div class="main-cont">
+      <div class="top-menu-wraper">
+        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-black.png" alt=""/></div>
+        <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a></div>
+        <div class="top-menu-enter">вход</div>
+        <div class="log-wraper">
+          <form action="" id="login-form">
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Пароль"/>
+            <button>Вход</button>
+            <div class="log-wraper-remember">
+              <div class="log-wraper-remember-el">
+                <input id="login" type="checkbox" name="rr"/>
+                <label for="login"> <span></span></label><span>Чужой компьютер</span>
+              </div>
+              <div class="log-wraper-remember-el"><a href="#">Востановить пароль</a></div>
+            </div>
+            <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
+            <div class="log-social-title">Авторизоваться через соц. сети</div>
+            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+          </form>
+          <form action="" id="registration-form">
+            <input type="text" placeholder="Фамилия"/>
+            <input type="text" placeholder="Имя"/>
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Пароль"/>
+            <button>Зарегистрироваться</button>
+            <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
+            <div class="log-social-title">Авторизоваться через соц. сети</div>
+            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-cont">
+    <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Экскурсии</a><a href="#">Результаты поиска</a></div>
+  </div>
+  <div class="main-cont">
+    <div class="lk-title">Мои закладки</div>
+    <div class="lk-wraper">
+      <div class="lk-left">
+        <div class="lk-left-el lk-left-el-profil">
+          <div class="lk-left-el-title">Мой профиль</div>
+          <div class="lk-left-el-sub"><a href="#">Личная страница</a><a href="#">Оплаченные заказы</a><a href="#">Настройки</a></div>
+        </div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Корзина</a></div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Брони</a></div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Избранное</a></div>
+      </div>
+      <div class="lk-right">
+        <div class="lk-right-content">
+          <div class="lk-list-tab-title">Избранное</div>
+          <div class="lk-bookmark"></div>
+          <div class="lk-bookmark-title">Выбрано: 5 экскурсий</div>
+          <div class="lk-bookmark-nav">
+            <select name="" class="dropdown">
+              <option>Выберите действие</option>
+              <option>Добавить в избранное</option>
+              <option>Удалить из списка</option>
+              <option>Выделить все</option>
+            </select><a href="#" class="btn-main">Забронировать</a>
+          </div>
+          <div class="lk-bookmark-wraper">
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-1" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-1"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-2" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-2"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-3" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-3"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-4" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-4"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-5" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-5"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+            <div class="lk-bookmark-el">
+              <div class="lk-bookmark-el-title">НАЗВАНИЕ ЭКСКУРСИИ</div>
+              <div class="lk-bookmark-el-check">
+                <input id=".lk-bookmark-6" type="checkbox" name="rr"/>
+                <label for=".lk-bookmark-6"> <span></span></label>
+              </div>
+              <div class="lk-bookmark-el-price">$ 1400</div><img src="img/otel-item-2.jpg" alt=""/>
+            </div>
+          </div>
+          <div class="lk-list-mail">
+            <div class="mid-title">Выслать список на e-mail</div>
+            <form action="" class="lk-list-mail-form">
+              <input type="text"/>
+              <button class="btn-main">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="lk-right-bottom"><a href="#" class="lk-right-bottom-el">Забронировать отель</a><a href="#" class="lk-right-bottom-el">Забронировать билет</a><a href="#" class="lk-right-bottom-el">Найти экскурсию</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-order"><i class="fa fa-close"></i>
+    <div class="modal-order-wraper">
+      <div class="big-title">Заказ экскурсии</div>
+      <div class="modal-order-text">Индивидуальная экскурсия</div>
+      <form action="#">
+        <input id="modal-date" type="text" placeholder=" Дата "/>
+        <select class="modal-time dropdown">
+          <option>Время </option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+        </select>
+        <select class="modal-man dropdown">
+          <option>Взрослые </option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select class="modal-children dropdown">
+          <option>Дети </option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <div class="modal-order-el">
+          <div class="modal-order-left">
+            <div class="modal-order-left-title">Лучшая цена</div>
+            <div class="modal-order-left-price">$ 1 788</div>
+          </div>
+          <div class="modal-order-right">
+            <div id="modal-get-bay" class="btn-main">Купить</div><span>Нельзя отменить бронь</span>
+          </div>
+        </div>
+        <div class="modal-order-el">
+          <div class="modal-order-left">
+            <div class="modal-order-left-title">Стандарт</div>
+            <div class="modal-order-left-price">$ 2000</div>
+          </div>
+          <div class="modal-order-right">
+            <div id="modal-get-bron" class="btn-main">Забронировать</div><span>Возможна отмена брони за 3 дня</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-more"><span>*Точное время будет указано в бланке заказа</span><span>*дети от 7 лет</span></div>
+  </div>
+  <div class="modal modal-bron">
+    <div class="modal-bron-wraper">
+      <div class="big-title">Бронь добавлена</div>
+      <div class="btn-main">продолжить покупки</div>
+    </div>
+  </div>
+  <div class="modal modal-exs">
+    <div class="modal-bron-wraper">
+      <div class="big-title">Экскурсия добавлена в корзину</div>
+      <div class="btn-main">Оплатить</div>
+      <div class="btn-main">продолжить покупки</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="main-cont">
+      <div class="footer-wraper">
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Портал</a></div>
+        <div class="footer-right"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </div>
+</body>
+<!--Include script-->
+<!--build:js js/combined.js-->
+<script src="bower/jquery/dist/jquery.js"></script>
+<script src="bower/easydropdown/src/jquery.easydropdown.js"></script>
+<script src="bower/nouislider/distribute/nouislider.min.js"></script>
+<script src="bower/bPopup/jquery.bpopup.min.js"></script>
+<script src="bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!--script(src="bower/Headhesive.js/dist/headhesive.min.js")-->
+<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="bower/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js"></script>
+<!-- endbuild-->
+<script src="js/script.js"></script>

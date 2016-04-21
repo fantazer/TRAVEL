@@ -1,0 +1,46 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Добро пожаловать
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.lk-about
+						.lk-about-img
+							img(src="img/gid.jpg", alt="")
+						.lk-about-info
+							.big-title Светлана Ивановна Попова
+							.lk-about-info-wraper
+								.lk-about-info-wraper-row
+									.mid-title Дата рождения
+									span  15 января 1987
+								.lk-about-info-wraper-row
+									.mid-title Ник для портала
+									span  Mick
+								.lk-about-info-wraper-row
+									.mid-title Адресс e-mail
+									span  mail@mail.ru
+								.lk-about-info-wraper-row
+									.mid-title Мобильный телефон
+									span  8(914)213-12-14
+
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

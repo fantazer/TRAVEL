@@ -1,0 +1,36 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Добро пожаловать
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.lk-about
+						.lk-about-img
+							img(src="img/gid.jpg", alt="")
+						.lk-about-info
+							.big-title Светлана Ивановна Попова
+							.mid-title Вы еще не заполнили информацию о себе
+					.btn-row
+						.btn-main Перейти к вашей личной странице
+						.btn-main вернуться к поиску
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

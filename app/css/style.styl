@@ -15,19 +15,10 @@ jeet.gutter = 1
 	wraper
 		background white
 		height 100vh
-		a
-			padding 20px
-			display block
-			box-shadow 1px 1px 20px #eee
-			margin-bottom 10px
-			border-radius 5px
-			tr(all)
-			&:hover
-				background #6D2D74
-				color white
+		
 .main-cont
 	center(1200px)
-
+	padding 0 5px!important
 input,select,textarea
 	border 0px
 	border 1px solid #E1E1E1
@@ -59,6 +50,21 @@ bsh(){
 	position relative
 	/*.main-cont
 		center(1440px)*/
+.wraper-allpage
+	center(1200px)
+	padding 20px
+	background white
+	margin-top 20px
+	a
+		padding 20px
+		display block
+		box-shadow 1px 1px 20px #eee
+		margin-bottom 10px
+		border-radius 5px
+		tr(all)
+		&:hover
+			background #6D2D74
+			color white
 .top-menu-wraper
 	+below(768px)
 		flexB(between)
@@ -82,7 +88,7 @@ bsh(){
 	+below(768px)
 		display none
 		position absolute
-		top 100%
+		top calc(100% + 10px)
 		left 0px
 		width 100%
 		background white
@@ -1370,6 +1376,7 @@ div[class*="main-type"]
 	text-transform uppercase
 	font-size 14px
 	display block
+	padding 10px 30px	
 	&:hover
 		cursor pointer
 button.btn-main
@@ -1593,9 +1600,10 @@ button.btn-main
 			margin 0
 			padding 0
 			border 1px solid grey
-			li.active
-				height 0px
-				display none
+			li
+				&:first-child
+					height 0px
+					display none
 	input
 		width 100%
 		margin-bottom 10px
@@ -1923,3 +1931,555 @@ hr
 	text-align center
 .help-contact-wraper
 	display none
+	
+
+.lk-wraper
+	f()
+	fw()
+.lk-left
+	+below(768px)
+		width 100%
+		margin-right 0
+	width 18%
+	margin-right 2%
+//.lk-left-el
+.lk-left-el-title
+	+below(768px)
+		margin-bottom 0px
+		border-bottom 1px solid grey
+	width 100%
+	display block
+	background blue
+	color white
+	text-align center
+	padding 10px
+	margin-bottom 10px
+	text-transform uppercase
+	bsh()
+.lk-left-el-sub
+	background white
+	bsh()
+	margin-bottom 10px
+	display none
+	a
+		display block
+		font-weight 600
+		padding 10px 20px
+		border-bottom 1px solid #e7e7e7
+.lk-right
+	+below(768px)
+		width 100%
+		.big-title
+			font-size 18px
+	width 80%
+.lk-right-content
+	+below(768px)
+		padding 5px
+	bsh()
+	background white
+	padding 20px
+	margin-bottom 10px
+.lk-left-el-profil
+	&:hover
+		cursor pointer
+.lk-right-bottom
+	+below(768px)
+		fw()
+		flexB(mid)
+		a
+			margin-bottom 5px
+	f()
+	justify-content flex-end
+.lk-right-bottom-el
+	margin-left 5%
+	text-decoration underline
+	color darkgrey
+	
+.btn-row
+	+below(768px)
+		fw()
+		[class*="btn-"]
+			margin-right 0!important
+			width 100%
+			margin-bottom 10px
+	f()
+	[class*="btn-"]
+		margin-right 20px
+		bsh()
+		
+.lk-title
+	margin-bottom 10px
+	flexB(mid)
+	justify-content flex-start
+	padding 10px
+	background white
+	bsh()
+	padding-left 20px
+	font-weight 600
+
+.lk-about
+	+below(768px)
+		margin-bottom 00px
+		.mid-title
+			text-align center
+	f()
+	fw()
+	margin-bottom 40px
+.lk-about-img
+	+below(768px)
+		width 100%
+		margin-right 0px
+		margin-bottom 10px
+	width 30%
+	margin-right 5%
+	img
+		width 100%
+.lk-about-info
+	+below(768px)
+		width 100%
+		.big-title
+			text-align center
+	width 65%
+	
+.lk-about-info-wraper 
+	margin-top 20px
+.lk-about-info-wraper-row 
+	+below(768px)
+		width 100%
+		margin-bottom 10px
+		max-width 100%
+		fw()
+		.mid-title,span
+			margin-bottom 0
+			width 100%
+			text-align center!important
+			display block
+	flexB(between)
+	max-width 400px
+	width 80%
+	span
+		text-align left
+//.mid-title 
+.form-row
+	+below(768px)
+		fw()
+	flexB(mid)
+	justify-content initial
+	margin-bottom 10px
+	label
+		+below(768px)
+			width 100%
+		font-weight 600
+		width 30%
+		padding-right 10px
+	input
+		+below(768px)
+			width 100%
+		width 70%
+.form-block-row
+	margin-bottom 10px
+	label
+		font-weight 600
+		width 30%
+		padding-right 10px
+.lk-prof-form-btn
+	+below(768px)
+		button
+			width 100%
+.lk-prof-form-check
+	margin 20px 0
+	text
+		font-size 12px
+		text-align right
+
+.lk-about-img-edit
+	+below(768px)
+		height 150px
+	flexB(mid)
+	border 1px solid grey
+	height 350px
+	
+.lk-list-el
+	padding 10px
+	margin-bottom 10px
+	border 1px solid grey
+	position relative
+.lk-list-el-wraper
+	+below(768px)
+		fw()
+	f()
+.lk-list-el-img
+	+below(768px)
+		width 100%
+		margin-right 0
+	width 20%
+	margin-right 10px
+	img
+		width 100%
+.lk-list-el-info
+	+below(768px)
+		width 100%
+	width 60%
+	margin-right 10px
+.lk-list-el-info-title
+	+below(768px)
+		font-size 18px
+		margin-top 10px
+	color blue
+	text-decoration underline
+	font-size 22px
+	margin-bottom 10px
+.lk-list-el-info-text
+	+below(768px)
+		font-size 14px
+.lk-list-el-price
+	+below(1024px)
+		.btn-main
+			font-size 10px
+	+below(768px)
+		width 100%
+		margin-bottom 10px
+	width 20%
+.lk-list-el-val
+	font-size 26px
+	font-weight 600
+	color black
+	text-align center
+	margin 15px 0
+.lk-list-el-bottom
+	+below(768px)
+		flexB(between)
+		a
+			margin 0!important
+			font-size 10px
+		.lk-list-el-sub-triger
+			margin 0!important
+			font-size 10px
+	f()
+	justify-content flex-end
+	a
+		color blue
+		margin-left 5%
+		text-decoration underline
+.lk-list-el-check
+	+below(768px)
+		top 20px
+		right 10px
+	position absolute
+	top 10px
+	right 0px
+
+.lk-list-mail
+	+below(768px)
+		.mid-title
+			text-align center
+			width 100%
+	margin 20px 0px
+	f()
+	fl()
+	align-items flex-end
+.lk-list-mail-form
+	+below(768px)
+		button
+			width 100%
+		input
+			margin-bottom 10px
+			width 100%
+	f()
+	fw()
+	button
+		border-radius 0px!important
+.lk-list-el-date
+	text-align center
+	margin 5px 0
+.lk-list-title
+	margin-bottom 10px
+	font-weight 600
+	color black
+	a
+		text-decoration underline
+.lk-list-tab-title
+	padding 10px
+	text-transform uppercase
+	border 1px solid grey
+	margin-bottom 10px
+	background lightgrey
+.lk-total
+	padding 20px
+	background lightgrey
+	f()
+	fw()
+.lk-total-info
+	width 50%
+	flexB(mid)
+	fl()
+	.mid-title
+		text-align center
+	p
+		text-align center
+		width 60%
+//.mid-title
+.lk-total-price
+	width 50%
+	flexB(mid)
+	fl()
+.lk-total-title
+	font-weight 600
+	font-size 26px
+	text-transform uppercase
+	color black
+	margin-bottom 10px
+	text-align center	
+//.lk-total-cource
+.lk-total-val
+	font-weight 600
+	font-size 26px
+	text-transform uppercase
+	color black
+	margin 20px 0
+//.btn-main
+.lk-total-text
+	margin-top 10px
+.lk-list-el-sub-form-wraper
+	flexB(between)
+	fw()
+.lk-list-el-sub-triger
+	text-decoration underline
+	color blue
+	margin-left 5%	
+	&:hover
+		cursor pointer
+.lk-list-el-sub
+	+below(768px)
+		margin-top 10px
+	display none
+	ul
+		padding 0
+		margin 0
+		border 1px solid grey
+	.dropdown
+		border 1px solid grey
+		width 100%
+	label
+		display block
+		width 100%
+		margin-bottom 10px	
+	input
+		width 100%
+	.form-block-row
+		+below(768px)
+			width 100%
+		width 48%
+		&:last-child
+			width 100%	
+.form-block-count
+	+below(768px)
+		fw()
+	flexB(between)
+	.dropdown
+		+below(768px)
+			width 100%
+			margin-bottom 10px
+		width 48%	
+	li
+		&:first-child
+			height 0px
+			display none
+	.fa
+		+below(768px)
+			display none
+		font-size 20px
+		color black
+		margin 0 10px
+.lk-total-sub
+	padding 20px
+	background lightgrey
+	f()
+	fw()
+.lk-total-sub-info
+	+below(768px)
+		width 100%
+	width 50%
+	flexB(mid)
+	fl()
+	.mid-title
+		text-align center
+	p
+		+below(768px)
+			width 100%
+		text-align center
+		width 60%
+//.mid-title
+.lk-total-sub-price
+	+below(768px)
+		width 100%
+	width 50%
+	flexB(mid)
+	fl()
+	
+.lk-total-sub-title
+	font-weight 600
+	font-size 14px
+	text-transform uppercase
+	color black
+	margin-bottom 10px
+	text-align center	
+	span
+		display block
+		text-align center	
+		font-size 28px
+		margin-top 10px	
+//.lk-total-sub-cource
+.lk-total-sub-val
+	font-weight 600
+	font-size 26px
+	text-transform uppercase
+	color black
+	margin 20px 0
+//.btn-main
+.lk-total-sub-text
+	margin-top 10px
+	
+.lk-list-el-delete
+	+below(768px)
+		top 20px
+		right 20px
+	position absolute	
+	top 10px
+	right 10px
+	border-radius 50%	
+	background red
+	color white
+	width 20px
+	height 20px
+	display block
+	flexB(mid)
+	&:hover
+		cursor pointer
+	.fa
+		line-height 4px
+.lk-order
+	+below(640px)
+		.btn-main
+			width 100%
+	.btn-row
+		+below(768px)
+			margin-bottom 10px
+		margin-bottom 40px
+	textarea
+		width 100%
+	button
+		padding 10px 40px
+.lk-order-result
+	flexB(between)
+	fw()
+	margin-bottom 10px	
+.lk-order-result-text
+	+below(768px)
+		text-align center
+		width 100%
+	font-weight 600	
+	color black
+	font-size 22px	
+.lk-order-result-val
+	+below(768px)
+		text-align center
+		width 100%
+	font-weight 600	
+	color black
+	font-size 32px	
+//.btn-main
+//.mid-title
+.lk-order-enter
+	background lightgrey
+	padding 10px
+	margin-bottom 10px
+	a
+		margin-right 2px
+		text-decoration underline
+		color blue
+//.form-row
+//.lk-prof-form-check
+.lk-type-pay
+	+below(768px)
+		flexB(mid)
+	f()
+	fw()
+	margin-bottom 20px	
+.lk-type-pay-img
+	img
+		max-width 60px
+		
+//.lk-bookmark
+.lk-bookmark-wraper
+	flexB(between)
+	fw()
+.lk-bookmark-el
+	+below(1024px)
+		width 48%
+	+below(640px)
+		width 100%
+	width 32%
+	position relative
+	margin-bottom 10px
+.lk-bookmark-el-title
+	+below(640px)
+		font-size 12px
+	position absolute
+	width 100%
+	padding 10px
+	left 0px
+	top 0px
+	background rgba(34, 34, 34, 0.55)
+	color white
+.lk-bookmark-el-check
+	position absolute
+	bottom 10px
+	left 10px
+.lk-bookmark-el-price
+	position absolute
+	bottom 10px
+	right 10px
+	color #232121
+	background yellow
+	padding 2px 5px
+	font-size 20px
+	font-weight 600
+
+//.lk-bookmark
+.lk-bookmark-title
+	font-size 20px
+	color black
+	font-weight 600
+	text-transform uppercase
+	margin-bottom 10px
+.lk-bookmark-nav
+	+below(768px)
+		fw()
+		.dropdown
+			width 100%!important
+			margin-bottom 10px
+		.btn-main
+			width 100%!important
+	flexB(between)
+	margin-bottom 10px
+	ul
+		padding 0
+		margin 0
+		border 1px solid grey
+		li
+			&:first-child
+				height 0px
+				display none
+	.dropdown
+		border 1px solid grey
+		width 300px
+.lk-bookmark-nav-el
+	text-decoration underline
+
+.dropdown
+	+below(1024px)
+		li
+			font-size 14px!important
+		span
+			font-size 14px!important

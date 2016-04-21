@@ -1,0 +1,76 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Оформление заказа
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content.lk-order
+					.big-title СОСТАВ ЗАКАЗА
+					.lk-order-result-wrap
+						.lk-order-result
+								.lk-order-result-text 3 экскурсии на сумму
+								.lk-order-result-val 12 500 руб
+						.btn-row
+							.btn-main Изменить состав заказа
+							.btn-main Вернуться  в корзину
+					.mid-title Заполните данные получателя
+					.lk-order-enter 
+						a(href="#") Войдите
+						span ,если Вы еще не зарегистрированы, или заполните данные о себе
+					form(action="#")
+						.form-row
+							label Ваше имя
+							input(type="text" placeholder="Ваше ФИО")
+						.form-row
+							label Адресс e-mail
+							input(type="text" placeholder="Ваш e-mail")
+						.form-row
+							label Мобильный телефон
+							input(type="text" placeholder="Ваш телефон")
+						.form-row
+							label Адрес доставки
+							input(type="text" placeholder="Ваш адрес")
+						.mid-title Способ оплаты
+						.lk-prof-form-check
+							input(id='pay-cash', type='checkbox', name='rr')
+							label(for='pay-cash') 
+								span
+							text Оплата наличными при получении заказа(Оплата курьеру)
+						.lk-prof-form-check
+							input(id='pay-online', type='checkbox', name='rr')
+							label(for='pay-online') 
+								span
+							text Онлайн оплата (Робокаса) 
+						.lk-type-pay
+							- for (var a = 0; a < 8; a++)
+								.lk-type-pay-img
+									img(src="img/pay-#{a+1}.png", alt="")
+						.mid-title Комментарий к заказу
+						textarea(name="" rows="4")
+						.lk-prof-form-check
+							input(id='pay-info', type='checkbox', name='rr')
+							label(for='pay-info') 
+								span
+							text Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации
+						button.btn-main Готово 
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+				
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

@@ -1,0 +1,75 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Настройка профиля
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.lk-about
+						.lk-about-img
+							.lk-about-img-edit
+								a(href="#") Загрузить фото
+							//img(src="img/gid.jpg", alt="")
+						.lk-about-info
+							.lk-prof-form
+								form(action="")
+									.form-row
+										label Фамилия
+										input(type="text" placeholder="Ваше Фамилия")
+									.form-row
+										label Имя
+										input(type="text" placeholder="Ваше Имя")
+									.form-row
+										label Отчество
+										input(type="text" placeholder="Ваше Отчество")
+									.form-row
+										label Дата рождения
+										input.input-date(type="text" placeholder="Ваша Дата рождения")
+									.form-row
+										label Ник портала
+										input(type="text" placeholder="Ваш Ник")
+									.form-row
+										label Адресс e-mail
+										input(type="text" placeholder="Ваш e-mail")
+									.form-row
+										label Мобильный телефон
+										input(type="text" placeholder="Ваш телефон")
+									.form-row
+										label Новый пароль
+										input(type="text" )
+									.form-row
+										label Повторить пароль
+										input(type="text" )
+									.form-row
+										label Подтевердить действующим паролем 
+										input(type="text" )
+									.lk-prof-form-check
+										input(id='get-news-check', type='checkbox', name='rr')
+										label(for='get-news-check') 
+											span
+										text Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации
+									.lk-prof-form-btn
+										button.btn-main Сохранить
+
+
+
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

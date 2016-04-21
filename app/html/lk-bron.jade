@@ -1,0 +1,101 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Бронирование
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.lk-list
+						.lk-list-tab-title Экскурсии
+						- for (var a = 0; a < 4; a++)
+							.lk-list-el
+								.lk-list-el-wraper
+									a(href="#").lk-list-el-img
+										img(src="img/otel-item-2.jpg", alt="")
+									.lk-list-el-info
+										.lk-list-el-info-title Страна город / Название экскурсии
+										.lk-list-el-info-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. 
+									.lk-list-el-price
+										.lk-list-el-val $ 400
+										a(href="#").btn-main Оплатить
+										.lk-list-el-date до 25.03.2016
+								.lk-list-el-bottom
+									.lk-list-el-sub-triger Изменить
+									a(href="#") Отменить
+								.lk-list-el-sub
+									form(action="#")
+										.lk-list-el-sub-form-wraper
+											.form-block-row
+												label Дата экскурсии
+												select(name="").dropdown
+													option 10.12.2014
+													option 23.11.2015
+													option 28.11.2015
+											.form-block-row
+												label Количество человек
+												.form-block-count
+													select(name="").dropdown
+														option Взрослые
+														option 1
+														option 2
+														option 3
+													select(name="").dropdown
+														option Дети
+														option 1
+														option 2
+														option 3
+											.form-block-row
+												label Время экскурсии
+												select(name="").dropdown
+													option 10:00
+													option 11:00
+													option 12:00
+											.form-block-row
+												label Язык экскурсии
+												select(name="").dropdown
+													option Русский
+													option Английски
+													option Немецкий
+											.form-block-row
+												label Место встречи
+												input(type="text" placeholder="Вы можете указать место встречи. Наш менеджер свяжется с Вами.")
+										.lk-total-sub
+											.lk-total-sub-info
+												.mid-title Внимательно ознакомтесь с условиями
+												p Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. 
+											.lk-total-sub-price
+												.lk-total-sub-title лучшая цена 
+													span $ 1287
+												.lk-total-sub-cource по курсу ЦБ на 15.02.2011
+												.lk-total-sub-val 48 500 руб
+												a(href="#").btn-main В корзину
+					.lk-total
+						.lk-total-info
+							.mid-title Внимательно ознакомтесь с условиями
+							p Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. 
+						.lk-total-price
+							.lk-total-title Общая сумма
+							.lk-total-cource по курсу ЦБ на 15.02.2011
+							.lk-total-val 48 500 руб
+							a(href="#").btn-main В корзину
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+				
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

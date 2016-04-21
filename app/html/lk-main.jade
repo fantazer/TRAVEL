@@ -1,0 +1,39 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Моя личная информация
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.big-title Добро пожаловать на ПОРТАЛ ПУТЕШЕСТВЕННИКОВ
+					p Спасибо за регистрацию, Иван! 
+					p На ваш электронный адрес направлено письмо с вашими регистрационными данными.
+					p Вы авторизованы на портале. Делитесь впечатлениями! Узнавайте мир! Общайтесь!
+
+					p Помощь в работе с сайтом:
+					p ссылки на страницы помощи, правила,
+					p Мы работаем для вашего отдыха.  
+					
+					.btn-row
+						.btn-main Перейти к вашей личной странице
+						.btn-main вернуться к поиску
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+
