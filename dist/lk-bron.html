@@ -1,0 +1,466 @@
+
+<!--Include style--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+  </head>
+</html>
+<body>
+  <!--Include header-->
+  <div class="top-menu">
+    <div class="main-cont">
+      <div class="top-menu-wraper">
+        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-black.png" alt=""/></div>
+        <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a></div>
+        <div class="top-menu-enter">вход</div>
+        <div class="log-wraper">
+          <form action="" id="login-form">
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Пароль"/>
+            <button>Вход</button>
+            <div class="log-wraper-remember">
+              <div class="log-wraper-remember-el">
+                <input id="login" type="checkbox" name="rr"/>
+                <label for="login"> <span></span></label><span>Чужой компьютер</span>
+              </div>
+              <div class="log-wraper-remember-el"><a href="#">Востановить пароль</a></div>
+            </div>
+            <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
+            <div class="log-social-title">Авторизоваться через соц. сети</div>
+            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+          </form>
+          <form action="" id="registration-form">
+            <input type="text" placeholder="Фамилия"/>
+            <input type="text" placeholder="Имя"/>
+            <input type="text" placeholder="E-mail"/>
+            <input type="password" placeholder="Пароль"/>
+            <button>Зарегистрироваться</button>
+            <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
+            <div class="log-social-title">Авторизоваться через соц. сети</div>
+            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-cont">
+    <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Экскурсии</a><a href="#">Результаты поиска</a></div>
+  </div>
+  <div class="main-cont">
+    <div class="lk-title">Бронирование</div>
+    <div class="lk-wraper">
+      <div class="lk-left">
+        <div class="lk-left-el lk-left-el-profil">
+          <div class="lk-left-el-title">Мой профиль</div>
+          <div class="lk-left-el-sub"><a href="#">Личная страница</a><a href="#">Оплаченные заказы</a><a href="#">Настройки</a></div>
+        </div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Корзина</a></div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Брони</a></div>
+        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Избранное</a></div>
+      </div>
+      <div class="lk-right">
+        <div class="lk-right-content">
+          <div class="lk-list">
+            <div class="lk-list-tab-title">Экскурсии</div>
+            <div class="lk-list-el">
+              <div class="lk-list-el-wraper"><a href="#" class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></a>
+                <div class="lk-list-el-info">
+                  <div class="lk-list-el-info-title">Страна город / Название экскурсии</div>
+                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
+                </div>
+                <div class="lk-list-el-price">
+                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплатить</a>
+                  <div class="lk-list-el-date">до 25.03.2016</div>
+                </div>
+              </div>
+              <div class="lk-list-el-bottom">
+                <div class="lk-list-el-sub-triger">Изменить</div><a href="#">Отменить</a>
+              </div>
+              <div class="lk-list-el-sub">
+                <form action="#">
+                  <div class="lk-list-el-sub-form-wraper">
+                    <div class="form-block-row">
+                      <label>Дата экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10.12.2014</option>
+                        <option>23.11.2015</option>
+                        <option>28.11.2015</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Количество человек</label>
+                      <div class="form-block-count">
+                        <select name="" class="dropdown">
+                          <option>Взрослые</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <select name="" class="dropdown">
+                          <option>Дети</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Время экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Язык экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>Русский</option>
+                        <option>Английски</option>
+                        <option>Немецкий</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Место встречи</label>
+                      <input type="text" placeholder="Вы можете указать место встречи. Наш менеджер свяжется с Вами."/>
+                    </div>
+                  </div>
+                  <div class="lk-total-sub">
+                    <div class="lk-total-sub-info">
+                      <div class="mid-title">Внимательно ознакомтесь с условиями</div>
+                      <p>Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. </p>
+                    </div>
+                    <div class="lk-total-sub-price">
+                      <div class="lk-total-sub-title">лучшая цена <span>$ 1287</span></div>
+                      <div class="lk-total-sub-cource">по курсу ЦБ на 15.02.2011</div>
+                      <div class="lk-total-sub-val">48 500 руб</div><a href="#" class="btn-main">В корзину</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="lk-list-el">
+              <div class="lk-list-el-wraper"><a href="#" class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></a>
+                <div class="lk-list-el-info">
+                  <div class="lk-list-el-info-title">Страна город / Название экскурсии</div>
+                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
+                </div>
+                <div class="lk-list-el-price">
+                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплатить</a>
+                  <div class="lk-list-el-date">до 25.03.2016</div>
+                </div>
+              </div>
+              <div class="lk-list-el-bottom">
+                <div class="lk-list-el-sub-triger">Изменить</div><a href="#">Отменить</a>
+              </div>
+              <div class="lk-list-el-sub">
+                <form action="#">
+                  <div class="lk-list-el-sub-form-wraper">
+                    <div class="form-block-row">
+                      <label>Дата экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10.12.2014</option>
+                        <option>23.11.2015</option>
+                        <option>28.11.2015</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Количество человек</label>
+                      <div class="form-block-count">
+                        <select name="" class="dropdown">
+                          <option>Взрослые</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <select name="" class="dropdown">
+                          <option>Дети</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Время экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Язык экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>Русский</option>
+                        <option>Английски</option>
+                        <option>Немецкий</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Место встречи</label>
+                      <input type="text" placeholder="Вы можете указать место встречи. Наш менеджер свяжется с Вами."/>
+                    </div>
+                  </div>
+                  <div class="lk-total-sub">
+                    <div class="lk-total-sub-info">
+                      <div class="mid-title">Внимательно ознакомтесь с условиями</div>
+                      <p>Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. </p>
+                    </div>
+                    <div class="lk-total-sub-price">
+                      <div class="lk-total-sub-title">лучшая цена <span>$ 1287</span></div>
+                      <div class="lk-total-sub-cource">по курсу ЦБ на 15.02.2011</div>
+                      <div class="lk-total-sub-val">48 500 руб</div><a href="#" class="btn-main">В корзину</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="lk-list-el">
+              <div class="lk-list-el-wraper"><a href="#" class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></a>
+                <div class="lk-list-el-info">
+                  <div class="lk-list-el-info-title">Страна город / Название экскурсии</div>
+                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
+                </div>
+                <div class="lk-list-el-price">
+                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплатить</a>
+                  <div class="lk-list-el-date">до 25.03.2016</div>
+                </div>
+              </div>
+              <div class="lk-list-el-bottom">
+                <div class="lk-list-el-sub-triger">Изменить</div><a href="#">Отменить</a>
+              </div>
+              <div class="lk-list-el-sub">
+                <form action="#">
+                  <div class="lk-list-el-sub-form-wraper">
+                    <div class="form-block-row">
+                      <label>Дата экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10.12.2014</option>
+                        <option>23.11.2015</option>
+                        <option>28.11.2015</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Количество человек</label>
+                      <div class="form-block-count">
+                        <select name="" class="dropdown">
+                          <option>Взрослые</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <select name="" class="dropdown">
+                          <option>Дети</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Время экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Язык экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>Русский</option>
+                        <option>Английски</option>
+                        <option>Немецкий</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Место встречи</label>
+                      <input type="text" placeholder="Вы можете указать место встречи. Наш менеджер свяжется с Вами."/>
+                    </div>
+                  </div>
+                  <div class="lk-total-sub">
+                    <div class="lk-total-sub-info">
+                      <div class="mid-title">Внимательно ознакомтесь с условиями</div>
+                      <p>Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. </p>
+                    </div>
+                    <div class="lk-total-sub-price">
+                      <div class="lk-total-sub-title">лучшая цена <span>$ 1287</span></div>
+                      <div class="lk-total-sub-cource">по курсу ЦБ на 15.02.2011</div>
+                      <div class="lk-total-sub-val">48 500 руб</div><a href="#" class="btn-main">В корзину</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="lk-list-el">
+              <div class="lk-list-el-wraper"><a href="#" class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></a>
+                <div class="lk-list-el-info">
+                  <div class="lk-list-el-info-title">Страна город / Название экскурсии</div>
+                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
+                </div>
+                <div class="lk-list-el-price">
+                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплатить</a>
+                  <div class="lk-list-el-date">до 25.03.2016</div>
+                </div>
+              </div>
+              <div class="lk-list-el-bottom">
+                <div class="lk-list-el-sub-triger">Изменить</div><a href="#">Отменить</a>
+              </div>
+              <div class="lk-list-el-sub">
+                <form action="#">
+                  <div class="lk-list-el-sub-form-wraper">
+                    <div class="form-block-row">
+                      <label>Дата экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10.12.2014</option>
+                        <option>23.11.2015</option>
+                        <option>28.11.2015</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Количество человек</label>
+                      <div class="form-block-count">
+                        <select name="" class="dropdown">
+                          <option>Взрослые</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                        <select name="" class="dropdown">
+                          <option>Дети</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Время экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Язык экскурсии</label>
+                      <select name="" class="dropdown">
+                        <option>Русский</option>
+                        <option>Английски</option>
+                        <option>Немецкий</option>
+                      </select>
+                    </div>
+                    <div class="form-block-row">
+                      <label>Место встречи</label>
+                      <input type="text" placeholder="Вы можете указать место встречи. Наш менеджер свяжется с Вами."/>
+                    </div>
+                  </div>
+                  <div class="lk-total-sub">
+                    <div class="lk-total-sub-info">
+                      <div class="mid-title">Внимательно ознакомтесь с условиями</div>
+                      <p>Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. </p>
+                    </div>
+                    <div class="lk-total-sub-price">
+                      <div class="lk-total-sub-title">лучшая цена <span>$ 1287</span></div>
+                      <div class="lk-total-sub-cource">по курсу ЦБ на 15.02.2011</div>
+                      <div class="lk-total-sub-val">48 500 руб</div><a href="#" class="btn-main">В корзину</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="lk-total">
+            <div class="lk-total-info">
+              <div class="mid-title">Внимательно ознакомтесь с условиями</div>
+              <p>Проверьте язык, на котором будет проводиться услуга, время начала и место встречи. Если место встречи не указано организатором - внесите информацию об отеле в котором вы остановились - название и адрес отеля. </p>
+            </div>
+            <div class="lk-total-price">
+              <div class="lk-total-title">Общая сумма</div>
+              <div class="lk-total-cource">по курсу ЦБ на 15.02.2011</div>
+              <div class="lk-total-val">48 500 руб</div><a href="#" class="btn-main">В корзину</a>
+            </div>
+          </div>
+        </div>
+        <div class="lk-right-bottom"><a href="#" class="lk-right-bottom-el">Забронировать отель</a><a href="#" class="lk-right-bottom-el">Забронировать билет</a><a href="#" class="lk-right-bottom-el">Найти экскурсию</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-order"><i class="fa fa-close"></i>
+    <div class="modal-order-wraper">
+      <div class="big-title">Заказ экскурсии</div>
+      <div class="modal-order-text">Индивидуальная экскурсия</div>
+      <form action="#">
+        <input id="modal-date" type="text" placeholder=" Дата "/>
+        <select class="modal-time dropdown">
+          <option>Время </option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+        </select>
+        <select class="modal-man dropdown">
+          <option>Взрослые </option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select class="modal-children dropdown">
+          <option>Дети </option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <div class="modal-order-el">
+          <div class="modal-order-left">
+            <div class="modal-order-left-title">Лучшая цена</div>
+            <div class="modal-order-left-price">$ 1 788</div>
+          </div>
+          <div class="modal-order-right">
+            <div id="modal-get-bay" class="btn-main">Купить</div><span>Нельзя отменить бронь</span>
+          </div>
+        </div>
+        <div class="modal-order-el">
+          <div class="modal-order-left">
+            <div class="modal-order-left-title">Стандарт</div>
+            <div class="modal-order-left-price">$ 2000</div>
+          </div>
+          <div class="modal-order-right">
+            <div id="modal-get-bron" class="btn-main">Забронировать</div><span>Возможна отмена брони за 3 дня</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-more"><span>*Точное время будет указано в бланке заказа</span><span>*дети от 7 лет</span></div>
+  </div>
+  <div class="modal modal-bron">
+    <div class="modal-bron-wraper">
+      <div class="big-title">Бронь добавлена</div>
+      <div class="btn-main">продолжить покупки</div>
+    </div>
+  </div>
+  <div class="modal modal-exs">
+    <div class="modal-bron-wraper">
+      <div class="big-title">Экскурсия добавлена в корзину</div>
+      <div class="btn-main">Оплатить</div>
+      <div class="btn-main">продолжить покупки</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="main-cont">
+      <div class="footer-wraper">
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Портал</a></div>
+        <div class="footer-right"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </div>
+</body>
+<!--Include script-->
+<script src="js/combined.js"></script>
+<script src="js/script.js"></script>

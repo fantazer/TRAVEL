@@ -1841,6 +1841,7 @@ hr
 .help-contact-left
 	+below(768px)
 		margin-right 0
+		max-height initial 
 		margin-bottom 20px
 	flexB(mid)
 	fl()
@@ -1991,6 +1992,8 @@ hr
 	f()
 	justify-content flex-end
 .lk-right-bottom-el
+	+below(640px)
+		margin 5px
 	margin-left 5%
 	text-decoration underline
 	color darkgrey
@@ -2210,6 +2213,8 @@ hr
 	f()
 	fw()
 .lk-total-info
+	+below(768px)
+		width 100%
 	width 50%
 	flexB(mid)
 	fl()
@@ -2220,6 +2225,8 @@ hr
 		width 60%
 //.mid-title
 .lk-total-price
+	+below(768px)
+		width 100%
 	width 50%
 	flexB(mid)
 	fl()
@@ -2362,6 +2369,8 @@ hr
 	+below(640px)
 		.btn-main
 			width 100%
+		.big-title
+			text-align center
 	.btn-row
 		+below(768px)
 			margin-bottom 10px
@@ -2391,6 +2400,8 @@ hr
 //.btn-main
 //.mid-title
 .lk-order-enter
+	+below(640px)
+		text-align center
 	background lightgrey
 	padding 10px
 	margin-bottom 10px
@@ -2483,3 +2494,145 @@ hr
 			font-size 14px!important
 		span
 			font-size 14px!important
+			
+//.lk-bron-edit
+//.lk-list-tab-title
+.lk-bron-edit-wraper
+	flexB(between)
+	fw()
+.lk-bron-edit-el
+	+below(1024px)
+		width 48%
+	+below(640px)
+		width 100%
+	f()
+	fl()
+	bsh()
+	position relative
+	width 32%
+	margin-bottom 10px
+	.lk-list-el-check
+		left 10px
+.lk-bron-edit-img
+	width 100%
+	margin-bottom 10px
+.lk-bron-edit-info
+	flexB(around)
+	fl()
+	margin-bottom 10px
+	padding-bottom 10px
+	border-bottom 1px solid grey
+	p
+		margin 0
+		margin-bottom 5px
+	a
+		color blue
+		text-decoration underline
+.lk-bron-edit-price
+	flexB(around)
+	fl()
+	margin-bottom 10px
+	padding-bottom 10px
+	border-bottom 1px solid grey
+.lk-bron-edit-price-val
+	font-weight 600
+	color black
+	font-size 18px
+	margin-top 10px
+//.lk-bron-edit-price-title
+.lk-bron-edit-price-info
+	
+	span
+		display block
+	a
+		display block
+		text-align center
+		color blue
+		text-decoration underline
+.lk-bron-edit-date
+	padding 0 10px
+	.form-block-row
+		label
+			display block
+			width 100%
+			text-align center
+			margin-bottom 10px
+		ul
+			padding 0
+			margin 0
+			border 1px solid grey
+		.dropdown
+			border 1px solid grey
+			width 100%
+//.form-block-row
+//.dropdown
+
+.lk-bron-edit-head
+	+below(1024px)
+		fw()
+		flexB(mid)
+	flexB(between)
+	border 1px solid #e1e1e1
+	background #f7f7f7
+	padding 10px
+	margin-bottom 10px
+	.lk-prof-form-check
+		margin 0
+//.lk-bron-edit-head-title
+.lk-bron-edit-head-select
+	+below(1024px)
+		width 100%
+		margin 5px 0
+		flexB(mid)
+	.form-row
+		+below(1024px)
+			label
+				width auto
+		+below(640px)
+			label
+				width 100%
+				text-align center
+				margin-bottom 5px
+			.dropdown
+				width 100%
+				margin 0 auto
+				margin 0 5px
+			width 100%
+			margin-right 0
+			margin-bottom 10px
+		flexB(between)
+		margin-right 20px
+		margin-bottom 0
+	f()
+	ul
+		padding 0
+		margin 0
+		border 1px solid grey
+	.dropdown
+		border 1px solid grey
+		width 100px
+		margin-left 10px
+//.lk-bron-edit-head-get
+//.lk-prof-form-check
+
+.lk-bron-edit-total
+	+below(768px)
+		width 100%
+	width 50%
+	margin 0 auto
+	margin-top 20px
+.lk-bron-edit-total-el
+	flexB(between)
+	margin-bottom 10px
+.lk-bron-edit-total-name
+	+below(768px)
+		font-size 14px
+	font-size 20px
+	color black
+.lk-bron-edit-total-val
+	+below(768px)
+		font-size 14px
+	font-weight 600
+	font-size 20px
+	color black
+//.btn-main

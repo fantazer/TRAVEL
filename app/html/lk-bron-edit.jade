@@ -1,0 +1,98 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Мои закладки
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.lk-bron-edit
+						.lk-list-tab-title Бронирование
+						.lk-bron-edit-head
+							.lk-bron-edit-head-title Количество человек
+							.lk-bron-edit-head-select 
+								.form-row
+									label Взрослые 
+									select(name="").dropdown
+										option 1
+										option 2
+										option 3
+								.form-row
+									label Дети 
+									select(name="").dropdown
+										option 1
+										option 2
+										option 3
+							.lk-bron-edit-head-get
+								.lk-prof-form-check
+									input(id='lk-bron-edit-head-get', type='checkbox', name='rr')
+									label(for='lk-bron-edit-head-get') 
+										span
+									text Применить ко всем
+						.lk-bron-edit-wraper
+							- for (var a = 0; a < 6; a++)
+								.lk-bron-edit-el
+									.lk-list-el-delete
+										.fa.fa-close
+									.lk-list-el-check
+										input(id='lk-list-#{a}', type='checkbox', name='rr')
+										label(for='lk-list-#{a}') 
+											span
+									.lk-bron-edit-img
+										img(src="img/otel-item-2.jpg", alt="")
+									.lk-bron-edit-info
+										p Индивидуальная экскурсия
+										p Италия, Рим
+										a(href="#") Название экскурсии
+									.lk-bron-edit-price
+										.lk-bron-edit-price-title Стоимость
+										.lk-bron-edit-price-info
+											span (2 взрослых + 1 ребенок)
+											a(href="#") изменить
+										.lk-bron-edit-price-val $200 = 4200 руб
+
+									.lk-bron-edit-date
+										.form-block-row
+											label Дата экскурсии
+											select(name="").dropdown
+												option 10.12.2014
+												option 23.11.2015
+												option 28.11.2015
+										.form-block-row
+											label Время экскурсии
+											select(name="").dropdown
+												option 10:00
+												option 11:00
+												option 12:00
+						hr
+						.lk-bron-edit-total
+							.lk-bron-edit-total-el
+								.lk-bron-edit-total-name Бронирование экскурсии
+								.lk-bron-edit-total-val 7240 руб
+							.lk-bron-edit-total-el
+								.lk-bron-edit-total-name Покупка экскурсии
+								.lk-bron-edit-total-val 17240 руб
+							.lk-bron-edit-total-el
+								.lk-bron-edit-total-name Итого:
+								.lk-bron-edit-total-val 7240 руб
+							a(href="#").btn-main Забронировать
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+				
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+
