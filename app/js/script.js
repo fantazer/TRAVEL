@@ -174,6 +174,12 @@ $(document).ready(function(){
 					position:['auto','auto'], // position center
 			}); 
 	})
+	$('.lk-list-el-modal').click(function(){
+			$('.modal-lk-list').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
 
 	//datePicker
 	

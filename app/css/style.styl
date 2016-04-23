@@ -101,11 +101,12 @@ bsh(){
 			border-top 1px solid #F8F8F8
 			&:last-child
 				border-bottom 1px solid #F8F8F8
-				
 	text-transform uppercase
 	flexB(around)
 	flex-grow 10
 	font-weight 600
+	a
+		display block
 .top-menu-money
 	+below(768px)
 		display none
@@ -662,7 +663,7 @@ input[type="checkbox"]:checked + label span
 	text-transform uppercase
 	font-size 14px
 	border-radius 5px
-
+	display block
 .content-right-found-get-price-text
 	+below(768px)
 		flex 2
@@ -1546,6 +1547,7 @@ button.btn-main
 		margin-bottom 10px
 	width 33%
 	position relative
+	display block
 .same-excurse-title
 	background blue
 	color black
@@ -1851,7 +1853,7 @@ hr
 	background white
 	flex 1 1 100%
 	margin-right 20px
-	max-height 400px
+	max-height 450px
 //.btn-main
 .help-contact-right
 	padding 20px
@@ -1997,7 +1999,7 @@ hr
 	margin-left 5%
 	text-decoration underline
 	color darkgrey
-	
+	display block
 .btn-row
 	+below(768px)
 		fw()
@@ -2038,15 +2040,20 @@ hr
 	img
 		width 100%
 .lk-about-info
+	position relative
 	+below(768px)
 		width 100%
 		.big-title
 			text-align center
 	width 65%
-	
+	+above(1024px)
+		.btn-row
+			position absolute
+			bottom 0px
 .lk-about-info-wraper 
 	margin-top 20px
 .lk-about-info-wraper-row 
+	margin-bottom 10px
 	+below(768px)
 		width 100%
 		margin-bottom 10px
@@ -2062,6 +2069,8 @@ hr
 	width 80%
 	span
 		text-align left
+	.mid-title
+		margin-bottom 0
 //.mid-title 
 .form-row
 	+below(768px)
@@ -2075,6 +2084,7 @@ hr
 		font-weight 600
 		width 30%
 		padding-right 10px
+		display block
 	input
 		+below(768px)
 			width 100%
@@ -2117,12 +2127,13 @@ hr
 		margin-right 0
 	width 20%
 	margin-right 10px
+	display block
 	img
 		width 100%
 .lk-list-el-info
 	+below(768px)
 		width 100%
-	width 60%
+	width 58%
 	margin-right 10px
 .lk-list-el-info-title
 	+below(768px)
@@ -2155,7 +2166,7 @@ hr
 		a
 			margin 0!important
 			font-size 10px
-		.lk-list-el-sub-triger
+		.lk-list-el-sub-triger,.lk-list-el-modal
 			margin 0!important
 			font-size 10px
 	f()
@@ -2164,6 +2175,7 @@ hr
 		color blue
 		margin-left 5%
 		text-decoration underline
+		display block
 .lk-list-el-check
 	+below(768px)
 		top 20px
@@ -2221,8 +2233,11 @@ hr
 	.mid-title
 		text-align center
 	p
+		+below(1024px)
+			width 80%
 		text-align center
 		width 60%
+		margin 0
 //.mid-title
 .lk-total-price
 	+below(768px)
@@ -2236,7 +2251,8 @@ hr
 	text-transform uppercase
 	color black
 	margin-bottom 10px
-	text-align center	
+	text-align center
+	width 100%
 //.lk-total-cource
 .lk-total-val
 	font-weight 600
@@ -2250,7 +2266,7 @@ hr
 .lk-list-el-sub-form-wraper
 	flexB(between)
 	fw()
-.lk-list-el-sub-triger
+.lk-list-el-sub-triger,.lk-list-el-modal
 	text-decoration underline
 	color blue
 	margin-left 5%	
@@ -2260,6 +2276,7 @@ hr
 	+below(768px)
 		margin-top 10px
 	display none
+	margin-top 20px
 	ul
 		padding 0
 		margin 0
@@ -2355,8 +2372,8 @@ hr
 	top 10px
 	right 10px
 	border-radius 50%	
-	background red
-	color white
+	//background red
+	color blue
 	width 20px
 	height 20px
 	display block
@@ -2513,6 +2530,10 @@ hr
 	margin-bottom 10px
 	.lk-list-el-check
 		left 10px
+	.lk-list-el-delete
+		background white
+		border 1px solid #B5B7BA
+		z-index 100
 .lk-bron-edit-img
 	width 100%
 	margin-bottom 10px
@@ -2636,3 +2657,13 @@ hr
 	font-size 20px
 	color black
 //.btn-main
+
+.modal-lk-list-wraper
+	.big-title
+		+below(768px)
+			font-size 18px
+	.mid-title
+		+below(768px)
+			font-size 16px
+		font-size 20px
+		text-align center
