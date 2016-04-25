@@ -181,6 +181,20 @@ $(document).ready(function(){
 			}); 
 	})
 
+	$('.button-lk-bron-time').click(function(){
+			$('.modal-lk-bron-time').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
+
+	$('.button-lk-bron-endtime').click(function(){
+			$('.modal-lk-bron-endtime').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
+
 	//datePicker
 	
 		$('.input-date').datepicker({

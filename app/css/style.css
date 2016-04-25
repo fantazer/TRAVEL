@@ -5219,6 +5219,9 @@ hr {
     font-size: 14px;
   }
 }
+.modal-lk-list-wraper {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   .modal-lk-list-wraper .big-title {
     font-size: 18px;
@@ -5232,4 +5235,52 @@ hr {
   .modal-lk-list-wraper .mid-title {
     font-size: 16px;
   }
+}
+.modal-lk-bron-time {
+  display: none;
+  width: 35%;
+}
+@media only screen and (max-width: 768px) {
+  .modal-lk-bron-time {
+    width: 85%;
+  }
+}
+.modal-lk-bron-time .big-title {
+  font-size: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .modal-lk-bron-time .big-title {
+    font-size: 12px;
+  }
+}
+.modal-lk-bron-time .mid-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: initial;
+}
+.modal-lk-bron-time .mid-title span {
+  font-weight: 600;
+  font-size: 18px;
+}
+.modal-lk-bron-endtime {
+  display: none;
+  width: 35%;
+}
+@media only screen and (max-width: 768px) {
+  .modal-lk-bron-endtime {
+    width: 85%;
+  }
+}
+.modal-lk-bron-endtime .big-title {
+  font-size: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .modal-lk-bron-endtime .big-title {
+    font-size: 12px;
+  }
+}
+.modal-lk-bron-endtime .mid-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: initial;
 }
