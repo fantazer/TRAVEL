@@ -4,7 +4,7 @@
 		.big-title Заказ экскурсии
 		.modal-order-text Индивидуальная экскурсия
 		form(action="#")
-			input#modal-date(type="text" placeholder=" Дата ")
+			input#modal-date(type="text" placeholder=" Дата " readonly)
 			select.modal-time.dropdown
 				option Время 
 				option 10:00
@@ -12,27 +12,31 @@
 				option 12:00
 			select.modal-man.dropdown
 				option Взрослые 
+				option нет
 				option 1
 				option 2
 				option 3
 			select.modal-children.dropdown
 				option Дети 
+				option нет
 				option 1
 				option 2
 				option 3
+			input.modal-date(type="text" placeholder="Номер телефона" )
+			input.modal-date(type="text" placeholder="Код СМС")
 			.modal-order-el
 				.modal-order-left
 					.modal-order-left-title Лучшая цена
 					.modal-order-left-price $ 1 788
 				.modal-order-right
-					.btn-main#modal-get-bay Купить
+					a(href="#").btn-main#modal-get-bay Купить
 					span Нельзя отменить бронь
 			.modal-order-el
 				.modal-order-left
 					.modal-order-left-title Стандарт
 					.modal-order-left-price $ 2000
 				.modal-order-right
-					.btn-main#modal-get-bron Забронировать
+					a(href="#").btn-main#modal-get-bron Забронировать
 					span Возможна отмена брони за 3 дня
 	.modal-more
 		span *Точное время будет указано в бланке заказа
@@ -41,28 +45,34 @@
 .modal.modal-bron
 	.modal-bron-wraper
 		.big-title Бронь добавлена
-		.btn-main продолжить покупки
+		a(href="#").btn-main продолжить покупки
 
 .modal.modal-exs
 	.modal-bron-wraper
 		.big-title Экскурсия добавлена в корзину
-		.btn-main Оплатить
-		.btn-main продолжить покупки
+		a(href="#").btn-main Оплатить
+		a(href="#").btn-main продолжить покупки
 
 .modal.modal-lk-list
 	.modal-lk-list-wraper
 		.big-title Свяжитесь с нами по телефону 
 		.mid-title 8900-000-00-00
-		.btn-main Готово
+		a(href="#").btn-main Готово
 
 .modal.modal-lk-bron-time
 	.modal-lk-bron-time-wraper
 		.big-title Отмена экскурсии возможна только <br> за 2 дня до даты бронирования 
 		.mid-title свяжитесь с нами поо телефону <br> <span> 8900-000-00-00</span>
-		.btn-main Готово
+		a(href="#").btn-main Готово
 
 .modal.modal-lk-bron-endtime
 	.modal-lk-bron-time-wraper
 		.big-title Спасибо, что предупредили нас заранее 
 		.mid-title На Ваш e-mail будет отправлено <br> письмо со ссылкой для подтверждения отмены</span>
-		.btn-main отправить письмо
+		a(href="#").btn-main отправить письмо 
+
+.modal.modal-bookmark
+	.modal-bookmark-wraper
+		.big-title Название экскурсии 
+		a(href="#").btn-main Подробно
+		a(href="#").btn-main Забронировать 

@@ -7,21 +7,64 @@ body
 	include ./block_html/breadcrumbs.jade
 
 	.main-cont
-		.lk-title Оформление заказа
+		.lk-title Корзина
 		.lk-wraper
 			.lk-left
 				include ./block_html/lk-menu.jade
 			.lk-right
 				.lk-right-content.lk-order
-					.big-title СОСТАВ ЗАКАЗА
+					.big-title Корзина
 					.lk-order-result-wrap
 						.lk-order-result
-								.lk-order-result-text 3 экскурсии на сумму
+								.lk-order-result-text В вашей корзине 3 экскурсии на сумму 
 								.lk-order-result-val 12 500 руб
 						.btn-row
-							.btn-main Изменить состав заказа
-							.btn-main Вернуться  в корзину
-					.mid-title Заполните данные получателя
+							.btn-main.toggle-basket-edit Состав корзины
+						
+						.lk-bron-edit.toggle-basket-wraper
+							.lk-bron-edit-wraper
+								- for (var a = 0; a < 3; a++)
+									.lk-bron-edit-el
+										.lk-list-el-delete
+											.fa.fa-close
+										.lk-bron-edit-img
+											img(src="img/otel-item-2.jpg", alt="")
+										.lk-bron-edit-info
+											p Индивидуальная экскурсия
+											p Италия, Рим
+											a(href="#") Название экскурсии
+										.lk-bron-edit-price
+											.lk-bron-edit-price-title Стоимость
+											.lk-bron-edit-price-info
+												span (2 взрослых + 1 ребенок)
+												a(href="#") изменить
+											.lk-bron-edit-price-val $200 = 4200 руб
+
+										.lk-bron-edit-date
+											.form-block-row
+												label Дата экскурсии
+												input.input-date(type="text" placeholder="Дата экскурсии" readonly)
+											.form-block-row
+												label Время экскурсии
+												select(name="").dropdown
+													option 10:00
+													option 11:00
+													option 12:00
+							hr
+							.lk-bron-edit-total
+								.lk-bron-edit-total-el
+									.lk-bron-edit-total-name Бронирование экскурсии
+									.lk-bron-edit-total-val 7240 руб
+								.lk-bron-edit-total-el
+									.lk-bron-edit-total-name Покупка экскурсии
+									.lk-bron-edit-total-val 17240 руб
+								.lk-bron-edit-total-el
+									.lk-bron-edit-total-name Итого:
+									.lk-bron-edit-total-val 7240 руб
+								a(href="#").btn-main Оформить
+
+
+					.mid-title Оформление заказа
 					.lk-order-enter 
 						a(href="#") Войдите
 						span ,если Вы еще не зарегистрированы, или заполните данные о себе

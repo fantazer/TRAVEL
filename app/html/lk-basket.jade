@@ -38,22 +38,21 @@ body
 										.lk-list-el-sub-form-wraper
 											.form-block-row
 												label Дата экскурсии
-												select(name="").dropdown
-													option 10.12.2014
-													option 23.11.2015
-													option 28.11.2015
+												input.input-date(type="text" readonly placeholder="дата экскурсии")
 											.form-block-row
 												label Количество человек
 												.form-block-count
 													i.fa.fa-male
 													select(name="").dropdown
 														option Взрослые
+														option нет
 														option 1
 														option 2
 														option 3
 													i.fa.fa-child
 													select(name="").dropdown
 														option Дети
+														option нет
 														option 1
 														option 2
 														option 3

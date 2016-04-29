@@ -106,8 +106,8 @@ input[type="checkbox"] {
 button {
   border: 0px;
   color: #fff;
-  background: #ffdb4d;
-  color: #222;
+  background: #feb20e;
+  color: #fff;
   text-transform: uppercase;
 }
 body {
@@ -741,8 +741,8 @@ body {
 .top-search-but button {
   border: 0px;
   color: #fff;
-  background: #ffdb4d;
-  color: #222;
+  background: #feb20e;
+  color: #fff;
   text-transform: uppercase;
   width: 100%;
   padding: 12px 0;
@@ -896,7 +896,7 @@ input[type="checkbox"]:checked + label span {
   margin-right: 5px;
 }
 .filter-reting-el-left .active {
-  color: #ffdc00 !important;
+  color: #feb20e !important;
 }
 .filter-reting-el-left .fa {
   margin-right: 3px;
@@ -907,7 +907,7 @@ input[type="checkbox"]:checked + label span {
   margin-right: 5px;
 }
 .filter-reting-stars .active {
-  color: #ffdc00 !important;
+  color: #feb20e !important;
 }
 .filter-reting-stars .fa {
   margin-right: 3px;
@@ -1310,8 +1310,8 @@ input[type="checkbox"]:checked + label span {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  background: #ffdb4d;
-  color: #222;
+  background: #feb20e;
+  color: #fff;
   padding: 10px;
   text-transform: uppercase;
   font-size: 14px;
@@ -2755,10 +2755,10 @@ div[class*="main-type"] {
 }
 .btn-main {
   text-align: center;
-  background: #ffdc00;
+  background: #feb20e;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  color: #222;
+  color: #fff;
   padding: 10px;
   text-transform: uppercase;
   font-size: 14px;
@@ -2945,7 +2945,7 @@ button.btn-main {
   }
 }
 .result-info-el-color-blue {
-  background: #ffdb4d;
+  background: #feb20e;
   color: #222;
 }
 .result-place {
@@ -3344,6 +3344,26 @@ button.btn-main {
 }
 .modal-bron {
   display: none;
+}
+.modal-date::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 1;
+  color: #000;
+}
+.modal-date::-moz-placeholder {
+  font-size: 18px;
+  line-height: 1;
+  color: #000;
+}
+.modal-date:-moz-placeholder {
+  font-size: 18px;
+  line-height: 1;
+  color: #000;
+}
+.modal-date:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 1;
+  color: #000;
 }
 .modal-exs {
   display: none;
@@ -4866,7 +4886,7 @@ hr {
   bottom: 10px;
   right: 10px;
   color: #232121;
-  background: #ffdc00;
+  background: #feb20e;
   padding: 2px 5px;
   font-size: 20px;
   font-weight: 600;
@@ -4978,7 +4998,7 @@ hr {
 .lk-bron-edit-el .lk-list-el-delete {
   background: #fff;
   border: 1px solid #b5b7ba;
-  z-index: 100;
+  z-index: 1;
 }
 .lk-bron-edit-img {
   width: 100%;
@@ -5047,6 +5067,9 @@ hr {
 }
 .lk-bron-edit-date {
   padding: 0 10px;
+}
+.lk-bron-edit-date input {
+  width: 100%;
 }
 .lk-bron-edit-date .form-block-row label {
   display: block;
@@ -5219,7 +5242,7 @@ hr {
     font-size: 14px;
   }
 }
-.modal-lk-list-wraper {
+.modal-lk-bron-time {
   display: none;
 }
 @media only screen and (max-width: 768px) {
@@ -5235,6 +5258,9 @@ hr {
   .modal-lk-list-wraper .mid-title {
     font-size: 16px;
   }
+}
+.modal-lk-list {
+  display: none;
 }
 .modal-lk-bron-time {
   display: none;
@@ -5283,4 +5309,14 @@ hr {
   text-align: center;
   font-weight: 300;
   text-transform: initial;
+}
+.modal-bookmark {
+  display: none;
+}
+.modal-bookmark .btn-main {
+  margin-bottom: 10px;
+}
+.toggle-basket-wraper {
+  display: none;
+  margin-bottom: 20px;
 }

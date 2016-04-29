@@ -93,6 +93,10 @@ $(document).ready(function(){
 		$('.help-contact-wraper').slideToggle()
 	})
 
+	$('.toggle-basket-edit').click(function(){
+		$('.toggle-basket-wraper').slideToggle()
+	})
+	
 	$('.lk-left-el-profil').click(function(){
 		$(this).find('.lk-left-el-sub').slideToggle()
 	})
@@ -195,6 +199,13 @@ $(document).ready(function(){
 			}); 
 	})
 
+	
+	$('.lk-bookmark-el img').click(function(){
+			$('.modal-bookmark').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
 	//datePicker
 	
 		$('.input-date').datepicker({

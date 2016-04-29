@@ -4,6 +4,7 @@
 @import 'jeet'
 @import 'rupture'
 
+yellow = #FEB20E;
 border-box-html()
 fluid-media() //care flex box image
 //rupture.scale = 0 320px 640px 768px 1024px 1280px
@@ -29,8 +30,8 @@ input[type="checkbox"]
 button
 	border 0px
 	color white
-	background #FFDB4D
-	color black
+	background #FEB20E
+	color white
 	text-transform uppercase
 body
 	//font-family "PT Sans"
@@ -335,8 +336,8 @@ bsh(){
 	button
 		border 0px
 		color white
-		background #FFDB4D
-		color black
+		background #FEB20E
+		color white
 		text-transform uppercase
 		width 100%
 		padding 12px 0
@@ -469,7 +470,7 @@ input[type="checkbox"]:checked + label span
 	.active
 		+below(768px)
 			color white
-			//background #FFDB4D
+			//background #FEB20E
 			color black
 		border-bottom 2px solid blue
 		&:after
@@ -657,8 +658,8 @@ input[type="checkbox"]:checked + label span
 		font-size 14px
 	flex 1
 	text-align center
-	background #FFDB4D
-	color black
+	background #FEB20E
+	color white
 	padding 10px
 	text-transform uppercase
 	font-size 14px
@@ -1372,7 +1373,7 @@ div[class*="main-type"]
 	text-align center
 	background yellow
 	border-radius 5px
-	color black
+	color white
 	padding 10px
 	text-transform uppercase
 	font-size 14px
@@ -1449,7 +1450,7 @@ button.btn-main
 		flex 1 1 100%
 	flex 1
 .result-info-el-color-blue
-	background #FFDB4D
+	background #FEB20E
 	color black
 	
 .result-place
@@ -1689,7 +1690,29 @@ button.btn-main
 
 .modal-bron
 	display none
-	
+
+.modal-date::-webkit-input-placeholder {
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+.modal-date::-moz-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+.modal-date:-moz-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+.modal-date:-ms-input-placeholder{
+	font-size: 18px;
+	line-height: 1;
+	color: #000;
+}
+
+
 .modal-exs
 	display none
 	.btn-main
@@ -2506,6 +2529,7 @@ hr
 	text-decoration underline
 
 .dropdown
+	//z-index 2000!important
 	+below(1024px)
 		li
 			font-size 14px!important
@@ -2533,7 +2557,7 @@ hr
 	.lk-list-el-delete
 		background white
 		border 1px solid #B5B7BA
-		z-index 100
+		z-index 1
 .lk-bron-edit-img
 	width 100%
 	margin-bottom 10px
@@ -2571,6 +2595,8 @@ hr
 		color blue
 		text-decoration underline
 .lk-bron-edit-date
+	input 
+		width 100%
 	padding 0 10px
 	.form-block-row
 		label
@@ -2657,9 +2683,9 @@ hr
 	font-size 20px
 	color black
 //.btn-main
-
-.modal-lk-list-wraper
+.modal-lk-bron-time
 	display none
+.modal-lk-list-wraper
 	.big-title
 		+below(768px)
 			font-size 18px
@@ -2668,7 +2694,8 @@ hr
 			font-size 16px
 		font-size 20px
 		text-align center
-		
+.modal-lk-list
+	display none
 .modal-lk-bron-time
 	display none
 	+below(768px)
@@ -2700,3 +2727,15 @@ hr
 		text-align center
 		font-weight 300
 		text-transform initial
+
+.datepicker
+	//z-index 2100!important
+
+.modal-bookmark
+	display none
+	.btn-main
+		margin-bottom 10px
+		
+.toggle-basket-wraper
+	display none
+	margin-bottom 20px

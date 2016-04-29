@@ -21,12 +21,14 @@ body
 								.form-row
 									label Взрослые 
 									select(name="").dropdown
+										option нет
 										option 1
 										option 2
 										option 3
 								.form-row
 									label Дети 
 									select(name="").dropdown
+										option нет
 										option 1
 										option 2
 										option 3
@@ -61,10 +63,7 @@ body
 									.lk-bron-edit-date
 										.form-block-row
 											label Дата экскурсии
-											select(name="").dropdown
-												option 10.12.2014
-												option 23.11.2015
-												option 28.11.2015
+											input.input-date(type="text" placeholder="Дата экскурсии" readonly)
 										.form-block-row
 											label Время экскурсии
 											select(name="").dropdown
