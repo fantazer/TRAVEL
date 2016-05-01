@@ -1,8 +1,8 @@
-@import "variable/*"
 @import "icon/*"
-@import 'axis'
+//@import 'axis'
 @import 'jeet'
 @import 'rupture'
+@import "variable/*"
 
 yellow = #FEB20E;
 border-box-html()
@@ -110,8 +110,11 @@ bsh(){
 		display block
 .top-menu-money
 	+below(768px)
-		display none
-	flex-grow 2
+		padding 10px
+		color black
+		.fa
+			color black!important
+	//flex-grow 2
 	flexB(mid)
 	font-weight 600
 	.fa
@@ -155,7 +158,7 @@ bsh(){
 	bsh()
 	input
 		+below(768px)
-			margin-bottom 25px
+			margin-bottom 15px
 		width 100%
 		margin-bottom 10px
 	button
@@ -833,6 +836,7 @@ input[type="checkbox"]:checked + label span
 	color white
 	&:hover
 		cursor pointer
+	
 .log-wraper-remember-el
 	span,a
 		font-size 10px
@@ -1565,7 +1569,7 @@ button.btn-main
 	+below(1024px)
 		display block
 	margin-top 10px
-	background #FDEC85
+	background #EDCD70
 	position relative
 	display none
 	.fa
@@ -1591,6 +1595,7 @@ button.btn-main
 		top 10px
 		right 10px
 		font-size 18px
+		color blue
 		&:hover
 			cursor pointer
 	.dropdown
@@ -1671,16 +1676,19 @@ button.btn-main
 	font-size: 18px;
 	line-height: 1;
 	color: #000;
+	
 }
 #modal-date::-moz-placeholder{
 	font-size: 18px;
 	line-height: 1;
 	color: #000;
+	opacity 1
 }
 #modal-date:-moz-placeholder{
 	font-size: 18px;
 	line-height: 1;
 	color: #000;
+	opacity 1
 }
 #modal-date:-ms-input-placeholder{
 	font-size: 18px;
@@ -1700,11 +1708,13 @@ button.btn-main
 	font-size: 18px;
 	line-height: 1;
 	color: #000;
+	opacity 1
 }
 .modal-date:-moz-placeholder{
 	font-size: 18px;
 	line-height: 1;
 	color: #000;
+	opacity 1
 }
 .modal-date:-ms-input-placeholder{
 	font-size: 18px;
@@ -2201,7 +2211,7 @@ hr
 		display block
 .lk-list-el-check
 	+below(768px)
-		top 20px
+		top 10px
 		right 10px
 	position absolute
 	top 10px
@@ -2388,11 +2398,11 @@ hr
 	margin-top 10px
 	
 .lk-list-el-delete
-	+below(768px)
-		top 20px
-		right 20px
+	+below(1024px)
+		top 10px
+		right 10px
 	position absolute	
-	top 10px
+	top 0px
 	right 10px
 	border-radius 50%	
 	//background red
@@ -2544,13 +2554,13 @@ hr
 .lk-bron-edit-el
 	+below(1024px)
 		width 48%
+		fl()
 	+below(640px)
 		width 100%
 	f()
-	fl()
 	bsh()
 	position relative
-	width 32%
+	//width 32%
 	margin-bottom 10px
 	.lk-list-el-check
 		left 10px
@@ -2559,14 +2569,19 @@ hr
 		border 1px solid #B5B7BA
 		z-index 1
 .lk-bron-edit-img
-	width 100%
+	+below(1024px)
+		width 100%
+	width 25%
 	margin-bottom 10px
 .lk-bron-edit-info
+	+below(1024px)
+		width 100%
+	width 25%
 	flexB(around)
 	fl()
 	margin-bottom 10px
 	padding-bottom 10px
-	border-bottom 1px solid grey
+	// border-bottom 1px solid grey
 	p
 		margin 0
 		margin-bottom 5px
@@ -2574,11 +2589,14 @@ hr
 		color blue
 		text-decoration underline
 .lk-bron-edit-price
+	+below(1024px)
+		width 100%
+	width 25%
 	flexB(around)
 	fl()
 	margin-bottom 10px
 	padding-bottom 10px
-	border-bottom 1px solid grey
+	// border-bottom 1px solid grey
 .lk-bron-edit-price-val
 	font-weight 600
 	color black
@@ -2595,6 +2613,9 @@ hr
 		color blue
 		text-decoration underline
 .lk-bron-edit-date
+	+below(1024px)
+		width 100%
+	width 25%
 	input 
 		width 100%
 	padding 0 10px
@@ -2739,3 +2760,46 @@ hr
 .toggle-basket-wraper
 	display none
 	margin-bottom 20px
+	
+//.top-menu-enter
+.top-auth
+	flexB(mid)
+.top-auth-img
+	+below(768px)
+		margin-right 5px
+	width 30px
+	height 30px
+	img
+		border-radius 50%
+.top-auth-name
+	+below(768px)
+		display none
+	font-size 12px
+	margin 0 10px
+//.log-wraper
+.top-auth-link
+	display block
+	padding 10px
+	
+.main-head-cont
+	.log-wraper
+		margin-top 0
+.get-code
+	display block
+	text-align center
+	margin-bottom 10px
+	text-transform uppercase
+	color blue
+
+.modal-bron-phone-wraper
+	form
+		width 80%
+		margin 0 auto
+	.mid-title
+		text-align center
+.modal-bron-phone
+	display none
+
+.get-bron
+	&:hover
+		cursor pointer

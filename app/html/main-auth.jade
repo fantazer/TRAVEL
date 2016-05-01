@@ -74,59 +74,19 @@ body
 						.top-menu-money
 							i.fa.fa-rub
 							i.fa.fa-caret-down
-					.main-head-cont-enter Вход
-					.log-wraper-main
-						form(action="")#login-form
-							input(type="text" placeholder="E-mail")
-							input(type="password" placeholder="Пароль")
-							button Вход
-							.log-wraper-remember
-								.log-wraper-remember-el
-									input(id='login', type='checkbox', name='rr')
-									label(for='login') 
-										span
-									span Чужой компьютер
-								.log-wraper-remember-el
-									a(href="#") Востановить пароль
-							.log-registration
-								span.registration-trigger Зарегистрироваться 
-								span для полного доступа к сервисам
-							.log-social-title Авторизоваться через соц. сети
-
-							.log-social
-								a(href="#")
-									i.fa.fa-vk
-								a(href="#")
-									i.fa.fa-facebook
-								a(href="#")
-									i.fa.fa-twitter
-								a(href="#")
-									i.fa.fa-google-plus
-								a(href="#")
-									i.fa.fa-instagram
-						form(action="")#registration-form
-							input(type="text" placeholder="Фамилия")
-							input(type="text" placeholder="Имя")
-							input(type="text" placeholder="E-mail")
-							input(type="password" placeholder="Пароль")
-							input(type="text" placeholder="Телефон")
-							a(href="#").get-code Выслать проверочный код
-							input(type="text" placeholder="Проверочный код")
-							button Зарегистрироваться
-							.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
-							.log-social-title Авторизоваться через соц. сети
-
-							.log-social
-								a(href="#")
-									i.fa.fa-vk
-								a(href="#")
-									i.fa.fa-facebook
-								a(href="#")
-									i.fa.fa-twitter
-								a(href="#")
-									i.fa.fa-google-plus
-								a(href="#")
-									i.fa.fa-instagram
+					.main-head-cont-enter.top-auth
+						.top-auth-img
+							img(src="img/gid.jpg", alt="")
+						.top-auth-name Здравствуйте,Юлия
+						i.fa.fa-angle-down
+					.log-wraper
+						a(href="#").top-auth-link Личные данные
+						a(href="#").top-auth-link Оплаченные заказы
+						a(href="#").top-auth-link Корзина
+						a(href="#").top-auth-link Мои брони
+						a(href="#").top-auth-link Избранное
+						hr
+						a(href="#").top-auth-link Выход
 		.head-form
 			.main-cont
 					script(src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716")

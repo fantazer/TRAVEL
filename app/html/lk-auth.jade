@@ -1,0 +1,70 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+
+	//Header-auth
+	.top-menu
+		.main-cont
+			.top-menu-wraper
+				.top-menu-logo
+					i.fa.fa-bars.toggle-top-menu
+					img(src="img/logo-black.png", alt="")
+				.top-menu-items
+					a(href="#") Авибилеты
+					a(href="#") Гостиницы
+					a(href="#") Экскурсии
+					a(href="#") Страховка
+					.top-menu-money
+						i.fa.fa-rub
+						i.fa.fa-caret-down
+				.top-menu-enter.top-auth
+					.top-auth-img
+						img(src="img/gid.jpg", alt="")
+					.top-auth-name Здравствуйте,Юлия
+					i.fa.fa-angle-down
+				.log-wraper
+					a(href="#").top-auth-link Личные данные
+					a(href="#").top-auth-link Оплаченные заказы
+					a(href="#").top-auth-link Корзина
+					a(href="#").top-auth-link Мои брони
+					a(href="#").top-auth-link Избранное
+					hr
+					a(href="#").top-auth-link Выход
+						
+	//Header-auth
+	
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Моя личная информация
+		.lk-wraper
+			.lk-left
+				include ./block_html/lk-menu.jade
+			.lk-right
+				.lk-right-content
+					.big-title Добро пожаловать на ПОРТАЛ ПУТЕШЕСТВЕННИКОВ
+					p Спасибо за регистрацию, Иван! 
+					p На ваш электронный адрес направлено письмо с вашими регистрационными данными.
+					p Вы авторизованы на портале. Делитесь впечатлениями! Узнавайте мир! Общайтесь!
+
+					p Помощь в работе с сайтом:
+					p ссылки на страницы помощи, правила,
+					p Мы работаем для вашего отдыха.  
+					
+					.btn-row
+						.btn-main Перейти к вашей личной странице
+						.btn-main вернуться к поиску
+				.lk-right-bottom
+					a(href="#").lk-right-bottom-el Забронировать отель
+					a(href="#").lk-right-bottom-el Забронировать билет
+					a(href="#").lk-right-bottom-el Найти экскурсию
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

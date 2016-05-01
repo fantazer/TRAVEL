@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>Document</title>
-    <!--build:css css/vendor.css-->
-    <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
-    <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="bower/easydropdown/themes/easydropdown.css"/>
-    <link rel="stylesheet" href="bower/nouislider/distribute/nouislider.min.css"/>
-    <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css"/>
-    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"/>
-    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css"/>
-    <!--endbuild-->
+    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
   </head>
@@ -73,35 +65,12 @@
         <div class="main-head-cont-menu main-cont"><a href="#"> <span>авиабилеты</span></a><a href="#"> <span>гостиницы</span></a><a href="#"> <span>экскурсии</span></a><a href="#"> <span>страховка</span></a>
           <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
         </div>
-        <div class="main-head-cont-enter">Вход</div>
-        <div class="log-wraper-main">
-          <form action="" id="login-form">
-            <input type="text" placeholder="E-mail"/>
-            <input type="password" placeholder="Пароль"/>
-            <button>Вход</button>
-            <div class="log-wraper-remember">
-              <div class="log-wraper-remember-el">
-                <input id="login" type="checkbox" name="rr"/>
-                <label for="login"> <span></span></label><span>Чужой компьютер</span>
-              </div>
-              <div class="log-wraper-remember-el"><a href="#">Востановить пароль</a></div>
-            </div>
-            <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
-            <div class="log-social-title">Авторизоваться через соц. сети</div>
-            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-          </form>
-          <form action="" id="registration-form">
-            <input type="text" placeholder="Фамилия"/>
-            <input type="text" placeholder="Имя"/>
-            <input type="text" placeholder="E-mail"/>
-            <input type="password" placeholder="Пароль"/>
-            <input type="text" placeholder="Телефон"/><a href="#" class="get-code">Выслать проверочный код</a>
-            <input type="text" placeholder="Проверочный код"/>
-            <button>Зарегистрироваться</button>
-            <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
-            <div class="log-social-title">Авторизоваться через соц. сети</div>
-            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-          </form>
+        <div class="main-head-cont-enter top-auth">
+          <div class="top-auth-img"><img src="img/gid.jpg" alt=""/></div>
+          <div class="top-auth-name">Здравствуйте,Юлия</div><i class="fa fa-angle-down"></i>
+        </div>
+        <div class="log-wraper"><a href="#" class="top-auth-link">Личные данные</a><a href="#" class="top-auth-link">Оплаченные заказы</a><a href="#" class="top-auth-link">Корзина</a><a href="#" class="top-auth-link">Мои брони</a><a href="#" class="top-auth-link">Избранное</a>
+          <hr/><a href="#" class="top-auth-link">Выход</a>
         </div>
       </div>
     </div>
@@ -507,14 +476,5 @@
   </style>
 </div>
 <!--Include script-->
-<!--build:js js/combined.js-->
-<script src="bower/jquery/dist/jquery.js"></script>
-<script src="bower/easydropdown/src/jquery.easydropdown.js"></script>
-<script src="bower/nouislider/distribute/nouislider.min.js"></script>
-<script src="bower/bPopup/jquery.bpopup.min.js"></script>
-<script src="bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!--script(src="bower/Headhesive.js/dist/headhesive.min.js")-->
-<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
-<script src="bower/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js"></script>
-<!-- endbuild-->
+<script src="js/combined.js"></script>
 <script src="js/script.js"></script>
