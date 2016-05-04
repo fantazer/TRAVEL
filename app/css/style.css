@@ -5472,3 +5472,6 @@ hr {
 .get-modal-change-bron:hover {
   cursor: pointer;
 }
+.modal-change-bron {
+  display: none;
+}
