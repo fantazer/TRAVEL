@@ -17,8 +17,9 @@
     <div class="main-cont">
       <div class="top-menu-wraper">
         <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-black.png" alt=""/></div>
-        <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a></div>
-        <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+        <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a>
+          <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+        </div>
         <div class="top-menu-enter">вход</div>
         <div class="log-wraper">
           <form action="" id="login-form">
@@ -114,21 +115,25 @@
           <option>2</option>
           <option>3</option>
         </select>
-        <input type="text" placeholder="Номер телефона" class="modal-date"/>
-        <input type="text" placeholder="Код СМС" class="modal-date"/>
+        <!--input.modal-date(type="text" placeholder="Номер телефона" )-->
+        <!--input.modal-date(type="text" placeholder="Код СМС")-->
         <div class="modal-order-el">
           <div class="modal-order-left">
             <div class="modal-order-left-title">Лучшая цена</div>
             <div class="modal-order-left-price">$ 1 788</div>
           </div>
-          <div class="modal-order-right"><a href="#" id="modal-get-bay" class="btn-main">Купить</a><span>Нельзя отменить бронь</span></div>
+          <div class="modal-order-right">
+            <div class="btn-main modal-get-bay">Купить</div><span>Нельзя отменить бронь</span>
+          </div>
         </div>
         <div class="modal-order-el">
           <div class="modal-order-left">
             <div class="modal-order-left-title">Стандарт</div>
             <div class="modal-order-left-price">$ 2000</div>
           </div>
-          <div class="modal-order-right"><a href="#" id="modal-get-bron" class="btn-main">Забронировать</a><span>Возможна отмена брони за 3 дня</span></div>
+          <div class="modal-order-right">
+            <div id="modal-get-bron" class="btn-main">Забронировать</div><span>Возможна отмена брони за 3 дня</span>
+          </div>
         </div>
       </form>
     </div>
@@ -165,6 +170,57 @@
   <div class="modal modal-bookmark">
     <div class="modal-bookmark-wraper">
       <div class="big-title">Название экскурсии </div><a href="#" class="btn-main">Подробно</a><a href="#" class="btn-main">Забронировать </a>
+    </div>
+  </div>
+  <div class="modal modal-bron-phone">
+    <div class="modal-bron-phone-wraper">
+      <div class="big-title">Бронирование экскурсии</div>
+      <div class="mid-title">Индивидуальная экскурсия</div>
+      <form action="">
+        <input type="text" placeholder=" Номер телефона"/><a href="#" class="get-code">Проверочный код</a>
+        <input type="text" placeholder=" Проверочный код"/>
+        <div class="btn-main">Подтвердить</div>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-bron-phone-bad">
+    <div class="modal-bron-phone-bad-wraper">
+      <div class="big-title">Отмена бронирования</div>
+      <div class="mid-title text-center">Индивидуальная экскурсия</div>
+      <form action="">
+        <input type="text" placeholder=" Номер телефона"/><a href="#" class="get-code">Проверочный код</a>
+        <input type="text" placeholder=" Проверочный код"/>
+        <div class="btn-main">Подтвердить</div>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-change-bron">
+    <div class="modal-change-bron-wraper">
+      <div class="big-title">Измение брони</div>
+      <form action="#">
+        <input type="text" placeholder=" Дата " readonly="readonly" class="modal-date"/>
+        <select class="modal-time dropdown">
+          <option>Время </option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+        </select>
+        <select class="modal-man dropdown">
+          <option>Взрослые </option>
+          <option>нет</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select class="modal-children dropdown">
+          <option>Дети </option>
+          <option>нет</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <div class="btn-main">Подтвердить</div>
+      </form>
     </div>
   </div>
   <div class="footer">

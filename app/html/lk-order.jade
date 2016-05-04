@@ -13,7 +13,7 @@ body
 				include ./block_html/lk-menu.jade
 			.lk-right
 				.lk-right-content.lk-order
-					.big-title Корзина
+					.lk-list-tab-title Корзина
 					.lk-order-result-wrap
 						.lk-order-result
 								.lk-order-result-text В вашей корзине 3 экскурсии на сумму 
@@ -37,7 +37,7 @@ body
 											.lk-bron-edit-price-title Стоимость
 											.lk-bron-edit-price-info
 												span (2 взрослых + 1 ребенок)
-												a(href="#") изменить
+												.get-modal-change-bron изменить 
 											.lk-bron-edit-price-val $200 = 4200 руб
 
 										.lk-bron-edit-date
@@ -50,18 +50,18 @@ body
 													option 10:00
 													option 11:00
 													option 12:00
-							hr
-							.lk-bron-edit-total
-								.lk-bron-edit-total-el
-									.lk-bron-edit-total-name Бронирование экскурсии
-									.lk-bron-edit-total-val 7240 руб
-								.lk-bron-edit-total-el
-									.lk-bron-edit-total-name Покупка экскурсии
-									.lk-bron-edit-total-val 17240 руб
-								.lk-bron-edit-total-el
-									.lk-bron-edit-total-name Итого:
-									.lk-bron-edit-total-val 7240 руб
-								a(href="#").btn-main Оформить
+							//- hr
+							//- .lk-bron-edit-total
+							//- 	.lk-bron-edit-total-el
+							//- 		.lk-bron-edit-total-name Бронирование экскурсии
+							//- 		.lk-bron-edit-total-val 7240 руб
+							//- 	.lk-bron-edit-total-el
+							//- 		.lk-bron-edit-total-name Покупка экскурсии
+							//- 		.lk-bron-edit-total-val 17240 руб
+							//- 	.lk-bron-edit-total-el
+							//- 		.lk-bron-edit-total-name Итого:
+							//- 		.lk-bron-edit-total-val 7240 руб
+							//- 	a(href="#").btn-main Оформить
 
 
 					.mid-title Оформление заказа

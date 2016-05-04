@@ -22,21 +22,21 @@
 				option 1
 				option 2
 				option 3
-			input.modal-date(type="text" placeholder="Номер телефона" )
-			input.modal-date(type="text" placeholder="Код СМС")
+			//input.modal-date(type="text" placeholder="Номер телефона" )
+			//input.modal-date(type="text" placeholder="Код СМС")
 			.modal-order-el
 				.modal-order-left
 					.modal-order-left-title Лучшая цена
 					.modal-order-left-price $ 1 788
 				.modal-order-right
-					a(href="#").btn-main#modal-get-bay Купить
+					.btn-main.modal-get-bay Купить
 					span Нельзя отменить бронь
 			.modal-order-el
 				.modal-order-left
 					.modal-order-left-title Стандарт
 					.modal-order-left-price $ 2000
 				.modal-order-right
-					a(href="#").btn-main#modal-get-bron Забронировать
+					.btn-main#modal-get-bron Забронировать
 					span Возможна отмена брони за 3 дня
 	.modal-more
 		span *Точное время будет указано в бланке заказа
@@ -85,4 +85,38 @@
 			input(type="text" placeholder=" Номер телефона")
 			a(href="#").get-code Проверочный код
 			input(type="text" placeholder=" Проверочный код") 
+			.btn-main Подтвердить
+
+.modal.modal-bron-phone-bad
+	.modal-bron-phone-bad-wraper
+		.big-title Отмена бронирования
+		.mid-title.text-center Индивидуальная экскурсия
+		form(action="")
+			input(type="text" placeholder=" Номер телефона")
+			a(href="#").get-code Проверочный код
+			input(type="text" placeholder=" Проверочный код") 
+			.btn-main Подтвердить
+
+.modal.modal-change-bron
+	.modal-change-bron-wraper
+		.big-title Измение брони
+		form(action="#")
+			input.modal-date(type="text" placeholder=" Дата " readonly)
+			select.modal-time.dropdown
+				option Время 
+				option 10:00
+				option 11:00
+				option 12:00
+			select.modal-man.dropdown
+				option Взрослые 
+				option нет
+				option 1
+				option 2
+				option 3
+			select.modal-children.dropdown
+				option Дети 
+				option нет
+				option 1
+				option 2
+				option 3
 			.btn-main Подтвердить

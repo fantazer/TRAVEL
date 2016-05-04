@@ -24,6 +24,7 @@ input,select,textarea
 	border 0px
 	border 1px solid #E1E1E1
 	padding 10px
+	//min-height 45px
 input[type="checkbox"]
 	padding 0
 	
@@ -209,6 +210,8 @@ bsh(){
 	box-shadow: 0px 0px 3px #E1E1E1;
 	display flex
 	justify-content  space-between
+	input
+		height 47px
 .top-search-town
 	+below(768px)
 		width 100%
@@ -315,7 +318,7 @@ bsh(){
 		margin-top 10px
 		background white
 		border 1px solid grey
-		height 40px
+		height 45px
 		ul
 			margin 0
 			padding 0
@@ -2008,6 +2011,8 @@ hr
 		.big-title
 			font-size 18px
 	width 80%
+	input
+		min-height 47px
 .lk-right-content
 	+below(768px)
 		padding 5px
@@ -2201,7 +2206,6 @@ hr
 			font-size 10px
 		.lk-list-el-sub-triger,.lk-list-el-modal
 			margin 0!important
-			font-size 10px
 	f()
 	justify-content flex-end
 	a
@@ -2803,3 +2807,51 @@ hr
 .get-bron
 	&:hover
 		cursor pointer
+		
+.modal-bron-phone-bad
+	display none
+
+.modal-bron-bad
+	text-decoration underline
+	color: #0074d9;
+	margin-left: 5%;
+	&:hover
+		cursor pointer
+		
+.text-center
+	text-align center
+	
+.edit-bron-footer
+	+below(768px)
+		width 100%
+	width 70%
+	margin 0 auto
+	
+// IE
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.modal-order-left, .modal-order-right
+		flex 1
+	.lk-bron-edit-el
+		width 100%
+	.main-head-cont-menu
+		max-width 1050px!important
+
+.dropdown .selected, .dropdown li
+	height 45px
+	
+.dropdown .selected:after
+	height calc(100% +2px)
+	margin-top -1px
+
+.dropdown li
+	padding 12px
+
+.get-modal-change-bron
+	color blue
+	text-decoration underline
+	text-align center
+	padding 5px 0
+	&:hover
+		cursor pointer
+		

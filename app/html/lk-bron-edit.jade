@@ -57,7 +57,7 @@ body
 										.lk-bron-edit-price-title Стоимость
 										.lk-bron-edit-price-info
 											span (2 взрослых + 1 ребенок)
-											a(href="#") изменить
+											.get-modal-change-bron изменить 
 										.lk-bron-edit-price-val $200 = 4200 руб
 
 									.lk-bron-edit-date
@@ -71,6 +71,21 @@ body
 												option 11:00
 												option 12:00
 						hr
+						.edit-bron-footer
+							.modal-order-el
+								.modal-order-left
+									.modal-order-left-title Лучшая цена
+									.modal-order-left-price $ 1 788
+								.modal-order-right
+									.btn-main#modal-get-bay Купить
+									span Нельзя отменить бронь
+							.modal-order-el
+								.modal-order-left
+									.modal-order-left-title Стандарт
+									.modal-order-left-price $ 2000
+								.modal-order-right
+									.btn-main#modal-get-bron Забронировать
+									span Возможна отмена брони за 3 дня
 						//- .lk-bron-edit-total
 						//- 	.lk-bron-edit-total-el
 						//- 		.lk-bron-edit-total-name Бронирование экскурсии

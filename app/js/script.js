@@ -184,7 +184,7 @@ var hideToggle = function(targetClick,toggleEl) {
 				follow: [true,false],
 				})
 	})
-	$('#modal-get-bay').click(function(){
+	$('.modal-get-bay').click(function(){
 			$('.modal-order').bPopup().close();
 			$('.modal-exs').bPopup({
 					closeClass:'btn-main',
@@ -219,6 +219,19 @@ var hideToggle = function(targetClick,toggleEl) {
 					position:['auto','auto'], // position center
 			}); 
 	})
+	$('.modal-bron-bad').click(function(){
+			$('.modal-bron-phone-bad').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
+
+	$('.get-modal-change-bron').click(function(){
+			$('.modal-change-bron').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
 	//datePicker
 	
 		$('.input-date').datepicker({
@@ -233,6 +246,13 @@ var hideToggle = function(targetClick,toggleEl) {
 			language: 'ru'
 		});
 		$('#modal-date').on('changeDate', function(ev){
+		    $(this).datepicker('hide');
+		});
+
+		$('.modal-date').datepicker({
+			language: 'ru'
+		});
+		$('.modal-date').on('changeDate', function(ev){
 		    $(this).datepicker('hide');
 		});
 
