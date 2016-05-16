@@ -85,8 +85,11 @@ bsh(){
 			position absolute
 			left 50%
 			margin-left -35px
+			top 0
 		margin 0 auto
 .top-menu-items
+	+above(768px)
+		display flex!important
 	+below(768px)
 		display none
 		position absolute
@@ -133,8 +136,8 @@ bsh(){
 		margin-left 10px
 .top-menu-enter
 	+below(768px)
-		flex-grow 0
 		margin-right 20px
+		text-align right
 	flex-grow 2
 	text-transform uppercase
 	text-align center
