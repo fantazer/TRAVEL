@@ -18,9 +18,10 @@ body
 						.lk-order-result
 								.lk-order-result-text В вашей корзине 3 экскурсии на сумму 
 								.lk-order-result-val 12 500 руб
+								
 						.btn-row
 							.btn-main.toggle-basket-edit Состав корзины
-						
+						.mid-title Проверьте, пожайлуста выбранный вами список экускурсий
 						.lk-bron-edit.toggle-basket-wraper
 							.lk-bron-edit-wraper
 								- for (var a = 0; a < 3; a++)
@@ -103,6 +104,11 @@ body
 							label(for='pay-info') 
 								span
 							text Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации
+						.lk-prof-form-check
+							input(id='pay-good', type='checkbox', name='rr')
+							label(for='pay-good') 
+								span
+							text Нажав на кнопку готово, я подтверждаю свой заказ
 						button.btn-main Готово 
 				.lk-right-bottom
 					a(href="#").lk-right-bottom-el Забронировать отель

@@ -103,6 +103,7 @@ var hideToggle = function(targetClick,toggleEl) {
 		$('.toggle-basket-wraper').slideToggle()
 	})
 	
+	$('.toggle-basket-edit').click();
 	$('.lk-left-el-profil').click(function(){
 		$(this).find('.lk-left-el-sub').slideToggle()
 	})

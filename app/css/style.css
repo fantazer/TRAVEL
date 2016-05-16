@@ -278,6 +278,18 @@ body {
 }
 .top-menu-items a {
   display: block;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .top-menu-items a:hover:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #222;
+    bottom: -28px;
+    left: 0px;
+  }
 }
 .top-menu-money {
   display: -webkit-box;
@@ -4743,7 +4755,7 @@ hr {
   }
 }
 .lk-order .btn-row {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
   .lk-order .btn-row {
