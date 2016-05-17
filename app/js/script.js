@@ -259,22 +259,21 @@ var hideToggle = function(targetClick,toggleEl) {
 
 	var slider = document.getElementById('rangeSlider');
 
-	noUiSlider.create(slider, {
-		start: [0, 100],
-		connect: true,
-		step: 10,
-		range: {
-			'min': 0,
-			'max': 100,
-		},
-		pips: { // Show a scale with the slider
-			mode: 'steps',
-			density: 4
-		}
-	});
-
-	
-
+	if(slider){
+		noUiSlider.create(slider, {
+			start: [0, 100],
+			connect: true,
+			step: 10,
+			range: {
+				'min': 0,
+				'max': 100,
+			},
+			pips: { // Show a scale with the slider
+				mode: 'steps',
+				density: 4
+			}
+		});
+	}
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)
