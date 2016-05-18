@@ -1,0 +1,182 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/head-exc.jade
+	.content
+		.main-cont
+			.content-wraper
+				.content-left
+					.show-from показано 26 из 1250
+					.content-left-filter
+						.filter-reting
+							.content-left-title Популярность
+							- for (var a = 0; a < 6; a++)
+								.filter-reting-el
+									.filter-reting-el-left
+										input(id='r#{a+4}', type='checkbox', name='rr')
+										label(for='r#{a+4}') 
+											span 
+										.filter-reting-stars
+											i.fa.fa-star.active
+											i.fa.fa-star.active
+											i.fa.fa-star.active
+											i.fa.fa-star
+											i.fa.fa-star
+									.filter-reting-el-right 566
+						.filter-review
+							.content-left-title Отзывы туристов
+							#rangeSlider
+							.filter-review-slider
+						.filter-name
+							.content-left-title Имя содержит
+							.filter-name-wraper
+								input(type="text")
+								button ок
+						.filter-type-wraper
+							.filter-type
+								.content-left-title Вид экскурсии
+								+filterLine(1,'Пешеходные') 
+								+filterLine(2,'Автобусные') 
+								+filterLine(3,'Гастрономические') 
+							.filter-type
+								.content-left-title Тип экскурсии
+								+filterLine(4,'Групповая') 
+								+filterLine(5,'Индивидуальная') 
+							.filter-type
+								.content-left-title Продолжительность
+								+filterLine(6,'Полдня') 
+								+filterLine(7,'День') 
+								+filterLine(8,'2-4 дня')
+							.filter-type
+								.content-left-title Язык экскурсии
+								+filterLine(9,'Русский') 
+								+filterLine(10,'Английский') 
+								+filterLine(11,'Французский') 
+								+filterLine(12,'Другое') 
+				.content-right
+					.content-right-sort
+						.content-right-sort-title 
+							.content-right-sort-title-filter
+								i.fa.fa-bars
+							span Сортировка
+							.content-right-sort-title-toggle
+								i.fa.fa-caret-down
+						.content-right-sort-el Цена
+						.content-right-sort-el.active Популярность
+						.content-right-sort-el Отзывы гостей
+						.content-right-sort-el Названия
+					- for (var f = 0; f < 6; f++)
+						.content-right-found
+							.content-right-found-content
+								.content-right-found-img
+									.content-right-found-img-big
+										img(src="img/otel-item-3.jpg", alt="")
+									.content-right-found-img-small
+										- for (var g = 0; g < 6; g++)
+											.content-right-found-img-small-el
+												img(src="img/otel-item-3.jpg", alt="")
+									.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!
+								.content-right-found-info
+									.content-right-found-title
+										.content-right-found-title-name Название экскурсии
+										+star()
+										.content-right-found-title-type Индивидуальная экскурсия
+									.content-right-found-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.
+
+									.exc-list-wraper
+										.exc-list-info-wraper
+											.exc-list-info
+												.exc-list-info-el
+													.exc-list-title Название экскурсии
+													.exc-list-content
+														a(href="#") Название экскурсии
+														p
+															i.fa.fa-check 
+															span Бесплатная отмена
+														p
+															i.fa.fa-check 
+															span Завтрак включен
+														p
+															i.fa.fa-check 
+															span Выезд утром
+												.exc-list-info-el
+													.exc-list-title Дата въезда
+													.exc-list-content
+														p
+															span 10.12.2016
+												.exc-list-info-el
+													.exc-list-title 	Цена за чел.
+													.exc-list-content.exc-list-goodprice 
+														p
+															.exc-list-sale -10%
+															strong 36 435 руб
+														p
+															strong.exc-list-badprice  36 435 руб
+														p Ozon.travel
+											.exc-list-info
+												.exc-list-info-el
+													.exc-list-content
+														a(href="#") Название экскурсии
+														p
+															i.fa.fa-check 
+															span Бесплатная отмена
+														p
+															i.fa.fa-check 
+															span Завтрак включен
+														p
+															i.fa.fa-check 
+															span Выезд утром
+												.exc-list-info-el
+													.exc-list-content
+														p
+															span 10.12.2016
+												.exc-list-info-el
+													.exc-list-content.exc-list-goodprice 
+														p
+															.exc-list-sale -10%
+															strong 36 435 руб
+														p
+															strong.exc-list-badprice  36 435 руб
+														p Ozon.travel
+
+										.exc-list-price
+											.exc-list-price-best Лучшая цена
+											.exc-list-price-val 36 435 руб
+											.exc-list-price-but Забронировать
+
+									//- .content-right-found-get
+									//- 	.content-right-found-get-type
+									//- 		.content-right-found-get-title Тип экскурсии
+									//- 		.content-right-found-get-type-wraper
+									//- 			.content-right-found-get-type-el
+									//- 				i.fa.fa-check
+									//- 				span 1-5 человек
+									//- 			.content-right-found-get-type-el
+									//- 				i.fa.fa-check
+									//- 				span Автобусная
+									//- 			.content-right-found-get-type-el
+									//- 				i.fa.fa-check
+									//- 				span 10 часов
+									//- 	.content-right-found-get-price
+									//- 		.content-right-found-get-title Цена за одного человека
+									//- 		.content-right-found-get-price-el
+									//- 			.content-right-found-get-price-val $100
+									//- 			.content-right-found-get-price-but.get-bron Забронировать
+									//- 			.content-right-found-get-price-text Снять бронь за 3 дня
+									//- 		.content-right-found-get-price-el
+									//- 			.content-right-found-get-price-val $70
+									//- 			.content-right-found-get-price-but.get-bron Купить
+									//- 			.content-right-found-get-price-text Бронь не отменить
+							.content-right-found-foter
+								a(href="#") Добавить в закладки
+								a(href="#") Забронировать отель
+								a(href="#") Забронировать билет
+								a(href="#") Найти экскурсию 
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

@@ -1,0 +1,103 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/head-exc.jade
+
+
+	.exc-type
+		.main-cont
+			.exc-type-wraper
+				a(href="#").exc-type-el
+					i.fa.fa-car 
+					span Индивидуальная экскурсия
+				a(href="#").exc-type-el 
+					i.fa.fa-ship 
+					span Групповая экскурсия
+
+	.main-place
+		.main-cont
+			.main-wraper
+				//!!!!! Change class for template(.main-type-one)
+				//Type One
+				.main-place-row.main-templ-one
+					.main-type-one-left
+						a(href="#").main-place-el
+							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-5.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+					.main-type-one-right
+						a(href="#").main-place-el
+							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур') 
+				
+				//Type Two
+				.main-place-row.main-templ-two
+					.main-type-two-left
+						a(href="#").main-place-el
+							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+					.main-type-two-right
+						a(href="#").main-place-el
+							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+
+				//Type four
+				.main-place-row.main-templ-four
+					.main-type-four-left
+						a(href="#").main-place-el
+							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 100','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+					.main-type-four-center
+						a(href="#").main-place-el
+							+place('img/img-place-7.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+					.main-type-four-right
+						a(href="#").main-place-el
+							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+		
+				//Type Three
+				.main-place-row.main-templ-three
+					.main-type-three-left
+						a(href="#").main-place-el
+							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+					.main-type-three-right
+						a(href="#").main-place-el
+							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+
+				//Type Five
+				.main-place-row.main-templ-five
+					.main-type-five-center
+						a(href="#").main-place-el
+							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+				//Type six
+				.main-place-row.main-templ-six
+					.main-type-six-center
+						a(href="#").main-place-el
+							+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						a(href="#").main-place-el
+							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

@@ -1,0 +1,157 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/head-exc.jade
+	.main-cont
+		.back-search
+			.triangle-left
+			a(href="#") Вернуться к результатам поиска
+
+	.result
+		.main-cont
+			.result-wraper
+				.result-left
+					.result-left-title
+						.big-title Золотое кольцо России 
+						+star()
+					.result-left-alert ! Кто-то только что забронировал экскурсию 
+					.result-left-img.owl-carousel
+						- for (var u = 0; u < 4; u++)
+							img(src="img/otel-item-2.jpg", alt="")
+							img(src="img/otel-item-3.jpg", alt="")
+							img(src="img/otel-item-2.jpg", alt="")
+					.mid-title сборные туры по золотому кольцу
+					
+					.tour-table
+						.tour-table-title
+							.tour-table-title-date Дата
+							.tour-table-title-info Стоимость на одного человека
+						- for (var b = 0; b < 3; b++)
+							.tour-table-el
+								.tour-table-el-title
+									a(href="#") РУССКИЕ ЖЕМЧУЖИНЫ
+								.exc-table-el-wraper
+									.exc-table-el-left
+										.exc-table-el-row
+											.exc-table-el-img 
+												img(src="img/icon-travel-comp.png", alt="")
+												.exc-table-el-date дата выезда: 05.12.2016
+											.exc-table-el-text 
+												p
+													i.fa.fa-check 
+													span Бесплатная отмена
+												p
+													i.fa.fa-check 
+													span Завтрак включен
+												p
+													i.fa.fa-check 
+													span Оплата сразу
+											.exc-table-el-cost 
+												.exc-table-el-cost-val  5340 р.
+									.exc-table-el-right
+										.btn-main забронировать
+
+
+					.mid-title-border оценки гостей
+					
+					.result-mark
+						.result-mark-left
+							+mark('Питание','82') 
+							+mark('Автобус','76') 
+							+mark('Удобства','42') 
+							+mark('Остановки','82') 
+						.result-mark-right
+							+mark('Экскурсовод','82') 
+							+mark('Атмосфера','42') 
+							+mark('Сервис','22') 
+							+mark('Общая','15')
+
+					.mid-title-border Полезная информация
+
+					.result-info
+						.result-info-left
+							.result-info-el
+								.result-info-el-color.result-info-el-color-red
+								.result-info-el-info Ж/Д оплачивается отдельно
+							.result-info-el
+								.result-info-el-color.result-info-el-color-green
+								.result-info-el-info Все включино
+						.result-info-right
+							.result-info-el
+								.result-info-el-color.result-info-el-color-green
+								.result-info-el-info Ж/Д оплачивается отдельно
+							.result-info-el
+								.result-info-el-color.result-info-el-color-blue
+								.result-info-el-info Питание
+
+					.mid-title-border Достопримечательности
+					
+					- for (var c = 0; c < 3; c++)
+						.result-place
+							.result-place-img
+								img(src="img/otel-item-2.jpg", alt="")
+							.result-place-info
+								.result-place-title Аастед-церковь
+								.result-place-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vitae vel ab provident, totam cumque voluptatum iste adipisci error, tempora repudiandae itaque aliquam temporibus aliquid nulla unde nisi nostrum. Ab veritatis asperiores in tenetur dolorum, architecto reiciendis quod, illum eum odio illo, accusantium autem odit. Necessitatibus recusandae fuga deserunt explicabo odio consequuntur sequi, cum eius dolor! Ab dignissimos temporibus at facere dolorem iusto consequuntur, unde veniam. Illum, 
+				
+				.result-right
+					.result-right-title Индивидуальная экскурсия
+					.btn-main.get-bron забронировать
+					a(href="#").btn-main.btn-more
+						i.fa.fa-bars
+						span Подробнее
+					.result-cost
+						.result-cost-text
+							span цена за 5 дней
+							span 1 взрослый
+						.result-cost-val $ 1 788
+					.result-right-hide-mobile
+						.result-right-img
+							- for (var b = 0; b < 12; b++)
+								.result-right-img-el
+									img(src="img/otel-item-2.jpg", alt="")
+							a(href="#") Еще фото
+
+						.mid-title-border Описание путевки и туры по золотому кольцу из перьми
+						.result-right-text
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo autem voluptatibus in dolor saepe tempore excepturi aliquid praesentium commodi ea similique magni ut laboriosam. Odit eum sunt libero enim eveniet id possimus iste illum dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat  
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo am dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat  
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo am dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat 
+
+						.mid-title-border Продолжительность
+						.result-right-text
+							p 4-5 дней
+
+						.mid-title-border Организатор
+						.result-right-text
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure et illum obcaecati consequuntur omnis veritatis sapiente quas eum recusandae magnam, quia, pariatur consectetur facilis modi animi. Nulla nisi sequi dolorum ex iure ipsa quam vero obcaecati et ipsum excepturi alias suscipit tempora, natus temporibus a necessitatibus, saepe unde recusandae.
+
+						.mid-title-border Информация о гиде
+						.gid
+							.gid-wraper
+								.gid-img
+									img(src="img/gid.jpg", alt="")
+								.gid-info
+									.gid-title Оксана Г.
+										+star()
+									.gid-text сертифицированный гид  
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ullam tempore quas voluptatem! Corrupti ipsa nobis, reiciendis asperiores exercitationem neque, unde non commodi consectetur nihil, omnis tempora ex aperiam, doloremque?
+	
+	.same-excurse
+		.main-cont
+			.mid-title похожие экскурсии
+			.same-excurse-wraper
+				- for (var c = 0; c < 3; c++)
+					a(href="#").same-excurse-el
+						img(src="img/otel-item-2.jpg", alt="")
+						.same-excurse-title Название экскурсии
+
+	
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

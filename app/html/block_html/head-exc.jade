@@ -1,0 +1,150 @@
+.main-head
+	.main-head-slider.owl-carousel 
+		//El of slider
+		.main-head-slider-el(style="background-image: url('img/main-head-bg-1.jpg')")
+			.main-head-filter
+			.main-cont
+				.main-head-slider-content
+					.main-head-slider-country Россия
+					.main-head-slider-name Красная поляна
+					.main-head-slider-days 6 ночей, на двоих
+					.main-head-slider-cost
+						.main-head-slider-cost-value
+							span.main-head-slider-from от 
+							span.main-head-slider-val 16494
+							span.main-head-slider-rub ₽
+						.main-head-slider-cost-text
+							span.main-head-slider-text тур
+					.main-head-slider-cost
+						.main-head-slider-cost-value
+							span.main-head-slider-from от 
+							span.main-head-slider-val 12194
+							span.main-head-slider-rub ₽
+						.main-head-slider-cost-text
+							span.main-head-slider-text отель
+					a(href="").main-head-slider-but О направлении
+		//El of slider
+		.main-head-slider-el(style="background-image: url('img/main-head-bg-2.jpg')")
+			.main-head-filter
+			.main-cont
+				.main-head-slider-content
+					.main-head-slider-country Россия
+					.main-head-slider-name Красная поляна
+					.main-head-slider-days 6 ночей, на двоих
+					.main-head-slider-cost
+						.main-head-slider-cost-value
+							span.main-head-slider-from от 
+							span.main-head-slider-val 16494
+							span.main-head-slider-rub ₽
+						.main-head-slider-cost-text
+							span.main-head-slider-text тур
+					.main-head-slider-cost
+						.main-head-slider-cost-value
+							span.main-head-slider-from от 
+							span.main-head-slider-val 12194
+							span.main-head-slider-rub ₽
+						.main-head-slider-cost-text
+							span.main-head-slider-text отель
+					a(href="").main-head-slider-but О направлении
+	
+
+	.main-head-content
+		//Top menu
+		.main-head-fullwidth
+			.main-head-cont
+					i.fa.fa-bars.toggle-top-menu
+					.main-head-cont-logo
+						.main-head-cont-logo-img
+							img(src="img/logo-white.png", alt="")
+					.main-head-cont-menu.main-cont
+						a(href="#") 
+							span авиабилеты
+						a(href="#") 
+							span гостиницы
+						a(href="#") 
+							span экскурсии
+						a(href="#") 
+							span страховка
+						.top-menu-money
+							i.fa.fa-rub
+							i.fa.fa-caret-down
+					.main-head-cont-enter Вход
+					.log-wraper-main
+						form(action="")#login-form
+							input(type="text" placeholder="E-mail")
+							input(type="password" placeholder="Пароль")
+							button Вход
+							.log-wraper-remember
+								.log-wraper-remember-el
+									input(id='login', type='checkbox', name='rr')
+									label(for='login') 
+										span
+									span Чужой компьютер
+								.log-wraper-remember-el
+									a(href="#") Востановить пароль
+							.log-registration
+								span.registration-trigger Зарегистрироваться 
+								span для полного доступа к сервисам
+							.log-social-title Авторизоваться через соц. сети
+
+							.log-social
+								a(href="#")
+									i.fa.fa-vk
+								a(href="#")
+									i.fa.fa-facebook
+								a(href="#")
+									i.fa.fa-twitter
+								a(href="#")
+									i.fa.fa-google-plus
+								a(href="#")
+									i.fa.fa-instagram
+						form(action="")#registration-form
+							input(type="text" placeholder="Фамилия")
+							input(type="text" placeholder="Имя")
+							input(type="text" placeholder="E-mail")
+							input(type="password" placeholder="Пароль")
+							input(type="text" placeholder="Телефон")
+							a(href="#").get-code Выслать проверочный код
+							input(type="text" placeholder="Проверочный код")
+							button Зарегистрироваться
+							.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
+							.log-social-title Авторизоваться через соц. сети
+
+							.log-social
+								a(href="#")
+									i.fa.fa-vk
+								a(href="#")
+									i.fa.fa-facebook
+								a(href="#")
+									i.fa.fa-twitter
+								a(href="#")
+									i.fa.fa-google-plus
+								a(href="#")
+									i.fa.fa-instagram
+		.head-form
+			.main-cont
+				// Exc form
+				.main-head-row-input
+					.exc-search-bg
+					.exc-search-top
+						.main-head-row-input-el
+							label Выберите город или отель
+							input(type="text" placeholder="Выберите город или отель")
+						.input-daterange
+							.main-head-row-input-el
+								.icon-datapicker
+								label Дата от
+								input.form-control(type="text" placeholder="Выберите дату" readonly="readonly")
+							.main-head-row-input-el
+								.icon-datapicker
+								label Дата до
+								input(type="text" placeholder="Выберите дату" readonly="readonly")
+					.exc-search-bottom
+						.main-head-row-input-el.exc-search-time
+							label Время
+							select(name="").dropdown
+								option 10:00
+								option 11:00
+								option 12:00
+						.main-head-row-input-el.exc-search-but
+							button Найти

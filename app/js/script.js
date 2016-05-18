@@ -257,6 +257,13 @@ var hideToggle = function(targetClick,toggleEl) {
 		    $(this).datepicker('hide');
 		});
 
+		$('.icon-datapicker').click(function(){
+			$(this).parent().find('input').datepicker('show');
+		})
+		$('.input-daterange').datepicker({
+			language: 'ru'
+		});
+		
 	var slider = document.getElementById('rangeSlider');
 
 	if(slider){
