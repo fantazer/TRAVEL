@@ -5648,7 +5648,6 @@ hr {
 .exc-type-el {
   width: 50%;
   text-align: center;
-  text-transform: uppercase;
   font-size: 18px;
   padding: 30px;
   border-left: 1px solid #e1e1e1;
@@ -5671,12 +5670,22 @@ hr {
     -webkit-flex-flow: column;
         -ms-flex-flow: column;
             flex-flow: column;
+  }
+  .exc-type-el span {
     font-size: 10px;
   }
   .exc-type-el .fa {
     margin-bottom: 10px;
     font-size: 14px;
   }
+}
+.exc-type-el span {
+  font-size: 14px;
+  display: block;
+}
+.exc-type-el img {
+  width: 45px;
+  margin: 0 auto;
 }
 .exc-type-el:first-child {
   border-right: 0px;
