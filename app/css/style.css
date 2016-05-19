@@ -2083,10 +2083,10 @@ input[type="checkbox"]:checked + label span {
 @media only screen and (max-width: 768px) {
   .main-service-el {
     width: 25%;
-    -webkit-box-flex: initial;
-    -webkit-flex: initial;
-        -ms-flex: initial;
-            flex: initial;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
   }
 }
 .main-service-el:hover {
