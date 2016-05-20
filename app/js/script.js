@@ -135,7 +135,7 @@ var hideToggle = function(targetClick,toggleEl) {
 	$(".mewtwo-hotels-container label").css('color','#fff');
 	$('.mewtwo-hotels').removeAttr('class');
 	$(".mewtwo-show_hotels").css('display','none');
-	$(".mewtwo-hotels-submit_button").removeAttr('class');
+	//$(".mewtwo-hotels-submit_button").removeAttr('class');
 	$(".mewtwo-hotels").addClass('FormStyle')
 
 	//Get progress Bar
@@ -185,102 +185,9 @@ var hideToggle = function(targetClick,toggleEl) {
 				follow: [true,false],
 				})
 	})
-	$('.modal-get-bay').click(function(){
-			$('.modal-order').bPopup().close();
-			$('.modal-exs').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-	$('.lk-list-el-modal').click(function(){
-			$('.modal-lk-list').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-
-	$('.button-lk-bron-time').click(function(){
-			$('.modal-lk-bron-time').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-
-	$('.button-lk-bron-endtime').click(function(){
-			$('.modal-lk-bron-endtime').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-
 	
-	$('.lk-bookmark-el img').click(function(){
-			$('.modal-bookmark').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-	$('.modal-bron-bad').click(function(){
-			$('.modal-bron-phone-bad').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-
-	$('.get-modal-change-bron').click(function(){
-			$('.modal-change-bron').bPopup({
-					closeClass:'btn-main',
-					position:['auto','auto'], // position center
-			}); 
-	})
-	//datePicker
-	
-		$('.input-date').datepicker({
-			language: 'ru'
-		});
-		$('.input-date').on('changeDate', function(ev){
-		    $(this).datepicker('hide');
-		});
-
-
-		$('#modal-date').datepicker({
-			language: 'ru'
-		});
-		$('#modal-date').on('changeDate', function(ev){
-		    $(this).datepicker('hide');
-		});
-
-		$('.modal-date').datepicker({
-			language: 'ru'
-		});
-		$('.modal-date').on('changeDate', function(ev){
-		    $(this).datepicker('hide');
-		});
-
-		$('.icon-datapicker').click(function(){
-			$(this).parent().find('input').datepicker('show');
-		})
-		$('.input-daterange').datepicker({
-			language: 'ru'
-		});
 		
-	var slider = document.getElementById('rangeSlider');
-
-	if(slider){
-		noUiSlider.create(slider, {
-			start: [0, 100],
-			connect: true,
-			step: 10,
-			range: {
-				'min': 0,
-				'max': 100,
-			},
-			pips: { // Show a scale with the slider
-				mode: 'steps',
-				density: 4
-			}
-		});
-	}
+	
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)

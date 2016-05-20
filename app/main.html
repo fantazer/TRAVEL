@@ -420,28 +420,40 @@
     </div>
   </div>
   <style>
+    .mewtwo-hotels-container form{
+    	display: -webkit-box!important;
+    	display: -ms-flexbox!important;
+    	display: flex!important;
+    	-webkit-box-align:end!important;
+    	-ms-flex-align:end!important;
+    	align-items:flex-end!important;
+    	-ms-flex-wrap:wrap!important;
+    	flex-wrap:wrap!important;
+    }
+    .mewtwo-widget .mewtwo-hotels-submit_button{
+    	width: auto!important;
+    }
     .mewtwo-hotels{background:inherit !important;}
-    	.mewtwo-hotels-container form div:nth-of-type(4){
-    		width: 300px;
-    		display: inline;
+    	.mewtwo-hotels-container form div:nth-of-type(5){
+    		display: inline-block!important;
     	}
-    	.mewtwo-hotels-container form div:nth-of-type(4) button{
-    		background: #FFDB4D!important;
-    		color: black !important;
-    		display: inline!important;
-    		#width: 18%!important;
-    		height: 35px!important;
-    		border: none!important;
-    		border-radius: 0px 3px 3px 0px!important;
-    		box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
-    		font-weight: 600!important;
-    		font-size: 14px !important;
-    		line-height: 3px!important;
-    		box-sizing: border-box!important;
-    		margin-top: 1px;
-    		padding: 0 6px!important;
-    	}
-    	.mewtwo-hotels-container form div:nth-of-type(4) button:hover{
+    .mewtwo-hotels-container form div:nth-of-type(5) button{
+    	background: #FFDB4D!important;
+    	color: black !important;
+    	display: inline!important;
+    	width: 100%!important;
+    	height: 35px!important;
+    	border: none!important;
+    	border-radius: 0px 3px 3px 0px!important;
+    	box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
+    	font-weight: 600!important;
+    	font-size: 14px !important;
+    	line-height: 3px!important;
+    	box-sizing: border-box!important;
+    	margin-top: 1px;
+    	padding: 0 6px!important;
+    }
+    	.mewtwo-hotels-container form div:nth-of-type(5) button:hover{
     		background: #feba26 !important;
     	}
     .mewtwo-widget .mewtwo-hotels-city{
@@ -466,7 +478,7 @@
     	border-radius: 0 !important;
     	border-right:1px solid #F1ECEC!important;
     }
-    .mewtwo-hotels-container form div:nth-of-type(4) button{
+    .mewtwo-hotels-container form div:nth-of-type(5) button{
     	
     }
     .mewtwo-widget .mewtwo-hotels-dates{
@@ -483,7 +495,7 @@
     	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
     	    width: 30%!important;
     	}
-    	.mewtwo-hotels-container form div:nth-of-type(4) button{
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-submit_button{
     		width: 20%!important;
     	}
     }
@@ -494,7 +506,7 @@
     	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
     	    width: 100%!important;
     	}
-    	.mewtwo-hotels-container form div:nth-of-type(4) button{
+    	.mewtwo-hotels-container form div:nth-of-type(5) button{
     		width: 100%!important;
     		margin-top: 15px!important;
     		border-radius: 0 !important;
