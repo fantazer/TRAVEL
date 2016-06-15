@@ -55,6 +55,18 @@ body
 								+filterLine(10,'Английский') 
 								+filterLine(11,'Французский') 
 								+filterLine(12,'Другое') 
+					.content-left-filter.trevel-message-wraper
+						.content-left-title Присоединяйтесь к миллионам путешественников по всему миру
+						.trevel-message-info.owl-carousel
+							- for (var v = 0; v < 6; v++)
+								.trevel-message-el
+									- for (var x = 0; x < 4; x++)
+										.trevel-message
+											img(src="img/gid.jpg", alt="")
+											.trevel-message-val
+												.trevel-message-name Путешественник из Китая
+												.trevel-message-text Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве
+
 				.content-right
 					.content-right-sort
 						.content-right-sort-title 
@@ -83,6 +95,26 @@ body
 										.content-right-found-title-name Название экскурсии
 										+star()
 										.content-right-found-title-type Индивидуальная экскурсия
+											.rating-toooltip
+												.rating-toooltip-el
+													.rating-toooltip-header
+														.rating-toooltip-name место положение
+														.rating-toooltip-val 9.2
+													.rating-toooltip-bar-wrap
+														.rating-toooltip-bar(data-progress='9.2')
+												.rating-toooltip-el
+													.rating-toooltip-header
+														.rating-toooltip-name чистота 
+														.rating-toooltip-val 5.3
+													.rating-toooltip-bar-wrap
+														.rating-toooltip-bar(data-progress='5.3')
+												.rating-toooltip-el
+													.rating-toooltip-header
+														.rating-toooltip-name цена качетсво
+														.rating-toooltip-val 7.4
+													.rating-toooltip-bar-wrap
+														.rating-toooltip-bar(data-progress='7.4')
+
 									.content-right-found-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.
 
 									.exc-list-wraper
@@ -110,8 +142,9 @@ body
 													.exc-list-title 	Цена за чел.
 													.exc-list-content.exc-list-goodprice 
 														p
-															.exc-list-sale -10%
-															strong 36 435 руб
+															img(src="img/icon-loading.png", alt="").el-scroll-hide
+															.exc-list-sale.el-scroll-show.hideScroll -10%
+															strong.el-scroll-show.hideScroll 36 435 руб
 														p
 															strong.exc-list-badprice  36 435 руб
 														p Ozon.travel
@@ -135,17 +168,18 @@ body
 												.exc-list-info-el
 													.exc-list-content.exc-list-goodprice 
 														p
-															.exc-list-sale -10%
-															strong 36 435 руб
+															img(src="img/icon-loading.png", alt="").el-scroll-hide
+															.exc-list-sale.el-scroll-show.hideScroll -10%
+															strong.el-scroll-show.hideScroll 36 435 руб
 														p
 															strong.exc-list-badprice  36 435 руб
 														p Ozon.travel
-
 										.exc-list-price
 											.exc-list-price-best Лучшая цена
-											.exc-list-price-val 36 435 руб
+											.exc-list-price-val 
+												img(src="img/icon-loading.png", alt="").el-scroll-hide
+												span.el-scroll-show.hideScroll 36 435 руб
 											.exc-list-price-but Забронировать
-
 									//- .content-right-found-get
 									//- 	.content-right-found-get-type
 									//- 		.content-right-found-get-title Тип экскурсии
@@ -174,6 +208,7 @@ body
 								a(href="#") Забронировать отель
 								a(href="#") Забронировать билет
 								a(href="#") Найти экскурсию 
+								
 	include ./block_html/modal.jade
 	include ./block_html/footer.jade
 

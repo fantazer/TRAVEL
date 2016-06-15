@@ -24,6 +24,9 @@
     "owl.carousel": "OwlCarousel2#^2.0.0-beta.3",
     "bPopup": "bpopup#^0.11.0",
     "bootstrap-datepicker": "^1.6.0",
-    "fancybox": "^2.1.5"
+    "fancybox": "^2.1.5",
+    "jQuery-viewport-checker": "^1.8.7",
+    "isInViewport": "^2.3.1",
+    "jquery-toast-plugin": "^1.3.1"
   }
 }

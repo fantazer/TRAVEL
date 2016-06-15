@@ -21,6 +21,54 @@
 
 $(document).ready(function(){
 
+//Tooltip
+$('.rating-toooltip-bar').each(function(){
+		var progress = $(this).data('progress')*10;
+		$(this).css('width',progress+'%')
+	})
+//Red title view
+setTimeout(function(){
+	$('.result-left-alert').slideDown()
+},4000)
+//message view
+var message = function(){
+	$.toast({
+		heading: 'Забронировать номер',
+	  text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate impedit, provident minima enim. Dignissimos, saepe quos dolorum repellat, commodi vel.",
+	 loader: false,
+	 hideAfter: 9000,
+	})
+}
+setTimeout(message,2000)
+
+
+//viewport el animate
+	$('.el-scroll-hide').viewportChecker({
+		callbackFunction: function(elem){
+        setTimeout(function(){
+            elem.addClass('hidden');
+        },800);
+    },
+    offset:200
+	});
+	$('.el-scroll-show').viewportChecker({
+		callbackFunction: function(elem){
+        setTimeout(function(){
+            elem.removeClass('hideScroll');
+        },800);
+    },
+    offset:200
+	});
+	
+		$('.exc-list-badprice').viewportChecker({
+			callbackFunction: function(elem){
+	        setTimeout(function(){
+	            elem.addClass('exc-list-badprice-line');
+	        },800);
+	    },
+	    offset:200
+		});
+
 //Hide toggle el
 var hideToggle = function(targetClick,toggleEl) {
 		$(targetClick).click(function(event){
@@ -56,12 +104,21 @@ var hideToggle = function(targetClick,toggleEl) {
     autoplayTimeout:10000,
 	 	singleItem:true,
 	 	loop:true,
-	 	autoHeight:true,
-	 	//animateOut: 'fadeOut'
 	 	}
 	 );  
 	 
-
+	 //message slide
+	 $(".trevel-message-info").owlCarousel({
+	 	items : 1,
+	 	navigation: false,
+	 	pagination : false,
+	 	autoplay:true,
+    autoplayTimeout:10000,
+	 	loop:true,
+	 	singleItem:true,
+	 	margin:10,
+	 	}
+	 );  
 	$('.result-right-img-el').click(function(){
 		var NumberSlide = $(this).index();
 		$('.result-left-img').trigger('to.owl.carousel', NumberSlide)

@@ -21,7 +21,11 @@ jeet.gutter = 1
 	wraper
 		background white
 		height 100vh
-		
+.hideScroll
+	font-size 0px
+.hidden
+	display none 
+
 .main-cont
 	center(1200px)
 	padding 0 5px!important
@@ -412,8 +416,11 @@ input[type="checkbox"]:checked + label span
 		width 100%
 		margin-right 0
 		padding 10px
+		max-width 100%
+		
 	flex:1;
 	margin-right 20px
+	max-width 250px
 .content-right
 	+below(1280px)
 		flex:none;
@@ -431,6 +438,7 @@ input[type="checkbox"]:checked + label span
 	padding 10px
 	bsh()
 	background white
+	margin-bottom 20px
 .filter-reting
 	margin-bottom 10px
 	padding-bottom 20px
@@ -620,6 +628,55 @@ input[type="checkbox"]:checked + label span
 	font-size 18px
 	font-weight 400
 	text-transform uppercase
+	position relative
+	&:hover
+		cursor pointer 
+		.rating-toooltip
+			display block
+.rating-toooltip-name 
+	font-size 12px
+	color black
+	text-decoration none 
+	margin-bottom 5px
+.rating-toooltip
+	+below(768px)
+		left 0px
+	position absolute
+	border 1px solid grey
+	padding 10px
+	background white
+	border-radius 4px
+	right 0px
+	top 120% 
+	min-width 250px
+	display none 
+	&:before
+		content ''
+		width 10px
+		height 10px
+		position absolute
+		background white
+		transform rotate(-45deg)
+		top -5px
+		left 50%
+		margin-left -5px
+		border-top 1px solid grey
+		border-right 1px solid grey
+.rating-toooltip-bar-wrap
+	width 100%
+	height 5px
+	border-radius 4px
+	background grey 
+.rating-toooltip-val
+	font-size 14px
+.rating-toooltip-header
+	flexB(between)
+.rating-toooltip-bar
+	background blue 
+	border-radius 4px
+	height 4px
+.rating-toooltip-el
+	margin-bottom 10px
 .content-right-found-text
 	font-size 14px
 	color #4F4F4F
@@ -1371,11 +1428,14 @@ div[class*="main-type"]
 .result-left-alert
 	+below(640px)
 		margin-top 10px
-	color red
+	color white
+	background red
+	padding 10px 
 	text-transform uppercase
 	margin-bottom 10px
 	font-size 14px
 	font-weight 600
+	display none
 .result-left-img
 	margin-bottom 20px
 	img
@@ -3136,6 +3196,10 @@ hr
 .exc-list-price-val
 	padding 10px 0
 	font-size 22px
+	flexB(mid)
+	fw()
+	img
+		width 25px
 //.exc-list-price-but
 
 .exc-table-el
@@ -3150,6 +3214,7 @@ hr
 .exc-table-el-title
 	flexB(between)
 	fw()
+	fl()
 	a
 		+below(768px)
 			width 100%
@@ -3254,6 +3319,7 @@ hr
 		&:before
 			content ''
 			margin-top -2px
+.exc-list-badprice-line
 	&:before
 		content ''
 		height 2px
@@ -3262,3 +3328,87 @@ hr
 		left 0px
 		top 50%
 		background red
+	
+@-webkit-keyframes rotating 
+	from
+		webkit-transform: rotate(0deg);
+	to
+		-webkit-transform: rotate(360deg);
+
+
+.exc-list-price-val img
+	-webkit-animation: rotating .6s linear infinite;
+.exc-list-content.exc-list-goodprice img
+	-webkit-animation: rotating .6s linear infinite;
+	width 20px
+	height 20px
+	margin 0 auto
+.jq-toast-single
+	background white 
+	color black
+	bsh()
+	border: 1px solid #dcd7d7;
+.jq-toast-heading
+	color white
+.result-right-footer
+	flexB(around)
+	fw()
+	padding 20px 0
+	a
+		color blue
+		width 30px
+		height 30px
+		border-radius 50%
+		border 1px solid blue
+		flexB(mid)
+		tr(all)
+		&:hover
+			background blue
+			color white 
+.trevel-message
+	padding 5px
+	f()
+	border-radius 4px
+	background #f7f7f7
+	margin-bottom 10px
+	img
+		display block 
+		width 40px !important
+		height 40px !important
+		border-radius 4px
+		margin-right 10px
+.trevel-message-name
+	font-size 12px
+	margin-bottom 5px
+	font-weight 600 
+.trevel-message-text
+	font-size 12px
+
+.baner-sale
+	+below(768px)
+		margin-left -20px
+	margin-left -35px
+	background red
+	padding 5px
+	border-radius 4px 4px 4px 0px
+	width 90px
+	flexB(mid) 
+	fl()
+	margin-bottom 10px
+	position relative
+.baner-sale-title
+	color white
+.baner-sale-val
+	color white
+	font-size 20px
+	font-weight 700 
+.baner-sale-coner
+	+below(768px)
+		display none
+	position absolute
+	width 0
+	height 0
+	border-top 10px solid #9e0812
+	border-left 15px solid transparent
+	left 0px
+	bottom -10px
