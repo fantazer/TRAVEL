@@ -21,6 +21,11 @@
 
 $(document).ready(function(){
 
+//Change preview
+$('.content-right-found-img-small-el img').click(function(){
+	var curUrl = $(this).attr('src');
+	$(this).closest('.content-right-found-img').find('.content-right-found-img-big img').attr('src', curUrl);
+})
 //Tooltip
 $('.rating-toooltip-bar').each(function(){
 		var progress = $(this).data('progress')*10;
@@ -85,6 +90,7 @@ var hideToggle = function(targetClick,toggleEl) {
 
 	hideToggle('.top-menu-enter','.log-wraper');
 	hideToggle('.main-head-cont-enter','.log-wraper');
+	hideToggle('.search-iput','.search-res');
 
 	$(".main-head-slider").owlCarousel({
 	 	items : 1,

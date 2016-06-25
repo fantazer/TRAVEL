@@ -127,9 +127,32 @@
 				.main-head-row-input
 					.exc-search-bg
 					.exc-search-top
-						.main-head-row-input-el
+						.main-head-row-input-el.search-iput
 							label Выберите город или отель
 							input(type="text" placeholder="Выберите город или отель")
+							//Drop result search
+							.search-res
+								a(href="#").search-res-row
+									.search-res-info
+										.search-res-name 
+											i.fa.fa-bullseye
+											|город 
+											.search-res-current Москва
+										.search-res-val 2022 отеля
+								a(href="#").search-res-row
+									.search-res-info
+										.search-res-name 
+											i.fa.fa-building
+											|город 
+											.search-res-current Москва
+										.search-res-val 2022 отеля
+								a(href="#").search-res-row
+									.search-res-info
+										.search-res-name 
+											|город 
+											.search-res-current Москва
+										.search-res-val 2022 отеля
+										
 						.input-daterange
 							.main-head-row-input-el
 								.icon-datapicker

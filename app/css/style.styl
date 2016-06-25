@@ -459,6 +459,8 @@ input[type="checkbox"]:checked + label span
 		font-size 20px
 		color grey
 .filter-reting-stars
+	min-width 110px
+	margin 0 10px
 	label
 		margin-right 5px
 	.active
@@ -622,13 +624,13 @@ input[type="checkbox"]:checked + label span
 	border-bottom 1px solid blue
 	text-transform uppercase
 .content-right-found-title-type
-	+below(1024px)
-		font-size 14px
 	color blue
 	font-size 18px
 	font-weight 400
 	text-transform uppercase
 	position relative
+	font-size 12px
+	white-space nowrap
 	&:hover
 		cursor pointer 
 		.rating-toooltip
@@ -771,6 +773,8 @@ input[type="checkbox"]:checked + label span
 .content-right-found-img-small
 	f()
 	fw()
+	&:hover
+		cursor pointer
 .content-right-found-img-small-el
 	width calc(33.333% - 2px)
 	margin 1px
@@ -931,7 +935,7 @@ input[type="checkbox"]:checked + label span
 	width 100%
 	height 100%
 .main-head-row-input-el
-	
+	position relative
 	f()
 	fl()
 	input
@@ -3412,3 +3416,40 @@ hr
 	border-left 15px solid transparent
 	left 0px
 	bottom -10px
+
+.search-res
+	position absolute
+	top 100%
+	z-index 2000
+	background white 
+	width 100%
+	display none
+	box-shadow  0px 1px 3px grey
+.search-res-row
+	padding 10px
+	padding-left 30px
+	display block
+	position relative
+	overflow-x hidden
+	&:hover
+		background blue
+		color white
+		.search-res-info
+			color white
+.search-res-info
+	flexB(between)
+	color black
+.search-res-name
+	.fa
+		position absolute
+		left 10px
+		top 10px
+		color blue
+.search-res-current
+	font-weight 700
+	display inline
+.search-res-val
+	color grey
+	font-size 10px
+	white-space nowrap
+	margin-left 10px
