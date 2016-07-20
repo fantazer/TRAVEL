@@ -803,8 +803,19 @@ input[type="checkbox"]:checked + label span
 .main-cont
 	center(1240px)
 .main-head 
+	+below(480px)
+		min-width 100%
+	.toggle-top-menu
+		display none!important 
+		+below(480px)
+			display block!important 
+	.top-menu-money i
+		color white!important
+		+below(480px)
+			color black!important
 	position relative
 	//height 500px
+	min-width 1200px
 
 .main-head-filter
 	background-color: rgba(34,34,34,.15);
@@ -846,7 +857,7 @@ input[type="checkbox"]:checked + label span
 	flexB(between)
 	height 70px
 	position relative
-	+below(768px)
+	+below(480px)
 		.toggle-top-menu
 			flex 1
 			margin 0
@@ -872,9 +883,9 @@ input[type="checkbox"]:checked + label span
 	+below(1280px)
 		flex 6
 		z-index 9999
-	+above(769px)
+	+above(480px)
 		display flex!important
-	+below(769px)
+	+below(480px)
 		display none
 		position absolute
 		left 0px
@@ -1033,7 +1044,7 @@ input[type="checkbox"]:checked + label span
 	&:hover
 		cursor pointer
 .main-head-fullwidth
-	+below(1024px)
+	+below(480px)
 		margin-bottom 10px
 	padding 0 20px
 	//+below(1280px)
@@ -1135,7 +1146,7 @@ input[type="checkbox"]:checked + label span
 		fw()
 	f()
 .main-place-el
-	+below(768px)
+	+below(480px)
 		width 100%
 	position relative
 	&:hover
@@ -1337,7 +1348,7 @@ div[class*="main-type"]
 			height 255px
 			.main-place-el-img
 				height 100%
-+below(768px)
++below(480px)
 	div[class*="main-type"]
 		fw()
 		f()
