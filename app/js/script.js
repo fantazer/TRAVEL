@@ -91,6 +91,7 @@ var hideToggle = function(targetClick,toggleEl) {
 	hideToggle('.top-menu-enter','.log-wraper');
 	hideToggle('.main-head-cont-enter','.log-wraper');
 	hideToggle('.search-iput','.search-res');
+	hideToggle('.top-menu__more','.top-menu__more-wrap');
 
 	$(".main-head-slider").owlCarousel({
 	 	items : 1,

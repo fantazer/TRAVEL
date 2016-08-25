@@ -4,17 +4,22 @@ body
 	//Include header
 	include ./block_html/elements/const.jade
 	include ./block_html/head-exc.jade
-
-
-	.exc-type
+	.exc-tools
 		.main-cont
-			.exc-type-wraper
-				a(href="#").exc-type-el
-					img(src="img/solo.png", alt="")
-					span Индивидуальная экскурсия
-				a(href="#").exc-type-el 
-					img(src="img/command.png", alt="")
-					span Групповая экскурсия
+			.exc-tools__wrap
+				- for (var i = 0; i < 3; i++)
+					.exc-tools__el
+						.exc-tools__img
+							img(src="img/icon-search.png", alt="")
+						.exc-tools__info
+							.exc-tools__name Тель-Авив
+							.exc-tools__date 24.09 - 25.09
+						img(src="img/icon-close.png", alt="").exc-tools__close
+						.exc-tools__message
+							.exc-tools__message-wrap
+								.exc-tools__text Тель-Авив
+								.exc-tools__text 06 сентября 2016 - undefined
+								i.fa.fa-caret-down
 
 	.main-place
 		.main-cont
@@ -94,7 +99,8 @@ body
 							+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
 						a(href="#").main-place-el
 							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-
+			.get__more
+				button показать еще
 
 	include ./block_html/footer.jade
 

@@ -181,19 +181,20 @@ gulp.task('make', function () {
 
 //Ftp
 gulp.task( 'ftp', function() {
+    var ftpConf = JSON.parse(fs.readFileSync('./ftp.json'));
     var conn = ftp.create( {
-        host:     'one.web-kuznetcov.ru',
+        host:     'kuznetcov.org',
         user:     ftpConf.user,
         password: ftpConf.pass,
-        parallel: 21,
+        parallel: 1,
+        maxConnections:1
     } );
     var globs = [
-        'dist/**',
-        'dist/*.html'
+        'dist/**/**.*'
     ];
-   return gulp.src(globs)
-        .pipe( conn.newer( 'httpdocs/one.web-kuznetcov.ru/'+ftpConf.name) )
-        .pipe( conn.dest( 'httpdocs/one.web-kuznetcov.ru/'+ftpConf.name) );
+   return gulp.src(globs, {buffer: false})
+        .pipe( conn.newer( 'kuznetcov.org/'+ftpConf.name) )
+        .pipe( conn.dest( 'kuznetcov.org/'+ftpConf.name) );
 
 } );
 

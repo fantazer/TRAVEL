@@ -54,8 +54,8 @@
 			.main-head-cont
 					i.fa.fa-bars.toggle-top-menu
 					.main-head-cont-logo
-						.main-head-cont-logo-img
-							img(src="img/logo-white.png", alt="")
+						a(href="#").main-head-cont-logo-img
+							img(src="img/traveller-logo.png", alt="")
 					.main-head-cont-menu.main-cont
 						a(href="#") 
 							span авиабилеты
@@ -65,14 +65,26 @@
 							span экскурсии
 						a(href="#") 
 							span страховка
-						.top-menu-money
-							i.fa.fa-rub
-							i.fa.fa-caret-down
+						.top-menu__more ЕЩЕ
+							i.fa.fa-angle-down
+							.top-menu__more-wrap
+								a(href="#").top-menu__more-el Туры
+								a(href="#").top-menu__more-el авто
+								a(href="#").top-menu__more-el автобусы
+								a(href="#").top-menu__more-el трансфер
+						.top-menu-money RUB
+							i.fa.fa-angle-down
+
 					.main-head-cont-enter Вход
 					.log-wraper-main
 						form(action="")#login-form
 							input(type="text" placeholder="E-mail")
 							input(type="password" placeholder="Пароль")
+							.log-wraper-enemy
+									input(id='login', type='checkbox', name='rr')
+									label(for='login') 
+										span
+									span Запомнить меня
 							button Вход
 							.log-wraper-remember
 								.log-wraper-remember-el
@@ -89,38 +101,25 @@
 
 							.log-social
 								a(href="#")
-									i.fa.fa-vk
+									img(src="img/soc/facebook.png", alt="")
 								a(href="#")
-									i.fa.fa-facebook
+									img(src="img/soc/vk.png", alt="")
 								a(href="#")
-									i.fa.fa-twitter
+									img(src="img/soc/twitter.png", alt="")
 								a(href="#")
-									i.fa.fa-google-plus
+									img(src="img/soc/google-plus.png", alt="")
 								a(href="#")
-									i.fa.fa-instagram
+									img(src="img/soc/instagram.png", alt="")
 						form(action="")#registration-form
 							input(type="text" placeholder="Фамилия")
 							input(type="text" placeholder="Имя")
 							input(type="text" placeholder="E-mail")
 							input(type="password" placeholder="Пароль")
 							input(type="text" placeholder="Телефон")
-							a(href="#").get-code Выслать проверочный код
 							input(type="text" placeholder="Проверочный код")
-							button Зарегистрироваться
 							.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
-							.log-social-title Авторизоваться через соц. сети
+							button Зарегистрироваться
 
-							.log-social
-								a(href="#")
-									i.fa.fa-vk
-								a(href="#")
-									i.fa.fa-facebook
-								a(href="#")
-									i.fa.fa-twitter
-								a(href="#")
-									i.fa.fa-google-plus
-								a(href="#")
-									i.fa.fa-instagram
 		.head-form
 			.main-cont
 				// Exc form
@@ -164,10 +163,19 @@
 								input(type="text" placeholder="Выберите дату" readonly="readonly")
 					.exc-search-bottom
 						.main-head-row-input-el.exc-search-time
-							label Время
-							select(name="").dropdown
-								option 10:00
-								option 11:00
-								option 12:00
+							label Состав группы
+							.group__number
+								.exc-search-time__el
+									img(src="img/icon-man.png", alt="")
+									select(name="").dropdown
+										option 1
+										option 2
+										option 3
+								.exc-search-time__el
+									img(src="img/icon-children.png", alt="")
+									select(name="").dropdown
+										option 1
+										option 2
+										option 3
 						.main-head-row-input-el.exc-search-but
 							button Найти

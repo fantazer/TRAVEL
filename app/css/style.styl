@@ -25,7 +25,6 @@ jeet.gutter = 1
 	font-size 0px
 .hidden
 	display none 
-
 .main-cont
 	center(1200px)
 	padding 0 5px!important
@@ -36,7 +35,6 @@ input,select,textarea
 	//min-height 45px
 input[type="checkbox"]
 	padding 0
-	
 button
 	border 0px
 	color white
@@ -77,44 +75,14 @@ bsh(){
 			background #6D2D74
 			color white
 .top-menu-wraper
-	+below(768px)
-		flexB(between)
 	flexB(around)
 	position relative
 .top-menu-logo
-	+below(768px)
-		flexB(between)
-		justify-content flex-start
-		flex-grow 0
 	flex-grow 2
 	img
-		+below(768px)
-			margin 0 auto
-			width 70px
-			position absolute
-			left 50%
-			margin-left -35px
-			top 0
 		margin 0 auto
 .top-menu-items
-	+above(768px)
-		display flex!important
-	+below(768px)
-		display none
-		position absolute
-		top calc(100% + 10px)
-		left 0px
-		width 100%
-		background white
-		z-index 2000
-		a
-			width 100%
-			display block
-			text-align center
-			padding 10px
-			border-top 1px solid #F8F8F8
-			&:last-child
-				border-bottom 1px solid #F8F8F8
+
 	text-transform uppercase
 	flexB(around)
 	flex-grow 10
@@ -133,20 +101,13 @@ bsh(){
 					bottom -28px
 					left 0px
 .top-menu-money
-	+below(768px)
-		padding 10px
-		color black
-		.fa
-			color black!important
-	//flex-grow 2
+	color white
 	flexB(mid)
 	font-weight 600
 	.fa
 		margin-left 10px
 .top-menu-enter
-	+below(768px)
-		margin-right 20px
-		text-align right
+	
 	flex-grow 2
 	text-transform uppercase
 	text-align center
@@ -168,8 +129,6 @@ bsh(){
 	color blue
 .log-wraper,
 .log-wraper-main
-	+below(640px)
-		width 100%
 	position absolute
 	top 100%
 	right 0px
@@ -181,8 +140,6 @@ bsh(){
 	display none
 	bsh()
 	input
-		+below(768px)
-			margin-bottom 15px
 		width 100%
 		margin-bottom 10px
 	button
@@ -192,25 +149,14 @@ bsh(){
 		margin-top 10px
 		flexB(around)
 		a
-			color blue
-			i 
-				color blue
+			width 25px
 .log-wraper-main
 	margin-top 0
 .toggle-top-menu
 	display none
-	+below(768px)
-		display block
-		margin 0 20px
-		&:hover
-			cursor pointer
 	font-size 22px
 	display none
 .breadcrumbs
-	+below(768px)
-		padding 20px
-		f()
-		fw()
 	padding 20px 0
 	a
 		margin-right 20px
@@ -225,9 +171,6 @@ bsh(){
 				content ''
 				
 .top-search
-	+below(768px)
-		fw()
-		position relative
 	padding 10px 20px
 	background white
 	box-shadow: 0px 0px 3px #E1E1E1;
@@ -236,16 +179,9 @@ bsh(){
 	input
 		height 47px
 .top-search-town
-	+below(768px)
-		width 100%
-		margin-right 0
-		//margin-bottom 10px
 	flex-grow 4
 	margin-right 20px
-	
 .top-search-more
-	+below(768px)
-		display block
 	display none
 	position absolute
 	top 17px
@@ -264,35 +200,15 @@ bsh(){
 .top-search-time-title
 	font-size 16px!important
 	width 100%
-	+below(768px)
-		font-size 14px!important
-		margin 5px 0
-		
+	
 .top-search-town,
 .top-search-date,
 .top-search-time
-	+below(768px)
-		display flex
-		justify-content space-between
-		//flex 2
-		fl()
-		flex 1 1 100%!important
-		width 100%
+	
 	flexB(between)
 	fl()
 	width 100%
-		
-.top-search
-	+below(768px)
-		input[type="text"],
-		select
-			width 100%
-.filter-type-wraper
-	+below(1280px)
-		f()
-		fw()
-		.filter-type
-			width 50%
+
 .top-search-town-title
 	font-size 18px
 	flexB(between)
@@ -302,11 +218,6 @@ bsh(){
 		width 100%
 		margin-top 10px
 .top-search-date
-	+below(768px)
-		display none
-		margin-right 0
-	+below(380px)
-		margin-right 0
 	flex-grow 2
 	margin-right 20px
 .top-search-date-title
@@ -315,8 +226,7 @@ bsh(){
 .top-search-date-title-el
 	//flex 1
 .top-search-date-input
-	+below(380px)
-		margin-bottom 10px
+	
 	position relative
 	input
 		width 100%
@@ -331,9 +241,6 @@ bsh(){
 		&:hover
 			cursor pointer
 .top-search-time
-	+below(768px)
-		margin-right 0px
-		display none
 	flex-grow 2
 	margin-right 20px
 	.dropdown
@@ -354,10 +261,6 @@ bsh(){
 		width 100%
 		margin-top 10px
 .top-search-but
-	+below(768px)
-		width 100%
-		margin-top 10px
-		flex 1 1 100%!important
 	flex-grow 1
 	f()
 	fl()
@@ -376,7 +279,6 @@ bsh(){
 		//border-bottom: 2px solid white;
 input[type="checkbox"]
 	display:none;
-
 
 input[type="checkbox"] + label span
 	display:inline-block;
@@ -408,23 +310,14 @@ input[type="checkbox"]:checked + label span
 	margin-top 20px
 .content-wraper
 	f()
-	+below(1280px)
-		fw()
+	
 .content-left
-	+below(1280px)
-		display none
-		width 100%
-		margin-right 0
-		padding 10px
-		max-width 100%
-		
+	
 	flex:1;
 	margin-right 20px
 	max-width 250px
 .content-right
-	+below(1280px)
-		flex:none;
-		width 100%
+
 	flex:4;
 	
 .show-from
@@ -485,28 +378,17 @@ input[type="checkbox"]:checked + label span
 //.filter-name 
 //.content-left-title 
 .filter-type 
-	+below(768px)
-		font-size 12px
+	
 	margin-bottom 10px
 	padding-bottom 20px
 	border-bottom 1px solid #f8f8f8
 .filter-type-el 
 	margin-bottom 3px
-	
 .content-right-sort
-	+below(768px)
-		fw()
-		position relative
-
-			
 	flexB(around)
 	bsh()
 	background white
 	.active
-		+below(768px)
-			color white
-			//background #FEB20E
-			color black
 		border-bottom 2px solid blue
 		&:after
 			content '\f0d7'
@@ -517,8 +399,6 @@ input[type="checkbox"]:checked + label span
 			margin-left 10px
 .content-right-sort-title-filter
 	display none
-	+below(768px)
-		display block
 	position absolute
 	padding-left 25px
 	top 0px
@@ -532,8 +412,6 @@ input[type="checkbox"]:checked + label span
 		cursor pointer
 .content-right-sort-title-toggle
 	display none
-	+below(768px)
-		display block
 	position absolute
 	padding-left 20px
 	top 0px
@@ -546,11 +424,6 @@ input[type="checkbox"]:checked + label span
 	&:hover
 		cursor pointer
 .content-right-sort-el
-	+below(768px)
-		width 100%
-		text-align center
-		display none
-	text-transform uppercase
 	padding 15px 0
 	&:hover
 		cursor pointer
@@ -595,13 +468,9 @@ input[type="checkbox"]:checked + label span
 	background white
 	padding 15px
 .content-right-found-content
-	+below(768px)
-		fl()
 	f()
 	margin-bottom 10px
 .content-right-found-img
-	+below(768px)
-		margin-right 0px
 	margin-right 20px
 	flex:3;
 	img
@@ -611,13 +480,9 @@ input[type="checkbox"]:checked + label span
 	fl()
 	flex:8;
 .content-right-found-title
-	+below(768px)
-		fw()
 	flexB(between)
 	margin-bottom 10px
 .content-right-found-title-name
-	+below(1024px)
-		font-size 14px
 	color blue
 	font-size 18px
 	font-weight 400
@@ -641,8 +506,6 @@ input[type="checkbox"]:checked + label span
 	text-decoration none 
 	margin-bottom 5px
 .rating-toooltip
-	+below(768px)
-		left 0px
 	position absolute
 	border 1px solid grey
 	padding 10px
@@ -688,48 +551,29 @@ input[type="checkbox"]:checked + label span
 	text-decoration underline
 	
 .content-right-found-get
-	+below(768px)
-		fw()
 	f()
 	margin-top 10px
 .content-right-found-get-type
-	+below(1024px)
-		flex 3
-	+below(768px)
-		width 100%
-		flex none
 	margin-right 20px
 	flex:3;
 .content-right-found-get-title
-	
 	font-weight 600
 	text-transform uppercase
 	border-bottom 1px solid grey
 	margin-bottom 5px
 .content-right-found-get-type-el
-	+below(768px)
-		text-align center
 	margin-bottom 10px
 	.fa
 		color blue
 		margin-right 5px
 .content-right-found-get-type-wraper
 	margin-top 15px
-	+below(768px)
-		flexB(between)
-		padding 10px 0
-		margin-bottom 10px
 	.fa
 		color blue
 		margin-right 5px
 .content-right-found-get-price
-	+below(768px)
-		width 100%
-		flex none
 	flex:8;
 .content-right-found-get-price-el
-	+below(768px)
-		padding 5px 0px
 	flexB(between)
 	padding 10px
 .content-right-found-get-price-val
@@ -738,8 +582,6 @@ input[type="checkbox"]:checked + label span
 	font-weight 600
 	font-size 20px
 .content-right-found-get-price-but
-	+below(768px)
-		font-size 14px
 	flex 1
 	text-align center
 	background #FEB20E
@@ -750,24 +592,13 @@ input[type="checkbox"]:checked + label span
 	border-radius 5px
 	display block
 .content-right-found-get-price-text
-	+below(768px)
-		flex 2
-		display none
 	flex 1
 	text-align center
 	font-size 12px
 .content-right-found-foter
-	+below(768px)
-		fw()
-		margin-top 10px
 	margin-top 20px
 	flexB(between)
 	a
-		+below(768px)
-			font-size 12px
-			width 50%
-			text-align center
-			margin-bottom 5px
 		text-decoration underline
 		color #AFAFAF
 .content-right-found-img-small
@@ -781,8 +612,6 @@ input[type="checkbox"]:checked + label span
 .content-right-found-img-big
 	margin-bottom 1px
 .content-right-found-sale
-	+below(768px)
-		margin-bottom 10px
 	background red
 	color white
 	font-size 12px
@@ -802,20 +631,15 @@ input[type="checkbox"]:checked + label span
 	display flex
 .main-cont
 	center(1240px)
+	width 1240px!important
 .main-head 
-	+below(480px)
-		min-width 100%
 	.toggle-top-menu
 		display none!important 
-		+below(480px)
-			display block!important 
 	.top-menu-money i
 		color white!important
-		+below(480px)
-			color black!important
 	position relative
 	//height 500px
-	min-width 1200px
+	min-width 1240px
 
 .main-head-filter
 	background-color: rgba(34,34,34,.15);
@@ -832,10 +656,6 @@ input[type="checkbox"]:checked + label span
 .main-head-slider
 	width 100%
 	.owl-item
-		+below(768px)
-			height 600px
-		+below(500px)
-			height 700px
 		height 500px
 .main-head-slider-el
 	background-size cover
@@ -853,51 +673,16 @@ input[type="checkbox"]:checked + label span
 	z-index 300
 	width 100%
 .main-head-cont 
-	center(1460px)
+	center(1240px)
+	max-width 1240px!important
 	flexB(between)
 	height 70px
 	position relative
-	+below(480px)
-		.toggle-top-menu
-			flex 1
-			margin 0
-			text-align center
+	
 .main-head-cont-logo
-	+below(1280px)
-		flex 1
-		img
-			margin 0 auto
-			width 100%
-	+below(768px)
-		justify-content flex-start
-		img
-			width 50%!important
-	+below(640px)
-		flex 4
-		
 	height 100%
 	flexB(mid)
-	img
-		width 80%
 .main-head-cont-menu
-	+below(1280px)
-		flex 6
-		z-index 9999
-	+above(480px)
-		display flex!important
-	+below(480px)
-		display none
-		position absolute
-		left 0px
-		top 70px
-		height auto
-		fw()
-		background white
-		a
-			width 100%
-			color black!important
-			padding 15px
-			
 	flexB(around)
 	height 100%
 	a
@@ -919,13 +704,6 @@ input[type="checkbox"]:checked + label span
 .main-head-cont-logo-img
 	width 100%
 .main-head-cont-enter 
-	+below(1280px)
-		flex 1
-		text-align center
-	+below(768px)
-		padding-right 20px
-	+below(640px)
-		font-size 12px
 	text-transform uppercase
 	color white
 	&:hover
@@ -936,6 +714,7 @@ input[type="checkbox"]:checked + label span
 		font-size 10px
 	a
 		text-decoration underline
+		color blue
 	flexB(mid)
 .main-head-row-input
 	position relative
@@ -961,22 +740,15 @@ input[type="checkbox"]:checked + label span
 	&:nth-child(1)
 		position relative
 		width 50%
-		+below(768px)
-			width 100% !important
 	&:nth-child(2)
 		position relative
 		width 22%
-		+below(768px)
-			width 100% !important
+		
 	&:nth-child(3)
 		position relative
 		width 22%
-		+below(768px)
-			width 100% !important
 .exc-search-time
-	width 25%!important
-	+below(768px)
-		width 100% !important
+	width 18%!important
 	.dropdown.open .carat
 		margin-top -4px
 	.dropdown
@@ -1003,12 +775,6 @@ input[type="checkbox"]:checked + label span
 			margin 0
 .exc-search-but
 	width 12.5% !important
-	+below(1024px)
-		width 20% !important
-	+below(768px)
-		width 100% !important
-		margin-top 20px
-		font-size 12px
 	button
 		height 45px
 		line-height 48px
@@ -1044,8 +810,7 @@ input[type="checkbox"]:checked + label span
 	&:hover
 		cursor pointer
 .main-head-fullwidth
-	+below(480px)
-		margin-bottom 10px
+	
 	padding 0 20px
 	//+below(1280px)
 	.fa
@@ -1061,7 +826,7 @@ input[type="checkbox"]:checked + label span
 	font-size 12px
 	text-align center
 	margin 10px 0
-	color #cbcbcb
+	margin-top 0px
 .main-head-slider-content
 	flexB(mid)
 	fl()
@@ -1115,26 +880,20 @@ input[type="checkbox"]:checked + label span
 	background #F3F1ED;
 //.main-cont
 .main-service-wraper
-	+below(768px)
-		fw()
 	flexB(mid)
 .main-service-el
-	+below(768px)
-		width 25%
-		flex none
 	height 120px
 	flexB(mid)
 	fl()
 	flex 1
 	&:hover
 		background white
+		border-top 2px solid black
 .main-service-el-img
 	img
 		width 32px
 		
 .main-service-el-text
-	+below(640px)
-		font-size 9px
 	font-size 13px
 	margin-top 20px
 	text-align center
@@ -1142,13 +901,10 @@ input[type="checkbox"]:checked + label span
 //.main-cont
 //.main-wraper
 .main-place-row
-	+below(768px)
-		fw()
 	f()
 .main-place-el
-	+below(480px)
-		width 100%
 	position relative
+	border .5px solid white
 	&:hover
 		.main-place-el-filter
 			background-image: linear-gradient(to right, rgba(34,34,34,0.55), rgba(34,34,34,0.5), rgba(34, 34, 34, 0.53), rgba(34, 34, 34, 0.54), rgba(34, 34, 34, 0.58));
@@ -1168,9 +924,6 @@ input[type="checkbox"]:checked + label span
 	background-position: bottom center
 //.main-place-el-content
 .main-small-small-big
-	+below(768px)
-		.main-place-el
-			flex initial!important
 	.main-place-el
 		&:nth-child(1)
 			flex 2
@@ -1179,9 +932,6 @@ input[type="checkbox"]:checked + label span
 		&:nth-child(3)
 			flex 1
 .main-big-small-small
-	+below(768px)
-		.main-place-el
-			flex initial!important
 	.main-place-el
 		&:nth-child(1)
 			flex 1
@@ -1267,7 +1017,6 @@ div[class*="main-type"]
 		&:nth-child(3)
 			width 100%
 .main-type-two-right
-
 	.main-place-el
 		display block
 		.main-place-el-img
@@ -1275,8 +1024,7 @@ div[class*="main-type"]
 		&:nth-child(1)
 			width 100%
 			height 510px
-
-
+			
 //.main-type-three
 
 .main-type-three-left
@@ -1297,8 +1045,6 @@ div[class*="main-type"]
 			width 50%
 		&:nth-child(3)
 			width 100%
-	
-			
 .main-templ-four
 	f()
 	fw()
@@ -1348,34 +1094,16 @@ div[class*="main-type"]
 			height 255px
 			.main-place-el-img
 				height 100%
-+below(480px)
-	div[class*="main-type"]
-		fw()
-		f()
-		width 100%!important
-		.main-place-el
-			max-height 255px!important
-			width 100%!important
-			
 .footer
-	border-top 3px solid #3051aa
 	margin-top 40px
 .footer-wraper
-	+below(768px)
-		fw()
+	border-top 3px solid grey
 	padding 20px
 	flexB(between)
 .footer-left
-	+below(768px)
-		width 100%
-		flexB(mid)
 	a
 		margin 0 20px
 .footer-right
-	+below(768px)
-		width 100%
-		flexB(mid)
-		margin-top 10px
 	.fa
 		background #F3F3F3
 		color #CCCCCC
@@ -1402,25 +1130,14 @@ div[class*="main-type"]
 .result
 	margin-bottom 20px
 .result-wraper
-	+below(1024px)
-		fw()
 	padding 20px
 	background white
 	bsh()
 	f()
 .result-left
-	+below(1024px)
-		width 100%
-		flex 1 1 100%
-		order 2
 	//flex 7
 	width 75%
 .result-right
-	+below(1024px)
-		order 1
-		width 100%
-		flex 1 1 100%
-		margin-left 0
 	flex 2
 	margin-left 20px
 	width 25%
@@ -1432,8 +1149,6 @@ div[class*="main-type"]
 	fw()
 	justify-content flex-start
 	.big-title
-		+below(640px)
-			font-size 22px
 		margin-right 20px
 .big-title
 	color blue
@@ -1441,8 +1156,6 @@ div[class*="main-type"]
 	margin-bottom 10px
 	
 .result-left-alert
-	+below(640px)
-		margin-top 10px
 	color white
 	background red
 	padding 10px 
@@ -1477,18 +1190,12 @@ div[class*="main-type"]
 	padding 10px 20px
 	flexB(between)
 .tour-table-title-date
-	+below(640px)
-		font-size 10px
 	font-weight 600
 	color #8F8F8F
 .tour-table-title-info
-	+below(640px)
-		font-size 10px
 	font-weight 600
 	color #8F8F8F
 .tour-table-el
-	+below(640px)
-		padding 10px
 	padding 10px 20px
 	border 1px solid #e1e1e1
 	margin-bottom 10px
@@ -1499,57 +1206,30 @@ div[class*="main-type"]
 	flexB(between)
 	fw()
 	a
-		+below(768px)
-			width 100%
-			display block
-			text-align center
 		text-decoration underline
 		color blue
 		margin-bottom 10px
 		font-size 14px
 .tour-table-el-left
-	+below(768px)
-		flex 1 1 100%
-		margin-bottom 10px
-		margin-right 0
 	flex 4
 	margin-right 20px
 .tour-table-el-row
-	+below(1024px)
-		box-shadow: 0px 0px 4px #E3E0E0;
-		background: #F7F7F7;
-		padding 10px
 	flexB(between)
 	fw()
 	margin-bottom 10px
 	padding 5px
 .tour-table-el-date
-	+below(640px)
-		flex 1 1 100%
-		text-align left
-		font-weight 600
 	flex 1
 	font-size 14px
 .tour-table-el-text
-	+below(640px)
-		flex 1 1 100%
-		text-align left
-		font-size 12px
-		margin 10px 0
 	flex 4
 	font-size 14px
 .tour-table-el-cost
-	+below(768px)
-		text-align left
-	+below(640px)
-		flex 1 1 100%
 	color black
 	flex 1
 	font-size 18px
 	font-weight 600
 .tour-table-el-right
-	+below(768px)
-		flex 1 1 100%
 	flex 1
 .btn-main
 	text-align center
@@ -1570,8 +1250,6 @@ button.btn-main
 	fw()
 	margin-bottom 20px
 .result-mark-left
-	+below(768px)
-		flex 1 1 100%
 	flex 1
 .result-mark-el
 	margin-bottom 10px
@@ -1579,13 +1257,9 @@ button.btn-main
 	justify-content flex-strat
 	margin-right 20px
 .result-mark-name
-	+below(640px)
-		flex 0 0 40%
 	flex 1
 	font-size 14px
 .result-mark-row
-	+below(640px)
-		flex 0 0 60%
 	flex 3
 	position relative
 	//padding 5px
@@ -1600,8 +1274,6 @@ button.btn-main
 	top 0px
 	height 100%
 .result-mark-right
-	+below(768px)
-		flex 1 1 100%
 	flex 1
 
 .result-info
@@ -1609,8 +1281,6 @@ button.btn-main
 	fw()
 	margin-bottom 20px
 .result-info-left
-	+below(640px)
-		flex 1 1 100%
 	flex 1
 .result-info-el
 	flexB(mid)
@@ -1628,28 +1298,20 @@ button.btn-main
 .result-info-el-color-green
 	background #5DC332
 .result-info-right
-	+below(640px)
-		flex 1 1 100%
 	flex 1
 .result-info-el-color-blue
 	background #FEB20E
 	color black
-	
 .result-place
 	f()
 	fw()
 	margin-bottom 20px
 .result-place-img
-	+below(640px)
-		flex 1 1 100%
-		margin-bottom 10px
 	flex 1
 	margin-right 10px
 	img
 		width 100%
 .result-place-info
-	+below(640px)
-		flex 1 1 100%
 	flex 5
 .result-place-title
 	color blue
@@ -1659,8 +1321,6 @@ button.btn-main
 	font-size 14px
 
 .result-right-title
-	+below(768px)
-		text-align center
 	text-transform uppercase
 	font-size 16px
 	color blue
@@ -1679,8 +1339,6 @@ button.btn-main
 	font-weight 600
 	color black
 .result-right-img
-	+below(1124px)
-		display none
 	f()
 	fw()
 	margin-bottom 40px
@@ -1704,10 +1362,6 @@ button.btn-main
 	fw()
 //.gid
 .gid-img
-	+below(1024px)
-		width 15%
-	+below(640px)
-		width 30%
 	width 30%
 	margin-right 10px
 	img
@@ -1725,9 +1379,6 @@ button.btn-main
 	flexB(between)
 	fw()
 .same-excurse-el
-	+below(768px)
-		width 100%
-		margin-bottom 10px
 	width 33%
 	position relative
 	display block
@@ -1744,8 +1395,6 @@ button.btn-main
 	width 100%
 
 .btn-more
-	+below(1024px)
-		display block
 	margin-top 10px
 	background #EDCD70
 	position relative
@@ -1754,15 +1403,9 @@ button.btn-main
 		position absolute
 		top 10px
 		left 10px
-.result-right-hide-mobile
-	+below(1024px)
-		display none
-		
+
 .modal
-	+below(	1024px)
-		width 60%	
-	+below(640px)
-		width 100%	
+
 	position relative
 	padding 20px
 	background white
@@ -1812,8 +1455,6 @@ button.btn-main
 //.modal-man
 //.modal-children
 .modal-order-el
-	+below(768px)
-		fw()
 	flexB(between)
 	width 100%
 	background #f7f7f7
@@ -1834,8 +1475,6 @@ button.btn-main
 	color black
 	text-align center
 .modal-order-right
-	+below(768px)
-		margin-top 10px	
 	width 100%
 	span
 		text-align center
@@ -1941,22 +1580,6 @@ hr
 	f()
 	fw()
 .faq-left
-	+below(1024px)
-		width 100%
-		margin-bottom 20px
-		position relative
-		margin-right 0
-		.mid-title
-			margin-bottom 0px
-		.fa-sort-desc
-			display block
-			position absolute
-			font-size 20px
-			top 25px
-			margin-top -10px
-			right 30px
-			&:hover
-				cursor pointer
 	width 20%
 	background white
 	padding 20px
@@ -1966,17 +1589,12 @@ hr
 .fa-sort-desc
 	display none
 .faq-menu
-	+below(1024px)
-		display none
-		margin-top 20px
 	a
 		display block
 		margin-bottom 15px
 		color blue
 		text-decoration underline
 .faq-right
-	+below(1024px)
-		width 100%
 	width 78%
 	
 .faq-search
@@ -1997,14 +1615,7 @@ hr
 	bsh()
 	padding 20px
 	background white
-.help
-	.big-title
-		+below(768px)
-			font-size 18px
-	.mid-title
-		+below(768px)
-			font-size 12px
-			text-align center
+
 //.help-wraper
 .help-top
 	background white
@@ -2012,14 +1623,6 @@ hr
 	bsh()
 	margin-bottom 20px
 .help-title
-	+below(768px)
-		flexB(mid)
-		fw()
-		img
-			margin-bottom 10px
-		.big-title
-			text-align center
-			
 	flexB(mid)
 	justify-content flex-start
 	.big-title
@@ -2033,11 +1636,6 @@ hr
 	fw()
 	align-items flex-start
 .help-top-el
-	+below(768px)
-		width 100%
-		a
-			text-align center
-			display block
 	width 30%
 	margin-bottom 20px
 	a
@@ -2051,18 +1649,12 @@ hr
 	text-decoration underline
 	display block
 .help-contact
-	+below(768px)
-		fw()
-		button
-			width 100%
+	
 	margin-bottom 20px
 	f()
 	form
 		width 100%
 	input
-		+below(768px)
-			flex 1 1 100%
-			margin-right 0
 		flex 1 1 48.5%
 		margin-bottom 10px
 		margin-right 5px
@@ -2073,10 +1665,6 @@ hr
 	f()
 	fw()
 .help-contact-left
-	+below(768px)
-		margin-right 0
-		max-height initial 
-		margin-bottom 20px
 	flexB(mid)
 	fl()
 	bsh()
@@ -2096,27 +1684,15 @@ hr
 	flexB(mid)
 	fw()
 .help-number-img
-	+below(1024px)
-		width 100%
-		img
-			margin 0 auto
 	width 30%
 	margin-right 5%
 .help-number-info
-	+below(1024px)
-		width 100%
-		p
-			text-align center
 	width 65%
 .help-number-text
-	+below(1024px)
-		text-align center
 	color blue
 	font-size 18px
 	margin-bottom 10px
 .help-number-numb
-	+below(1024px)
-		text-align center
 	color black
 	font-size 28px
 	margin-bottom 20px
@@ -2137,8 +1713,6 @@ hr
 	padding 20px
 	margin-bottom 20px
 .help-flag
-	+below(1024px)
-		flexB(mid)
 	flexB(mid)
 	justify-content flex-start
 	margin-bottom 20px
@@ -2147,11 +1721,7 @@ hr
 .help-flag-text
 	color black
 	font-size 28px
-	
 .help-bottom-el
-	+below(768px)
-		width 100%
-		margin-bottom 20px
 	flexB(mid)
 	fl()
 	.mid-title
@@ -2160,8 +1730,6 @@ hr
 .help-bottom-el-img
 	margin-bottom 20px
 .help-bottom-el-text
-	+below(768px)
-		width 90%
 	width 60%
 	text-align center
 .help-contact-wraper
@@ -2172,16 +1740,10 @@ hr
 	f()
 	fw()
 .lk-left
-	+below(768px)
-		width 100%
-		margin-right 0
 	width 18%
 	margin-right 2%
 //.lk-left-el
 .lk-left-el-title
-	+below(768px)
-		margin-bottom 0px
-		border-bottom 1px solid grey
 	width 100%
 	display block
 	background blue
@@ -2202,16 +1764,10 @@ hr
 		padding 10px 20px
 		border-bottom 1px solid #e7e7e7
 .lk-right
-	+below(768px)
-		width 100%
-		.big-title
-			font-size 18px
 	width 80%
 	input
 		min-height 47px
 .lk-right-content
-	+below(768px)
-		padding 5px
 	bsh()
 	background white
 	padding 20px
@@ -2220,27 +1776,14 @@ hr
 	&:hover
 		cursor pointer
 .lk-right-bottom
-	+below(768px)
-		fw()
-		flexB(mid)
-		a
-			margin-bottom 5px
 	f()
 	justify-content flex-end
 .lk-right-bottom-el
-	+below(640px)
-		margin 5px
 	margin-left 5%
 	text-decoration underline
 	color darkgrey
 	display block
 .btn-row
-	+below(768px)
-		fw()
-		[class*="btn-"]
-			margin-right 0!important
-			width 100%
-			margin-bottom 10px
 	f()
 	[class*="btn-"]
 		margin-right 20px
@@ -2257,47 +1800,21 @@ hr
 	font-weight 600
 
 .lk-about
-	+below(768px)
-		margin-bottom 00px
-		.mid-title
-			text-align center
 	f()
 	fw()
 	margin-bottom 40px
 .lk-about-img
-	+below(768px)
-		width 100%
-		margin-right 0px
-		margin-bottom 10px
 	width 30%
 	margin-right 5%
 	img
 		width 100%
 .lk-about-info
 	position relative
-	+below(768px)
-		width 100%
-		.big-title
-			text-align center
 	width 65%
-	+above(1024px)
-		.btn-row
-			position absolute
-			bottom 0px
 .lk-about-info-wraper 
 	margin-top 20px
 .lk-about-info-wraper-row 
 	margin-bottom 10px
-	+below(768px)
-		width 100%
-		margin-bottom 10px
-		max-width 100%
-		fw()
-		.mid-title,span
-			margin-bottom 0
-			width 100%
-			text-align center!important
-			display block
 	flexB(between)
 	max-width 400px
 	width 80%
@@ -2307,21 +1824,15 @@ hr
 		margin-bottom 0
 //.mid-title 
 .form-row
-	+below(768px)
-		fw()
 	flexB(mid)
 	justify-content initial
 	margin-bottom 10px
 	label
-		+below(768px)
-			width 100%
 		font-weight 600
 		width 30%
 		padding-right 10px
 		display block
 	input
-		+below(768px)
-			width 100%
 		width 70%
 .form-block-row
 	margin-bottom 10px
@@ -2329,10 +1840,6 @@ hr
 		font-weight 600
 		width 30%
 		padding-right 10px
-.lk-prof-form-btn
-	+below(768px)
-		button
-			width 100%
 .lk-prof-form-check
 	margin 20px 0
 	text
@@ -2340,8 +1847,6 @@ hr
 		text-align right
 
 .lk-about-img-edit
-	+below(768px)
-		height 150px
 	flexB(mid)
 	border 1px solid grey
 	height 350px
@@ -2352,41 +1857,23 @@ hr
 	border 1px solid grey
 	position relative
 .lk-list-el-wraper
-	+below(768px)
-		fw()
 	f()
 .lk-list-el-img
-	+below(768px)
-		width 100%
-		margin-right 0
 	width 20%
 	margin-right 10px
 	display block
 	img
 		width 100%
 .lk-list-el-info
-	+below(768px)
-		width 100%
 	width 58%
 	margin-right 10px
 .lk-list-el-info-title
-	+below(768px)
-		font-size 18px
-		margin-top 10px
 	color blue
 	text-decoration underline
 	font-size 22px
 	margin-bottom 10px
-.lk-list-el-info-text
-	+below(768px)
-		font-size 14px
+
 .lk-list-el-price
-	+below(1024px)
-		.btn-main
-			font-size 10px
-	+below(768px)
-		width 100%
-		margin-bottom 10px
 	width 20%
 .lk-list-el-val
 	font-size 26px
@@ -2395,13 +1882,6 @@ hr
 	text-align center
 	margin 15px 0
 .lk-list-el-bottom
-	+below(768px)
-		flexB(between)
-		a
-			margin 0!important
-			font-size 10px
-		.lk-list-el-sub-triger,.lk-list-el-modal
-			margin 0!important
 	f()
 	justify-content flex-end
 	a
@@ -2410,29 +1890,16 @@ hr
 		text-decoration underline
 		display block
 .lk-list-el-check
-	+below(768px)
-		top 10px
-		right 10px
 	position absolute
 	top 10px
 	right 0px
 
 .lk-list-mail
-	+below(768px)
-		.mid-title
-			text-align center
-			width 100%
 	margin 20px 0px
 	f()
 	fl()
 	align-items flex-end
 .lk-list-mail-form
-	+below(768px)
-		button
-			width 100%
-		input
-			margin-bottom 10px
-			width 100%
 	f()
 	fw()
 	button
@@ -2458,23 +1925,17 @@ hr
 	f()
 	fw()
 .lk-total-info
-	+below(768px)
-		width 100%
 	width 50%
 	flexB(mid)
 	fl()
 	.mid-title
 		text-align center
 	p
-		+below(1024px)
-			width 80%
 		text-align center
 		width 60%
 		margin 0
 //.mid-title
 .lk-total-price
-	+below(768px)
-		width 100%
 	width 50%
 	flexB(mid)
 	fl()
@@ -2506,8 +1967,6 @@ hr
 	&:hover
 		cursor pointer
 .lk-list-el-sub
-	+below(768px)
-		margin-top 10px
 	display none
 	margin-top 20px
 	ul
@@ -2524,27 +1983,18 @@ hr
 	input
 		width 100%
 	.form-block-row
-		+below(768px)
-			width 100%
 		width 48%
 		&:last-child
 			width 100%	
 .form-block-count
-	+below(768px)
-		fw()
 	flexB(between)
 	.dropdown
-		+below(768px)
-			width 100%
-			margin-bottom 10px
 		width 48%	
 	li
 		&:first-child
 			height 0px
 			display none
 	.fa
-		+below(768px)
-			display none
 		font-size 20px
 		color black
 		margin 0 10px
@@ -2554,22 +2004,16 @@ hr
 	f()
 	fw()
 .lk-total-sub-info
-	+below(768px)
-		width 100%
 	width 50%
 	flexB(mid)
 	fl()
 	.mid-title
 		text-align center
 	p
-		+below(768px)
-			width 100%
 		text-align center
 		width 60%
 //.mid-title
 .lk-total-sub-price
-	+below(768px)
-		width 100%
 	width 50%
 	flexB(mid)
 	fl()
@@ -2598,9 +2042,6 @@ hr
 	margin-top 10px
 	
 .lk-list-el-delete
-	+below(1024px)
-		top 10px
-		right 10px
 	position absolute	
 	top 0px
 	right 10px
@@ -2616,14 +2057,7 @@ hr
 	.fa
 		line-height 4px
 .lk-order
-	+below(640px)
-		.btn-main
-			width 100%
-		.big-title
-			text-align center
 	.btn-row
-		+below(768px)
-			margin-bottom 10px
 		margin-bottom 20px
 	textarea
 		width 100%
@@ -2634,24 +2068,16 @@ hr
 	fw()
 	margin-bottom 10px	
 .lk-order-result-text
-	+below(768px)
-		text-align center
-		width 100%
 	font-weight 600	
 	color black
 	font-size 22px	
 .lk-order-result-val
-	+below(768px)
-		text-align center
-		width 100%
 	font-weight 600	
 	color black
 	font-size 32px	
 //.btn-main
 //.mid-title
 .lk-order-enter
-	+below(640px)
-		text-align center
 	background lightgrey
 	padding 10px
 	margin-bottom 10px
@@ -2662,8 +2088,6 @@ hr
 //.form-row
 //.lk-prof-form-check
 .lk-type-pay
-	+below(768px)
-		flexB(mid)
 	f()
 	fw()
 	margin-bottom 20px	
@@ -2676,16 +2100,10 @@ hr
 	flexB(between)
 	fw()
 .lk-bookmark-el
-	+below(1024px)
-		width 48%
-	+below(640px)
-		width 100%
 	width 32%
 	position relative
 	margin-bottom 10px
 .lk-bookmark-el-title
-	+below(640px)
-		font-size 12px
 	position absolute
 	width 100%
 	padding 10px
@@ -2715,13 +2133,6 @@ hr
 	text-transform uppercase
 	margin-bottom 10px
 .lk-bookmark-nav
-	+below(768px)
-		fw()
-		.dropdown
-			width 100%!important
-			margin-bottom 10px
-		.btn-main
-			width 100%!important
 	flexB(between)
 	margin-bottom 10px
 	ul
@@ -2738,13 +2149,6 @@ hr
 .lk-bookmark-nav-el
 	text-decoration underline
 
-.dropdown
-	//z-index 2000!important
-	+below(1024px)
-		li
-			font-size 14px!important
-		span
-			font-size 14px!important
 			
 //.lk-bron-edit
 //.lk-list-tab-title
@@ -2752,11 +2156,6 @@ hr
 	flexB(between)
 	fw()
 .lk-bron-edit-el
-	+below(1024px)
-		width 48%
-		fl()
-	+below(640px)
-		width 100%
 	f()
 	bsh()
 	position relative
@@ -2769,13 +2168,9 @@ hr
 		border 1px solid #B5B7BA
 		z-index 1
 .lk-bron-edit-img
-	+below(1024px)
-		width 100%
 	width 25%
 	margin-bottom 10px
 .lk-bron-edit-info
-	+below(1024px)
-		width 100%
 	width 25%
 	flexB(around)
 	fl()
@@ -2789,8 +2184,6 @@ hr
 		color blue
 		text-decoration underline
 .lk-bron-edit-price
-	+below(1024px)
-		width 100%
 	width 25%
 	flexB(around)
 	fl()
@@ -2813,8 +2206,6 @@ hr
 		color blue
 		text-decoration underline
 .lk-bron-edit-date
-	+below(1024px)
-		width 100%
 	width 25%
 	input 
 		width 100%
@@ -2836,9 +2227,6 @@ hr
 //.dropdown
 
 .lk-bron-edit-head
-	+below(1024px)
-		fw()
-		flexB(mid)
 	flexB(between)
 	border 1px solid #e1e1e1
 	background #f7f7f7
@@ -2848,26 +2236,7 @@ hr
 		margin 0
 //.lk-bron-edit-head-title
 .lk-bron-edit-head-select
-	+below(1024px)
-		width 100%
-		margin 5px 0
-		flexB(mid)
 	.form-row
-		+below(1024px)
-			label
-				width auto
-		+below(640px)
-			label
-				width 100%
-				text-align center
-				margin-bottom 5px
-			.dropdown
-				width 100%
-				margin 0 auto
-				margin 0 5px
-			width 100%
-			margin-right 0
-			margin-bottom 10px
 		flexB(between)
 		margin-right 20px
 		margin-bottom 0
@@ -2884,8 +2253,6 @@ hr
 //.lk-prof-form-check
 
 .lk-bron-edit-total
-	+below(768px)
-		width 100%
 	width 50%
 	margin 0 auto
 	margin-top 20px
@@ -2893,13 +2260,9 @@ hr
 	flexB(between)
 	margin-bottom 10px
 .lk-bron-edit-total-name
-	+below(768px)
-		font-size 14px
 	font-size 20px
 	color black
 .lk-bron-edit-total-val
-	+below(768px)
-		font-size 14px
 	font-weight 600
 	font-size 20px
 	color black
@@ -2907,24 +2270,15 @@ hr
 .modal-lk-bron-time
 	display none
 .modal-lk-list-wraper
-	.big-title
-		+below(768px)
-			font-size 18px
 	.mid-title
-		+below(768px)
-			font-size 16px
 		font-size 20px
 		text-align center
 .modal-lk-list
 	display none
 .modal-lk-bron-time
 	display none
-	+below(768px)
-		width 85%
 	width 35%
 	.big-title
-		+below(768px)
-			font-size 12px
 		font-size 16px
 	.mid-title
 		text-align center
@@ -2937,12 +2291,8 @@ hr
 
 .modal-lk-bron-endtime
 	display none
-	+below(768px)
-		width 85%
 	width 35%
 	.big-title
-		+below(768px)
-			font-size 12px
 		font-size 16px
 	.mid-title
 		text-align center
@@ -2965,15 +2315,11 @@ hr
 .top-auth
 	flexB(mid)
 .top-auth-img
-	+below(768px)
-		margin-right 5px
 	width 30px
 	height 30px
 	img
 		border-radius 50%
 .top-auth-name
-	+below(768px)
-		display none
 	font-size 12px
 	margin 0 10px
 //.log-wraper
@@ -3018,8 +2364,6 @@ hr
 	text-align center
 	
 .edit-bron-footer
-	+below(768px)
-		width 100%
 	width 70%
 	margin 0 auto
 	
@@ -3059,14 +2403,6 @@ hr
 .exc-type-wraper
 	f()
 .exc-type-el
-	+below(768px)
-		flexB(mid)
-		fl()
-		span
-			font-size 10px
-		.fa
-			margin-bottom 10px
-			font-size 14px
 	width 50%
 	text-align center
 	font-size 18px
@@ -3087,9 +2423,6 @@ hr
 		background white
 
 .input-daterange
-	+below(768px)
-		width 100%
-		margin-top 10px
 	width 45%
 	flexB(between)
 	.main-head-row-input-el
@@ -3099,8 +2432,6 @@ hr
 		text-align left
 		
 .icon-datapicker
-	+below(768px)
-		display none
 	bgi('calendar.png')
 	border none
 	width 23px
@@ -3131,14 +2462,10 @@ hr
 	fw()
 	align-items flex-start
 .exc-list-info-wraper
-	+below(768px)
-		width 100%
 	width 75%
 .exc-list-content
 	border-top 1px solid grey
 	padding 5px 0
-	+below(768px)
-		font-size 10px
 	a
 		color blue
 		text-decoration underline
@@ -3147,14 +2474,11 @@ hr
 		display inline-block
 .exc-list-info
 	width 100%
-	
 	f()
 	.fa
 		margin-right 5px
 		color blue
 	p
-		+below(768px)
-			font-size 10px
 		margin 0
 		margin-bottom 5px
 .exc-list-info-el
@@ -3167,25 +2491,17 @@ hr
 		text-align right
 //.exc-list-type
 .exc-list-title
-	+below(768px)
-		font-size 8px
 	font-weight 600
 	margin-bottom 10px
 //.exc-list-date
 //.exc-list-cost
 .exc-list-price
-	+below(768px)
-		width 100%
 	width 23%
 	padding 0 5px
 	f()
 	fl()
 	align-items center
 .exc-list-price-best
-	+below(768px)
-		&:before
-			content ''
-			display none
 	background #f1f1f1
 	font-weight 600
 	font-size 18
@@ -3218,8 +2534,6 @@ hr
 //.exc-list-price-but
 
 .exc-table-el
-	+below(640px)
-		padding 10px
 	padding 10px 20px
 	border 1px solid #e1e1e1
 	margin-bottom 10px
@@ -3231,37 +2545,19 @@ hr
 	fw()
 	fl()
 	a
-		+below(768px)
-			width 100%
-			display block
-			text-align center
 		text-decoration underline
 		color blue
 		margin-bottom 10px
 		font-size 14px
 .exc-table-el-left
-	+below(768px)
-		flex 1 1 100%
-		margin-bottom 10px
-		margin-right 0
 	flex 4
 	margin-right 20px
 .exc-table-el-row
-	+below(1024px)
-		box-shadow: 0px 0px 4px #E3E0E0;
-		background: #F7F7F7;
-		padding 10px
 	flexB(between)
 	fw()
 	margin-bottom 10px
 	padding 5px
 .exc-table-el-img
-	+below(640px)
-		flex 1 1 100%
-		text-align left
-		font-weight 600
-		img
-			width 80px
 	flex 2
 	font-size 14px
 	padding-right 10px
@@ -3273,15 +2569,6 @@ hr
 	//font-size 10px
 	text-align center
 .exc-table-el-text
-	+below(640px)
-		flex 1 1 100%
-		text-align left
-		font-size 12px
-		margin 10px 0
-		flexB(mid)
-		p
-			width 100%
-			padding-left 20%
 	flex 4
 	font-size 14px
 	flexB(mid)
@@ -3295,17 +2582,11 @@ hr
 		margin-bottom 5px
 		margin-right 5px
 .exc-table-el-cost
-	+below(768px)
-		text-align left
-	+below(640px)
-		flex 1 1 100%
 	color black
 	flex 1
 	font-size 18px
 	font-weight 600
 .exc-table-el-right
-	+below(768px)
-		flex 1 1 100%
 	flex 1
 .exc-table-el-cost-val
 	text-align center
@@ -3320,8 +2601,6 @@ hr
 	strong
 		color red
 .exc-list-sale
-	+below(768px)
-		left 0px
 	position absolute
 	left 10px
 	top 10px
@@ -3330,10 +2609,6 @@ hr
 .exc-list-badprice 
 	position relative
 	color black!important
-	+below(768px)
-		&:before
-			content ''
-			margin-top -2px
 .exc-list-badprice-line
 	&:before
 		content ''
@@ -3400,8 +2675,6 @@ hr
 	font-size 12px
 
 .baner-sale
-	+below(768px)
-		margin-left -20px
 	margin-left -35px
 	background red
 	padding 5px
@@ -3418,8 +2691,6 @@ hr
 	font-size 20px
 	font-weight 700 
 .baner-sale-coner
-	+below(768px)
-		display none
 	position absolute
 	width 0
 	height 0
@@ -3464,3 +2735,112 @@ hr
 	font-size 10px
 	white-space nowrap
 	margin-left 10px
+
+//add style
+.group__number
+	flexB(between)
+.exc-search-time__el
+	img
+		margin-right 10px
+	width 90px
+	flexB(between)
+.top-menu__more
+	color white
+	font-weight 200
+	position relative 
+	i
+		margin-left 5px
+	&:hover
+		cursor pointer
+.top-menu__more-wrap
+	position absolute
+	top 43px
+	left 0px
+	background white 
+	z-index 9999
+	display none
+.top-menu__more-el
+	padding 5px 10px
+	text-align left!important
+	width  120px
+	display block
+	color #545454!important
+	font-family Arial
+	font-size 14px
+	font-weight 400
+	text-transform uppercase
+	justify-content flex-start!important
+	&:hover
+		color black!important
+		font-weight   600
+		border-left 2px solid yellow
+
+.log-wraper-enemy
+	font-size 10px
+	margin-bottom 10px
+	
+//.exc-tools
+//.main-cont
+.exc-tools__wrap
+	f()
+.exc-tools__el
+	f()
+	position relative
+	padding 10px 15px
+	border-right 1px solid black
+	background-color #efefef
+	width 165px
+	&:hover
+		cursor pointer
+		.exc-tools__message
+			display block 
+.exc-tools__img
+	margin-right 10px
+.exc-tools__info
+	width 80px
+	font-size 12px
+	white-space nowrap
+.exc-tools__name
+	overflow hidden
+	text-overflow ellipsis
+.exc-tools__date
+	text-overflow ellipsis
+	overflow hidden
+.exc-tools__close
+	position absolute
+	top 10px 
+	right 10px
+	&:hover
+		cursor pointer
+.exc-tools__message
+	position absolute
+	bottom 100%
+	z-index 9999
+	background-color #3e3e3e
+	padding 5px 10px
+	width 100%
+	margin-left -15px
+	display none
+.exc-tools__text 
+	font-size 12px 
+	color white
+	text-overflow ellipsis
+	overflow hidden
+	white-space nowrap
+	padding 3px 0px
+.exc-tools__message-wrap
+	position relative
+	.fa
+		position absolute
+		bottom -14px
+		left 50%
+.get__more
+	padding-top 20px
+	flexB(mid)
+	button 
+		size 180px 35px
+		background-color #feb20e
+		border-radius 4px
+		margin 0 auto
+		display inline-block
+	

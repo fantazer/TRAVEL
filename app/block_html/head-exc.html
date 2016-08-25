@@ -44,17 +44,22 @@
     <!--Top menu-->
     <div class="main-head-fullwidth">
       <div class="main-head-cont"><i class="fa fa-bars toggle-top-menu"></i>
-        <div class="main-head-cont-logo">
-          <div class="main-head-cont-logo-img"><img src="img/logo-white.png" alt=""/></div>
-        </div>
+        <div class="main-head-cont-logo"><a href="#" class="main-head-cont-logo-img"><img src="img/traveller-logo.png" alt=""/></a></div>
         <div class="main-head-cont-menu main-cont"><a href="#"> <span>авиабилеты</span></a><a href="#"> <span>гостиницы</span></a><a href="#"> <span>экскурсии</span></a><a href="#"> <span>страховка</span></a>
-          <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+          <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+            <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+          </div>
+          <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
         </div>
         <div class="main-head-cont-enter">Вход</div>
         <div class="log-wraper-main">
           <form action="" id="login-form">
             <input type="text" placeholder="E-mail"/>
             <input type="password" placeholder="Пароль"/>
+            <div class="log-wraper-enemy">
+              <input id="login" type="checkbox" name="rr"/>
+              <label for="login"> <span></span></label><span>Запомнить меня</span>
+            </div>
             <button>Вход</button>
             <div class="log-wraper-remember">
               <div class="log-wraper-remember-el">
@@ -65,19 +70,17 @@
             </div>
             <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
             <div class="log-social-title">Авторизоваться через соц. сети</div>
-            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+            <div class="log-social"><a href="#"><img src="img/soc/facebook.png" alt=""/></a><a href="#"><img src="img/soc/vk.png" alt=""/></a><a href="#"><img src="img/soc/twitter.png" alt=""/></a><a href="#"><img src="img/soc/google-plus.png" alt=""/></a><a href="#"><img src="img/soc/instagram.png" alt=""/></a></div>
           </form>
           <form action="" id="registration-form">
             <input type="text" placeholder="Фамилия"/>
             <input type="text" placeholder="Имя"/>
             <input type="text" placeholder="E-mail"/>
             <input type="password" placeholder="Пароль"/>
-            <input type="text" placeholder="Телефон"/><a href="#" class="get-code">Выслать проверочный код</a>
+            <input type="text" placeholder="Телефон"/>
             <input type="text" placeholder="Проверочный код"/>
-            <button>Зарегистрироваться</button>
             <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
-            <div class="log-social-title">Авторизоваться через соц. сети</div>
-            <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+            <button>Зарегистрироваться</button>
           </form>
         </div>
       </div>
@@ -129,12 +132,23 @@
           </div>
           <div class="exc-search-bottom">
             <div class="main-head-row-input-el exc-search-time">
-              <label>Время</label>
-              <select name="" class="dropdown">
-                <option>10:00</option>
-                <option>11:00</option>
-                <option>12:00</option>
-              </select>
+              <label>Состав группы</label>
+              <div class="group__number">
+                <div class="exc-search-time__el"><img src="img/icon-man.png" alt=""/>
+                  <select name="" class="dropdown">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </div>
+                <div class="exc-search-time__el"><img src="img/icon-children.png" alt=""/>
+                  <select name="" class="dropdown">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div class="main-head-row-input-el exc-search-but">
               <button>Найти</button>
