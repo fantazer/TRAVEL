@@ -28,7 +28,8 @@ var newer = require('gulp-newer');
 var remember = require('gulp-remember');
 var spritesmith = require('gulp.spritesmith');
 var runSequence = require('run-sequence');
-
+var prettify = require('gulp-prettify');
+var combineMq = require('gulp-combine-mq');
 // ########## make img ###############
 gulp.task('imagePng',function(){
  return gulp.src('app/img/*.png')
@@ -157,21 +158,22 @@ function errorhandler(a) {
 
 //useref
 gulp.task('make', function () {
-   
   var assets = useref.assets();
   gulp.src('app/js/*.js')
   .pipe(uglify())
   .pipe(gulp.dest('dist/js/'));
-
-   gulp.src('app/css/style.css')
-  .pipe(minifyCss())
+  gulp.src('app/css/style.css')
+  //.pipe(minifyCss())
+  .pipe(combineMq({
+          beautify: true
+  }))
   .pipe(gulp.dest('dist/css/'));
   return gulp.src('app/*.html')
       .pipe(cache('make'))
       .pipe(assets)
       .pipe(remember('make'))
       .pipe(gulpif('*.js', uglify()))
-      .pipe(gulpif('*.css', minifyCss()))
+      //.pipe(gulpif('*.css', minifyCss()))
       .pipe(assets.restore())
       .pipe(useref())
       .pipe(gulp.dest('dist'));

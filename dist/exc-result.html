@@ -3,7 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--meta(name='viewport' content="width=device-width, initial-scale=1")-->
+    <meta name="viewport" content="width=1240"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>Document</title>
     <link rel="stylesheet" href="css/vendor.css">
@@ -102,19 +103,31 @@
           <div class="main-head-row-input">
             <div class="exc-search-bg"></div>
             <div class="exc-search-top">
-              <div class="main-head-row-input-el">
+              <div class="main-head-row-input-el search-iput">
                 <label>Выберите город или отель</label>
                 <input type="text" placeholder="Выберите город или отель"/>
-                <div class="search-res">
-                  <div class="search-res-row">
+                <!--Drop result search-->
+                <div class="search-res"><a href="#" class="search-res-row">
                     <div class="search-res-info">
-                      <div class="search-res-name">город 
+                      <div class="search-res-name"> <i class="fa fa-bullseye"></i>город 
                         <div class="search-res-current">Москва</div>
                       </div>
                       <div class="search-res-val">2022 отеля</div>
-                    </div>
-                  </div>
-                </div>
+                    </div></a><a href="#" class="search-res-row">
+                    <div class="search-res-info">
+                      <div class="search-res-name"> <i class="fa fa-building"></i>город 
+                        <div class="search-res-current">Москва</div>
+                      </div>
+                      <div class="search-res-val">2022 отеля</div>
+                    </div></a><a href="#" class="search-res-row">
+                    <div class="search-res-info">
+                      <div class="search-res-name">
+                         
+                        город 
+                        <div class="search-res-current">Москва</div>
+                      </div>
+                      <div class="search-res-val">2022 отеля</div>
+                    </div></a></div>
               </div>
               <div class="input-daterange">
                 <div class="main-head-row-input-el">
