@@ -16,16 +16,16 @@ body
 					.lk-about
 						.lk-about-img
 							.lk-about-img-edit
-								a(href="#") Загрузить фото
-							//img(src="img/gid.jpg", alt="")
+								img(src="img/profil-img.jpg", alt="")
+								a(href="#").lk-about-img__edit Загрузить фото
 						.lk-about-info
 							.lk-prof-form
 								form(action="")
 									.form-row
-										label Фамилия
+										label Фамилия <span class="john_snow">*</span>
 										input(type="text" placeholder="Ваше Фамилия")
 									.form-row
-										label Имя
+										label Имя <span class="john_snow">*</span>
 										input(type="text" placeholder="Ваше Имя")
 									.form-row
 										label Отчество
@@ -37,10 +37,10 @@ body
 										label Ник портала
 										input(type="text" placeholder="Ваш Ник")
 									.form-row
-										label Адресс e-mail
+										label  E-mail <span class="john_snow">*</span>
 										input(type="text" placeholder="Ваш e-mail")
 									.form-row
-										label Мобильный телефон
+										label Мобильный телефон <span class="john_snow">*</span>
 										input(type="text" placeholder="Ваш телефон")
 									.form-row
 										label Новый пароль
@@ -48,9 +48,34 @@ body
 									.form-row
 										label Повторить пароль
 										input(type="password" )
-									.form-row
-										label Подтевердить действующим паролем 
-										input(type="password" )
+									
+									.lk-about__soc
+										.lk-about__soc-el
+											.lk-about__soc-icon
+												img(src="img/soc/facebook.png", alt="")
+											.lk-about__soc-link Прявязать
+											.lk-about__soc-message После удаления вы не сможете входить на сайт через этот аккаунт. Но вы сможете добавить аккаунт позднее.
+										.lk-about__soc-el
+											.lk-about__soc-icon
+												img(src="img/soc/vk.png", alt="")
+											.lk-about__soc-link Прявязать
+											.lk-about__soc-message После удаления вы не сможете входить на сайт через этот аккаунт. Но вы сможете добавить аккаунт позднее.
+										.lk-about__soc-el
+											.lk-about__soc-icon
+												img(src="img/soc/twitter.png", alt="")
+											.lk-about__soc-link Прявязать
+											.lk-about__soc-message После удаления вы не сможете входить на сайт через этот аккаунт. Но вы сможете добавить аккаунт позднее.
+										.lk-about__soc-el
+											.lk-about__soc-icon
+												img(src="img/soc/google-plus.png", alt="")
+											.lk-about__soc-link Прявязать
+											.lk-about__soc-message После удаления вы не сможете входить на сайт через этот аккаунт. Но вы сможете добавить аккаунт позднее.
+										.lk-about__soc-el
+											.lk-about__soc-icon
+												img(src="img/soc/instagram.png", alt="")
+											.lk-about__soc-link Прявязать
+											.lk-about__soc-message После удаления вы не сможете входить на сайт через этот аккаунт. Но вы сможете добавить аккаунт позднее.
+
 									.lk-prof-form-check
 										input(id='get-news-check', type='checkbox', name='rr')
 										label(for='get-news-check') 
@@ -58,13 +83,10 @@ body
 										text Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации
 									.lk-prof-form-btn
 										button.btn-main Сохранить
-
-
-
-				.lk-right-bottom
-					a(href="#").lk-right-bottom-el Забронировать отель
-					a(href="#").lk-right-bottom-el Забронировать билет
-					a(href="#").lk-right-bottom-el Найти экскурсию
+				//.lk-right-bottom
+				//	a(href="#").lk-right-bottom-el Забронировать отель
+				//	a(href="#").lk-right-bottom-el Забронировать билет
+				//	a(href="#").lk-right-bottom-el Найти экскурсию
 
 	
 	include ./block_html/modal.jade

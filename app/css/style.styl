@@ -4,7 +4,7 @@
 @import 'rupture'
 @import "variable/*"
 
-yellow = #FEB20E;
+
 border-box-html()
 fluid-media() //care flex box image
 //rupture.scale = 0 320px 640px 768px 1024px 1280px
@@ -15,6 +15,7 @@ jeet.gutter = 1
 	display: flex!important;
 	align-items:flex-end!important;
 	flex-wrap:wrap!important;
+
 
 .allpage
 	background #eee
@@ -52,7 +53,7 @@ bsh(){
 	box-shadow: 0px 2px 3px #E1E1E1;
 }
 .top-menu
-	padding 10px
+	padding 19px
 	width 100%
 	background white
 	box-shadow: 0px 2px 3px #E1E1E1;
@@ -75,43 +76,38 @@ bsh(){
 			background #6D2D74
 			color white
 .top-menu-wraper
-	flexB(around)
+	flexB(between)
 	position relative
 .top-menu-logo
-	flex-grow 2
-	img
-		margin 0 auto
+	//flex-grow 2
 .top-menu-items
-
 	text-transform uppercase
 	flexB(around)
-	flex-grow 10
-	font-weight 600
-	a
+	width 820px
+	> a
 		display block
 		position relative
-		+above(768px)
-			&:hover
-				&:before
-					content ''
-					position absolute
-					width 100%
-					height 2px
-					background black
-					bottom -28px
-					left 0px
+		&:hover
+			&:before
+				content ''
+				position absolute
+				width 100%
+				height 2px
+				background black
+				bottom -28px
+				left 0px
 .top-menu-money
 	color white
 	flexB(mid)
-	font-weight 600
+	font-weight 200
+	&:hover
+		cursor pointer
 	.fa
 		margin-left 10px
 .top-menu-enter
-	
 	flex-grow 2
 	text-transform uppercase
-	text-align center
-	font-weight 600
+	text-align right
 	&:hover
 		cursor pointer
 .log-wraper-remember
@@ -149,6 +145,9 @@ bsh(){
 		margin-top 10px
 		flexB(around)
 		a
+			width 25px
+			display block
+		img
 			width 25px
 .log-wraper-main
 	margin-top 0
@@ -314,19 +313,19 @@ input[type="checkbox"]:checked + label span
 .content-left
 	
 	flex:1;
-	margin-right 20px
+	margin-right 10px
 	max-width 250px
 .content-right
 
 	flex:4;
-	
 .show-from
 	text-align center
-	color white
-	background blue
-	padding 15px 0
-	text-transform uppercase
+	padding 10px
 	margin-bottom 10px
+	font-size 14px
+	a
+		color blue
+		border-bottom 2px dotted blue
 .content-left-filter
 	padding 10px
 	bsh()
@@ -335,15 +334,22 @@ input[type="checkbox"]:checked + label span
 .filter-reting
 	margin-bottom 10px
 	padding-bottom 20px
-	border-bottom 1px solid #f8f8f8
+	border-bottom 1px solid #e1e1e1
 .content-left-title
-	font-weight 600
 	margin-bottom 10px
+	color #545454
+	font-family Open Sans
+	font-size 16px
+	font-weight 700
 .filter-reting-el
 	flexB(between)
 .filter-reting-el-left
+	margin-bottom 10px
 	label
 		margin-right 5px
+	input
+		display block
+		margin-right 10px
 	flexB(between)
 	.active
 		color yellow!important
@@ -354,13 +360,14 @@ input[type="checkbox"]:checked + label span
 .filter-reting-stars
 	min-width 110px
 	margin 0 10px
+	margin-left 0
 	label
 		margin-right 5px
 	.active
 		color yellow!important
 	.fa
 		margin-right 3px
-		font-size 20px
+		font-size 13px
 		color grey
 //.active
 //.filter-reting-el-right
@@ -368,35 +375,44 @@ input[type="checkbox"]:checked + label span
 //.filter-review-slider
 .filter-name-wraper
 	input[type="text"]
-		width 80%
+		width 75%
+		height 25px
+		padding 0
+		padding-left 5px
 	f()
 	margin-bottom 10px
 	padding-bottom 20px
-	border-bottom 1px solid #f8f8f8
+	border-bottom 1px solid #d5d4d4
 	button
 		padding 0 10px
+		width 55px
+		border-bottom 2px solid #cb9527
+		margin-left 10px
 //.filter-name 
 //.content-left-title 
 .filter-type 
-	
 	margin-bottom 10px
-	padding-bottom 20px
-	border-bottom 1px solid #f8f8f8
+	padding-bottom 10px
+	border-bottom 1px solid #d5d4d4
 .filter-type-el 
-	margin-bottom 3px
+	input
+		display inline-block
+		margin-right 10px
+		margin-bottom 0
+	display flex
+	align-items center
+	margin-bottom 10px
 .content-right-sort
-	flexB(around)
+	display flex
+	align-items center
 	bsh()
 	background white
 	.active
-		border-bottom 2px solid blue
-		&:after
-			content '\f0d7'
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-decoration: inherit;
-			margin-left 10px
+		border-bottom 3px solid blue
+		color blue
+		font-family Open Sans
+		font-size 14px
+		font-weight 700
 .content-right-sort-title-filter
 	display none
 	position absolute
@@ -424,14 +440,18 @@ input[type="checkbox"]:checked + label span
 	&:hover
 		cursor pointer
 .content-right-sort-el
-	padding 15px 0
+	padding 15px 0px
+	margin-right 50px
 	&:hover
 		cursor pointer
 	
 .content-right-sort-title
-	text-transform uppercase
-	padding 15px 0
-
+	padding 15px 25px
+	span
+		color #545454
+		font-family Open Sans
+		font-size 14px
+		font-weight 400
 .noUi-horizontal
 	height 5px
 
@@ -472,7 +492,7 @@ input[type="checkbox"]:checked + label span
 	margin-bottom 10px
 .content-right-found-img
 	margin-right 20px
-	flex:3;
+	width 150px
 	img
 		width 100%
 .content-right-found-info
@@ -480,24 +500,32 @@ input[type="checkbox"]:checked + label span
 	fl()
 	flex:8;
 .content-right-found-title
-	flexB(between)
+	display flex
+	align-items center
 	margin-bottom 10px
 .content-right-found-title-name
-	color blue
-	font-size 18px
-	font-weight 400
-	border-bottom 1px solid blue
 	text-transform uppercase
+	color #545454
+	font-family Open Sans
+	font-size 20px
+	font-weight 400
+	margin-right 10px
+	&:hover
+		color darken(#545454,20)
 .content-right-found-title-type
 	color blue
 	font-size 18px
+	position relative
+	white-space nowrap
+	font-family Open Sans
+	font-size 18px
 	font-weight 400
 	text-transform uppercase
-	position relative
-	font-size 12px
-	white-space nowrap
+	margin-top -10px
+	margin-bottom 20px
 	&:hover
 		cursor pointer 
+		color darken(blue,10)
 		.rating-toooltip
 			display block
 .rating-toooltip-name 
@@ -511,10 +539,11 @@ input[type="checkbox"]:checked + label span
 	padding 10px
 	background white
 	border-radius 4px
-	right 0px
+	left 0px
 	top 120% 
 	min-width 250px
-	display none 
+	display none
+	z-index 2000 
 	&:before
 		content ''
 		width 10px
@@ -600,17 +629,24 @@ input[type="checkbox"]:checked + label span
 	flexB(between)
 	a
 		text-decoration underline
-		color #AFAFAF
+		color blue
+		display block
 .content-right-found-img-small
 	f()
 	fw()
 	&:hover
 		cursor pointer
 .content-right-found-img-small-el
-	width calc(33.333% - 2px)
-	margin 1px
+	width 48px
+	margin 3px 3px 0 0
+	&:nth-child(3n)
+		margin-right 0
+	img
+		height 48px
 .content-right-found-img-big
 	margin-bottom 1px
+	img
+		height 150px
 .content-right-found-sale
 	background red
 	color white
@@ -630,8 +666,8 @@ input[type="checkbox"]:checked + label span
 	background green
 	display flex
 .main-cont
-	center(1240px)
-	width 1240px!important
+	center(1180px)
+	width 1180px!important
 .main-head 
 	.toggle-top-menu
 		display none!important 
@@ -639,7 +675,7 @@ input[type="checkbox"]:checked + label span
 		color white!important
 	position relative
 	//height 500px
-	min-width 1240px
+	min-width 1180px
 
 .main-head-filter
 	background-color: rgba(34,34,34,.15);
@@ -673,8 +709,8 @@ input[type="checkbox"]:checked + label span
 	z-index 300
 	width 100%
 .main-head-cont 
-	center(1240px)
-	max-width 1240px!important
+	center(1180px)
+	max-width 1180px!important
 	flexB(between)
 	height 70px
 	position relative
@@ -759,8 +795,9 @@ input[type="checkbox"]:checked + label span
 			left 0px
 			right 0px
 		.selected
-			padding 14px
+			padding 12px 12px
 			font-size 14px
+			height 38px	
 			&:after
 				content ''
 				background white
@@ -776,11 +813,12 @@ input[type="checkbox"]:checked + label span
 .exc-search-but
 	width 12.5% !important
 	button
-		height 45px
+		height 50px
 		line-height 48px
 		padding 0 25px
 		font-size 25.004px
 		text-transform inherit
+		border-bottom 	2px solid  #cb9527
 .exc-search-top
 	position relative
 	flexB(between)
@@ -889,6 +927,8 @@ input[type="checkbox"]:checked + label span
 	&:hover
 		background white
 		border-top 2px solid black
+		.main-service-el-img
+			margin-top -2px
 .main-service-el-img
 	img
 		width 32px
@@ -904,7 +944,10 @@ input[type="checkbox"]:checked + label span
 	f()
 .main-place-el
 	position relative
-	border .5px solid white
+	border 1px solid #b3b3b3
+	border-left 0px
+	border-bottom 0px 
+	display block
 	&:hover
 		.main-place-el-filter
 			background-image: linear-gradient(to right, rgba(34,34,34,0.55), rgba(34,34,34,0.5), rgba(34, 34, 34, 0.53), rgba(34, 34, 34, 0.54), rgba(34, 34, 34, 0.58));
@@ -1121,9 +1164,14 @@ div[class*="main-type"]
 	margin 10px 0
 	flexB(mid)
 	justify-content flex-start
-	padding 10px
+	padding 10px 20px
 	background white
 	bsh()
+	a
+		font-family Arial 
+		color blue
+		font-weight 700
+		text-decoration underline
 .triangle-left
 	triangle:left 5px black
 	margin-right 10px
@@ -1148,17 +1196,18 @@ div[class*="main-type"]
 	flexB(mid)
 	fw()
 	justify-content flex-start
+	margin-bottom 40px
 	.big-title
 		margin-right 20px
+		margin-bottom 0
 .big-title
-	color blue
-	font-size 28px
+	color black
 	margin-bottom 10px
-	
+	font-family Open Sans
+	font-size 22px
+	font-weight 700
 .result-left-alert
-	color white
-	background red
-	padding 10px 
+	color red
 	text-transform uppercase
 	margin-bottom 10px
 	font-size 14px
@@ -1168,37 +1217,41 @@ div[class*="main-type"]
 	margin-bottom 20px
 	img
 		width 100%
+		height 600px
 		display block
 .mid-title
 	font-size 14px
 	text-transform uppercase
-	font-weight 600
-	margin-bottom 20px
-	color black
+	color #545454
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+	margin-bottom 10px
 .mid-title-border
 	font-size 14px
 	text-transform uppercase
 	font-weight 600
-	margin-bottom 20px
-	padding-bottom 20px
+	margin-bottom 10px
+	padding-bottom 10px
 	border-bottom 1px solid #e1e1e1
 	color black
 .tour-table
-	margin-bottom 20px
+	margin-bottom 40px
 .tour-table-title
 	background #f7f7f7
 	padding 10px 20px
 	flexB(between)
 .tour-table-title-date
 	font-weight 600
-	color #8F8F8F
+	color #444
 .tour-table-title-info
 	font-weight 600
-	color #8F8F8F
+	color #444
 .tour-table-el
 	padding 10px 20px
 	border 1px solid #e1e1e1
 	margin-bottom 10px
+	position relative
 .tour-table-el-wraper
 	flexB(mid)
 	fw()
@@ -1234,13 +1287,14 @@ div[class*="main-type"]
 .btn-main
 	text-align center
 	background yellow
-	border-radius 5px
+	//border-radius 5px
 	color white
 	padding 10px
-	text-transform uppercase
-	font-size 14px
+	//text-transform uppercase
+	font-size 18px
 	display block
 	padding 10px 30px	
+	border-bottom: 2px solid #cb9527;
 	&:hover
 		cursor pointer
 button.btn-main
@@ -1327,13 +1381,14 @@ button.btn-main
 	margin-bottom 10px
 .result-cost
 	margin 20px 0
-	flexB(mid)
+	flexB(between)
+
 .result-cost-text
 	span 
 		display block
-		text-align right
 		margin-right 10px
 		font-size 14px
+		width 75px
 .result-cost-val
 	font-size 24px
 	font-weight 600
@@ -1341,19 +1396,16 @@ button.btn-main
 .result-right-img
 	f()
 	fw()
-	margin-bottom 40px
-	a
-		color blue
-		text-decoration underline
-		font-size 14px
-		margin-top 10px
+	margin-bottom 10px
+
 .result-right-img-el
-	width calc(33.333% - 4px)
+	width calc(25% - 4px)
 	margin 2px
+	height 50px
+	
 	&:hover
 		cursor pointer
-	img
-		width 100%
+	background-size cover
 .result-right-text
 	margin-bottom 25px
 
@@ -1371,17 +1423,22 @@ button.btn-main
 .gid-title
 	color blue
 	margin-bottom 10px
+	.filter-reting-stars
+		margin-left 0
 .gid-text
 	font-size 10px
 .same-excurse
 	padding 10px
 .same-excurse-wraper
+	width 90%
+	margin 0 auto
 	flexB(between)
 	fw()
 .same-excurse-el
-	width 33%
+	width 100%!important
 	position relative
 	display block
+	height 200px
 .same-excurse-title
 	background blue
 	color black
@@ -1746,7 +1803,7 @@ hr
 .lk-left-el-title
 	width 100%
 	display block
-	background blue
+	background #0074d9
 	color white
 	text-align center
 	padding 10px
@@ -1760,13 +1817,19 @@ hr
 	display none
 	a
 		display block
-		font-weight 600
 		padding 10px 20px
 		border-bottom 1px solid #e7e7e7
+		color #545454
+		font-family Arial
+		font-size 14px
+		font-weight 400
+		&:hover
+			border-left 2px solid yellow
+			padding-left 18px
 .lk-right
 	width 80%
 	input
-		min-height 47px
+		min-height 40px
 .lk-right-content
 	bsh()
 	background white
@@ -1776,10 +1839,8 @@ hr
 	&:hover
 		cursor pointer
 .lk-right-bottom
-	f()
-	justify-content flex-end
+	flexB(between)
 .lk-right-bottom-el
-	margin-left 5%
 	text-decoration underline
 	color darkgrey
 	display block
@@ -1843,14 +1904,21 @@ hr
 .lk-prof-form-check
 	margin 20px 0
 	text
-		font-size 12px
 		text-align right
+		color #545454
+		font-family Open Sans
+		font-size 12px
+		font-weight 400
 
-.lk-about-img-edit
-	flexB(mid)
-	border 1px solid grey
-	height 350px
-	
+.lk-about-img__edit
+	color #545454
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+	text-decoration underline
+	display block
+	text-align right
+	margin-top 10px
 .lk-list-el
 	padding 10px
 	margin-bottom 10px
@@ -1868,13 +1936,21 @@ hr
 	width 58%
 	margin-right 10px
 .lk-list-el-info-title
-	color blue
 	text-decoration underline
 	font-size 22px
 	margin-bottom 10px
-
+	color #0074d9
+	font-family Open Sans
+	font-size 22px
+	font-weight 700
+	display block 
 .lk-list-el-price
 	width 20%
+	margin-top 20px
+	.btn-main
+		background #ccc
+		border 0px
+		margin-bottom 10px
 .lk-list-el-val
 	font-size 26px
 	font-weight 600
@@ -1904,6 +1980,7 @@ hr
 	fw()
 	button
 		border-radius 0px!important
+		text-transform inherit
 .lk-list-el-date
 	text-align center
 	margin 5px 0
@@ -1966,6 +2043,11 @@ hr
 	margin-left 5%	
 	&:hover
 		cursor pointer
+.lk-list-el-modal
+	color #0074d9
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
 .lk-list-el-sub
 	display none
 	margin-top 20px
@@ -2349,6 +2431,8 @@ hr
 .get-bron
 	&:hover
 		cursor pointer
+	font-size 25px 
+	margin-bottom 20px
 		
 .modal-bron-phone-bad
 	display none
@@ -2451,27 +2535,31 @@ hr
 	background: #feb20e;
 	color: #fff;
 	padding: 10px;
-	text-transform: uppercase;
 	font-size: 14px;
-	border-radius: 5px;
 	display: block;
-	
+	font-family Open Sans
+	font-size 18px
+	font-weight 700
+	border-bottom 2px solid #cb9527
 .exc-list-wraper
 	margin-top 10px
 	flexB(between)
 	fw()
 	align-items flex-start
 .exc-list-info-wraper
-	width 75%
+	width 70%
 .exc-list-content
 	border-top 1px solid grey
 	padding 5px 0
+	font-family Open Sans
 	a
 		color blue
 		text-decoration underline
 		margin-bottom 10px
 		text-transform uppercase
 		display inline-block
+		&:hover
+			color darken(blue,10)
 .exc-list-info
 	width 100%
 	f()
@@ -2481,6 +2569,8 @@ hr
 	p
 		margin 0
 		margin-bottom 5px
+	&:nth-child(2)
+		border-bottom 1px solid grey
 .exc-list-info-el
 	&:nth-child(1)
 		width 50%
@@ -2496,7 +2586,7 @@ hr
 //.exc-list-date
 //.exc-list-cost
 .exc-list-price
-	width 23%
+	width 28%
 	padding 0 5px
 	f()
 	fl()
@@ -2504,17 +2594,17 @@ hr
 .exc-list-price-best
 	background #f1f1f1
 	font-weight 600
-	font-size 18
+	font-size 18px
 	display block
 	line-height 56px
 	height 56px
 	text-align center
 	box-sizing border-box
-	//color blue
+	color blue
 	position relative
 	width calc(100% - 20px)
-	margin-top 25px
-	
+	margin-top 40px
+	font-family Open Sans
 	&:before
 		content ''
 		width 0
@@ -2550,7 +2640,7 @@ hr
 		margin-bottom 10px
 		font-size 14px
 .exc-table-el-left
-	flex 4
+	flex 3
 	margin-right 20px
 .exc-table-el-row
 	flexB(between)
@@ -2565,14 +2655,11 @@ hr
 		margin 0 auto
 		
 .exc-table-el-date
-	margin-top 10px
-	//font-size 10px
-	text-align center
+	margin-left 10px
+
 .exc-table-el-text
 	flex 4
 	font-size 14px
-	flexB(mid)
-	justify-content flex-start
 	fw()
 	.fa
 		color blue
@@ -2581,16 +2668,24 @@ hr
 		margin 0
 		margin-bottom 5px
 		margin-right 5px
+		color #545454
+		font-family Open Sans
+		font-size 14px
+		font-weight 700
+	span
+		font-weight 700 
 .exc-table-el-cost
 	color black
-	flex 1
+	flex 2
 	font-size 18px
 	font-weight 600
+	margin-top 40px
 .exc-table-el-right
 	flex 1
 .exc-table-el-cost-val
 	text-align center
 	font-size 22px
+	margin-top -5px
 .exc-table-el-cost-date
 	text-align center
 	font-size 12px
@@ -2602,10 +2697,12 @@ hr
 		color red
 .exc-list-sale
 	position absolute
-	left 10px
+	left 5px
 	top 10px
 	color red
-	font-weight 600
+	font-family Open Sans
+	font-size 16px
+	font-weight 400
 .exc-list-badprice 
 	position relative
 	color black!important
@@ -2759,6 +2856,7 @@ hr
 	background white 
 	z-index 9999
 	display none
+	bsh()
 .top-menu__more-el
 	padding 5px 10px
 	text-align left!important
@@ -2772,8 +2870,8 @@ hr
 	justify-content flex-start!important
 	&:hover
 		color black!important
-		font-weight   600
 		border-left 2px solid yellow
+		padding-left 8px
 
 .log-wraper-enemy
 	font-size 10px
@@ -2783,6 +2881,8 @@ hr
 //.main-cont
 .exc-tools__wrap
 	f()
+	background-color #efefef
+	margin-bottom 10px	
 .exc-tools__el
 	f()
 	position relative
@@ -2796,6 +2896,7 @@ hr
 			display block 
 .exc-tools__img
 	margin-right 10px
+	margin-top 5px	
 .exc-tools__info
 	width 80px
 	font-size 12px
@@ -2819,8 +2920,8 @@ hr
 	background-color #3e3e3e
 	padding 5px 10px
 	width 100%
-	margin-left -15px
 	display none
+	left 0px
 .exc-tools__text 
 	font-size 12px 
 	color white
@@ -2836,11 +2937,294 @@ hr
 		left 50%
 .get__more
 	padding-top 20px
-	flexB(mid)
 	button 
 		size 180px 35px
 		background-color #feb20e
 		border-radius 4px
 		margin 0 auto
-		display inline-block
+		display block
+
+.dropdown
+	.carat
+		margin-top -10px!important
+		right 10px
+		border 0px!important
+
+.bread_block
+	margin-left 20px
+	.bread_block__el
+		margin-right 20px
+		position relative
+		font-size 14px
+		text-decoration none
+		span
+			text-decoration underline
+			&:hover
+				color darken(blue,10)
+		&:after
+			content '/'
+			position absolute
+			right -12px
+			text-decoration inherit!important
+		&:last-child
+			&:after
+				content ''
+.more_img
+	display block
+	color blue
+	text-decoration underline
+	font-size 14px
+	margin-bottom 50px
+.exc-table__title
+	color #00b1dd
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+	text-decoration underline	
+	margin-bottom 10px
+	display inline-block
+.exc-table__date
+	display flex
+.exc-table__gid
+	display flex
+	.fa-star
+		font-size 16px
+		margin-right 3px
+		color grey
+.exc-table__gid-name
+	margin-left 20px
+
+.exc-table__sale
+	flexB(between)
+	align-items flex-start
+	justify-content flex-end
+.exc-table__sale-val
+	color red
+	font-family Open Sans
+	font-size 16px
+	font-weight 400
+.exc-table__sale-cross
+	margin-left 30px
+	color #545454
+	font-family Open Sans
+	font-size 14px
+	font-weight 700
+	position relative
+.price__cross
+	position absolute
+	height 2px
+	width 100%
+	top 50%
+	left 0
+	background red
+	 margin-top -1px
+.exc-table-el-cost-val
+	color red
+	font-family Open Sans
+	font-size 22px
+	font-weight 700
+	text-align right
+.exc-table__text
+	color red
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+	text-align right
+.tour-table__exc-name
+	position absolute
+	top 10px
+	right 20px
+	color #00b1dd
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+
+.same-excurse-wraper
+	.owl-next,.owl-prev
+		position absolute
+		top 50%
+		margin-top -30px
+		color white
+		font-size 40px
+	.owl-carousel
+		position relative
+		.icon
+			font-size 64px
+	.owl-prev
+		left -5%
+	.owl-next
+		right -5%
+
+.filter-type
+	&:nth-child(3)
+		border-bottom 0px!important
+.filter-type_cont
+	flex(between)
+	margin-bottom 20px
+.filter-type_get
+	width 115px 
+	height 25px
+	background-color #feb20e
+	color white
+	font-family Open Sans
+	font-size 14px
+	font-weight 700
+	text-transform uppercase
+	padding 5px 10px
+.filter-type_reset
+	width 95px
+	height 24px
+	padding 4px 10px
+	border 1px solid #feb20e
+	color #feb20e
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+	text-transform uppercase
+	margin-left 20px
+.exc-list-content__info
+	display inline-block
+	margin-right 5px
+.exc-list-content__last
+	color red
+	font-family Open Sans 
+	font-size 14px
+	font-weight 400
+.content__exc-list
+	margin-top 0
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+	.exc-tools__message
+		margin-left 0px!important
+
+.organizator__el
+	margin-bottom 10px
+	display flex
+.organizator__icon
+	margin-right 10px
+	img
+		width 70px
+.organizator__link
+	a
+		color #0074d9
+		font-family Arial
+		font-size 14px
+		font-weight 400
+.organizator
+	margin-bottom 40px
+.main__header
+	.top-menu__more
+		color black
+	.top-menu-money
+		color black
+	.top-menu-items
+		text-transform uppercase
+		flexB(around)
+		> a
+			display block
+			position relative
+			&:hover
+				&:before
+					content ''
+					position absolute
+					width 100%
+					height 2px
+					background yellow
+					bottom -28px
+					left 0px
+.top-menu__user
+	flexB(mid)
+	&:hover
+		cursor pointer
+.top-menu__avatar
+	margin-right 10px
+	img
+		width 35px
+		border-radius 50%
+.top-menu__user-name
+	margin-right 10px
+.top-menu__user-sub
+	display none 
+	position absolute
+	right 0px
+	top 54px
+	background white
+	width 250px
+	bsh()
+	z-index 4000
+	a
+		text-transform uppercase
+		display block 
+		padding 10px 
+		color #222
+		font-family Arial
+		font-size 14px
+		font-weight 400
+		&:hover
+			border-left 2px solid yellow
+			padding-left 8px
+.top-menu__user-exit 
+	border-top 1px solid blue
+.john_snow
+	color red
+	font-weight 700
+.lk-about__soc
+	flexB(between)
+	margin-top 20px
+.lk-about__soc-el
+	flexB(mid)
+	&:hover
+		.lk-about__soc-message
+			display block
+.lk-about__soc-icon
+	img
+		width 30px
+		margin-right 10px
+.lk-about__soc-link
+	color #545454
+	font-family Open Sans
+	font-size 12px
+	font-weight 400
+	text-decoration underline
+	&:hover
+		cursor pointer
+.modal-soc__remove-row 
+	flexB(between)
+	color #545454
+	font-family Open Sans
+	font-size 14px
+	font-weight 700
+	margin-bottom 20px
+.modal-soc__remove
+	display none
+.modal-soc__remove-name
+	color #4d76a1
+	font-family Open Sans
+	font-size 14px
+	font-weight 400
+.modal-soc__remove-prof
+	flexB(mid)
+.modal-soc__remove_btn-row
+	flexB(mid)
+.btn-main--def
+	background white
+	border 1px solid #ccc
+	color #a2a2a2
+	margin-left 30px
+.lk-about__soc-el
+	position relative
+.lk-about__soc-message
+	bsh()
+	position absolute
+	left calc(100% + 10px)
+	top -50%
+	background white 
+	width 250px
+	padding 10px
+	z-index 1000
+	color #545454
+	font-family Open Sans
+	font-size 12px
+	font-weight 400
+	display none
 	
+//.top-menu__user-exit

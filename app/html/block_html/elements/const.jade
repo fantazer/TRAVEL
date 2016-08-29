@@ -85,10 +85,15 @@
 	
 mixin filterLine(numb,text)
 	.filter-type-el
-			input(id='filter#{numb}', type='checkbox', name='rr')
-			label(for='filter#{numb}') 
-				span
+			input( type='checkbox', name='rr')
 			text #{text}
+
+//mixin filterLine(numb,text)
+//	.filter-type-el
+//			input(id='filter#{numb}', type='checkbox', name='rr')
+//			label(for='filter#{numb}') 
+//				span
+//			text #{text}
 
 mixin star()
 	.filter-reting-stars

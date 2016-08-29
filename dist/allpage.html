@@ -10,18 +10,27 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/opensans.css"/>
   </head>
 </html>
 <body class="allpage">
   <!--Include header-->
-  <div class="top-menu">
+  <div class="top-menu main__header">
     <div class="main-cont">
       <div class="top-menu-wraper">
-        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-black.png" alt=""/></div>
+        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-color.png" alt=""/></div>
         <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a>
-          <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+          <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+            <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+          </div>
+          <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
         </div>
-        <div class="top-menu-enter">вход</div>
+        <!--.top-menu-enter вход-->
+        <div class="top-menu__user">
+          <div class="top-menu__avatar"><img src="img/gid.jpg" alt=""/></div>
+          <div class="top-menu__user-name">Aleksandr_93</div><i class="fa fa-angle-down"></i>
+          <div class="top-menu__user-sub"><a href="#">Личные данные</a><a href="#">Оплаченные заказы</a><a href="#">Избранное</a><a href="#" class="top-menu__user-exit">Выход</a></div>
+        </div>
         <div class="log-wraper">
           <form action="" id="login-form">
             <input type="text" placeholder="E-mail"/>
@@ -54,6 +63,12 @@
       </div>
     </div>
   </div>
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
   <div class="wraper-allpage">
     <h1>Список страниц </h1><a href="main.html">Главная <br></a><a href="result.html">Результаты поиска <br></a><a href="index.html">Каталог <br></a><a href="help.html">Помощь <br></a><a href="FAQ.html">FAQ <br></a><a href="lk-main.html">ЛК Приветствие <br></a><a href="lk-profil-empty.html">ЛК профиль не заполнен <br></a><a href="lk-profil-full.html">ЛК профиль заполнен <br></a><a href="lk-profil-edit.html">ЛК заполнение профиля <br></a><a href="lk-basket.html">ЛК корзина <br></a><a href="lk-bron.html">ЛК бронирование <br></a><a href="lk-list.html">ЛК список <br></a><a href="lk-order.html">ЛК оформление заказа <br></a><a href="lk-bookmark.html">ЛК закладки <br></a><a href="lk-bron-edit.html">ЛК редактирование брони <br></a><a href="lk-auth.html">ЛК Авторизированные <br></a><a href="main-auth.html">Главная Авторизированные <br></a><a href="main-exc.html">Главная Экскурсии <br></a><a href="exc-list.html">Список Экскурсии <br></a><a href="exc-result.html">Экскурсии описание <br></a>
   </div>

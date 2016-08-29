@@ -21,6 +21,12 @@
 
 $(document).ready(function(){
 
+
+//remove_message
+$('.exc-tools__close').click(function(){
+	$(this).closest('.exc-tools__el').remove();
+	console.log('msg')
+})
 //Change preview
 $('.content-right-found-img-small-el img').click(function(){
 	var curUrl = $(this).attr('src');
@@ -92,6 +98,7 @@ var hideToggle = function(targetClick,toggleEl) {
 	hideToggle('.main-head-cont-enter','.log-wraper');
 	hideToggle('.search-iput','.search-res');
 	hideToggle('.top-menu__more','.top-menu__more-wrap');
+	hideToggle('.top-menu__user','.top-menu__user-sub');
 
 	$(".main-head-slider").owlCarousel({
 	 	items : 1,
@@ -108,19 +115,34 @@ var hideToggle = function(targetClick,toggleEl) {
 	 	items : 1,
 	 	pagination : false,
 	 	autoplay:true,
-    autoplayTimeout:10000,
+   		 autoplayTimeout:10000,
 	 	singleItem:true,
 	 	loop:true,
+	 	autoheight:true
 	 	}
 	 );  
 	 
+	 $(".same-excurse-wraper").owlCarousel({
+	 	items : 3,
+	 	pagination : false,
+	 	autoplay:true,
+   		 autoplayTimeout:10000,
+	 	singleItem:true,
+	 	loop:true,
+	 	autoheight:true,
+	 	margin:20,
+	 	 nav:true,
+	 		navText:['<img src="img/slider-left.png">','<img src="img/slider-right.png">']
+	 	}
+	 );  
+
 	 //message slide
 	 $(".trevel-message-info").owlCarousel({
 	 	items : 1,
 	 	navigation: false,
 	 	pagination : false,
 	 	autoplay:true,
-    autoplayTimeout:10000,
+    	autoplayTimeout:10000,
 	 	loop:true,
 	 	singleItem:true,
 	 	margin:10,
@@ -226,6 +248,14 @@ var hideToggle = function(targetClick,toggleEl) {
 		}); 
 	})
 
+	$('.lk-about__soc-link').click(function(){
+		$('.modal-soc__remove').bPopup({
+				closeClass:'btn-main',
+					position:['auto','auto'], // position center
+				follow: [true,false]
+		}); 
+	})
+
 	$('.tour-table-el-right .btn-main').click(function(){
 		$('.modal-bron').bPopup({
 				closeClass:'btn-main',
@@ -249,9 +279,47 @@ var hideToggle = function(targetClick,toggleEl) {
 				follow: [true,false],
 				})
 	})
+
+	$('.lk-list-el-modal').click(function(){
+			$('.modal-lk-list').bPopup({
+					closeClass:'btn-main',
+					position:['auto','auto'], // position center
+			}); 
+	})
 	
 		
-	
+	$('.carat').append(" <i class='fa fa-angle-down' aria-hidden='true'></i> ");
+
+	//datePicker
+		
+			$('.input-date').datepicker({
+				language: 'ru'
+			});
+			$('.input-date').on('changeDate', function(ev){
+			    $(this).datepicker('hide');
+			});
+
+
+			$('#modal-date').datepicker({
+				language: 'ru'
+			});
+			$('#modal-date').on('changeDate', function(ev){
+			    $(this).datepicker('hide');
+			});
+
+			$('.modal-date').datepicker({
+				language: 'ru'
+			});
+			$('.modal-date').on('changeDate', function(ev){
+			    $(this).datepicker('hide');
+			});
+
+			$('.icon-datapicker').click(function(){
+				$(this).parent().find('input').datepicker('show');
+			})
+			$('.input-daterange').datepicker({
+				language: 'ru'
+			});
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)

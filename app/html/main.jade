@@ -4,344 +4,371 @@ body
 	//Include header
 	include ./block_html/elements/const.jade
 
-.main-head
-	.main-head-slider.owl-carousel 
-		//El of slider
-		.main-head-slider-el(style="background-image: url('img/main-head-bg-1.jpg')")
-			.main-head-filter
-			.main-cont
-				.main-head-slider-content
-					.main-head-slider-country Россия
-					.main-head-slider-name Красная поляна
-					.main-head-slider-days 6 ночей, на двоих
-					.main-head-slider-cost
-						.main-head-slider-cost-value
-							span.main-head-slider-from от 
-							span.main-head-slider-val 16494
-							span.main-head-slider-rub ₽
-						.main-head-slider-cost-text
-							span.main-head-slider-text тур
-					.main-head-slider-cost
-						.main-head-slider-cost-value
-							span.main-head-slider-from от 
-							span.main-head-slider-val 12194
-							span.main-head-slider-rub ₽
-						.main-head-slider-cost-text
-							span.main-head-slider-text отель
-					a(href="").main-head-slider-but О направлении
-		//El of slider
-		.main-head-slider-el(style="background-image: url('img/main-head-bg-2.jpg')")
-			.main-head-filter
-			.main-cont
-				.main-head-slider-content
-					.main-head-slider-country Россия
-					.main-head-slider-name Красная поляна
-					.main-head-slider-days 6 ночей, на двоих
-					.main-head-slider-cost
-						.main-head-slider-cost-value
-							span.main-head-slider-from от 
-							span.main-head-slider-val 16494
-							span.main-head-slider-rub ₽
-						.main-head-slider-cost-text
-							span.main-head-slider-text тур
-					.main-head-slider-cost
-						.main-head-slider-cost-value
-							span.main-head-slider-from от 
-							span.main-head-slider-val 12194
-							span.main-head-slider-rub ₽
-						.main-head-slider-cost-text
-							span.main-head-slider-text отель
-					a(href="").main-head-slider-but О направлении
-	
-
-	.main-head-content
-		//Top menu
-		.main-head-fullwidth
-			.main-head-cont
-					i.fa.fa-bars.toggle-top-menu
-					.main-head-cont-logo
-						.main-head-cont-logo-img
-							img(src="img/logo-white.png", alt="")
-					.main-head-cont-menu.main-cont
-						a(href="#") 
-							span авиабилеты
-						a(href="#") 
-							span гостиницы
-						a(href="#") 
-							span экскурсии
-						a(href="#") 
-							span страховка
-						.top-menu-money
-							i.fa.fa-rub
-							i.fa.fa-caret-down
-					.main-head-cont-enter Вход
-					.log-wraper-main
-						form(action="")#login-form
-							input(type="text" placeholder="E-mail")
-							input(type="password" placeholder="Пароль")
-							button Вход
-							.log-wraper-remember
-								.log-wraper-remember-el
-									input(id='login', type='checkbox', name='rr')
-									label(for='login') 
-										span
-									span Чужой компьютер
-								.log-wraper-remember-el
-									a(href="#") Востановить пароль
-							.log-registration
-								span.registration-trigger Зарегистрироваться 
-								span для полного доступа к сервисам
-							.log-social-title Авторизоваться через соц. сети
-
-							.log-social
-								a(href="#")
-									i.fa.fa-vk
-								a(href="#")
-									i.fa.fa-facebook
-								a(href="#")
-									i.fa.fa-twitter
-								a(href="#")
-									i.fa.fa-google-plus
-								a(href="#")
-									i.fa.fa-instagram
-						form(action="")#registration-form
-							input(type="text" placeholder="Фамилия")
-							input(type="text" placeholder="Имя")
-							input(type="text" placeholder="E-mail")
-							input(type="password" placeholder="Пароль")
-							input(type="text" placeholder="Телефон")
-							a(href="#").get-code Выслать проверочный код
-							input(type="text" placeholder="Проверочный код")
-							button Зарегистрироваться
-							.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
-							.log-social-title Авторизоваться через соц. сети
-
-							.log-social
-								a(href="#")
-									i.fa.fa-vk
-								a(href="#")
-									i.fa.fa-facebook
-								a(href="#")
-									i.fa.fa-twitter
-								a(href="#")
-									i.fa.fa-google-plus
-								a(href="#")
-									i.fa.fa-instagram
-		.head-form
-			.main-cont
-					script(src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716")
-		//- 	.main-head-row-input
-		//- 		.main-head-row-input-el
-		//- 			label Город и отель
-		//- 			input(type="text" placeholder="Город и отель")
-		//- 		.main-head-row-input-el
-		//- 			label Прибытие
-		//- 			input(type="text" placeholder="Город и отель")
-		//- 		.main-head-row-input-el
-		//- 			label Выезд
-		//- 			input(type="text" placeholder="Город и отель")
-		//- 		.main-head-row-input-el
-		//- 			label Гости
-		//- 			input(type="text" placeholder="Город и отель")
-		//- 		.main-head-row-input-el
-		//- 			button узнать цены
-
-	.main-service
-		.main-cont
-			.main-service-wraper
-				mixin Service(name,img)
-					a(href="#").main-service-el
-						.main-service-el-img
-							img(src="img/#{img}", alt="")
-						.main-service-el-text #{name}
-				+Service('Море пляж','service-img-1.png')
-				+Service('Города мира','service-img-2.png')
-				+Service('Экзотика','service-img-3.png')
-				+Service('Горные лыжи','service-img-4.png')
-				+Service('Дайвинг','service-img-5.png')
-				+Service('Вечерники','service-img-6.png')
-				+Service('Шопинг','service-img-7.png')
-				+Service('Интресные места','service-img-8.png')
-	.main-place
-		.main-cont
-			.main-wraper
-				//!!!!! Change class for template(.main-type-one)
-				//Type One
-				.main-place-row.main-templ-one
-					.main-type-one-left
-						a(href="#").main-place-el
-							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-5.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-					.main-type-one-right
-						a(href="#").main-place-el
-							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур') 
-				
-				//Type Two
-				.main-place-row.main-templ-two
-					.main-type-two-left
-						a(href="#").main-place-el
-							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-					.main-type-two-right
-						a(href="#").main-place-el
-							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-
-
-				//Type four
-				.main-place-row.main-templ-four
-					.main-type-four-left
-						a(href="#").main-place-el
-							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 100','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-					.main-type-four-center
-						a(href="#").main-place-el
-							+place('img/img-place-7.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-					.main-type-four-right
-						a(href="#").main-place-el
-							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+	.main-head
+		.main-head-slider.owl-carousel 
+			//El of slider
+			.main-head-slider-el(style="background-image: url('img/main-head-bg-1.jpg')")
+				.main-head-filter
+				.main-cont
+					.main-head-slider-content
+						.main-head-slider-country Россия
+						.main-head-slider-name Красная поляна
+						.main-head-slider-days 6 ночей, на двоих
+						.main-head-slider-cost
+							.main-head-slider-cost-value
+								span.main-head-slider-from от 
+								span.main-head-slider-val 16494
+								span.main-head-slider-rub ₽
+							.main-head-slider-cost-text
+								span.main-head-slider-text тур
+						.main-head-slider-cost
+							.main-head-slider-cost-value
+								span.main-head-slider-from от 
+								span.main-head-slider-val 12194
+								span.main-head-slider-rub ₽
+							.main-head-slider-cost-text
+								span.main-head-slider-text отель
+						a(href="").main-head-slider-but О направлении
+			//El of slider
+			.main-head-slider-el(style="background-image: url('img/main-head-bg-2.jpg')")
+				.main-head-filter
+				.main-cont
+					.main-head-slider-content
+						.main-head-slider-country Россия
+						.main-head-slider-name Красная поляна
+						.main-head-slider-days 6 ночей, на двоих
+						.main-head-slider-cost
+							.main-head-slider-cost-value
+								span.main-head-slider-from от 
+								span.main-head-slider-val 16494
+								span.main-head-slider-rub ₽
+							.main-head-slider-cost-text
+								span.main-head-slider-text тур
+						.main-head-slider-cost
+							.main-head-slider-cost-value
+								span.main-head-slider-from от 
+								span.main-head-slider-val 12194
+								span.main-head-slider-rub ₽
+							.main-head-slider-cost-text
+								span.main-head-slider-text отель
+						a(href="").main-head-slider-but О направлении
 		
-				//Type Three
-				.main-place-row.main-templ-three
-					.main-type-three-left
-						a(href="#").main-place-el
-							+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-					.main-type-three-right
-						a(href="#").main-place-el
-							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+		.main-head-content
+			//Top menu
+			.main-head-fullwidth
+				.main-head-cont
+						i.fa.fa-bars.toggle-top-menu
+						.main-head-cont-logo
+							a(href="#").main-head-cont-logo-img
+								img(src="img/traveller-logo.png", alt="")
+						.main-head-cont-menu.main-cont
+							a(href="#") 
+								span авиабилеты
+							a(href="#") 
+								span гостиницы
+							a(href="#") 
+								span экскурсии
+							a(href="#") 
+								span страховка
+							.top-menu__more ЕЩЕ
+								i.fa.fa-angle-down
+								.top-menu__more-wrap
+									a(href="#").top-menu__more-el Туры
+									a(href="#").top-menu__more-el авто
+									a(href="#").top-menu__more-el автобусы
+									a(href="#").top-menu__more-el трансфер
+							.top-menu-money RUB
+								i.fa.fa-angle-down
+
+						.main-head-cont-enter Вход
+						.log-wraper-main
+							form(action="")#login-form
+								input(type="text" placeholder="E-mail")
+								input(type="password" placeholder="Пароль")
+								.log-wraper-enemy
+										input(id='login', type='checkbox', name='rr')
+										label(for='login') 
+											span
+										span Запомнить меня
+								button Вход
+								.log-wraper-remember
+									.log-wraper-remember-el
+										input(id='login', type='checkbox', name='rr')
+										label(for='login') 
+											span
+										span Чужой компьютер
+									.log-wraper-remember-el
+										a(href="#") Востановить пароль
+								.log-registration
+									span.registration-trigger Зарегистрироваться 
+									span для полного доступа к сервисам
+								.log-social-title Авторизоваться через соц. сети
+
+								.log-social
+									a(href="#")
+										img(src="img/soc/facebook.png", alt="")
+									a(href="#")
+										img(src="img/soc/vk.png", alt="")
+									a(href="#")
+										img(src="img/soc/twitter.png", alt="")
+									a(href="#")
+										img(src="img/soc/google-plus.png", alt="")
+									a(href="#")
+										img(src="img/soc/instagram.png", alt="")
+							form(action="")#registration-form
+								input(type="text" placeholder="Фамилия")
+								input(type="text" placeholder="Имя")
+								input(type="text" placeholder="E-mail")
+								input(type="password" placeholder="Пароль")
+								input(type="text" placeholder="Телефон")
+								input(type="text" placeholder="Проверочный код")
+								.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
+								button Зарегистрироваться
+			.head-form
+				.main-cont
+						script(src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716")
+			//- 	.main-head-row-input
+			//- 		.main-head-row-input-el
+			//- 			label Город и отель
+			//- 			input(type="text" placeholder="Город и отель")
+			//- 		.main-head-row-input-el
+			//- 			label Прибытие
+			//- 			input(type="text" placeholder="Город и отель")
+			//- 		.main-head-row-input-el
+			//- 			label Выезд
+			//- 			input(type="text" placeholder="Город и отель")
+			//- 		.main-head-row-input-el
+			//- 			label Гости
+			//- 			input(type="text" placeholder="Город и отель")
+			//- 		.main-head-row-input-el
+			//- 			button узнать цены
+
+		.main-service
+			.main-cont
+				.main-service-wraper
+					mixin Service(name,img)
+						a(href="#").main-service-el
+							.main-service-el-img
+								img(src="img/#{img}", alt="")
+							.main-service-el-text #{name}
+					+Service('Море пляж','service-img-1.png')
+					+Service('Города мира','service-img-2.png')
+					+Service('Экзотика','service-img-3.png')
+					+Service('Горные лыжи','service-img-4.png')
+					+Service('Дайвинг','service-img-5.png')
+					+Service('Вечерники','service-img-6.png')
+					+Service('Шопинг','service-img-7.png')
+					+Service('Интресные места','service-img-8.png')
+		.main-place
+			.main-cont
+				.main-wraper
+					//!!!!! Change class for template(.main-type-one)
+					//Type One
+					.main-place-row.main-templ-one
+						.main-type-one-left
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-5.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-one-right
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур') 
+					
+					//Type Two
+					.main-place-row.main-templ-two
+						.main-type-two-left
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-two-right
+							a(href="#").main-place-el
+								+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
 
 
-				//Type Five
-				.main-place-row.main-templ-five
-					.main-type-five-center
-						a(href="#").main-place-el
-							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-
-				//Type six
-				.main-place-row.main-templ-six
-					.main-type-six-center
-						a(href="#").main-place-el
-							+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-						a(href="#").main-place-el
-							+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
-
-
-	include ./block_html/footer.jade
-				
-
-	style.
-		.mewtwo-hotels-container form{
-			display: -webkit-box!important;
-			display: -ms-flexbox!important;
-			display: flex!important;
-			-webkit-box-align:end!important;
-			-ms-flex-align:end!important;
-			align-items:flex-end!important;
-			-ms-flex-wrap:wrap!important;
-			flex-wrap:wrap!important;
-		}
-		.mewtwo-widget .mewtwo-hotels-submit_button{
-			width: auto!important;
-		}
-		.mewtwo-hotels{background:inherit !important;}
-			.mewtwo-hotels-container form div:nth-of-type(5){
-				display: inline-block!important;
-			}
-		.mewtwo-hotels-container form div:nth-of-type(5) button{
-			background: #FFDB4D!important;
-			color: black !important;
-			display: inline!important;
-			width: 100%!important;
-			height: 35px!important;
-			border: none!important;
-			border-radius: 0px 3px 3px 0px!important;
-			box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
-			font-weight: 600!important;
-			font-size: 14px !important;
-			line-height: 3px!important;
-			box-sizing: border-box!important;
-			margin-top: 1px;
-			padding: 0 6px!important;
-		}
-			.mewtwo-hotels-container form div:nth-of-type(5) button:hover{
-				background: #feba26 !important;
-			}
-		.mewtwo-widget .mewtwo-hotels-city{
-			margin-right: 0!important;
-		}
-		.mewtwo-hotels-dates,
-		.mewtwo-hotels-guests{
+					//Type four
+					.main-place-row.main-templ-four
+						.main-type-four-left
+							a(href="#").main-place-el
+								+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 100','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-four-center
+							a(href="#").main-place-el
+								+place('img/img-place-7.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-four-right
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
 			
-		}
-		.mewtwo-widget .mewtwo-hotels-guests,
-		.mewtwo-widget .mewtwo-hotels-dates{
-			margin-right: 0!important;
-		}
-		.mewtwo-widget .mewtwo-hotels-city>input{
-			border: 0!important;
-			box-shadow:0 0 0!important;
-			border-radius: 0 !important;
-		}
-		.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]{
-			border: 0!important;
-			box-shadow:0 0 0!important;
-			border-radius: 0 !important;
-			border-right:1px solid #F1ECEC!important;
-		}
-		.mewtwo-hotels-container form div:nth-of-type(5) button{
-			
-		}
-		.mewtwo-widget .mewtwo-hotels-dates{
-			width: 38% !important;
-		}
-		.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]:nth-child(1){
-			border-radius: 3px 0px 0px 3px!important;
-			
-		}
-		@media only screen and (max-width: 1024px) {
-			.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
-				width: 50% !important;
+					//Type Three
+					.main-place-row.main-templ-three
+						.main-type-three-left
+							a(href="#").main-place-el
+								+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-three-right
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+
+					//Type Five
+					.main-place-row.main-templ-five
+						.main-type-five-center
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+					//Type six
+					.main-place-row.main-templ-six
+						.main-type-six-center
+							a(href="#").main-place-el
+								+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+
+		.get__more
+				button показать еще
+
+		include ./block_html/footer.jade
+					
+
+		style.
+			.mewtwo-hotels-container form{
+				display: -webkit-box!important;
+				display: -ms-flexbox!important;
+				display: flex!important;
+				-webkit-box-align:end!important;
+				-ms-flex-align:end!important;
+				align-items:flex-end!important;
+				-ms-flex-wrap:wrap!important;
+				flex-wrap:wrap!important;
 			}
-			.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
-			    width: 30%!important;
+			.mewtwo-widget .mewtwo-hotels-submit_button{
+				width: auto!important;
 			}
-			.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-submit_button{
-				width: 20%!important;
-			}
-		}
-		@media only screen and (max-width: 768px) {
-			.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
-				width: 100% !important;
-			}
-			.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
-			    width: 100%!important;
-			}
+			.mewtwo-hotels{background:inherit !important;}
+				.mewtwo-hotels-container form div:nth-of-type(5){
+					display: inline-block!important;
+				}
 			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				background: #FFDB4D!important;
+				color: black !important;
+				display: inline!important;
 				width: 100%!important;
-				margin-top: 15px!important;
+				height: 35px!important;
+				border: none!important;
+				border-radius: 0px 3px 3px 0px!important;
+				box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
+				font-weight: 600!important;
+				font-size: 14px !important;
+				line-height: 3px!important;
+				box-sizing: border-box!important;
+				margin-top: 1px;
+				padding: 0 6px!important;
+			}
+				.mewtwo-hotels-container form div:nth-of-type(5) button:hover{
+					background: #feba26 !important;
+				}
+			.mewtwo-widget .mewtwo-hotels-city{
+				margin-right: 20px!important;
+				width: 35%!important;
+			}
+			.mewtwo-hotels-dates,
+			.mewtwo-hotels-guests{
+				
+			}
+			.hotels-destination-884ffd3f13542596ff6c56055ea9f7d6{
+				border-radius:5px!important;
+			}
+			.mewtwo-widget .mewtwo-hotels-dates-checkin{
+			width: 170px!important;
+			margin-right: 20px !important;
+			}
+			.mewtwo-widget .mewtwo-hotels-guests,
+			.mewtwo-widget .mewtwo-hotels-dates{
+				margin-right: 0!important;
+			}
+			.mewtwo-widget .mewtwo-hotels-city>input{
+				border: 0!important;
+				box-shadow:0 0 0!important;
 				border-radius: 0 !important;
 			}
-			.mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests{
-				margin-bottom: 15px!important;
+			.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]{
+				border-radius: 5px !important;
+				border-right:1px solid #F1ECEC!important;
+			}
+			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				
+			}
+			.mewtwo-widget .mewtwo-hotels-dates{
+				width: 32% !important;
+			}
+			.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]:nth-child(1){
+				border-radius: 3px 0px 0px 3px!important;
+				
+			}
+			#hotels-form-884ffd3f13542596ff6c56055ea9f7d6{
+				padding: 20px!important;
+				background: rgba(32, 31, 31, 0.63)!important;
 			}
 
-		}
-//Include script
-include ./block_html/script.jade
+			.mewtwo-widget .mewtwo-hotels-dates-checkout{
+				width: 175px !important;
+			}
+
+			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				width:200px!important;
+				background-color: #feb20e!important;
+				border-radius :4px!important;
+				color:white!important;
+				font-family: Arial!important;
+				font-size: 16px!important;
+				font-weight: 400!important;
+				margin-left: 18px!important;
+			}
+			
+
+			@media only screen and (max-width: 1024px) {
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+					width: 50% !important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+				    width: 30%!important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-submit_button{
+					width: 20%!important;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+					width: 100% !important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+				    width: 100%!important;
+				}
+				.mewtwo-hotels-container form div:nth-of-type(5) button{
+					width: 100%!important;
+					margin-top: 15px!important;
+					border-radius: 0 !important;
+				}
+				.mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests{
+					margin-bottom: 15px!important;
+				}
+			
+			}
+	//Include script
+	include ./block_html/script.jade
 

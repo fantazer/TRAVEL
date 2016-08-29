@@ -5,20 +5,42 @@ body
 	//Include header
 	include ./block_html/elements/const.jade
 	include ./block_html/head-exc.jade
-	.content
+	.main-cont
+		.exc-tools
+			.main-cont
+				.exc-tools__wrap
+					- for (var i = 0; i < 3; i++)
+						.exc-tools__el
+							.exc-tools__img
+								img(src="img/icon-search.png", alt="")
+							.exc-tools__info
+								.exc-tools__name Тель-Авив
+								.exc-tools__date 24.09 - 25.09
+							img(src="img/icon-close.png", alt="").exc-tools__close
+							.exc-tools__message
+								.exc-tools__message-wrap
+									.exc-tools__text Тель-Авив
+									.exc-tools__text 06 сентября 2016 - undefined
+									i.fa.fa-caret-down
+	.content.content__exc-list
 		.main-cont
 			.content-wraper
 				.content-left
-					.show-from показано 26 из 1250
+					.show-from 
+						.show-from__text Показано 5 из 138 отелей
+						a(href="#").show-from__link Сбросить фильтр
 					.content-left-filter
 						.filter-reting
-							.content-left-title Популярность
+							.filter-name
+								.content-left-title Имя содержит
+								.filter-name-wraper
+									input(type="text")
+									button ок
+							.content-left-title Рейтинг
 							- for (var a = 0; a < 6; a++)
 								.filter-reting-el
 									.filter-reting-el-left
-										input(id='r#{a+4}', type='checkbox', name='rr')
-										label(for='r#{a+4}') 
-											span 
+										input( type='checkbox', name='rr')
 										.filter-reting-stars
 											i.fa.fa-star.active
 											i.fa.fa-star.active
@@ -26,16 +48,13 @@ body
 											i.fa.fa-star
 											i.fa.fa-star
 									.filter-reting-el-right 566
-						.filter-review
-							.content-left-title Отзывы туристов
-							#rangeSlider
-							.filter-review-slider
-						.filter-name
-							.content-left-title Имя содержит
-							.filter-name-wraper
-								input(type="text")
-								button ок
 						.filter-type-wraper
+							.filter-type
+								.content-left-title Язык экскурсии
+								+filterLine(9,'Русский') 
+								+filterLine(10,'Английский') 
+								+filterLine(11,'Французский') 
+								+filterLine(12,'Другое') 
 							.filter-type
 								.content-left-title Вид экскурсии
 								+filterLine(1,'Пешеходные') 
@@ -44,36 +63,29 @@ body
 							.filter-type
 								.content-left-title Тип экскурсии
 								+filterLine(4,'Групповая') 
-								+filterLine(5,'Индивидуальная') 
-							.filter-type
-								.content-left-title Продолжительность
-								+filterLine(6,'Полдня') 
-								+filterLine(7,'День') 
-								+filterLine(8,'2-4 дня')
-							.filter-type
-								.content-left-title Язык экскурсии
-								+filterLine(9,'Русский') 
-								+filterLine(10,'Английский') 
-								+filterLine(11,'Французский') 
-								+filterLine(12,'Другое') 
-					.content-left-filter.trevel-message-wraper
-						.content-left-title Присоединяйтесь к миллионам путешественников по всему миру
-						.trevel-message-info.owl-carousel
-							- for (var v = 0; v < 6; v++)
-								.trevel-message-el
-									- for (var x = 0; x < 4; x++)
-										.trevel-message
-											img(src="img/gid.jpg", alt="")
-											.trevel-message-val
-												.trevel-message-name Путешественник из Китая
-												.trevel-message-text Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве
+								+filterLine(5,'Индивидуальная')
+							.filter-type_cont
+								a(href="#").filter-type_get применить
+								a(href="#").filter-type_reset сбросить
+					//- .content-left-filter.trevel-message-wraper
+					//- 	.content-left-title Присоединяйтесь к миллионам путешественников по всему миру
+					//- 	.trevel-message-info.owl-carousel
+					//- 		- for (var v = 0; v < 6; v++)
+					//- 			.trevel-message-el
+					//- 				- for (var x = 0; x < 4; x++)
+					//- 					.trevel-message
+					//- 						img(src="img/gid.jpg", alt="")
+					//- 						.trevel-message-val
+					//- 							.trevel-message-name Путешественник из Китая
+					//- 							.trevel-message-text Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве
+
 
 				.content-right
 					.content-right-sort
 						.content-right-sort-title 
 							.content-right-sort-title-filter
 								i.fa.fa-bars
-							span Сортировка
+							span Сортировать
 							.content-right-sort-title-toggle
 								i.fa.fa-caret-down
 						.content-right-sort-el Цена
@@ -87,36 +99,36 @@ body
 									.content-right-found-img-big
 										img(src="img/otel-item-2.jpg", alt="")
 									.content-right-found-img-small
-										- for (var g = 0; g < 6; g++)
+										- for (var g = 0; g < 9; g++)
 											.content-right-found-img-small-el
 												img(src="img/otel-item-3.jpg", alt="")
-									.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!
+									//.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!
 								.content-right-found-info
 									.content-right-found-title
-										.content-right-found-title-name Название экскурсии
+										a(href="#").content-right-found-title-name Знакомство с Барселоной
 										+star()
-										.content-right-found-title-type Индивидуальная экскурсия
-											.rating-toooltip
-												.rating-toooltip-el
-													.rating-toooltip-header
-														.rating-toooltip-name место положение
-														.rating-toooltip-val 9.2
-													.rating-toooltip-bar-wrap
-														.rating-toooltip-bar(data-progress='9.2')
-												.rating-toooltip-el
-													.rating-toooltip-header
-														.rating-toooltip-name чистота 
-														.rating-toooltip-val 5.3
-													.rating-toooltip-bar-wrap
-														.rating-toooltip-bar(data-progress='5.3')
-												.rating-toooltip-el
-													.rating-toooltip-header
-														.rating-toooltip-name цена качетсво
-														.rating-toooltip-val 7.4
-													.rating-toooltip-bar-wrap
-														.rating-toooltip-bar(data-progress='7.4')
+									.content-right-found-title-type груповая экскурсия
+										.rating-toooltip
+											.rating-toooltip-el
+												.rating-toooltip-header
+													.rating-toooltip-name место положение
+													.rating-toooltip-val 9.2
+												.rating-toooltip-bar-wrap
+													.rating-toooltip-bar(data-progress='9.2')
+											.rating-toooltip-el
+												.rating-toooltip-header
+													.rating-toooltip-name чистота 
+													.rating-toooltip-val 5.3
+												.rating-toooltip-bar-wrap
+													.rating-toooltip-bar(data-progress='5.3')
+											.rating-toooltip-el
+												.rating-toooltip-header
+													.rating-toooltip-name цена качетсво
+													.rating-toooltip-val 7.4
+												.rating-toooltip-bar-wrap
+													.rating-toooltip-bar(data-progress='7.4')
 
-									.content-right-found-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.
+									.content-right-found-text  Анонс
 
 									.exc-list-wraper
 										.exc-list-info-wraper
@@ -125,15 +137,14 @@ body
 													.exc-list-title Название экскурсии
 													.exc-list-content
 														a(href="#") Название экскурсии
-														p
+														p.exc-list-content__info
 															i.fa.fa-check 
-															span Бесплатная отмена
-														p
+															span Осталось 2 комнаты
+														p.exc-list-content__info
 															i.fa.fa-check 
-															span Завтрак включен
-														p
-															i.fa.fa-check 
-															span Выезд утром
+															span БЕЗ
+													.exc-list-content__last Последняя экскурсия
+													
 												.exc-list-info-el
 													.exc-list-title Дата въезда
 													.exc-list-content
@@ -145,23 +156,21 @@ body
 														p
 															img(src="img/icon-loading.png", alt="").el-scroll-hide
 															.exc-list-sale.el-scroll-show.hideScroll -10%
-															strong.el-scroll-show.hideScroll 36 435 руб
+															strong.el-scroll-show.hideScroll 450 RUB
 														p
-															strong.exc-list-badprice  36 435 руб
+															strong.exc-list-badprice  450 RUB
 														p Ozon.travel
 											.exc-list-info
 												.exc-list-info-el
 													.exc-list-content
 														a(href="#") Название экскурсии
-														p
+														p.exc-list-content__info
 															i.fa.fa-check 
-															span Бесплатная отмена
-														p
+															span Осталось 2 комнаты
+														p.exc-list-content__info
 															i.fa.fa-check 
-															span Завтрак включен
-														p
-															i.fa.fa-check 
-															span Выезд утром
+															span БЕЗ
+												
 												.exc-list-info-el
 													.exc-list-content
 														p
@@ -176,7 +185,7 @@ body
 															strong.exc-list-badprice  36 435 руб
 														p Ozon.travel
 										.exc-list-price
-											.exc-list-price-best Лучшая цена
+											a(href="#").exc-list-price-best Лучшая цена
 											.exc-list-price-val 
 												img(src="img/icon-loading.png", alt="").el-scroll-hide
 												span.el-scroll-show.hideScroll 36 435 руб

@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/opensans.css"/>
   </head>
 </html>
 <body>
   <!--Include header-->
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
   <div class="main-head">
     <div class="main-head-slider owl-carousel"> 
       <!--El of slider-->
@@ -59,17 +66,22 @@
       <!--Top menu-->
       <div class="main-head-fullwidth">
         <div class="main-head-cont"><i class="fa fa-bars toggle-top-menu"></i>
-          <div class="main-head-cont-logo">
-            <div class="main-head-cont-logo-img"><img src="img/logo-white.png" alt=""/></div>
-          </div>
+          <div class="main-head-cont-logo"><a href="#" class="main-head-cont-logo-img"><img src="img/traveller-logo.png" alt=""/></a></div>
           <div class="main-head-cont-menu main-cont"><a href="#"> <span>авиабилеты</span></a><a href="#"> <span>гостиницы</span></a><a href="#"> <span>экскурсии</span></a><a href="#"> <span>страховка</span></a>
-            <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+            <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+              <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+            </div>
+            <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
           </div>
           <div class="main-head-cont-enter">Вход</div>
           <div class="log-wraper-main">
             <form action="" id="login-form">
               <input type="text" placeholder="E-mail"/>
               <input type="password" placeholder="Пароль"/>
+              <div class="log-wraper-enemy">
+                <input id="login" type="checkbox" name="rr"/>
+                <label for="login"> <span></span></label><span>Запомнить меня</span>
+              </div>
               <button>Вход</button>
               <div class="log-wraper-remember">
                 <div class="log-wraper-remember-el">
@@ -80,19 +92,17 @@
               </div>
               <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
               <div class="log-social-title">Авторизоваться через соц. сети</div>
-              <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+              <div class="log-social"><a href="#"><img src="img/soc/facebook.png" alt=""/></a><a href="#"><img src="img/soc/vk.png" alt=""/></a><a href="#"><img src="img/soc/twitter.png" alt=""/></a><a href="#"><img src="img/soc/google-plus.png" alt=""/></a><a href="#"><img src="img/soc/instagram.png" alt=""/></a></div>
             </form>
             <form action="" id="registration-form">
               <input type="text" placeholder="Фамилия"/>
               <input type="text" placeholder="Имя"/>
               <input type="text" placeholder="E-mail"/>
               <input type="password" placeholder="Пароль"/>
-              <input type="text" placeholder="Телефон"/><a href="#" class="get-code">Выслать проверочный код</a>
+              <input type="text" placeholder="Телефон"/>
               <input type="text" placeholder="Проверочный код"/>
-              <button>Зарегистрироваться</button>
               <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
-              <div class="log-social-title">Авторизоваться через соц. сети</div>
-              <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+              <button>Зарегистрироваться</button>
             </form>
           </div>
         </div>
@@ -144,12 +154,23 @@
             </div>
             <div class="exc-search-bottom">
               <div class="main-head-row-input-el exc-search-time">
-                <label>Время</label>
-                <select name="" class="dropdown">
-                  <option>10:00</option>
-                  <option>11:00</option>
-                  <option>12:00</option>
-                </select>
+                <label>Состав группы</label>
+                <div class="group__number">
+                  <div class="exc-search-time__el"><img src="img/icon-man.png" alt=""/>
+                    <select name="" class="dropdown">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="exc-search-time__el"><img src="img/icon-children.png" alt=""/>
+                    <select name="" class="dropdown">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div class="main-head-row-input-el exc-search-but">
                 <button>Найти</button>
@@ -161,8 +182,53 @@
     </div>
   </div>
   <div class="main-cont">
-    <div class="back-search">
-      <div class="triangle-left"></div><a href="#">Вернуться к результатам поиска</a>
+    <div class="exc-tools">
+      <div class="main-cont">
+        <div class="exc-tools__wrap">
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back-search"><a href="#">Вернуться к результатам поиска</a>
+      <div class="bread_block"><a href="#" class="bread_block__el">Главная</a><a href="#" class="bread_block__el">Тель-Авив, Израиль</a><span class="bread_block__el">Arbel Suites Hotel</span></div>
     </div>
   </div>
   <div class="result">
@@ -173,81 +239,119 @@
             <div class="big-title">Золотое кольцо России </div>
               <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
           </div>
-          <div class="result-left-alert">! Кто-то только что забронировал экскурсию </div>
           <div class="result-left-img owl-carousel"><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-3.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-3.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-3.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/><img src="img/otel-item-3.jpg" alt=""/><img src="img/otel-item-2.jpg" alt=""/>
           </div>
-          <div class="mid-title">сборные туры по золотому кольцу</div>
+          <div class="result-left-alert">Кто-то только что забронировал экскурсию </div>
           <div class="tour-table">
             <div class="tour-table-title">
-              <div class="tour-table-title-date">Дата</div>
-              <div class="tour-table-title-info">Стоимость на одного человека</div>
+              <div class="tour-table-title-date">Организатор</div>
+              <div class="tour-table-title-info">Цена за одного человека</div>
             </div>
-            <div class="tour-table-el">
-              <div class="tour-table-el-title"><a href="#">РУССКИЕ ЖЕМЧУЖИНЫ</a></div>
+            <div class="tour-table-el"><a href="#" class="tour-table__exc-name">Индивидуальная экскурсия</a>
               <div class="exc-table-el-wraper">
                 <div class="exc-table-el-left">
                   <div class="exc-table-el-row">
-                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/>
-                      <div class="exc-table-el-date">дата выезда: 05.12.2016</div>
-                    </div>
-                    <div class="exc-table-el-text"> 
-                      <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                      <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                      <p><i class="fa fa-check"> </i><span>Оплата сразу</span></p>
+                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/></div>
+                    <div class="exc-table-el-text"> <a href="#" class="exc-table__title">Знакомство с Барселоной</a>
+                      <p>
+                        <div class="exc-table__gid"><i class="fa fa-check"> </i><span>Гид</span>
+                          <div class="exc-table__gid-name">Иван</div>
+                            <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        </div>
+                      </p>
+                      <p>
+                        <div class="exc-table__date"><i class="fa fa-check"></i><span>Дата экскурсии: </span>
+                          <div class="exc-table-el-date">05.12.2016</div>
+                        </div>
+                      </p>
+                      <p><i class="fa fa-check"> </i><span>Оплата гиду на месте</span></p>
                     </div>
                     <div class="exc-table-el-cost"> 
-                      <div class="exc-table-el-cost-val"> 5340 р.</div>
+                      <div class="exc-table__sale">
+                        <div class="exc-table__sale-val">-10%</div>
+                        <div class="exc-table__sale-cross">450 RUB
+                          <div class="price__cross"> </div>
+                        </div>
+                      </div>
+                      <div class="exc-table-el-cost-val"> 450 RUB</div>
+                      <div class="exc-table__text">Последняя экскурсия</div>
                     </div>
                   </div>
                 </div>
                 <div class="exc-table-el-right">
-                  <div class="btn-main">забронировать</div>
+                  <div class="btn-main">Забронировать</div>
                 </div>
               </div>
             </div>
-            <div class="tour-table-el">
-              <div class="tour-table-el-title"><a href="#">РУССКИЕ ЖЕМЧУЖИНЫ</a></div>
+            <div class="tour-table-el"><a href="#" class="tour-table__exc-name">Индивидуальная экскурсия</a>
               <div class="exc-table-el-wraper">
                 <div class="exc-table-el-left">
                   <div class="exc-table-el-row">
-                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/>
-                      <div class="exc-table-el-date">дата выезда: 05.12.2016</div>
-                    </div>
-                    <div class="exc-table-el-text"> 
-                      <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                      <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                      <p><i class="fa fa-check"> </i><span>Оплата сразу</span></p>
+                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/></div>
+                    <div class="exc-table-el-text"> <a href="#" class="exc-table__title">Знакомство с Барселоной</a>
+                      <p>
+                        <div class="exc-table__gid"><i class="fa fa-check"> </i><span>Гид</span>
+                          <div class="exc-table__gid-name">Иван</div>
+                            <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        </div>
+                      </p>
+                      <p>
+                        <div class="exc-table__date"><i class="fa fa-check"></i><span>Дата экскурсии: </span>
+                          <div class="exc-table-el-date">05.12.2016</div>
+                        </div>
+                      </p>
+                      <p><i class="fa fa-check"> </i><span>Оплата гиду на месте</span></p>
                     </div>
                     <div class="exc-table-el-cost"> 
-                      <div class="exc-table-el-cost-val"> 5340 р.</div>
+                      <div class="exc-table__sale">
+                        <div class="exc-table__sale-val">-10%</div>
+                        <div class="exc-table__sale-cross">450 RUB
+                          <div class="price__cross"> </div>
+                        </div>
+                      </div>
+                      <div class="exc-table-el-cost-val"> 450 RUB</div>
+                      <div class="exc-table__text">Последняя экскурсия</div>
                     </div>
                   </div>
                 </div>
                 <div class="exc-table-el-right">
-                  <div class="btn-main">забронировать</div>
+                  <div class="btn-main">Забронировать</div>
                 </div>
               </div>
             </div>
-            <div class="tour-table-el">
-              <div class="tour-table-el-title"><a href="#">РУССКИЕ ЖЕМЧУЖИНЫ</a></div>
+            <div class="tour-table-el"><a href="#" class="tour-table__exc-name">Индивидуальная экскурсия</a>
               <div class="exc-table-el-wraper">
                 <div class="exc-table-el-left">
                   <div class="exc-table-el-row">
-                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/>
-                      <div class="exc-table-el-date">дата выезда: 05.12.2016</div>
-                    </div>
-                    <div class="exc-table-el-text"> 
-                      <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                      <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                      <p><i class="fa fa-check"> </i><span>Оплата сразу</span></p>
+                    <div class="exc-table-el-img"> <img src="img/icon-travel-comp.png" alt=""/></div>
+                    <div class="exc-table-el-text"> <a href="#" class="exc-table__title">Знакомство с Барселоной</a>
+                      <p>
+                        <div class="exc-table__gid"><i class="fa fa-check"> </i><span>Гид</span>
+                          <div class="exc-table__gid-name">Иван</div>
+                            <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        </div>
+                      </p>
+                      <p>
+                        <div class="exc-table__date"><i class="fa fa-check"></i><span>Дата экскурсии: </span>
+                          <div class="exc-table-el-date">05.12.2016</div>
+                        </div>
+                      </p>
+                      <p><i class="fa fa-check"> </i><span>Оплата гиду на месте</span></p>
                     </div>
                     <div class="exc-table-el-cost"> 
-                      <div class="exc-table-el-cost-val"> 5340 р.</div>
+                      <div class="exc-table__sale">
+                        <div class="exc-table__sale-val">-10%</div>
+                        <div class="exc-table__sale-cross">450 RUB
+                          <div class="price__cross"> </div>
+                        </div>
+                      </div>
+                      <div class="exc-table-el-cost-val"> 450 RUB</div>
+                      <div class="exc-table__text">Последняя экскурсия</div>
                     </div>
                   </div>
                 </div>
                 <div class="exc-table-el-right">
-                  <div class="btn-main">забронировать</div>
+                  <div class="btn-main">Забронировать</div>
                 </div>
               </div>
             </div>
@@ -362,40 +466,48 @@
           </div>
         </div>
         <div class="result-right">
-          <div class="result-right-title">Индивидуальная экскурсия</div>
-          <div class="btn-main get-bron">забронировать</div><a href="#" class="btn-main btn-more"><i class="fa fa-bars"></i><span>Подробнее</span></a>
           <div class="result-cost">
-            <div class="result-cost-text"><span>цена за 5 дней</span><span>1 взрослый</span></div>
-            <div class="result-cost-val">$ 1 788</div>
+            <div class="result-cost-text"><span>цена за 1 взрослого</span></div>
+            <div class="result-cost-val">450 руб.</div>
           </div>
+          <div class="btn-main get-bron">Забронировать</div><a href="#" class="btn-main btn-more"><i class="fa fa-bars"></i><span>Подробнее</span></a>
           <div class="result-right-hide-mobile">
             <div class="result-right-img">
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div>
-              <div class="result-right-img-el"><img src="img/otel-item-2.jpg" alt=""/></div><a href="#">Еще фото</a>
-            </div>
-            <div class="mid-title-border">Описание путевки и туры по золотому кольцу из перьми</div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+              <div style="background-image:url(img/otel-item-2.jpg)" class="result-right-img-el"></div>
+            </div><a href="#" class="more_img">Еще фото</a>
+            <div class="mid-title-border">Описание </div>
             <div class="result-right-text">
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo autem voluptatibus in dolor saepe tempore excepturi aliquid praesentium commodi ea similique magni ut laboriosam. Odit eum sunt libero enim eveniet id possimus iste illum dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat  </p>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo am dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat  </p>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laudantium molestiae. Ex eos, veniam consequatur voluptatum ullam deleniti eius, impedit molestiae porro quod illo am dolorem magnam maiores fuga porro earum deserunt ipsum praesentium voluptate placeat </p>
             </div>
             <div class="mid-title-border">Продолжительность</div>
             <div class="result-right-text">
               <p>4-5 дней</p>
             </div>
             <div class="mid-title-border">Организатор</div>
-            <div class="result-right-text">
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure et illum obcaecati consequuntur omnis veritatis sapiente quas eum recusandae magnam, quia, pariatur consectetur facilis modi animi. Nulla nisi sequi dolorum ex iure ipsa quam vero obcaecati et ipsum excepturi alias suscipit tempora, natus temporibus a necessitatibus, saepe unde recusandae.</p>
+            <div class="organizator">
+              <div class="organizator__el">
+                <div class="organizator__icon"><img src="img/organizator-icon.png" alt=""/></div>
+                <div class="organizator__link"><a href="#">booking.com</a></div>
+              </div>
             </div>
             <div class="mid-title-border">Информация о гиде</div>
             <div class="gid">
@@ -418,7 +530,13 @@
   <div class="same-excurse">
     <div class="main-cont">
       <div class="mid-title">похожие экскурсии</div>
-      <div class="same-excurse-wraper"><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+      <div class="same-excurse-wraper owl-carousel"><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
+          <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
           <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
           <div class="same-excurse-title">Название экскурсии</div></a><a href="#" class="same-excurse-el"><img src="img/otel-item-2.jpg" alt=""/>
           <div class="same-excurse-title">Название экскурсии</div></a>
@@ -559,11 +677,25 @@
       </form>
     </div>
   </div>
+  <div class="modal modal-soc__remove">
+    <div class="modal-soc__remove-row">
+       
+      Ссылка на ваш профиль 
+      <div class="modal-soc__remove-prof">
+        <div class="lk-about__soc-icon"><img src="img/soc/facebook.png" alt=""/></div>
+        <div class="modal-soc__remove-name">Малеев Александр</div>
+      </div>будет удалена
+    </div>
+    <div class="modal-soc__remove_btn-row">
+      <div class="btn-main">Удалить</div>
+      <div class="btn-main btn-main--def">Отменить</div>
+    </div>
+  </div>
   <div class="footer">
     <div class="main-cont">
       <div class="footer-wraper">
-        <div class="footer-left"><a href="#">Помощь</a><a href="#">Портал</a></div>
-        <div class="footer-right"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Конфиденциальность</a></div>
+        <div class="footer-right">Copyright © 2004-2016 Ots.ru.com TM</div>
       </div>
     </div>
   </div>

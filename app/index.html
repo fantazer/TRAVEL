@@ -19,18 +19,33 @@
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/opensans.css"/>
   </head>
 </html>
 <body>
   <!--Include header-->
-  <div class="top-menu">
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
+  <div class="top-menu main__header">
     <div class="main-cont">
       <div class="top-menu-wraper">
-        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-black.png" alt=""/></div>
+        <div class="top-menu-logo"><i class="fa fa-bars toggle-top-menu"></i><img src="img/logo-color.png" alt=""/></div>
         <div class="top-menu-items"><a href="#">Авибилеты</a><a href="#">Гостиницы</a><a href="#">Экскурсии</a><a href="#">Страховка</a>
-          <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+          <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+            <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+          </div>
+          <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
         </div>
-        <div class="top-menu-enter">вход</div>
+        <!--.top-menu-enter вход-->
+        <div class="top-menu__user">
+          <div class="top-menu__avatar"><img src="img/gid.jpg" alt=""/></div>
+          <div class="top-menu__user-name">Aleksandr_93</div><i class="fa fa-angle-down"></i>
+          <div class="top-menu__user-sub"><a href="#">Личные данные</a><a href="#">Оплаченные заказы</a><a href="#">Избранное</a><a href="#" class="top-menu__user-exit">Выход</a></div>
+        </div>
         <div class="log-wraper">
           <form action="" id="login-form">
             <input type="text" placeholder="E-mail"/>
@@ -64,7 +79,9 @@
     </div>
   </div>
   <div class="main-cont">
-    <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Экскурсии</a><a href="#">Результаты поиска</a></div>
+    <div class="back-search"><a href="#">Вернуться к результатам поиска</a>
+      <div class="bread_block"><a href="#" class="bread_block__el"> <span>Главная</span></a><a href="#" class="bread_block__el"> <span>Тель-Авив, Израиль</span></a><span class="bread_block__el">Arbel Suites Hotel</span></div>
+    </div>
   </div>
   <div class="main-cont">
     <div class="top-search">
@@ -181,72 +198,60 @@
               <div class="filter-type">
                 <div class="content-left-title">Вид экскурсии</div>
                   <div class="filter-type-el">
-                    <input id="filter1" type="checkbox" name="rr"/>
-                    <label for="filter1"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Пешеходные</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter2" type="checkbox" name="rr"/>
-                    <label for="filter2"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Автобусные</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter3" type="checkbox" name="rr"/>
-                    <label for="filter3"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Гастрономические</text>
                   </div>
               </div>
               <div class="filter-type">
                 <div class="content-left-title">Тип экскурсии</div>
                   <div class="filter-type-el">
-                    <input id="filter4" type="checkbox" name="rr"/>
-                    <label for="filter4"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Групповая</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter5" type="checkbox" name="rr"/>
-                    <label for="filter5"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Индивидуальная</text>
                   </div>
               </div>
               <div class="filter-type">
                 <div class="content-left-title">Продолжительность</div>
                   <div class="filter-type-el">
-                    <input id="filter6" type="checkbox" name="rr"/>
-                    <label for="filter6"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Полдня</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter7" type="checkbox" name="rr"/>
-                    <label for="filter7"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>День</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter8" type="checkbox" name="rr"/>
-                    <label for="filter8"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>2-4 дня</text>
                   </div>
               </div>
               <div class="filter-type">
                 <div class="content-left-title">Язык экскурсии</div>
                   <div class="filter-type-el">
-                    <input id="filter9" type="checkbox" name="rr"/>
-                    <label for="filter9"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Русский</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter10" type="checkbox" name="rr"/>
-                    <label for="filter10"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Английский</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter11" type="checkbox" name="rr"/>
-                    <label for="filter11"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Французский</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter12" type="checkbox" name="rr"/>
-                    <label for="filter12"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Другое</text>
                   </div>
               </div>
@@ -690,11 +695,25 @@
       </form>
     </div>
   </div>
+  <div class="modal modal-soc__remove">
+    <div class="modal-soc__remove-row">
+       
+      Ссылка на ваш профиль 
+      <div class="modal-soc__remove-prof">
+        <div class="lk-about__soc-icon"><img src="img/soc/facebook.png" alt=""/></div>
+        <div class="modal-soc__remove-name">Малеев Александр</div>
+      </div>будет удалена
+    </div>
+    <div class="modal-soc__remove_btn-row">
+      <div class="btn-main">Удалить</div>
+      <div class="btn-main btn-main--def">Отменить</div>
+    </div>
+  </div>
   <div class="footer">
     <div class="main-cont">
       <div class="footer-wraper">
-        <div class="footer-left"><a href="#">Помощь</a><a href="#">Портал</a></div>
-        <div class="footer-right"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Конфиденциальность</a></div>
+        <div class="footer-right">Copyright © 2004-2016 Ots.ru.com TM</div>
       </div>
     </div>
   </div>

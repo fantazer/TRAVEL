@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/opensans.css"/>
   </head>
 </html>
 <body>
   <!--Include header-->
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
   <div class="main-head">
     <div class="main-head-slider owl-carousel"> 
       <!--El of slider-->
@@ -59,17 +66,22 @@
       <!--Top menu-->
       <div class="main-head-fullwidth">
         <div class="main-head-cont"><i class="fa fa-bars toggle-top-menu"></i>
-          <div class="main-head-cont-logo">
-            <div class="main-head-cont-logo-img"><img src="img/logo-white.png" alt=""/></div>
-          </div>
+          <div class="main-head-cont-logo"><a href="#" class="main-head-cont-logo-img"><img src="img/traveller-logo.png" alt=""/></a></div>
           <div class="main-head-cont-menu main-cont"><a href="#"> <span>авиабилеты</span></a><a href="#"> <span>гостиницы</span></a><a href="#"> <span>экскурсии</span></a><a href="#"> <span>страховка</span></a>
-            <div class="top-menu-money"><i class="fa fa-rub"></i><i class="fa fa-caret-down"></i></div>
+            <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+              <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+            </div>
+            <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
           </div>
           <div class="main-head-cont-enter">Вход</div>
           <div class="log-wraper-main">
             <form action="" id="login-form">
               <input type="text" placeholder="E-mail"/>
               <input type="password" placeholder="Пароль"/>
+              <div class="log-wraper-enemy">
+                <input id="login" type="checkbox" name="rr"/>
+                <label for="login"> <span></span></label><span>Запомнить меня</span>
+              </div>
               <button>Вход</button>
               <div class="log-wraper-remember">
                 <div class="log-wraper-remember-el">
@@ -80,19 +92,17 @@
               </div>
               <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
               <div class="log-social-title">Авторизоваться через соц. сети</div>
-              <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+              <div class="log-social"><a href="#"><img src="img/soc/facebook.png" alt=""/></a><a href="#"><img src="img/soc/vk.png" alt=""/></a><a href="#"><img src="img/soc/twitter.png" alt=""/></a><a href="#"><img src="img/soc/google-plus.png" alt=""/></a><a href="#"><img src="img/soc/instagram.png" alt=""/></a></div>
             </form>
             <form action="" id="registration-form">
               <input type="text" placeholder="Фамилия"/>
               <input type="text" placeholder="Имя"/>
               <input type="text" placeholder="E-mail"/>
               <input type="password" placeholder="Пароль"/>
-              <input type="text" placeholder="Телефон"/><a href="#" class="get-code">Выслать проверочный код</a>
+              <input type="text" placeholder="Телефон"/>
               <input type="text" placeholder="Проверочный код"/>
-              <button>Зарегистрироваться</button>
               <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
-              <div class="log-social-title">Авторизоваться через соц. сети</div>
-              <div class="log-social"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+              <button>Зарегистрироваться</button>
             </form>
           </div>
         </div>
@@ -144,12 +154,23 @@
             </div>
             <div class="exc-search-bottom">
               <div class="main-head-row-input-el exc-search-time">
-                <label>Время</label>
-                <select name="" class="dropdown">
-                  <option>10:00</option>
-                  <option>11:00</option>
-                  <option>12:00</option>
-                </select>
+                <label>Состав группы</label>
+                <div class="group__number">
+                  <div class="exc-search-time__el"><img src="img/icon-man.png" alt=""/>
+                    <select name="" class="dropdown">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="exc-search-time__el"><img src="img/icon-children.png" alt=""/>
+                    <select name="" class="dropdown">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div class="main-head-row-input-el exc-search-but">
                 <button>Найти</button>
@@ -160,316 +181,168 @@
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="main-cont">
+    <div class="exc-tools">
+      <div class="main-cont">
+        <div class="exc-tools__wrap">
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+          <div class="exc-tools__el">
+            <div class="exc-tools__img"><img src="img/icon-search.png" alt=""/></div>
+            <div class="exc-tools__info">
+              <div class="exc-tools__name">Тель-Авив</div>
+              <div class="exc-tools__date">24.09 - 25.09</div>
+            </div><img src="img/icon-close.png" alt="" class="exc-tools__close"/>
+            <div class="exc-tools__message">
+              <div class="exc-tools__message-wrap">
+                <div class="exc-tools__text">Тель-Авив</div>
+                <div class="exc-tools__text">06 сентября 2016 - undefined</div><i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content content__exc-list">
     <div class="main-cont">
       <div class="content-wraper">
         <div class="content-left">
-          <div class="show-from">показано 26 из 1250</div>
+          <div class="show-from"> 
+            <div class="show-from__text">Показано 5 из 138 отелей</div><a href="#" class="show-from__link">Сбросить фильтр</a>
+          </div>
           <div class="content-left-filter">
             <div class="filter-reting">
-              <div class="content-left-title">Популярность</div>
+              <div class="filter-name">
+                <div class="content-left-title">Имя содержит</div>
+                <div class="filter-name-wraper">
+                  <input type="text"/>
+                  <button>ок</button>
+                </div>
+              </div>
+              <div class="content-left-title">Рейтинг</div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r4" type="checkbox" name="rr"/>
-                  <label for="r4"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
               </div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r5" type="checkbox" name="rr"/>
-                  <label for="r5"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
               </div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r6" type="checkbox" name="rr"/>
-                  <label for="r6"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
               </div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r7" type="checkbox" name="rr"/>
-                  <label for="r7"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
               </div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r8" type="checkbox" name="rr"/>
-                  <label for="r8"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
               </div>
               <div class="filter-reting-el">
                 <div class="filter-reting-el-left">
-                  <input id="r9" type="checkbox" name="rr"/>
-                  <label for="r9"> <span> </span></label>
+                  <input type="checkbox" name="rr"/>
                   <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                 </div>
                 <div class="filter-reting-el-right">566</div>
-              </div>
-            </div>
-            <div class="filter-review">
-              <div class="content-left-title">Отзывы туристов</div>
-              <div id="rangeSlider"></div>
-              <div class="filter-review-slider"></div>
-            </div>
-            <div class="filter-name">
-              <div class="content-left-title">Имя содержит</div>
-              <div class="filter-name-wraper">
-                <input type="text"/>
-                <button>ок</button>
               </div>
             </div>
             <div class="filter-type-wraper">
               <div class="filter-type">
+                <div class="content-left-title">Язык экскурсии</div>
+                  <div class="filter-type-el">
+                    <input type="checkbox" name="rr"/>
+                    <text>Русский</text>
+                  </div>
+                  <div class="filter-type-el">
+                    <input type="checkbox" name="rr"/>
+                    <text>Английский</text>
+                  </div>
+                  <div class="filter-type-el">
+                    <input type="checkbox" name="rr"/>
+                    <text>Французский</text>
+                  </div>
+                  <div class="filter-type-el">
+                    <input type="checkbox" name="rr"/>
+                    <text>Другое</text>
+                  </div>
+              </div>
+              <div class="filter-type">
                 <div class="content-left-title">Вид экскурсии</div>
                   <div class="filter-type-el">
-                    <input id="filter1" type="checkbox" name="rr"/>
-                    <label for="filter1"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Пешеходные</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter2" type="checkbox" name="rr"/>
-                    <label for="filter2"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Автобусные</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter3" type="checkbox" name="rr"/>
-                    <label for="filter3"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Гастрономические</text>
                   </div>
               </div>
               <div class="filter-type">
                 <div class="content-left-title">Тип экскурсии</div>
                   <div class="filter-type-el">
-                    <input id="filter4" type="checkbox" name="rr"/>
-                    <label for="filter4"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Групповая</text>
                   </div>
                   <div class="filter-type-el">
-                    <input id="filter5" type="checkbox" name="rr"/>
-                    <label for="filter5"> <span></span></label>
+                    <input type="checkbox" name="rr"/>
                     <text>Индивидуальная</text>
                   </div>
               </div>
-              <div class="filter-type">
-                <div class="content-left-title">Продолжительность</div>
-                  <div class="filter-type-el">
-                    <input id="filter6" type="checkbox" name="rr"/>
-                    <label for="filter6"> <span></span></label>
-                    <text>Полдня</text>
-                  </div>
-                  <div class="filter-type-el">
-                    <input id="filter7" type="checkbox" name="rr"/>
-                    <label for="filter7"> <span></span></label>
-                    <text>День</text>
-                  </div>
-                  <div class="filter-type-el">
-                    <input id="filter8" type="checkbox" name="rr"/>
-                    <label for="filter8"> <span></span></label>
-                    <text>2-4 дня</text>
-                  </div>
-              </div>
-              <div class="filter-type">
-                <div class="content-left-title">Язык экскурсии</div>
-                  <div class="filter-type-el">
-                    <input id="filter9" type="checkbox" name="rr"/>
-                    <label for="filter9"> <span></span></label>
-                    <text>Русский</text>
-                  </div>
-                  <div class="filter-type-el">
-                    <input id="filter10" type="checkbox" name="rr"/>
-                    <label for="filter10"> <span></span></label>
-                    <text>Английский</text>
-                  </div>
-                  <div class="filter-type-el">
-                    <input id="filter11" type="checkbox" name="rr"/>
-                    <label for="filter11"> <span></span></label>
-                    <text>Французский</text>
-                  </div>
-                  <div class="filter-type-el">
-                    <input id="filter12" type="checkbox" name="rr"/>
-                    <label for="filter12"> <span></span></label>
-                    <text>Другое</text>
-                  </div>
-              </div>
+              <div class="filter-type_cont"><a href="#" class="filter-type_get">применить</a><a href="#" class="filter-type_reset">сбросить</a></div>
             </div>
           </div>
-          <div class="content-left-filter trevel-message-wraper">
-            <div class="content-left-title">Присоединяйтесь к миллионам путешественников по всему миру</div>
-            <div class="trevel-message-info owl-carousel">
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-              <div class="trevel-message-el">
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-                <div class="trevel-message"><img src="img/gid.jpg" alt=""/>
-                  <div class="trevel-message-val">
-                    <div class="trevel-message-name">Путешественник из Китая</div>
-                    <div class="trevel-message-text">Только что забронировал BNC AGENCY - Tel Aviv apartments в Тель-Авиве</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div class="content-right">
           <div class="content-right-sort">
             <div class="content-right-sort-title"> 
-              <div class="content-right-sort-title-filter"><i class="fa fa-bars"></i></div><span>Сортировка</span>
+              <div class="content-right-sort-title-filter"><i class="fa fa-bars"></i></div><span>Сортировать</span>
               <div class="content-right-sort-title-toggle"><i class="fa fa-caret-down"></i></div>
             </div>
             <div class="content-right-sort-el">Цена</div>
@@ -488,56 +361,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -549,9 +424,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -559,9 +434,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -580,8 +454,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -601,56 +474,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -662,9 +537,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -672,9 +547,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -693,8 +567,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -714,56 +587,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -775,9 +650,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -785,9 +660,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -806,8 +680,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -827,56 +700,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -888,9 +763,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -898,9 +773,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -919,8 +793,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -940,56 +813,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -1001,9 +876,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -1011,9 +886,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -1032,8 +906,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -1053,56 +926,58 @@
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                   <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
+                  <div class="content-right-found-img-small-el"><img src="img/otel-item-3.jpg" alt=""/></div>
                 </div>
-                <div class="content-right-found-sale">Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!</div>
+                <!--.content-right-found-sale Сейчас большой спрос на экскурсии в ХХХ(город). УСПЕВАЙТЕ БРОНИРОВАТЬ!-->
               </div>
               <div class="content-right-found-info">
-                <div class="content-right-found-title">
-                  <div class="content-right-found-title-name">Название экскурсии</div>
+                <div class="content-right-found-title"><a href="#" class="content-right-found-title-name">Знакомство с Барселоной</a>
                     <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                  <div class="content-right-found-title-type">Индивидуальная экскурсия
-                    <div class="rating-toooltip">
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">место положение</div>
-                          <div class="rating-toooltip-val">9.2</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="9.2" class="rating-toooltip-bar"></div>
-                        </div>
+                </div>
+                <div class="content-right-found-title-type">груповая экскурсия
+                  <div class="rating-toooltip">
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">место положение</div>
+                        <div class="rating-toooltip-val">9.2</div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">чистота </div>
-                          <div class="rating-toooltip-val">5.3</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="5.3" class="rating-toooltip-bar"></div>
-                        </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="9.2" class="rating-toooltip-bar"></div>
                       </div>
-                      <div class="rating-toooltip-el">
-                        <div class="rating-toooltip-header">
-                          <div class="rating-toooltip-name">цена качетсво</div>
-                          <div class="rating-toooltip-val">7.4</div>
-                        </div>
-                        <div class="rating-toooltip-bar-wrap">
-                          <div data-progress="7.4" class="rating-toooltip-bar"></div>
-                        </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">чистота </div>
+                        <div class="rating-toooltip-val">5.3</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="5.3" class="rating-toooltip-bar"></div>
+                      </div>
+                    </div>
+                    <div class="rating-toooltip-el">
+                      <div class="rating-toooltip-header">
+                        <div class="rating-toooltip-name">цена качетсво</div>
+                        <div class="rating-toooltip-val">7.4</div>
+                      </div>
+                      <div class="rating-toooltip-bar-wrap">
+                        <div data-progress="7.4" class="rating-toooltip-bar"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="content-right-found-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officiis, obcaecati quas recusandae eligendi cumque labore ipsa repellendus at sunt explicabo provident accusantium quidem beatae dolores dolorum fugiat consequuntur ipsum harum. Excepturi totam pariatur vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.vitae blanditiis provident quasi quos, consequatur hic aperiam, eius consectetur accusamus cum nam quaerat dolore sit inventore doloremque itaque ratione atque ab. Ex nisi inventore itaque.</div>
+                <div class="content-right-found-text"> Анонс</div>
                 <div class="exc-list-wraper">
                   <div class="exc-list-info-wraper">
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Название экскурсии</div>
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
+                        <div class="exc-list-content__last">Последняя экскурсия</div>
                       </div>
                       <div class="exc-list-info-el">
                         <div class="exc-list-title">Дата въезда</div>
@@ -1114,9 +989,9 @@
                         <div class="exc-list-title">	Цена за чел.</div>
                         <div class="exc-list-content exc-list-goodprice"> 
                           <p><img src="img/icon-loading.png" alt="" class="el-scroll-hide"/>
-                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">36 435 руб</strong>
+                            <div class="exc-list-sale el-scroll-show hideScroll">-10%</div><strong class="el-scroll-show hideScroll">450 RUB</strong>
                           </p>
-                          <p><strong class="exc-list-badprice"> 36 435 руб</strong></p>
+                          <p><strong class="exc-list-badprice"> 450 RUB</strong></p>
                           <p>Ozon.travel</p>
                         </div>
                       </div>
@@ -1124,9 +999,8 @@
                     <div class="exc-list-info">
                       <div class="exc-list-info-el">
                         <div class="exc-list-content"><a href="#">Название экскурсии</a>
-                          <p><i class="fa fa-check"> </i><span>Бесплатная отмена</span></p>
-                          <p><i class="fa fa-check"> </i><span>Завтрак включен</span></p>
-                          <p><i class="fa fa-check"> </i><span>Выезд утром</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>Осталось 2 комнаты</span></p>
+                          <p class="exc-list-content__info"><i class="fa fa-check"> </i><span>БЕЗ</span></p>
                         </div>
                       </div>
                       <div class="exc-list-info-el">
@@ -1145,8 +1019,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="exc-list-price">
-                    <div class="exc-list-price-best">Лучшая цена</div>
+                  <div class="exc-list-price"><a href="#" class="exc-list-price-best">Лучшая цена</a>
                     <div class="exc-list-price-val"> <img src="img/icon-loading.png" alt="" class="el-scroll-hide"/><span class="el-scroll-show hideScroll">36 435 руб</span></div>
                     <div class="exc-list-price-but get-bron">Забронировать</div>
                   </div>
@@ -1293,11 +1166,25 @@
       </form>
     </div>
   </div>
+  <div class="modal modal-soc__remove">
+    <div class="modal-soc__remove-row">
+       
+      Ссылка на ваш профиль 
+      <div class="modal-soc__remove-prof">
+        <div class="lk-about__soc-icon"><img src="img/soc/facebook.png" alt=""/></div>
+        <div class="modal-soc__remove-name">Малеев Александр</div>
+      </div>будет удалена
+    </div>
+    <div class="modal-soc__remove_btn-row">
+      <div class="btn-main">Удалить</div>
+      <div class="btn-main btn-main--def">Отменить</div>
+    </div>
+  </div>
   <div class="footer">
     <div class="main-cont">
       <div class="footer-wraper">
-        <div class="footer-left"><a href="#">Помощь</a><a href="#">Портал</a></div>
-        <div class="footer-right"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Конфиденциальность</a></div>
+        <div class="footer-right">Copyright © 2004-2016 Ots.ru.com TM</div>
       </div>
     </div>
   </div>

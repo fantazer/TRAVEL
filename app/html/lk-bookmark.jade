@@ -7,22 +7,22 @@ body
 	include ./block_html/breadcrumbs.jade
 
 	.main-cont
-		.lk-title Мои закладки
+		.lk-title Избранное
 		.lk-wraper
 			.lk-left
 				include ./block_html/lk-menu.jade
 			.lk-right
 				.lk-right-content
-					.lk-list-tab-title Избранное
+					//.lk-list-tab-title Избранное
 					.lk-bookmark
 					.lk-bookmark-title Выбрано: 5 экскурсий
-					.lk-bookmark-nav
-						select(name="").dropdown
-							option Выберите действие
-							option Добавить в избранное
-							option Удалить из списка
-							option Выделить все
-						a(href="#").btn-main Забронировать
+					//.lk-bookmark-nav
+					//	select(name="").dropdown
+					//		option Выберите действие
+					//		option Добавить в избранное
+					//		option Удалить из списка
+					//		option Выделить все
+					//	a(href="#").btn-main Забронировать
 
 					.lk-bookmark-wraper
 						- for (var a = 0; a < 6; a++)
@@ -37,12 +37,12 @@ body
 					.lk-list-mail
 						.mid-title Выслать список на e-mail
 						form(action="").lk-list-mail-form
-							input(type="text")
+							input(type="text" placeholder="Введите ваш e-mail")
 							button.btn-main Отправить
-				.lk-right-bottom
-					a(href="#").lk-right-bottom-el Забронировать отель 
-					a(href="#").lk-right-bottom-el Забронировать билет
-					a(href="#").lk-right-bottom-el Найти экскурсию
+					.lk-right-bottom
+						a(href="#").lk-right-bottom-el Забронировать отель 
+						a(href="#").lk-right-bottom-el Забронировать билет
+						a(href="#").lk-right-bottom-el Найти экскурсию
 				
 
 	

@@ -1,18 +1,34 @@
-.top-menu
+.top-menu.main__header
 	.main-cont
 		.top-menu-wraper
 			.top-menu-logo
 				i.fa.fa-bars.toggle-top-menu
-				img(src="img/logo-black.png", alt="")
+				img(src="img/logo-color.png", alt="")
 			.top-menu-items
 				a(href="#") Авибилеты
 				a(href="#") Гостиницы
 				a(href="#") Экскурсии
 				a(href="#") Страховка
-				.top-menu-money
-					i.fa.fa-rub
-					i.fa.fa-caret-down
-			.top-menu-enter вход
+				.top-menu__more ЕЩЕ
+					i.fa.fa-angle-down
+					.top-menu__more-wrap
+						a(href="#").top-menu__more-el Туры
+						a(href="#").top-menu__more-el авто
+						a(href="#").top-menu__more-el автобусы
+						a(href="#").top-menu__more-el трансфер
+				.top-menu-money RUB
+					i.fa.fa-angle-down
+			//.top-menu-enter вход
+			.top-menu__user
+				.top-menu__avatar
+					img(src="img/gid.jpg", alt="")
+				.top-menu__user-name Aleksandr_93
+				i.fa.fa-angle-down
+				.top-menu__user-sub
+					a(href="#") Личные данные
+					a(href="#") Оплаченные заказы
+					a(href="#") Избранное
+					a(href="#").top-menu__user-exit Выход
 			.log-wraper
 				form(action="")#login-form
 					input(type="text" placeholder="E-mail")
