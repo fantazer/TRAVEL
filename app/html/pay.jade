@@ -1,0 +1,182 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	include ./block_html/elements/const.jade
+	include ./block_html/header.jade
+	include ./block_html/breadcrumbs.jade
+
+	.main-cont
+		.lk-title Подтверждение бронирования
+		.content-wraper
+			.content-left.content-left--white
+				.text.bold  Индивидуальная  экскурсия
+				.templ-exc
+					.templ-exc__img
+						img(src="img/otel-item.jpg", alt="")
+					.templ-exc__info
+						.filter-reting-stars
+							i.fa.fa-star.active
+							i.fa.fa-star.active
+							i.fa.fa-star.active
+							i.fa.fa-star.active
+							i.fa.fa-star.active
+							i.fa.fa-thumbs-up.tooltip
+								.tooltip__content Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.
+
+						.templ-exc__name Иерусалим  христианский и Вифлеем
+				.divider
+				.title__get-exc Заказ экскурсии
+				.title__get-exc.title__get-exc--sm Индивидуальная экскурсия
+				form(action="").pay-filter-form
+					input(type="text" placeholder="Дата" readonly="readonly").input-date
+					select.select
+						option(data-display="Время") Нет
+						option 12:00
+						option 13:00
+						option 14:00
+					select.select
+						option(data-display="Взрослые") Нет
+						option 1
+						option 2
+						option 3
+						option 4
+					select.select
+						option(data-display="Дети") Нет
+						option 1
+						option 2
+						option 3
+						option 4
+					select.select
+						option(data-display="Тип машины") Нет
+						option 1
+						option 2
+						option 3
+						option 4
+				.pay__val RUB 1 788
+				.text Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.
+			.content-right.content-right--white
+				.big-title Иерусалим христианский и Вифлеем
+				.text Вы вошли как неавторизованный пользовователь
+				.pay__row-btn
+					a(href="#").btn-main Войти
+					a(href="#").btn-main.btn-main--empty Зарегистрироваться
+				.text Вы можете продолжить бронирование регистрация будет оформлена автоматически
+				.divider
+				.text.bold Данные организатора
+				.organizator-row
+					.organizator-row__el
+						.organizator__title Организатор
+						.organizator__el
+							.organizator__icon
+								img(src="img/organizator-icon.png", alt="")
+							.organizator__link
+								a(href="#") booking.com
+					.organizator-row__el
+						.organizator__title Гид
+						.organizator__el
+							.organizator__icon
+								img(src="img/gid.jpg", alt="")
+							.organizator__link
+								+star()
+								.organizator__gid Мария
+				.divider
+				.text.text--green
+					span.bold БЕСПЛАТНАЯ отмена бронирования 
+						i.fa.fa-info-circle.note-inform.tooltip
+							.tooltip__content  <span class="bold">Отмена бронирования:</span> Вы можете беслатно отменить броинрование в срок вплоть до 2 дней
+					br
+					span Вы можете легко отменить или изменить бронирование бесплатно! Просто пройдите по ссылке в вашем электронном подтверждении.
+				.block-meassage.block-meassage_icon--red
+					.block-meassage__icon
+						i.fa.fa-exclamation-triangle
+					.block-meassage__text Внимание это последняя свободная экскурсия организатора!
+				
+				.block-meassage.block-meassage_icon--red
+					.block-meassage__icon
+						i.fa.fa-users
+					.block-meassage__text 4 других пользователя тоже рассматривают этот вариант для бронирования
+				
+				.block-meassage.block-meassage_icon--green
+					.block-meassage__icon
+						i.fa.fa-check
+					.block-meassage__text Сегодня оплата в полном размере не требуется. Вы платите гиду на экскурсии.
+
+				.block-meassage.block-meassage_icon--green
+					.block-meassage__icon
+						i.fa.fa-thumbs-up
+					.block-meassage__text При оплате в полном объеме вы экономите значительную сумму
+
+				.block-meassage.block-meassage_icon--green
+					.block-meassage__icon
+						i.fa.fa-thumbs-up
+					.block-meassage__text Если вы вносите предоплату - ваша экскурсия гарантировано состоится!!!
+				.divider
+				form(action="#").pay__main-form
+					.text.bold Введите свои данные
+					.text-block--people-inf Взрослый 1 (Основной гость) Укажите свое имя и фамилию (как в паспорте) Имя (используйте только буквы латинского алфавита)Введите имя одного из гостей, который будет проживать в этом номере.
+					input(type="text")
+					label Фамилия (используйте только буквы латинского алфавита)
+					input(type="text")
+					label E-mail
+					input(type="text")
+					label Пароль
+					input(type="text")
+					label Номер телефона
+					input(type="text")
+					.text__securiti Ваше бронирование в полной безопасности.
+					.divider
+					.text.bold Способ оплаты:
+					.text.bold Полная оплата
+					.text Итого: 
+						span.bold 12 456 руб
+					.divider
+					.text.bold Способ оплаты:
+					.text Оплата гиду на месте
+					.divider
+					.text.bold Онлайн оплата через
+					.payment
+						- var items = ['pay-visa','pay-master','pay-yandex','pay-paypal'];
+						- each item in items
+							.payment--el
+								.payment--check
+									input(type="checkbox")
+								.payment--img
+									img(src="img/#{item}.png", alt="")
+					.divider
+					.text.bold Оплата через телефон
+					.pay-phone
+						.pay-phone__el
+							label Номер телефона
+							input(type="text")
+							.pay-phone__btn
+								a(href="#").btn-main.btn-main--inline  Выслать проверочный код
+							label Введите код
+							input(type="text")
+						.pay-phone__text
+							.text Ваш гид свяжется с вами в течении сегодняшнего дня, если вы не ответите - бронь будет снята.
+							.text За 2 дня до даты экскурсии наш гид свяжется с вами для уточнения намерений, если вы не ответите в течении этого дня - бронь будет снята.
+							.text Если у вас не будет возможности ответить в этот день, просим вас предупредить об этом администрацию сайта или вашего гида.
+
+					.divider
+					.text.bold Расскажите нам о ваших особых пожеланиях
+					p.text__suggestions Расскажите нам о ваших особых пожеланиях <br> Пожалуйста, напишите свои запросы на английском или на иврите.Администрация объекта размещения не может гарантировать выполнение особых пожеланий, но сделает для этого все возможное.
+					textarea(name="", cols="30", rows="10")
+					.suggestions
+						.suggestions__el
+							input(type="checkbox")
+							span Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации
+						.suggestions__el
+							input(type="checkbox")
+							span 3 чек-бокс
+						.suggestions__el
+							input(type="checkbox")
+							span Нажав на кнопку готово, я подтверждаю свой заказ
+						.btn-main.btn-main--inline.get-modal-payment  Подтвердить покупку
+	include ./block_html/modal.jade
+	include ./block_html/footer.jade
+
+//Include script
+include ./block_html/script.jade
+

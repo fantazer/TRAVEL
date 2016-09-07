@@ -58,6 +58,8 @@ bsh(){
 	background white
 	box-shadow: 0px 2px 3px #E1E1E1;
 	position relative
+	rigth 0px
+	min-width 1200px
 	/*.main-cont
 		center(1440px)*/
 .wraper-allpage
@@ -276,8 +278,8 @@ bsh(){
 		display inline-block
 		border-radius 5px
 		//border-bottom: 2px solid white;
-input[type="checkbox"]
-	display:none;
+//input[type="checkbox"]
+	//display:none;
 
 input[type="checkbox"] + label span
 	display:inline-block;
@@ -369,6 +371,12 @@ input[type="checkbox"]:checked + label span
 		margin-right 3px
 		font-size 13px
 		color grey
+	.fa-thumbs-up
+		color yellow
+		font-size 18px
+		margin-left 5px
+		&:hover
+			cursor pointer
 //.active
 //.filter-reting-el-right
 //.filter-review
@@ -1172,6 +1180,7 @@ div[class*="main-type"]
 		color blue
 		font-weight 700
 		text-decoration underline
+		display inline-block
 .triangle-left
 	triangle:left 5px black
 	margin-right 10px
@@ -1462,13 +1471,12 @@ button.btn-main
 		left 10px
 
 .modal
-
 	position relative
 	padding 20px
 	background white
 	width 45%
 	max-width 520px
-	.fa
+	>.fa
 		position absolute
 		top 10px
 		right 10px
@@ -1859,7 +1867,7 @@ hr
 	bsh()
 	padding-left 20px
 	font-weight 600
-
+	width 100%
 .lk-about
 	f()
 	fw()
@@ -2957,8 +2965,11 @@ hr
 		position relative
 		font-size 14px
 		text-decoration none
+		display inline-block
+		
 		span
 			text-decoration underline
+			display inline-block
 			&:hover
 				color darken(blue,10)
 		&:after
@@ -3112,6 +3123,7 @@ hr
 .organizator
 	margin-bottom 40px
 .main__header
+	display inline-block
 	.top-menu__more
 		color black
 	.top-menu-money
@@ -3226,5 +3238,223 @@ hr
 	font-size 12px
 	font-weight 400
 	display none
+.content-left--white
+	padding 10px
+	bsh()
+	background white
+	margin-bottom 20px
+.content-right--white
+	padding 10px 20px
+	bsh()
+	background white
+	margin-bottom 20px
+.bold
+	font-weight 700
+.templ-exc
+	display flex
+.templ-exc__img
+	width 90px
+	margin-right 10px
+.templ-exc__info
+	width 120px 
+	z-index 9
+.templ-exc__name
+	font-size 16px 
+	font-weight 700
+	color #545454
+	margin-top 5px
+.divider
+	width 100%
+	height 1px
+	background-color #e1e1e1
+	margin 10px 0
+.title__get-exc
+	color #545454
+	font-size 28px
+	font-weight 400
+	margin-bottom 10px
+	width 100%
+.title__get-exc--sm
+	color #bcbcbc
+	font-size 16px
+	font-weight 400
+.pay-filter-form
+	input
+		width 100%
+		margin-bottom 10px
+.nice-select
+	border-radius 0px
+	border-color grey!important
+	width 100%
+	padding-left 10px
+	color #bcbcbc
+	margin-bottom 10px
+	select 
+		display none
+	.list
+		width 100%
+		border-color grey
+		border-radius 0px
+		color #545454
+.nice-select.open
+		border-color grey!important
+
+.pay__val
+	color #545454
+	font-family Arial
+	font-size 26px
+	font-weight 700
+	margin-top 10px 
+	margin-bottom 30px
+	text-align center
+.pay__row-btn
+	.btn-main
+		display inline-block
+		margin-right 30px
+.btn-main--empty
+	background white
+	border 1px solid yellow
+	color yellow 
+.organizator-row
+	display flex
+.organizator-row__el
+	margin-right 90px
+.organizator__title
+	margin-bottom 10px
+.organizator__gid
+	margin-top 5px
+.text--green
+	color #390
+.note-inform
+	color #00b1dd
+	&:hover
+		cursor pointer
+.block-meassage
+	display flex
+	align-items center
+	margin-bottom 15px
+.block-meassage__icon
+	padding 10px
+	padding-bottom 12px
+.block-meassage_icon--red
+	color red
+	background-color #fededf
+	border-bottom 2px solid #fab7b9
+	.block-meassage__text 
+		color red
+.block-meassage_icon--green
+	color #390
+	background-color #e0efd8
+	border-bottom 2px solid #d6e8d0
+	.block-meassage__text 
+		color #390
+.text-block--people-inf
+	width 370px
+	margin-bottom 15px
+.pay__main-form
+	> input
+		width 330px
+		margin-bottom 30px
+	textarea
+		width 490px	
+		margin-bottom 15px
+	label
+		display block
+		margin-bottom 5px
+		width 100%
+.text__securiti 
+	text-align right
+	margin-top -20px
+	width 100%
+.payment
+	width 360px
+	display flex
+	fw()
+	input
+		display inline
+.payment--el
+	width 50%
+	flexB(mid)
+	margin-bottom 30px
+	justify-content flex-start
+.payment--img
+	margin-left 20px
+.text__suggestions
+	width 480px
+.suggestions
+	margin-bottom 20px
+.suggestions__el
+	margin-bottom 10px
+	span
+		margin-left 10px
+		font-size 12px
+.btn-main--inline
+	display inline-block
+.pay-phone
+	flexB(between)
+	input
+		width 330px
+	.btn-main
+		padding 5px 10px
+		margin-top 30px
+		margin-bottom 10px
+.pay-phone__text
+	width 300px
+.pay-phone__el
+	label
+		margin-bottom 10px
+.modal-payment__user
+	padding 15px
+	color #003580
+	font-size 14px
+	font-weight 400
+	line-height 24px
+	background-color #e2edf9
+	border-radius 8px
+	i
+		margin-right 10px
+		font-size 24px
+.modal-payment__garant
+	display flex
+	i
+		color #55af32
+		margin-right 10px
+		
+.modal-payment
+	width 700px
+	display none
+	max-width 700px
+	padding-bottom 50px
+.text
+	width 100%
+	margin 10px 0
+	
+.tooltip
+	position relative
+	transition all  .4s
+	&:hover
+		.tooltip__content
+			display block
+			transform translateY(0px);
+			opacity 1
+			visibility visible
+.tooltip__content
+	visibility hidden
+	opacity 0
+	transition all .8s
+	transform translateY(20px);
+	position absolute
+	top 110%
+	font-family Open Sans
+	padding 20px
+	color white
+	background rgba(34, 34, 34, 0.8)
+	width 350px
+	z-index 9999
+	font-size 14px
+	font-weight 400
+	line-height 24px
+	left -185px
+	border-radius 8px
 	
 //.top-menu__user-exit

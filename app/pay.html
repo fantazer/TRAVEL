@@ -30,6 +30,12 @@
   <!--			label(for='filter#{numb}') -->
   <!--				span-->
   <!--			text #{text}-->
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
   <div class="top-menu main__header">
     <div class="main-cont">
       <div class="top-menu-wraper">
@@ -84,109 +90,185 @@
     </div>
   </div>
   <div class="main-cont">
-    <div class="lk-title">Настройка профиля</div>
-    <div class="lk-wraper">
-      <div class="lk-left">
-        <div class="lk-left-el lk-left-el-profil">
-          <div class="lk-left-el-title">Мой профиль</div>
-          <div class="lk-left-el-sub"><a href="#">Личная страница</a><a href="#">Оплаченные заказы</a><a href="#">Настройки</a></div>
+    <div class="lk-title">Подтверждение бронирования</div>
+    <div class="content-wraper">
+      <div class="content-left content-left--white">
+        <div class="text bold"> Индивидуальная  экскурсия</div>
+        <div class="templ-exc">
+          <div class="templ-exc__img"><img src="img/otel-item.jpg" alt=""/></div>
+          <div class="templ-exc__info">
+            <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-thumbs-up tooltip">
+                <div class="tooltip__content">Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.</div></i></div>
+            <div class="templ-exc__name">Иерусалим  христианский и Вифлеем</div>
+          </div>
         </div>
-        <!--.lk-left-el-->
-        <!--	a(href="#").lk-left-el-title Корзина-->
-        <!--.lk-left-el-->
-        <!--	a(href="#").lk-left-el-title Брони-->
-        <div class="lk-left-el"><a href="#" class="lk-left-el-title">Избранное</a></div>
+        <div class="divider"></div>
+        <div class="title__get-exc">Заказ экскурсии</div>
+        <div class="title__get-exc title__get-exc--sm">Индивидуальная экскурсия</div>
+        <form action="" class="pay-filter-form">
+          <input type="text" placeholder="Дата" readonly="readonly" class="input-date"/>
+          <select class="select">
+            <option data-display="Время">Нет</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+          </select>
+          <select class="select">
+            <option data-display="Взрослые">Нет</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <select class="select">
+            <option data-display="Дети">Нет</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <select class="select">
+            <option data-display="Тип машины">Нет</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </form>
+        <div class="pay__val">RUB 1 788</div>
+        <div class="text">Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.</div>
       </div>
-      <div class="lk-right">
-        <div class="lk-right-content">
-          <div class="lk-list">
-            <div class="lk-list-title"><span>Открыть подробно </span><a href="#">ВСЕ ЭКСКУРСИИ</a></div>
-            <div class="lk-list-el">
-              <div class="lk-list-el-check">
-                <input id="lk-list-0" type="checkbox" name="rr"/>
-                <label for="lk-list-0"> <span></span></label>
-              </div>
-              <div class="lk-list-el-wraper">
-                <div class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></div>
-                <div class="lk-list-el-info"><a href="#" class="lk-list-el-info-title">Страна город / Название экскурсии</a>
-                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
-                </div>
-                <div class="lk-list-el-price">
-                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплачено</a>
-                </div>
-              </div>
-              <div class="lk-list-el-bottom">
-                <div class="lk-list-el-modal">Изменить</div>
-                <div class="lk-list-el-modal">Отменить </div>
-              </div>
+      <div class="content-right content-right--white">
+        <div class="big-title">Иерусалим христианский и Вифлеем</div>
+        <div class="text">Вы вошли как неавторизованный пользовователь</div>
+        <div class="pay__row-btn"><a href="#" class="btn-main">Войти</a><a href="#" class="btn-main btn-main--empty">Зарегистрироваться</a></div>
+        <div class="text">Вы можете продолжить бронирование регистрация будет оформлена автоматически</div>
+        <div class="divider"></div>
+        <div class="text bold">Данные организатора</div>
+        <div class="organizator-row">
+          <div class="organizator-row__el">
+            <div class="organizator__title">Организатор</div>
+            <div class="organizator__el">
+              <div class="organizator__icon"><img src="img/organizator-icon.png" alt=""/></div>
+              <div class="organizator__link"><a href="#">booking.com</a></div>
             </div>
-            <div class="lk-list-el">
-              <div class="lk-list-el-check">
-                <input id="lk-list-1" type="checkbox" name="rr"/>
-                <label for="lk-list-1"> <span></span></label>
-              </div>
-              <div class="lk-list-el-wraper">
-                <div class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></div>
-                <div class="lk-list-el-info"><a href="#" class="lk-list-el-info-title">Страна город / Название экскурсии</a>
-                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
-                </div>
-                <div class="lk-list-el-price">
-                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплачено</a>
-                </div>
-              </div>
-              <div class="lk-list-el-bottom">
-                <div class="lk-list-el-modal">Изменить</div>
-                <div class="lk-list-el-modal">Отменить </div>
-              </div>
-            </div>
-            <div class="lk-list-el">
-              <div class="lk-list-el-check">
-                <input id="lk-list-2" type="checkbox" name="rr"/>
-                <label for="lk-list-2"> <span></span></label>
-              </div>
-              <div class="lk-list-el-wraper">
-                <div class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></div>
-                <div class="lk-list-el-info"><a href="#" class="lk-list-el-info-title">Страна город / Название экскурсии</a>
-                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
-                </div>
-                <div class="lk-list-el-price">
-                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплачено</a>
-                </div>
-              </div>
-              <div class="lk-list-el-bottom">
-                <div class="lk-list-el-modal">Изменить</div>
-                <div class="lk-list-el-modal">Отменить </div>
-              </div>
-            </div>
-            <div class="lk-list-el">
-              <div class="lk-list-el-check">
-                <input id="lk-list-3" type="checkbox" name="rr"/>
-                <label for="lk-list-3"> <span></span></label>
-              </div>
-              <div class="lk-list-el-wraper">
-                <div class="lk-list-el-img"><img src="img/otel-item-2.jpg" alt=""/></div>
-                <div class="lk-list-el-info"><a href="#" class="lk-list-el-info-title">Страна город / Название экскурсии</a>
-                  <div class="lk-list-el-info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. sint, iure doloremque assumenda delectus odio sit voluptatibus placeat consequuntur tenetur. </div>
-                </div>
-                <div class="lk-list-el-price">
-                  <div class="lk-list-el-val">$ 400</div><a href="#" class="btn-main">Оплачено</a>
-                </div>
-              </div>
-              <div class="lk-list-el-bottom">
-                <div class="lk-list-el-modal">Изменить</div>
-                <div class="lk-list-el-modal">Отменить </div>
+          </div>
+          <div class="organizator-row__el">
+            <div class="organizator__title">Гид</div>
+            <div class="organizator__el">
+              <div class="organizator__icon"><img src="img/gid.jpg" alt=""/></div>
+              <div class="organizator__link">
+                  <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="organizator__gid">Мария</div>
               </div>
             </div>
           </div>
-          <div class="lk-list-mail">
-            <div class="mid-title">Выслать список на e-mail</div>
-            <form action="" class="lk-list-mail-form">
-              <input type="text"/>
-              <button class="btn-main">Отправить</button>
-            </form>
-          </div>
-          <div class="lk-right-bottom"><a href="#" class="lk-right-bottom-el">Забронировать отель</a><a href="#" class="lk-right-bottom-el">Забронировать билет</a><a href="#" class="lk-right-bottom-el">Найти экскурси</a></div>
         </div>
+        <div class="divider"></div>
+        <div class="text text--green"><span class="bold">БЕСПЛАТНАЯ отмена бронирования <i class="fa fa-info-circle note-inform tooltip">
+              <div class="tooltip__content"> <span class="bold">Отмена бронирования:</span> Вы можете беслатно отменить броинрование в срок вплоть до 2 дней</div></i></span><br/><span>Вы можете легко отменить или изменить бронирование бесплатно! Просто пройдите по ссылке в вашем электронном подтверждении.</span></div>
+        <div class="block-meassage block-meassage_icon--red">
+          <div class="block-meassage__icon"><i class="fa fa-exclamation-triangle"></i></div>
+          <div class="block-meassage__text">Внимание это последняя свободная экскурсия организатора!</div>
+        </div>
+        <div class="block-meassage block-meassage_icon--red">
+          <div class="block-meassage__icon"><i class="fa fa-users"></i></div>
+          <div class="block-meassage__text">4 других пользователя тоже рассматривают этот вариант для бронирования</div>
+        </div>
+        <div class="block-meassage block-meassage_icon--green">
+          <div class="block-meassage__icon"><i class="fa fa-check"></i></div>
+          <div class="block-meassage__text">Сегодня оплата в полном размере не требуется. Вы платите гиду на экскурсии.</div>
+        </div>
+        <div class="block-meassage block-meassage_icon--green">
+          <div class="block-meassage__icon"><i class="fa fa-thumbs-up"></i></div>
+          <div class="block-meassage__text">При оплате в полном объеме вы экономите значительную сумму</div>
+        </div>
+        <div class="block-meassage block-meassage_icon--green">
+          <div class="block-meassage__icon"><i class="fa fa-thumbs-up"></i></div>
+          <div class="block-meassage__text">Если вы вносите предоплату - ваша экскурсия гарантировано состоится!!!</div>
+        </div>
+        <div class="divider"></div>
+        <form action="#" class="pay__main-form">
+          <div class="text bold">Введите свои данные</div>
+          <div class="text-block--people-inf">Взрослый 1 (Основной гость) Укажите свое имя и фамилию (как в паспорте) Имя (используйте только буквы латинского алфавита)Введите имя одного из гостей, который будет проживать в этом номере.</div>
+          <input type="text"/>
+          <label>Фамилия (используйте только буквы латинского алфавита)</label>
+          <input type="text"/>
+          <label>E-mail</label>
+          <input type="text"/>
+          <label>Пароль</label>
+          <input type="text"/>
+          <label>Номер телефона</label>
+          <input type="text"/>
+          <div class="text__securiti">Ваше бронирование в полной безопасности.</div>
+          <div class="divider"></div>
+          <div class="text bold">Способ оплаты:</div>
+          <div class="text bold">Полная оплата</div>
+          <div class="text">Итого: <span class="bold">12 456 руб</span></div>
+          <div class="divider"></div>
+          <div class="text bold">Способ оплаты:</div>
+          <div class="text">Оплата гиду на месте</div>
+          <div class="divider"></div>
+          <div class="text bold">Онлайн оплата через</div>
+          <div class="payment">
+            <div class="payment--el">
+              <div class="payment--check">
+                <input type="checkbox"/>
+              </div>
+              <div class="payment--img"><img src="img/pay-visa.png" alt=""/></div>
+            </div>
+            <div class="payment--el">
+              <div class="payment--check">
+                <input type="checkbox"/>
+              </div>
+              <div class="payment--img"><img src="img/pay-master.png" alt=""/></div>
+            </div>
+            <div class="payment--el">
+              <div class="payment--check">
+                <input type="checkbox"/>
+              </div>
+              <div class="payment--img"><img src="img/pay-yandex.png" alt=""/></div>
+            </div>
+            <div class="payment--el">
+              <div class="payment--check">
+                <input type="checkbox"/>
+              </div>
+              <div class="payment--img"><img src="img/pay-paypal.png" alt=""/></div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="text bold">Оплата через телефон</div>
+          <div class="pay-phone">
+            <div class="pay-phone__el">
+              <label>Номер телефона</label>
+              <input type="text"/>
+              <div class="pay-phone__btn"><a href="#" class="btn-main btn-main--inline"> Выслать проверочный код</a></div>
+              <label>Введите код</label>
+              <input type="text"/>
+            </div>
+            <div class="pay-phone__text">
+              <div class="text">Ваш гид свяжется с вами в течении сегодняшнего дня, если вы не ответите - бронь будет снята.</div>
+              <div class="text">За 2 дня до даты экскурсии наш гид свяжется с вами для уточнения намерений, если вы не ответите в течении этого дня - бронь будет снята.</div>
+              <div class="text">Если у вас не будет возможности ответить в этот день, просим вас предупредить об этом администрацию сайта или вашего гида.</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="text bold">Расскажите нам о ваших особых пожеланиях</div>
+          <p class="text__suggestions">Расскажите нам о ваших особых пожеланиях <br> Пожалуйста, напишите свои запросы на английском или на иврите.Администрация объекта размещения не может гарантировать выполнение особых пожеланий, но сделает для этого все возможное.</p>
+          <textarea name="" cols="30" rows="10"></textarea>
+          <div class="suggestions">
+            <div class="suggestions__el">
+              <input type="checkbox"/><span>Я хочу получать информацию об акциях, скидках, а также бесплатные советы и рекомендации</span>
+            </div>
+            <div class="suggestions__el">
+              <input type="checkbox"/><span>3 чек-бокс</span>
+            </div>
+            <div class="suggestions__el">
+              <input type="checkbox"/><span>Нажав на кнопку готово, я подтверждаю свой заказ</span>
+            </div>
+            <div class="btn-main btn-main--inline get-modal-payment"> Подтвердить покупку</div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

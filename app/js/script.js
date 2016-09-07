@@ -21,6 +21,37 @@
 
 $(document).ready(function(){
 
+//show message on leave page
+
+	function addEvent(obj, evt, fn) {
+	    if (obj.addEventListener) {
+	        obj.addEventListener(evt, fn, false);
+	    }
+	    else if (obj.attachEvent) {
+	        obj.attachEvent("on" + evt, fn);
+	    }
+	}
+	var viewPage = true;
+	
+	addEvent(window,"load",function(e) {
+	    addEvent(document, "mouseout", function(e) {
+	        e = e ? e : window.event;
+	        var from = e.relatedTarget || e.toElement;
+	        if (!from || from.nodeName == "HTML") {
+	        		if (viewPage === true) {
+			            $('.modal-payment').bPopup({
+			            		closeClass:'fa',
+			            			position:['auto','auto'], // position center
+			            		follow: [true,false]
+			            }); 
+	            	 return viewPage = false;
+					};
+	        }
+	    });
+	});
+		   
+//added select
+$('.select').niceSelect();
 
 //remove_message
 $('.exc-tools__close').click(function(){
@@ -239,6 +270,7 @@ var hideToggle = function(targetClick,toggleEl) {
 		}
 	})
 
+	
 
 	$('.get-bron').click(function(){
 		$('.modal-order').bPopup({
