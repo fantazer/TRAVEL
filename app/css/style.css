@@ -1183,14 +1183,14 @@ input[type="checkbox"]:checked + label span {
 .main-cont {
   *zoom: 1;
   width: auto;
-  max-width: 1180px;
+  max-width: 1190px;
   float: none;
   display: block;
   margin-right: auto;
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  width: 1180px !important;
+  width: 1190px !important;
 }
 .main-cont:before,
 .main-cont:after {
@@ -1202,7 +1202,7 @@ input[type="checkbox"]:checked + label span {
 }
 .main-head {
   position: relative;
-  min-width: 1180px;
+  min-width: 1190px;
 }
 .main-head .toggle-top-menu {
   display: none !important;
@@ -1249,14 +1249,14 @@ input[type="checkbox"]:checked + label span {
 .main-head-cont {
   *zoom: 1;
   width: auto;
-  max-width: 1180px;
+  max-width: 1190px;
   float: none;
   display: block;
   margin-right: auto;
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  max-width: 1180px !important;
+  max-width: 1190px !important;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2064,7 +2064,7 @@ div[class*="main-type"] {
   margin-bottom: 20px;
 }
 .result-wraper {
-  padding: 20px;
+  padding: 20px 40px 30px;
   background: #fff;
   -webkit-box-shadow: 0px 2px 3px #e1e1e1;
           box-shadow: 0px 2px 3px #e1e1e1;
@@ -2074,15 +2074,11 @@ div[class*="main-type"] {
   display: flex;
 }
 .result-left {
-  width: 75%;
+  width: 800px;
 }
 .result-right {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  margin-left: 20px;
-  width: 25%;
+  margin-left: 30px;
+  width: 275px;
 }
 .result-right p {
   font-size: 14px;
