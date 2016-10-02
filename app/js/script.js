@@ -21,6 +21,9 @@
 
 $(document).ready(function(){
 
+//scroll fix
+
+$(".content-left--fix").sticky({topSpacing:0});
 //show message on leave page
 
 	function addEvent(obj, evt, fn) {

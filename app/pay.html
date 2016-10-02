@@ -92,51 +92,53 @@
   <div class="main-cont">
     <div class="lk-title">Подтверждение бронирования</div>
     <div class="content-wraper">
-      <div class="content-left content-left--white">
-        <div class="text bold"> Индивидуальная  экскурсия</div>
-        <div class="templ-exc">
-          <div class="templ-exc__img"><img src="img/otel-item.jpg" alt=""/></div>
-          <div class="templ-exc__info">
-            <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-thumbs-up tooltip">
-                <div class="tooltip__content">Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.</div></i></div>
-            <div class="templ-exc__name">Иерусалим  христианский и Вифлеем</div>
+      <div class="content-left content-left--white content-left--fix-wraper">
+        <div class="content-left--fix">
+          <div class="text bold"> Индивидуальная  экскурсия</div>
+          <div class="templ-exc">
+            <div class="templ-exc__img"><img src="img/otel-item.jpg" alt=""/></div>
+            <div class="templ-exc__info">
+              <div class="filter-reting-stars"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-thumbs-up tooltip">
+                  <div class="tooltip__content">Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.</div></i></div>
+              <div class="templ-exc__name">Иерусалим  христианский и Вифлеем</div>
+            </div>
           </div>
+          <div class="divider"></div>
+          <div class="title__get-exc">Заказ экскурсии</div>
+          <div class="title__get-exc title__get-exc--sm">Индивидуальная экскурсия</div>
+          <form action="" class="pay-filter-form">
+            <input type="text" placeholder="Дата" readonly="readonly" class="input-date"/>
+            <select class="select">
+              <option data-display="Время">Нет</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+            </select>
+            <select class="select">
+              <option data-display="Взрослые">Нет</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <select class="select">
+              <option data-display="Дети">Нет</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <select class="select">
+              <option data-display="Тип машины">Нет</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </form>
+          <div class="pay__val">RUB 1 788</div>
+          <div class="text">Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.</div>
         </div>
-        <div class="divider"></div>
-        <div class="title__get-exc">Заказ экскурсии</div>
-        <div class="title__get-exc title__get-exc--sm">Индивидуальная экскурсия</div>
-        <form action="" class="pay-filter-form">
-          <input type="text" placeholder="Дата" readonly="readonly" class="input-date"/>
-          <select class="select">
-            <option data-display="Время">Нет</option>
-            <option>12:00</option>
-            <option>13:00</option>
-            <option>14:00</option>
-          </select>
-          <select class="select">
-            <option data-display="Взрослые">Нет</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
-          <select class="select">
-            <option data-display="Дети">Нет</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
-          <select class="select">
-            <option data-display="Тип машины">Нет</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
-        </form>
-        <div class="pay__val">RUB 1 788</div>
-        <div class="text">Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.</div>
       </div>
       <div class="content-right content-right--white">
         <div class="big-title">Иерусалим христианский и Вифлеем</div>
@@ -451,6 +453,7 @@
 <script src="bower/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js"></script>
 <script src="bower/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"> </script>
+<script src="bower/jquery-sticky/jquery.sticky.js"></script>
 <!-- endbuild-->
 
 <script src="js/script.js"></script>

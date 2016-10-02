@@ -10,52 +10,53 @@ body
 	.main-cont
 		.lk-title Подтверждение бронирования
 		.content-wraper
-			.content-left.content-left--white
-				.text.bold  Индивидуальная  экскурсия
-				.templ-exc
-					.templ-exc__img
-						img(src="img/otel-item.jpg", alt="")
-					.templ-exc__info
-						.filter-reting-stars
-							i.fa.fa-star.active
-							i.fa.fa-star.active
-							i.fa.fa-star.active
-							i.fa.fa-star.active
-							i.fa.fa-star.active
-							i.fa.fa-thumbs-up.tooltip
-								.tooltip__content Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.
+			.content-left.content-left--white.content-left--fix-wraper
+				.content-left--fix
+					.text.bold  Индивидуальная  экскурсия
+					.templ-exc
+						.templ-exc__img
+							img(src="img/otel-item.jpg", alt="")
+						.templ-exc__info
+							.filter-reting-stars
+								i.fa.fa-star.active
+								i.fa.fa-star.active
+								i.fa.fa-star.active
+								i.fa.fa-star.active
+								i.fa.fa-star.active
+								i.fa.fa-thumbs-up.tooltip
+									.tooltip__content Данный объект согласился стать участником программы “Приоритетные объекты размещения”. Приоритетные объекты размещения, кроме отличных услуг, так же предлагают хорошее соотношение цена/качество благодаря конкурентным ценам. Участие в программе соответствия ряду критериев и учитывает отзывы предыдущих гостей.
 
-						.templ-exc__name Иерусалим  христианский и Вифлеем
-				.divider
-				.title__get-exc Заказ экскурсии
-				.title__get-exc.title__get-exc--sm Индивидуальная экскурсия
-				form(action="").pay-filter-form
-					input(type="text" placeholder="Дата" readonly="readonly").input-date
-					select.select
-						option(data-display="Время") Нет
-						option 12:00
-						option 13:00
-						option 14:00
-					select.select
-						option(data-display="Взрослые") Нет
-						option 1
-						option 2
-						option 3
-						option 4
-					select.select
-						option(data-display="Дети") Нет
-						option 1
-						option 2
-						option 3
-						option 4
-					select.select
-						option(data-display="Тип машины") Нет
-						option 1
-						option 2
-						option 3
-						option 4
-				.pay__val RUB 1 788
-				.text Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.
+							.templ-exc__name Иерусалим  христианский и Вифлеем
+					.divider
+					.title__get-exc Заказ экскурсии
+					.title__get-exc.title__get-exc--sm Индивидуальная экскурсия
+					form(action="").pay-filter-form
+						input(type="text" placeholder="Дата" readonly="readonly").input-date
+						select.select
+							option(data-display="Время") Нет
+							option 12:00
+							option 13:00
+							option 14:00
+						select.select
+							option(data-display="Взрослые") Нет
+							option 1
+							option 2
+							option 3
+							option 4
+						select.select
+							option(data-display="Дети") Нет
+							option 1
+							option 2
+							option 3
+							option 4
+						select.select
+							option(data-display="Тип машины") Нет
+							option 1
+							option 2
+							option 3
+							option 4
+					.pay__val RUB 1 788
+					.text Цена в руб. — это приблизительная сумма, рассчитанная на основе сегодняшнего курса валют Банк-эмитент, выдавший вашу карту, может взимать комиссию за операцию в иностранной валюте.
 			.content-right.content-right--white
 				.big-title Иерусалим христианский и Вифлеем
 				.text Вы вошли как неавторизованный пользовователь

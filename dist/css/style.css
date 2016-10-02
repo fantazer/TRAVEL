@@ -662,6 +662,10 @@ input[type="checkbox"]:checked + label span {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .content-left {
@@ -6563,6 +6567,22 @@ button.btn-main {
   left: -185px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+}
+
+.content-left--fix {
+  background: #fff;
+  padding: 0 10px 10px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: 242px !important;
+  -webkit-box-shadow: 0px 2px 3px #e1e1e1;
+  box-shadow: 0px 2px 3px #e1e1e1;
+}
+
+.content-left--fix-wraper {
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  padding-bottom: 0;
 }
 
 @font-face {
