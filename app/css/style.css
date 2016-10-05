@@ -5780,3 +5780,38 @@ hr {
           box-shadow: 0 0 0;
   padding-bottom: 0;
 }
+.toast__wraper-cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.toast__wraper-img {
+  width: 15%;
+  margin-right: 5px;
+}
+.toast__wraper-text {
+  width: 70%;
+}
+.jq-toast-single {
+  background: #fffee5;
+  border: 1px solid #222;
+}
+.toast__wraper {
+  display: none;
+}
+.TPWL-ui-tabs-x_badge {
+  width: 14px !important;
+  height: 14px !important;
+  text-align: center !important;
+  line-height: 16px !important;
+}
+.TPWL-ui-tabs-history-list li {
+  border-right: 1px solid #c1c1c1 !important;
+  width: 145px !important;
+  padding-top: 5px !important;
+  height: 50px !important;
+}
+.TPWL-layout-row.TPWL-layout-content {
+  margin-top: 40px !important;
+}

@@ -21,6 +21,23 @@
 
 $(document).ready(function(){
 
+
+//show message in left part 
+	var arrToast = [];
+	$('.toast__wraper-el').each(function(){
+		arrToast.push($(this).html());
+	})
+	arrToast.forEach(function(item,i){
+		setTimeout(function(){
+				$.toast({
+				  	text : item,
+				 	loader: false,
+				 	hideAfter: 900000,
+				})
+			},(i+1)*5000)
+	})
+
+
 //scroll fix
 
 $(".content-left--fix").sticky({topSpacing:0});
@@ -59,7 +76,6 @@ $('.select').niceSelect();
 //remove_message
 $('.exc-tools__close').click(function(){
 	$(this).closest('.exc-tools__el').remove();
-	console.log('msg')
 })
 //Change preview
 $('.content-right-found-img-small-el img').click(function(){
@@ -75,17 +91,6 @@ $('.rating-toooltip-bar').each(function(){
 setTimeout(function(){
 	$('.result-left-alert').slideDown()
 },4000)
-//message view
-var message = function(){
-	$.toast({
-		heading: 'Забронировать номер',
-	  text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate impedit, provident minima enim. Dignissimos, saepe quos dolorum repellat, commodi vel.",
-	 loader: false,
-	 hideAfter: 9000,
-	})
-}
-setTimeout(message,2000)
-
 
 //viewport el animate
 	$('.el-scroll-hide').viewportChecker({
