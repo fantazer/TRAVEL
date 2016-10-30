@@ -21,9 +21,31 @@
 
 $(document).ready(function(){
 
+//addig scripts for page Town
+$(".container-town-slider").owlCarousel({
+	 	touchDrag  : false,
+    	mouseDrag  : false,
+    	items : 1,
+	 	pagination : false,
+	 	autoplay:false,
+	 	singleItem:true,
+	 	}
+	 );  
+$(".town__slider").owlCarousel({
+	 	items : 5,
+	 	pagination : false,
+	 	autoplay:true,
+    	autoplayTimeout:10000,
+	 	loop:true,
+	 	margin:30,
+	 	 nav:true,
+	 		navText:['<img src="img/slider-left.png">','<img src="img/slider-right.png">']
+	 	}
+	 );
+//addig scripts for page Town
 
 //show message in left part 
-	var arrToast = [];
+/*	var arrToast = [];
 	$('.toast__wraper-el').each(function(){
 		arrToast.push($(this).html());
 	})
@@ -36,14 +58,14 @@ $(document).ready(function(){
 				})
 			},(i+1)*5000)
 	})
-
+*/
 
 //scroll fix
 
 $(".content-left--fix").sticky({topSpacing:0});
 //show message on leave page
 
-	function addEvent(obj, evt, fn) {
+/*	function addEvent(obj, evt, fn) {
 	    if (obj.addEventListener) {
 	        obj.addEventListener(evt, fn, false);
 	    }
@@ -68,7 +90,7 @@ $(".content-left--fix").sticky({topSpacing:0});
 					};
 	        }
 	    });
-	});
+	});*/
 		   
 //added select
 $('.select').niceSelect();

@@ -1,0 +1,676 @@
+
+<!--Include style--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <!--meta(name='viewport' content="width=device-width, initial-scale=1")-->
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <!--build:css css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower/easydropdown/themes/easydropdown.css"/>
+    <link rel="stylesheet" href="bower/nouislider/distribute/nouislider.min.css"/>
+    <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css"/>
+    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"/>
+    <link rel="stylesheet" href="bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css"/>
+    <link rel="stylesheet" href="bower/jquery-toast-plugin/dist/jquery.toast.min.css"/>
+    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css"/>
+    <!--endbuild-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/ptsans.css"/>
+    <link rel="stylesheet" href="http://webfonts.ru/import/opensans.css"/>
+  </head>
+</html>
+<body>
+  <!--Include header-->
+  <!--mixin filterLine(numb,text)-->
+  <!--	.filter-type-el-->
+  <!--			input(id='filter#{numb}', type='checkbox', name='rr')-->
+  <!--			label(for='filter#{numb}') -->
+  <!--				span-->
+  <!--			text #{text}-->
+  <div class="main-head container-town">
+    <div class="main-head-slider owl-carousel container-town-slider">
+      <!--El of slider-->
+      <div style="background-image: url('img/main-head-bg-1.jpg')" class="main-head-slider-el">
+        <div class="main-head-filter"></div>
+        <div class="main-cont">
+          <div class="main-head-slider-content">
+            <div class="main-head-slider-country">Италия</div>
+            <div class="main-head-slider-name">Красная поляна</div>
+            <div class="main-head-slider-days">Город влюбленных голубков и сизых голубей</div>
+            <div class="main-head-slider-simple">Дешевые гостиницы в Милане от</div>
+            <div class="main-head-slider-cost">
+              <div class="main-head-slider-cost-value"><span class="main-head-slider-val">16 494 $</span></div>
+            </div>
+            <div class="main-head-slider-simple__small">на человека</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-head-content">
+      <!--Top menu-->
+      <div class="main-head-fullwidth">
+        <div class="main-head-cont"><i class="fa fa-bars toggle-top-menu"></i>
+          <div class="main-head-cont-logo"><a href="#" class="main-head-cont-logo-img"><img src="img/traveller-logo.png" alt=""/></a></div>
+          <div class="main-head-cont-menu main-cont"><a href="#"> <span>авиабилеты</span></a><a href="#"> <span>гостиницы</span></a><a href="#"> <span>экскурсии</span></a><a href="#"> <span>страховка</span></a>
+            <div class="top-menu__more">ЕЩЕ<i class="fa fa-angle-down"></i>
+              <div class="top-menu__more-wrap"><a href="#" class="top-menu__more-el">Туры</a><a href="#" class="top-menu__more-el">авто</a><a href="#" class="top-menu__more-el">автобусы</a><a href="#" class="top-menu__more-el">трансфер</a></div>
+            </div>
+            <div class="top-menu-money">RUB<i class="fa fa-angle-down"></i></div>
+          </div>
+          <div class="main-head-cont-enter">Вход</div>
+          <div class="log-wraper-main">
+            <form action="" id="login-form">
+              <input type="text" placeholder="E-mail"/>
+              <input type="password" placeholder="Пароль"/>
+              <div class="log-wraper-enemy">
+                <input id="login" type="checkbox" name="rr"/>
+                <label for="login"> <span></span></label><span>Запомнить меня</span>
+              </div>
+              <button>Вход</button>
+              <div class="log-wraper-remember">
+                <div class="log-wraper-remember-el">
+                  <input id="login" type="checkbox" name="rr"/>
+                  <label for="login"> <span></span></label><span>Чужой компьютер</span>
+                </div>
+                <div class="log-wraper-remember-el"><a href="#">Востановить пароль</a></div>
+              </div>
+              <div class="log-registration"><span class="registration-trigger">Зарегистрироваться </span><span>для полного доступа к сервисам</span></div>
+              <div class="log-social-title">Авторизоваться через соц. сети</div>
+              <div class="log-social"><a href="#"><img src="img/soc/facebook.png" alt=""/></a><a href="#"><img src="img/soc/vk.png" alt=""/></a><a href="#"><img src="img/soc/twitter.png" alt=""/></a><a href="#"><img src="img/soc/google-plus.png" alt=""/></a><a href="#"><img src="img/soc/instagram.png" alt=""/></a></div>
+            </form>
+            <form action="" id="registration-form">
+              <input type="text" placeholder="Фамилия"/>
+              <input type="text" placeholder="Имя"/>
+              <input type="text" placeholder="E-mail"/>
+              <input type="password" placeholder="Пароль"/>
+              <input type="text" placeholder="Телефон"/>
+              <input type="text" placeholder="Проверочный код"/>
+              <div class="registr-text">Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.</div>
+              <button>Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="head-form">
+        <div class="main-cont">
+          <script src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Main container -->
+  <div class="main-cont container-town">
+    <div class="town-info">
+      <div class="town-wrapper">
+        <!--Left col-->
+        <div class="town-wrapper__col-left">
+          <div class="town-wrapper__col-info">
+            <div class="type type--lg type--blue">Милан</div>
+            <p> Бедный Милан (на самом деле конечно очень богатый) – он изо всех сил старается победить в соревновании на звание лучшего итальянского города, оставив позади Рим, Флоренцию и Венецию. Но у него все не получается, и, честно говоря, мутноватый квартал рядом с железнодорожным вокзалом победе не способствует. Но если вы возьмете себя в руки и перестанете сравнивать, то тут же влюбитесь в Милан. Жизнь в столице моды течет гораздо быстрее, чем в других частях Италии, но и тут можно притормозить и насладиться долче-витой – в бесчисленных кафе с террасами на улице, ухоженных парках, модных ресторанах и бутиках с последними новинками сезона. Модницы с головой погрузятся в магазины квартала Квадрилатеро, гурманы сделают все, чтобы заполучить столик в лучших ресторанах города, а то и страны и мира. Поднимитесь на крушу Дуомо – это поистине религиозный опыт. А чтобы проанализировать впечатления – идите в одно из кафе вдоль каналов квартала Навильи.</p>
+            <div class="type type--pink">В Милане придумали аперитив – мероприятие, что-то вроде счастливого часа, когда ты платишь за напиток, а в качестве бонуса получаешь закуски и кучу собеседников.</div>
+          </div>
+          <div class="wather-cont">
+            <div class="wather-el">
+              <div class="wather-title">Погода: Декабрь</div>
+              <div class="wather-info">
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Температура</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-thermometer.png" alt=""/></div>
+                    <div class="wather-info-item__text">0 - 3 °С</div>
+                  </div>
+                </div>
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Засушливые дни</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-sun.png" alt=""/></div>
+                    <div class="wather-info-item__text">21</div>
+                  </div>
+                </div>
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Осадки</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-rain.png" alt=""/></div>
+                    <div class="wather-info-item__text">42 mm</div>
+                  </div>
+                </div>
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Снежные дни</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-snow.png" alt=""/></div>
+                    <div class="wather-info-item__text">2</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wather-el">
+              <div class="wather-title">Демография</div>
+              <div class="wather-info">
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Население</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-user.png" alt=""/></div>
+                    <div class="wather-info-item__text">0 - 3 °С</div>
+                  </div>
+                </div>
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Местное время</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-clock.png" alt=""/></div>
+                    <div class="wather-info-item__text">0 - 3 °С</div>
+                  </div>
+                </div>
+                <div class="wather-info-item">
+                  <div class="wather-info-item__title">Валюта</div>
+                  <div class="wather-info-item__row">
+                    <div class="wather-info-item__icon"><img src="img/i-m-data.png" alt=""/></div>
+                    <div class="wather-info-item__text">0 - 3 °С</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Right col-->
+        <div class="town-wrapper__col-right"><img src="img/milan.png" alt=""/>
+          <div class="town-text-pay">
+            <div class="type type--blue">Милан: сколько стоит здесь жить?</div>
+            <div class="town-text-pay__info">
+              <div class="town-text-pay__el">
+                <p>Еда</p>
+                <p>Еда в ресторане Милана стоит на 39% больше, чем еда в ресторане Москвы</p>
+              </div>
+              <div class="town-text-pay__el">
+                <p>Общественный транспорт</p>
+                <p>Обычная стоимость билета на общественный транспорт - 100 RUB</p>
+              </div>
+            </div><a href="#" class="town-text-pay__btn">Автомобиль на прокат <strong>1231 RUB/день </strong> на momodo</a>
+          </div>
+        </div>
+      </div>
+      <div class="town-info__border"></div>
+      <!-- 4-th block-->
+      <div class="type type--blue">Информация о перелете</div>
+      <div class="town-fly">
+        <div class="town-fly__el"><a href="#">
+            <div class="town-fly__el-icon"><img src="img/i-m-airplane.png" alt=""/></div>
+            <div class="town-fly__el-title">Авиакомпания</div>
+            <div class="town-fly__el-text">Популярные авиакомпании, летающие в Милан: Pobeda, Alitalia и Unknown Airline</div></a></div>
+        <div class="town-fly__el"><a href="#">
+            <div class="town-fly__el-icon"><img src="img/i-m-baggage.png" alt=""/></div>
+            <div class="town-fly__el-title">Трансфер</div>
+            <div class="town-fly__el-text">Комфортный и безопасный трансфер, доставит вас от аэропорта до места проживания</div></a></div>
+        <div class="town-fly__el"><a href="#">
+            <div class="town-fly__el-icon"><img src="img/i-m-hotel.png" alt=""/></div>
+            <div class="town-fly__el-title">Отели</div>
+            <div class="town-fly__el-text">Поиск отелей и сравнение цен от 26 сайтов бронирования</div></a></div>
+        <div class="town-fly__el"><a href="#">
+            <div class="town-fly__el-icon"><img src="img/i-m-big-ben.png" alt=""/></div>
+            <div class="town-fly__el-title">Экскурсии</div>
+            <div class="town-fly__el-text">Большой выбор экскурсий во всех уголках мира</div></a></div>
+      </div>
+    </div>
+  </div>
+  <!--Towns block-->
+  <div class="main-place">
+    <div class="main-cont">
+      <div class="main-wraper">
+        <!--!!!!! Change class for template(.main-type-one)-->
+        <!--Type One-->
+        <div class="main-place-row main-templ-one">
+          <div class="main-type-one-left"><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-1.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-5.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-3.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a></div>
+          <div class="main-type-one-right"><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-2.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-8.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-9.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a></div>
+        </div>
+        <!--Type Two-->
+        <div class="main-place-row main-templ-two">
+          <div class="main-type-two-left"><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-2.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-8.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-3.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a></div>
+          <div class="main-type-two-right"><a href="#" class="main-place-el">
+                <div class="main-place-el-filter"></div>
+                <div style="background-image: url(img/img-place-4.jpg)" class="main-place-el-img"></div>
+                <div class="main-place-el-content">
+                  <div class="baner-sale">
+                    <div class="baner-sale-title">сегодня</div>
+                    <div class="baner-sale-val">-52%</div>
+                    <div class="baner-sale-coner"></div>
+                  </div>
+                  <div class="main-place-country">Россия</div>
+                  <div class="main-place-name">Крым</div>
+                  <div class="main-place-days">1 ночь для двоих</div>
+                  <div class="main-place-cost">
+                    <div class="main-place-cost-value"><span class="main-place-from">от </span><span class="main-place-val">35 000</span><span class="main-place-rub">₽</span></div>
+                    <div class="main-place-cost-text"><span class="main-place-text">Тур</span></div>
+                  </div>
+                </div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-cont">
+    <div class="town-discr">
+      <div class="type type--lg type--blue">Лучшие отели Милана</div>
+      <!--Slider Town-->
+      <div class="town__slider-wrap"><a href="#" class="town__slider-all">Посмотреть все отели</a>
+        <div class="town__slider owl-carousel"><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a><a href="#">
+            <div class="town__slider-el">
+              <div style="background-image:url(img/item-hottel.jpg)" class="town__slider-img">
+                <div class="town__slider-info"><span>Рейтинг</span><span>8</span></div>
+              </div>
+              <div class="town__slider-rating"><i class="fa fa-star active"></i><i class="fa fa-star active"></i><i class="fa fa-star active"></i></div>
+              <div class="town__slider-text">Admiral Hotel Milan</div>
+            </div></a>
+        </div>
+      </div>
+      <div class="dashed-divider"></div>
+      <!--Content Town-->
+      <div class="type type--lg type--blue">Милан</div>
+      <div class="town-column-text">
+        <div class="town-column-intro">Модная столица Италии - Милан - это еще и популярный туристический, культурный и исторический центр, поражающий гостей современными зданиями - воплощением дизайна и технологий - и не уступающими им в грандиозности средневековыми памятниками архитектуры.</div>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.</p>
+      </div>
+    </div>
+    <!--Subs block-->
+    <div class="town-subs">
+      <div class="town-subs-info">
+        <div class="town-subs-title">Куда бы поехать следующий раз? Позвольте нам помочь вдохновить вас ...</div>
+        <div class="town-subs-text">Подпишитесь на нашу рассылку для советов и инструментов для путешествий, которые помогут вам открыть ваш мир и помогут вам путешествовать комфортнее.</div>
+      </div>
+      <div class="town-subs-link"><a href="#">Подписаться</a></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="main-cont">
+      <div class="footer-wraper">
+        <div class="footer-left"><a href="#">Помощь</a><a href="#">Конфиденциальность</a></div>
+        <div class="footer-right">Copyright © 2004-2016 Ots.ru.com TM</div>
+      </div>
+    </div>
+    <div class="toast__wraper">
+      <div class="toast__wraper-el">
+        <div class="toast__wraper-cont">
+          <div class="toast__wraper-img"><img src="img/clock-msg.png" alt=""/></div>
+          <div class="toast__wraper-text">Сообщение 1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aperiam dolore iste aut blanditiis earum amet odit consequatur, atque ad.</div>
+        </div>
+      </div>
+      <div class="toast__wraper-el">
+        <div class="toast__wraper-cont">
+          <div class="toast__wraper-img"><img src="img/clock-msg.png" alt=""/></div>
+          <div class="toast__wraper-text">Сообщение 1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aperiam dolore iste aut blanditiis earum amet odit consequatur, atque ad.</div>
+        </div>
+      </div>
+      <div class="toast__wraper-el">
+        <div class="toast__wraper-cont">
+          <div class="toast__wraper-img"><img src="img/clock-msg.png" alt=""/></div>
+          <div class="toast__wraper-text">Сообщение 1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aperiam dolore iste aut blanditiis earum amet odit consequatur, atque ad.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .mewtwo-hotels-container form{
+    	display: -webkit-box!important;
+    	display: -ms-flexbox!important;
+    	display: flex!important;
+    	-webkit-box-align:end!important;
+    	-ms-flex-align:end!important;
+    	align-items:flex-end!important;
+    	-ms-flex-wrap:wrap!important;
+    	flex-wrap:wrap!important;
+    }
+    .mewtwo-widget .mewtwo-hotels-submit_button{
+    	width: auto!important;
+    }
+    .mewtwo-hotels{background:inherit !important;}
+    	.mewtwo-hotels-container form div:nth-of-type(5){
+    		display: inline-block!important;
+    	}
+    .mewtwo-hotels-container form div:nth-of-type(5) button{
+    	background: #FFDB4D!important;
+    	color: black !important;
+    	display: inline!important;
+    	width: 100%!important;
+    	height: 35px!important;
+    	border: none!important;
+    	border-radius: 0px 3px 3px 0px!important;
+    	box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
+    	font-weight: 600!important;
+    	font-size: 14px !important;
+    	line-height: 3px!important;
+    	box-sizing: border-box!important;
+    	margin-top: 1px;
+    	padding: 0 6px!important;
+    }
+    	.mewtwo-hotels-container form div:nth-of-type(5) button:hover{
+    		background: #feba26 !important;
+    	}
+    .mewtwo-widget .mewtwo-hotels-city{
+    	margin-right: 20px!important;
+    	width: 35%!important;
+    }
+    .mewtwo-hotels-dates,
+    .mewtwo-hotels-guests{
+    	
+    }
+    .hotels-destination-884ffd3f13542596ff6c56055ea9f7d6{
+    	border-radius:5px!important;
+    }
+    .mewtwo-widget .mewtwo-hotels-dates-checkin{
+    width: 170px!important;
+    margin-right: 10px !important;
+    }
+    .mewtwo-widget .mewtwo-hotels-guests,
+    .mewtwo-widget .mewtwo-hotels-dates{
+    	margin-right: 0!important;
+    }
+    .mewtwo-widget .mewtwo-hotels-city>input{
+    	border: 0!important;
+    	box-shadow:0 0 0!important;
+    	border-radius: 0 !important;
+    }
+    .mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]{
+    	border-radius: 5px !important;
+    	border-right:1px solid #F1ECEC!important;
+    }
+    .mewtwo-hotels-container form div:nth-of-type(5) button{
+    	
+    }
+    .mewtwo-widget .mewtwo-hotels-dates{
+    	width: 32% !important;
+    }
+    .mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]:nth-child(1){
+    	border-radius: 3px 0px 0px 3px!important;
+    	
+    }
+    #hotels-form-884ffd3f13542596ff6c56055ea9f7d6{
+    	padding: 20px!important;
+    	background: rgba(32, 31, 31, 0.63)!important;
+    }
+    
+    .mewtwo-widget .mewtwo-hotels-dates-checkout{
+    	width: 175px !important;
+    }
+    
+    .mewtwo-hotels-container form div:nth-of-type(5) button{
+    	width:195px!important;
+    	background-color: #feb20e!important;
+    	border-radius :4px!important;
+    	color:white!important;
+    	font-family: Arial!important;
+    	font-size: 16px!important;
+    	font-weight: 400!important;
+    	margin-left: 9px!important;
+    }
+    
+    
+    @media only screen and (max-width: 1024px) {
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+    		width: 50% !important;
+    	}
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+    	    width: 30%!important;
+    	}
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-submit_button{
+    		width: 20%!important;
+    	}
+    }
+    @media only screen and (max-width: 768px) {
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+    		width: 100% !important;
+    	}
+    	.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+    	    width: 100%!important;
+    	}
+    	.mewtwo-hotels-container form div:nth-of-type(5) button{
+    		width: 100%!important;
+    		margin-top: 15px!important;
+    		border-radius: 0 !important;
+    	}
+    	.mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests{
+    		margin-bottom: 15px!important;
+    	}
+    
+    }
+  </style>
+  <!--Include script-->
+  <!--build:js js/combined.js-->
+  <script src="bower/jquery/dist/jquery.js"></script>
+  <script src="bower/easydropdown/src/jquery.easydropdown.js"></script>
+  <script src="bower/nouislider/distribute/nouislider.min.js"></script>
+  <script src="bower/bPopup/jquery.bpopup.min.js"></script>
+  <script src="bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!--script(src="bower/Headhesive.js/dist/headhesive.min.js")-->
+  <script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="bower/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js"></script>
+  <script src="bower/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js"></script>
+  <script src="bower/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+  <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"> </script>
+  <script src="bower/jquery-sticky/jquery.sticky.js"></script>
+  <!-- endbuild-->
+  
+  <script src="js/script.js"></script>
+</body>

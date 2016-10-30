@@ -1,0 +1,378 @@
+//Include style
+include ./block_html/style.jade
+body
+	//Include header
+	include ./block_html/elements/const.jade
+	
+	.main-head.container-town
+		.main-head-slider.owl-carousel.container-town-slider
+			//El of slider
+			.main-head-slider-el(style="background-image: url('img/main-head-bg-1.jpg')")
+				.main-head-filter
+				.main-cont
+					.main-head-slider-content
+						.main-head-slider-country Италия
+						.main-head-slider-name Красная поляна
+						.main-head-slider-days Город влюбленных голубков и сизых голубей
+						.main-head-slider-simple Дешевые гостиницы в Милане от
+						.main-head-slider-cost
+							.main-head-slider-cost-value
+								span.main-head-slider-val 16 494 $
+						.main-head-slider-simple__small на человека
+						
+
+		.main-head-content
+			//Top menu
+			.main-head-fullwidth
+				.main-head-cont
+						i.fa.fa-bars.toggle-top-menu
+						.main-head-cont-logo
+							a(href="#").main-head-cont-logo-img
+								img(src="img/traveller-logo.png", alt="")
+						.main-head-cont-menu.main-cont
+							a(href="#") 
+								span авиабилеты
+							a(href="#") 
+								span гостиницы
+							a(href="#") 
+								span экскурсии
+							a(href="#") 
+								span страховка
+							.top-menu__more ЕЩЕ
+								i.fa.fa-angle-down
+								.top-menu__more-wrap
+									a(href="#").top-menu__more-el Туры
+									a(href="#").top-menu__more-el авто
+									a(href="#").top-menu__more-el автобусы
+									a(href="#").top-menu__more-el трансфер
+							.top-menu-money RUB
+								i.fa.fa-angle-down
+
+						.main-head-cont-enter Вход
+						.log-wraper-main
+							form(action="")#login-form
+								input(type="text" placeholder="E-mail")
+								input(type="password" placeholder="Пароль")
+								.log-wraper-enemy
+										input(id='login', type='checkbox', name='rr')
+										label(for='login') 
+											span
+										span Запомнить меня
+								button Вход
+								.log-wraper-remember
+									.log-wraper-remember-el
+										input(id='login', type='checkbox', name='rr')
+										label(for='login') 
+											span
+										span Чужой компьютер
+									.log-wraper-remember-el
+										a(href="#") Востановить пароль
+								.log-registration
+									span.registration-trigger Зарегистрироваться 
+									span для полного доступа к сервисам
+								.log-social-title Авторизоваться через соц. сети
+
+								.log-social
+									a(href="#")
+										img(src="img/soc/facebook.png", alt="")
+									a(href="#")
+										img(src="img/soc/vk.png", alt="")
+									a(href="#")
+										img(src="img/soc/twitter.png", alt="")
+									a(href="#")
+										img(src="img/soc/google-plus.png", alt="")
+									a(href="#")
+										img(src="img/soc/instagram.png", alt="")
+							form(action="")#registration-form
+								input(type="text" placeholder="Фамилия")
+								input(type="text" placeholder="Имя")
+								input(type="text" placeholder="E-mail")
+								input(type="password" placeholder="Пароль")
+								input(type="text" placeholder="Телефон")
+								input(type="text" placeholder="Проверочный код")
+								.registr-text Нажимая на кнопку "Зарегистрироваться", вы соглашаетесь с условиями использования и Политикой возврата ден. средств.
+								button Зарегистрироваться
+			.head-form
+				.main-cont
+						script(src="//www.travelpayouts.com/widgets/884ffd3f13542596ff6c56055ea9f7d6.js?v=716")
+	
+	//Main container 
+	.main-cont.container-town
+		.town-info
+			.town-wrapper
+				//Left col
+				.town-wrapper__col-left
+					.town-wrapper__col-info
+						.type.type--lg.type--blue Милан
+						p  Бедный Милан (на самом деле конечно очень богатый) – он изо всех сил старается победить в соревновании на звание лучшего итальянского города, оставив позади Рим, Флоренцию и Венецию. Но у него все не получается, и, честно говоря, мутноватый квартал рядом с железнодорожным вокзалом победе не способствует. Но если вы возьмете себя в руки и перестанете сравнивать, то тут же влюбитесь в Милан. Жизнь в столице моды течет гораздо быстрее, чем в других частях Италии, но и тут можно притормозить и насладиться долче-витой – в бесчисленных кафе с террасами на улице, ухоженных парках, модных ресторанах и бутиках с последними новинками сезона. Модницы с головой погрузятся в магазины квартала Квадрилатеро, гурманы сделают все, чтобы заполучить столик в лучших ресторанах города, а то и страны и мира. Поднимитесь на крушу Дуомо – это поистине религиозный опыт. А чтобы проанализировать впечатления – идите в одно из кафе вдоль каналов квартала Навильи.
+						.type.type--pink В Милане придумали аперитив – мероприятие, что-то вроде счастливого часа, когда ты платишь за напиток, а в качестве бонуса получаешь закуски и кучу собеседников.
+					.wather-cont
+						.wather-el
+							.wather-title Погода: Декабрь
+							.wather-info
+								- each item in weather
+									.wather-info-item
+										.wather-info-item__title #{item.title}
+										.wather-info-item__row
+											.wather-info-item__icon
+												img(src="#{item.icon}", alt="")
+											.wather-info-item__text #{item.text}
+
+						.wather-el
+							.wather-title Демография
+							.wather-info
+								- each item in demograf
+									.wather-info-item
+										.wather-info-item__title #{item.title}
+										.wather-info-item__row
+											.wather-info-item__icon
+												img(src="#{item.icon}", alt="")
+											.wather-info-item__text #{item.text}
+				//Right col
+				.town-wrapper__col-right
+					img(src="img/milan.png", alt="")
+					.town-text-pay
+						.type.type--blue Милан: сколько стоит здесь жить?
+						.town-text-pay__info
+							.town-text-pay__el
+								p Еда
+								p Еда в ресторане Милана стоит на 39% больше, чем еда в ресторане Москвы
+							.town-text-pay__el
+								p Общественный транспорт
+								p Обычная стоимость билета на общественный транспорт - 100 RUB
+						a(href="#").town-text-pay__btn Автомобиль на прокат <strong>1231 RUB/день </strong> на momodo
+			.town-info__border
+			
+			// 4-th block
+			.type.type--blue Информация о перелете
+			.town-fly
+				.town-fly__el
+					a(href="#")
+						.town-fly__el-icon
+							img(src="img/i-m-airplane.png", alt="")
+						.town-fly__el-title Авиакомпания
+						.town-fly__el-text Популярные авиакомпании, летающие в Милан: Pobeda, Alitalia и Unknown Airline
+				.town-fly__el
+					a(href="#")
+						.town-fly__el-icon
+							img(src="img/i-m-baggage.png", alt="")
+						.town-fly__el-title Трансфер
+						.town-fly__el-text Комфортный и безопасный трансфер, доставит вас от аэропорта до места проживания
+				.town-fly__el
+					a(href="#")
+						.town-fly__el-icon
+							img(src="img/i-m-hotel.png", alt="")
+						.town-fly__el-title Отели
+						.town-fly__el-text Поиск отелей и сравнение цен от 26 сайтов бронирования
+				.town-fly__el
+					a(href="#")
+						.town-fly__el-icon
+							img(src="img/i-m-big-ben.png", alt="")
+						.town-fly__el-title Экскурсии
+						.town-fly__el-text Большой выбор экскурсий во всех уголках мира
+	
+	//Towns block
+	.main-place
+			.main-cont
+				.main-wraper
+					//!!!!! Change class for template(.main-type-one)
+					//Type One
+					.main-place-row.main-templ-one
+						.main-type-one-left
+							a(href="#").main-place-el
+								+place('img/img-place-1.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-5.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-one-right
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-9.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур') 
+					
+					//Type Two
+					.main-place-row.main-templ-two
+						.main-type-two-left
+							a(href="#").main-place-el
+								+place('img/img-place-2.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-8.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+							a(href="#").main-place-el
+								+place('img/img-place-3.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+						.main-type-two-right
+							a(href="#").main-place-el
+								+place('img/img-place-4.jpg','Россия','Крым','1 ночь для двоих','35 000','Тур')
+	
+	.main-cont
+		.town-discr
+			.type.type--lg.type--blue Лучшие отели Милана
+			//Slider Town
+			.town__slider-wrap
+				a(href="#").town__slider-all Посмотреть все отели
+				.town__slider.owl-carousel
+					- for (var i = 0; i < 12; i++)
+						a(href="#")
+							.town__slider-el
+								.town__slider-img(style="background-image:url(img/item-hottel.jpg)")
+									.town__slider-info
+										span Рейтинг
+										span 8
+								.town__slider-rating
+									i.fa.fa-star.active
+									i.fa.fa-star.active
+									i.fa.fa-star.active
+								.town__slider-text Admiral Hotel Milan
+			.dashed-divider
+			
+			//Content Town
+			.type.type--lg.type--blue Милан
+			.town-column-text
+				.town-column-intro Модная столица Италии - Милан - это еще и популярный туристический, культурный и исторический центр, поражающий гостей современными зданиями - воплощением дизайна и технологий - и не уступающими им в грандиозности средневековыми памятниками архитектуры.
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi aut, animi dicta. Natus, corporis reiciendis ex ea quia nam sequi recusandae amet eum dolor atque. Sed quam cumque esse maiores id voluptatibus totam eius libero unde ut adipisci repudiandae reiciendis ab molestiae aliquid perspiciatis dignissimos, odio sint nam, ratione doloremque in? Quos vitae voluptates, fugiat earum nesciunt aut qui nisi quidem. Quos doloremque necessitatibus assumenda, sunt, beatae obcaecati! Hic accusamus voluptatum, corporis libero, sint iure, nostrum vitae repellendus excepturi officia a omnis, officiis iusto est nulla consequatur voluptas deleniti quam dolorem atque possimus expedita. Hic rerum laborum, quibusdam ex.
+		
+		//Subs block
+		.town-subs
+			.town-subs-info
+				.town-subs-title Куда бы поехать следующий раз? Позвольте нам помочь вдохновить вас ...
+				.town-subs-text Подпишитесь на нашу рассылку для советов и инструментов для путешествий, которые помогут вам открыть ваш мир и помогут вам путешествовать комфортнее.
+			.town-subs-link
+				a(href="#") Подписаться
+
+
+
+
+	include ./block_html/footer.jade
+					
+
+	style.
+			.mewtwo-hotels-container form{
+				display: -webkit-box!important;
+				display: -ms-flexbox!important;
+				display: flex!important;
+				-webkit-box-align:end!important;
+				-ms-flex-align:end!important;
+				align-items:flex-end!important;
+				-ms-flex-wrap:wrap!important;
+				flex-wrap:wrap!important;
+			}
+			.mewtwo-widget .mewtwo-hotels-submit_button{
+				width: auto!important;
+			}
+			.mewtwo-hotels{background:inherit !important;}
+				.mewtwo-hotels-container form div:nth-of-type(5){
+					display: inline-block!important;
+				}
+			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				background: #FFDB4D!important;
+				color: black !important;
+				display: inline!important;
+				width: 100%!important;
+				height: 35px!important;
+				border: none!important;
+				border-radius: 0px 3px 3px 0px!important;
+				box-shadow: 0 3px 0 0 rgba(0,0,0,.1)!important;
+				font-weight: 600!important;
+				font-size: 14px !important;
+				line-height: 3px!important;
+				box-sizing: border-box!important;
+				margin-top: 1px;
+				padding: 0 6px!important;
+			}
+				.mewtwo-hotels-container form div:nth-of-type(5) button:hover{
+					background: #feba26 !important;
+				}
+			.mewtwo-widget .mewtwo-hotels-city{
+				margin-right: 20px!important;
+				width: 35%!important;
+			}
+			.mewtwo-hotels-dates,
+			.mewtwo-hotels-guests{
+				
+			}
+			.hotels-destination-884ffd3f13542596ff6c56055ea9f7d6{
+				border-radius:5px!important;
+			}
+			.mewtwo-widget .mewtwo-hotels-dates-checkin{
+			width: 170px!important;
+			margin-right: 10px !important;
+			}
+			.mewtwo-widget .mewtwo-hotels-guests,
+			.mewtwo-widget .mewtwo-hotels-dates{
+				margin-right: 0!important;
+			}
+			.mewtwo-widget .mewtwo-hotels-city>input{
+				border: 0!important;
+				box-shadow:0 0 0!important;
+				border-radius: 0 !important;
+			}
+			.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]{
+				border-radius: 5px !important;
+				border-right:1px solid #F1ECEC!important;
+			}
+			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				
+			}
+			.mewtwo-widget .mewtwo-hotels-dates{
+				width: 32% !important;
+			}
+			.mewtwo-widget--884ffd3f13542596ff6c56055ea9f7d6 .mewtwo-hotels-container input[type="text"]:nth-child(1){
+				border-radius: 3px 0px 0px 3px!important;
+				
+			}
+			#hotels-form-884ffd3f13542596ff6c56055ea9f7d6{
+				padding: 20px!important;
+				background: rgba(32, 31, 31, 0.63)!important;
+			}
+
+			.mewtwo-widget .mewtwo-hotels-dates-checkout{
+				width: 175px !important;
+			}
+
+			.mewtwo-hotels-container form div:nth-of-type(5) button{
+				width:195px!important;
+				background-color: #feb20e!important;
+				border-radius :4px!important;
+				color:white!important;
+				font-family: Arial!important;
+				font-size: 16px!important;
+				font-weight: 400!important;
+				margin-left: 9px!important;
+			}
+			
+
+			@media only screen and (max-width: 1024px) {
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+					width: 50% !important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+				    width: 30%!important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-submit_button{
+					width: 20%!important;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-dates{
+					width: 100% !important;
+				}
+				.mewtwo-hotels--l .mewtwo-widget .mewtwo-hotels-guests {
+				    width: 100%!important;
+				}
+				.mewtwo-hotels-container form div:nth-of-type(5) button{
+					width: 100%!important;
+					margin-top: 15px!important;
+					border-radius: 0 !important;
+				}
+				.mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests{
+					margin-bottom: 15px!important;
+				}
+			
+			}
+	//Include script
+	include ./block_html/script.jade
+
