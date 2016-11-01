@@ -42,6 +42,18 @@ $(".town__slider").owlCarousel({
 	 		navText:['<img src="img/slider-left.png">','<img src="img/slider-right.png">']
 	 	}
 	 );
+
+	//hide el on scroll to end page	
+     $(window).scroll(function(){
+         if($(window).scrollTop()+$(window).height()>=$(document).height()){
+			    $('.hide-scroll-text').addClass('hidden');
+			}
+			else {
+			    $('.hide-scroll-text').removeClass('hidden');
+
+			}
+     })
+  
 //addig scripts for page Town
 
 //show message in left part 
